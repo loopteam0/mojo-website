@@ -1,1 +1,203 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  max-width: 100%;
+  // height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// Importing font families
+
+// Inter
+
+@font-face {
+  font-family: "Inter-Light";
+  src: local("Inter Light"),
+    url("assets/fonts/Inter/Inter-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: local("Inter Regular"),
+    url("assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: local("Inter Medium"),
+    url("assets/fonts/Inter/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: local("Inter SemiBold"),
+    url("assets/fonts/Inter/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: local("Inter Bold"),
+    url("assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
+}
+
+// Poppins
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: local("Poppins Light"),
+    url("assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: local("Poppins Regular"),
+    url("assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: local("Poppins Medium"),
+    url("assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: local("Poppins SemiBold"),
+    url("assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: local("Poppins Bold"),
+    url("assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+/* All styles here are applied on Desktop.
+ Media Queries would include all global styles for each 
+ screen size */
+
+@media (min-width: 1024px) {
+  // Global text styles.
+  // Just the font-size and font-style. Other styles would be
+  // made specifically to the text, i.e color, line-height etc.
+
+  #text-xl {
+    font-size: 2.5rem;
+    font-family: "Poppins-Bold";
+    flex-shrink: 0;
+
+  }
+
+  #text-lg {
+    font-size: 1.5rem;
+    font-family: "Poppins-SemiBold";
+    flex-shrink: 0;
+
+  }
+
+  #text-md {
+    font-size: 1.125rem;
+    font-family: "Poppins-SemiBold";
+    flex-shrink: 0;
+
+  }
+
+  #text-rg {
+    font-size: 1.125rem;
+    font-family: "Poppins-Regular";
+    flex-shrink: 0;
+  }
+
+  #text-sm {
+    font-size: 1rem;
+    font-family: "Inter-SemiBold";
+    flex-shrink: 0;
+
+  }
+
+  #text-xs {
+    font-size: 0.875rem;
+    font-family: "Poppins-Regular";
+    flex-shrink: 0;
+  }
+
+  /* Global buttons styles. 
+  All solid color buttons. Other styles, eg. color of text, 
+  would be applied individually ) */
+
+  #btn-filled {
+    padding: 0.8rem 1.5rem;
+    background: rgba(69, 0, 255, 1);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: "Poppins-Regular";
+    border: 0;
+    color: white;
+  }
+
+  /* Section container styling */
+
+  #container{
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+ 
+  #btn-filled {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Section container styling */
+
+  #container{
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  // Global text styles.
+  // Just the font-size and font-style. Other styles would be
+  // made specifically to the text, i.e color, line-height etc.
+
+  #text-xl {
+    font-size: 3rem;
+    font-family: "Poppins-Bold";
+  }
+
+  #text-lg {
+    font-size: 2rem;
+    font-family: "Poppins-SemiBold";
+  }
+
+  #text-md {
+    font-size: 1.5rem;
+    font-family: "Poppins-SemiBold";
+  }
+
+  #text-rg {
+    font-size: 1.125rem;
+    font-family: "Poppins-Regular";
+  }
+
+  #text-sm {
+    font-size: 1rem;
+    font-family: "Inter-SemiBold";
+  }
+
+  #text-xs {
+    font-size: 0.875rem;
+    font-family: "Poppins-Regular";
+  }
+
+
+   /* Section container styling */
+
+   #container{
+    padding: 0 4rem;
+  }
+}

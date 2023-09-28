@@ -1,0 +1,142 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  // Main container for the navbar
+  .entire-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 0 2rem;
+  }
+
+
+  // Left side of the navigation bar, with the logo and the links
+  .entire-navbar .navbar-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+
+  // Container to hold all the link cells
+  .entire-navbar .navbar-left .link-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  // Each single link in the nav
+  .navbar-left .link-wrapper .link-cell {
+    display: flex;
+    padding: 1.2rem 1rem;
+    align-items: center;
+    gap: 0.625rem;
+    border-bottom: 2px solid white;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      color: rgba(55, 65, 81, 1);
+      font-size: 0.875rem;
+      font-family: "Poppins-SemiBold";
+    }
+  }
+
+
+  // Dropdown container style
+  .navbar-left .link-wrapper .link-cell #dropdown-content {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    display: none;
+    padding: 1.3rem;
+    align-items: flex-start;
+    gap: 3.5rem;
+    width: max-content;
+    background: #fff;
+    border-radius: 0.375rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  // Column groups in the dropdown container
+  #dropdown-content .dropdown-content-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  // Column links
+  #dropdown-content .dropdown-content-column .column-link{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    span{
+        color: rgba(52, 64, 94, 1);
+    }
+  }
+
+
+  // Show the dropdown content on hover
+  .navbar-left .link-wrapper .link-cell:hover #dropdown-content {
+    display: flex;
+  }
+
+
+  // Styles for when route is active with
+  // "routerLinkActive" in HTML
+  .navbar-left .link-wrapper .link-cell.activeCell {
+    background-color: rgba(69, 0, 255, 1);
+    border-bottom-color: rgba(105, 224, 122, 1);
+
+    .cell-title {
+      color: white;
+    }
+
+    .chevron-down {
+      display: none;
+    }
+  }
+
+
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+
+  .entire-navbar{
+    padding: 0 4rem;
+  }
+
+  // Left side of the navigation bar, with the logo and the links
+  .entire-navbar .navbar-left {
+    gap: 2.5rem;
+  }
+
+  .entire-navbar .navbar-left .link-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+}
