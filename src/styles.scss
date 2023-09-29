@@ -76,9 +76,17 @@ body {
     url("assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
 }
 
-/* All styles here are applied on Desktop.
+/* 
+
+ All styles here are applied on Desktop.
  Media Queries would include all global styles for each 
- screen size */
+ screen size
+ 
+ NB: Some styles might not be repeated in bigger screens 
+ because they might be maintained from the previous
+ media query 
+
+ */ 
 
 @media (min-width: 1024px) {
   // Global text styles.
@@ -89,21 +97,18 @@ body {
     font-size: 2.5rem;
     font-family: "Poppins-Bold";
     flex-shrink: 0;
-
   }
 
   #text-lg {
     font-size: 1.5rem;
     font-family: "Poppins-SemiBold";
     flex-shrink: 0;
-
   }
 
   #text-md {
     font-size: 1.125rem;
     font-family: "Poppins-SemiBold";
     flex-shrink: 0;
-
   }
 
   #text-rg {
@@ -116,7 +121,6 @@ body {
     font-size: 1rem;
     font-family: "Inter-SemiBold";
     flex-shrink: 0;
-
   }
 
   #text-xs {
@@ -131,30 +135,27 @@ body {
 
   #btn-filled {
     padding: 0.8rem 1.5rem;
-    background: rgba(69, 0, 255, 1);
     border-radius: 0.25rem;
     font-size: 0.875rem;
     font-family: "Poppins-Regular";
     border: 0;
-    color: white;
   }
 
   /* Section container styling */
 
-  #container{
+  #container {
     padding: 0 2rem;
   }
 }
 
 @media (min-width: 1280px) {
- 
   #btn-filled {
     padding: 1rem 1.5rem;
   }
 
   /* Section container styling */
 
-  #container{
+  #container {
     padding: 0 4rem;
   }
 }
@@ -164,40 +165,39 @@ body {
   // Just the font-size and font-style. Other styles would be
   // made specifically to the text, i.e color, line-height etc.
 
-  #text-xl {
-    font-size: 3rem;
-    font-family: "Poppins-Bold";
-  }
+  // #text-xl {
+  //   font-size: 3rem;
+  //   font-family: "Poppins-Bold";
+  // }
 
-  #text-lg {
-    font-size: 2rem;
-    font-family: "Poppins-SemiBold";
-  }
+  // #text-lg {
+  //   font-size: 2rem;
+  //   font-family: "Poppins-SemiBold";
+  // }
 
-  #text-md {
-    font-size: 1.5rem;
-    font-family: "Poppins-SemiBold";
-  }
+  // #text-md {
+  //   font-size: 1.5rem;
+  //   font-family: "Poppins-SemiBold";
+  // }
 
-  #text-rg {
-    font-size: 1.125rem;
-    font-family: "Poppins-Regular";
-  }
+  // #text-rg {
+  //   font-size: 1.125rem;
+  //   font-family: "Poppins-Regular";
+  // }
 
-  #text-sm {
-    font-size: 1rem;
-    font-family: "Inter-SemiBold";
-  }
+  // #text-sm {
+  //   font-size: 1rem;
+  //   font-family: "Inter-SemiBold";
+  // }
 
-  #text-xs {
-    font-size: 0.875rem;
-    font-family: "Poppins-Regular";
-  }
+  // #text-xs {
+  //   font-size: 0.875rem;
+  //   font-family: "Poppins-Regular";
+  // }
 
+  /* Section container styling */
 
-   /* Section container styling */
-
-   #container{
+  #container {
     padding: 0 4rem;
   }
 }

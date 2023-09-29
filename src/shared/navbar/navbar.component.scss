@@ -112,6 +112,11 @@ of styling is done in the mobile media query (340px)
     }
   }
 
+  .navbar-right button{
+    background: rgba(69, 0, 255, 1);
+    color: white;
+  }
+
 
 }
 
@@ -139,4 +144,7 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Large
 @media (min-width: 1650px) {
+  .entire-navbar{
+    padding: 0 6rem;
+  }
 }

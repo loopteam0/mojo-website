@@ -1,0 +1,63 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  .entire-CTA {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background: rgba(69, 0, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5rem;
+    position: relative;
+  }
+
+  // Positioning image slightly out of the main container
+  img {
+    position: absolute;
+    top: -1rem;
+    width: 6rem;
+  }
+
+  // Right side of the main container
+.CTA-right{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 6rem;
+
+    #btn-filled{
+        background: white;
+        color: rgba(69, 0, 255, 1);
+        margin-right: 4rem;
+    }
+}
+
+  .CTA-right .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title {
+      color: white;
+      font-size: 1.125rem;
+      font-family: "Poppins-SemiBold";
+      flex-shrink: 0;
+      line-height: 2rem;
+    }
+
+    .description {
+      color: white;
+      font-size: 1rem;
+      font-family: "Poppins-Regular";
+      flex-shrink: 0;
+    }
+  }
+}

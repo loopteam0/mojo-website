@@ -8,12 +8,14 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { MojoMerchantCtaComponent } from './mojo-merchant-cta/mojo-merchant-cta.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MojoMerchantCtaComponent
   
   ],
   imports: [
@@ -25,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MojoMerchantCtaComponent
 
 
   ]
