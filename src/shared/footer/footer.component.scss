@@ -91,12 +91,20 @@ of styling is done in the mobile media query (340px)
  
 }
 
+// Desktop - Standard
+@media (min-width: 1440px) {
+ // Main container for the footer
+ .entire-footer {
+  padding: 6rem;
+}
+}
+
 
 // Desktop - Large
 @media (min-width: 1650px) {
   // Main container for the footer
   .entire-footer {
-    padding: 6rem;
+    padding: 8rem;
   }
 }
 

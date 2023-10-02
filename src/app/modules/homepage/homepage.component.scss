@@ -85,5 +85,28 @@ of styling is done in the mobile media query (340px)
     height: 30rem;
     width: 25rem;
     scale: 0.8;
+    background-color: pink;
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+ 
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  .entire-hero-section {
+    padding-top: 3rem;
+    padding: 6rem
+  }
+}
+
+
+// Desktop - Large
+@media (min-width: 1650px) {
+  .entire-hero-section {
+    padding-top: 4rem;
+    padding: 8rem
   }
 }

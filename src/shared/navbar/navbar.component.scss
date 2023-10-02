@@ -141,11 +141,14 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Standard
 @media (min-width: 1440px) {
+  .entire-navbar{
+    padding: 0 6rem;
+  }
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
   .entire-navbar{
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
