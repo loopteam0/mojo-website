@@ -1,3 +1,38 @@
-<div id="container">
-    <app-mojo-merchant-cta></app-mojo-merchant-cta>
-</div>
+<section class="entire-hero-section">
+  <!-- Dividing the Hero container into two parts; 
+        left for the information, and right for the slider -->
+  <div class="hero-left">
+    <span id="text-sm" class="mini-header-txt">Mojo</span>
+    <span id="text-xl" class="main-header-txt"
+      >Trusted and Secured. <br />
+      Join Mojo now</span
+    >
+    <span id="text-rg" class="sub-header-txt"
+      >Spend, save and manage your money, all in one place. Open an e-wallet
+      from your phone, for free.</span
+    >
+
+    <!-- Container to hold both App Store and Play Store badges -->
+    <div class="badge-wrapper">
+      <img src="/assets/svgs/icn-app-store-badge-black.svg" alt="" />
+      <img src="/assets/svgs/icn-google-store-badge-black.svg" alt="" />
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- This is the sent succesfully card -->
+    <img
+      class="successful-card"
+      src="/assets/images/Successfuly-card.png"
+      alt=""
+    />
+
+    <!-- Here, we have the container which the images are changing in -->
+   <div class="slider-container"></div>
+    <!-- This is the expenses and income card -->
+    <img class="expenses-card" src="/assets/images/expenses-card.png" alt="" />
+  </div>
+</section>
+
+<app-mojo-merchant-cta></app-mojo-merchant-cta>
+<app-newsletter></app-newsletter>

@@ -1,4 +1,89 @@
-*{
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // Dividing the Hero container into two parts;
+  // left for the information, and right for the slider
+  .entire-hero-section {
+    background-color: rgb(247, 247, 247);
+    padding-top: 3rem;
+    padding: 4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    height: 30rem;
+  }
+
+  .hero-left {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    gap: 0.5rem;
+  }
+
+  // Text editing
+  .hero-left .mini-header-txt {
+    color: rgba(105, 224, 122, 1);
+  }
+
+  .hero-left .main-header-txt {
+    line-height: 3.2rem;
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .hero-left .sub-header-txt {
+    color: rgba(52, 64, 94, 1);
+    margin: 1rem 0;
+    max-width: 35rem;
+  }
+
+  // Container to hold both App Store and Play Store badges
+  .hero-left .badge-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  // Right section of the hero container. 
+  // It is made relative so objects in it are absolute and 
+  // can be put on top of each other
+  .hero-right {
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  // This is the style for the "sent succesfully" card
+  .hero-right .successful-card {
+    position: absolute;
+    z-index: 2;
+    top: 5rem;
+    left: -1rem;
+    width: 8rem;
+  }
+
+  // This is the style for the "expenses" card
+  .hero-right .expenses-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  // Here, we have the container which the images are changing in
+  .hero-right .slider-container {
+    clip-path: path(
+      "M4 40C4 17.9087 21.9086 0 44 0H354C376.091 0 394 17.9086 394 40V348.992C394 365.065 384.379 379.577 369.574 385.835L210.097 453.248C199.907 457.556 188.388 457.451 178.279 452.958L27.7561 386.067C13.3101 379.648 4 365.322 4 349.514V40Z"
+    );
+    height: 30rem;
+    width: 25rem;
+    scale: 0.8;
+  }
 }

@@ -13,7 +13,7 @@ of styling is done in the mobile media query (340px)
     align-items: center;
     justify-content: space-between;
     background: #f7f7f7;
-    padding: 4rem 2rem;
+    padding: 4rem;
   }
 
   .entire-footer .footer-left {
@@ -88,10 +88,7 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-  // Main container for the footer
-  .entire-footer {
-    padding: 4rem;
-  }
+ 
 }
 
 

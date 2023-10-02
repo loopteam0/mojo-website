@@ -15,7 +15,7 @@ of styling is done in the mobile media query (340px)
     align-items: center;
     justify-content: space-between;
     background: white;
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 
 
@@ -94,6 +94,7 @@ of styling is done in the mobile media query (340px)
   // Show the dropdown content on hover
   .navbar-left .link-wrapper .link-cell:hover #dropdown-content {
     display: flex;
+    z-index: 1000;
   }
 
 

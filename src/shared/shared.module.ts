@@ -9,13 +9,15 @@ import { MaterialModule } from 'src/app/material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MojoMerchantCtaComponent } from './mojo-merchant-cta/mojo-merchant-cta.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
-    MojoMerchantCtaComponent
+    MojoMerchantCtaComponent,
+    NewsletterComponent
   
   ],
   imports: [
@@ -28,7 +30,8 @@ import { MojoMerchantCtaComponent } from './mojo-merchant-cta/mojo-merchant-cta.
   exports: [
     NavbarComponent,
     FooterComponent,
-    MojoMerchantCtaComponent
+    MojoMerchantCtaComponent,
+    NewsletterComponent
 
 
   ]

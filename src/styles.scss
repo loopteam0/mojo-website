@@ -144,7 +144,7 @@ body {
   /* Section container styling */
 
   #container {
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 }
 
@@ -170,10 +170,10 @@ body {
   //   font-family: "Poppins-Bold";
   // }
 
-  // #text-lg {
-  //   font-size: 2rem;
-  //   font-family: "Poppins-SemiBold";
-  // }
+  #text-lg {
+    font-size: 2rem;
+    font-family: "Poppins-SemiBold";
+  }
 
   // #text-md {
   //   font-size: 1.5rem;
@@ -198,6 +198,13 @@ body {
   /* Section container styling */
 
   #container {
-    padding: 0 4rem;
+    padding: 0 6rem;
   }
+}
+
+@media (min-width: 1650px) {
+  #container {
+    padding: 0 8rem;
+  }
+  
 }
