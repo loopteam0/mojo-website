@@ -69,6 +69,42 @@ of styling is done in the mobile media query (340px)
     text-align: center;
   }
 
+
+
+  // About Mojo section
+  .about-mojo-section{
+    height: 30rem;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-mojo-section .about-mojo-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .about-mojo-left > #text-lg{
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .about-mojo-left > #text-rg{
+    color: rgba(52, 64, 94, 1);
+    max-width: 28rem;
+  }
+
+  .about-mojo-left > #btn-filled{
+    background: rgba(69, 0, 255, 1);
+    color: white;
+  }
+
+  .about-mojo-section > img{
+    width: clamp(28rem, 50%, 40rem);
+  }
+
 }
 
 
@@ -86,6 +122,11 @@ of styling is done in the mobile media query (340px)
   // Container holding feature cards
   .entire-advantages-section .feature-cards-wrapper {
     gap: 3.5rem;
+  }
+
+  // About Mojo section
+  .about-mojo-section{
+    padding: 2rem 6rem;
   }
 }
 
@@ -106,6 +147,12 @@ of styling is done in the mobile media query (340px)
   .entire-advantages-section .feature-cards-wrapper {
     gap: 4rem;
   }
+
+  // About Mojo section
+  .about-mojo-section{
+    height: 35rem;
+    padding: 2rem 8rem;
+  }
 }
 
 
@@ -125,5 +172,15 @@ of styling is done in the mobile media query (340px)
   .entire-advantages-section .feature-cards-wrapper {
     margin-top: 1rem;
     gap: 4.5rem;
+  }
+
+  // About Mojo section
+  .about-mojo-section{
+    height: 40rem;
+    padding: 2rem 10rem;
+  }
+
+  .about-mojo-left #text-rg{
+    max-width: 32rem;
   }
 }
