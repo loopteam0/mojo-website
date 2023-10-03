@@ -1,39 +1,35 @@
-<section class="entire-hero-section">
-  <!-- Dividing the Hero container into two parts; 
-        left for the information, and right for the slider -->
-  <div class="hero-left">
-    <span id="text-sm" class="mini-header-txt">Mojo</span>
-    <span id="text-xl" class="main-header-txt">Trusted and Secured. <br />
-      Join Mojo now</span>
-    <span id="text-rg" class="sub-header-txt">Spend, save and manage your money, all in one place. Open an e-wallet
-      from your phone, for free.</span>
+<section class="homepage">
 
-    <!-- Container to hold both App Store and Play Store badges -->
-    <div class="badge-wrapper">
-      <img src="/assets/svgs/icn-app-store-badge-black.svg" alt="" />
-      <img src="/assets/svgs/icn-google-store-badge-black.svg" alt="" />
+<!-- Hero Section -->
+<app-homepage-hero></app-homepage-hero>
+
+<!-- "Why choose us" / "Our Advantages" section -->
+
+<section class="entire-advantages-section">
+<span id="text-xs">Why Choose Us</span>
+<span id="text-lg">Some of our advantages</span>
+
+<!-- Container holding feature cards -->
+<div class="feature-cards-wrapper">
+
+  <!-- Card Population with "*ngFor" -->
+  <div class="feature-card" *ngFor="let card of advantageCard">
+
+    <!-- Ellipse holding the container -->
+    <div class="icon-container">
+      <img src="{{card.icon}}" alt="">
     </div>
-  </div>
 
-  <div class="hero-right">
-
-    <div class="inner-right-wrapper">
-      <!-- This is the sent succesfully card -->
-      <img class="successful-card" src="/assets/images/Successfuly-card.png" alt="" />
-
-      <!-- Carousel Implementation -->
-      <!-- Here, we have the container which the images are changing in -->
-      <div class="slider-container" [ngClass]="currentImage">
-
-      </div>
-
-      <!-- This is the expenses and income card -->
-      <img class="expenses-card" src="/assets/images/expenses-card.png" alt="" />
-    </div>
+    <span id="text-md">{{card.title}}</span>
+    <span id="text-xs">{{card.subtitle}}</span>
 
   </div>
 
+
+</div>
 </section>
 
-<app-mojo-merchant-cta></app-mojo-merchant-cta>
-<app-newsletter></app-newsletter>
+<!-- <app-mojo-merchant-cta></app-mojo-merchant-cta>
+<app-newsletter></app-newsletter> -->
+</section>
+

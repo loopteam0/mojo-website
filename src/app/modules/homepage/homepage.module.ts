@@ -5,11 +5,13 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material.module';
 import { SharedModule } from 'src/shared/shared.module';
 import { PersonalComponent } from './pages/personal/personal.component';
+import { HomepageHeroComponent } from './components/homepage-hero/homepage-hero.component';
 
 @NgModule({
   declarations: [
     HomepageComponent,
-    PersonalComponent
+    PersonalComponent,
+    HomepageHeroComponent
   ],
   imports: [
     CommonModule,

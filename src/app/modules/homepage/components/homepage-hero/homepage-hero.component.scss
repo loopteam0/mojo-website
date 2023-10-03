@@ -1,0 +1,176 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+    // Dividing the Hero container into two parts;
+    // left for the information, and right for the slider
+    .entire-hero-section {
+      background-color: rgb(247, 247, 247);
+      padding-top: 3rem;
+      padding: 4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      gap: 0.5rem;
+    }
+  
+    // Text editing
+    .hero-left .mini-header-txt {
+      color: rgba(105, 224, 122, 1);
+    }
+  
+    .hero-left .main-header-txt {
+      line-height: 3.2rem;
+      color: rgba(69, 0, 255, 1);
+    }
+  
+    .hero-left .sub-header-txt {
+      color: rgba(52, 64, 94, 1);
+      margin: 1rem 0;
+      max-width: 35rem;
+    }
+  
+    // Container to hold both App Store and Play Store badges
+    .hero-left .badge-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    // Right section of the hero container.
+    // It is made relative so objects in it are absolute and
+    // can be put on top of each other
+    .hero-right {
+      flex: 1 1 auto;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      position: relative;
+      width: 24rem;
+      height: 28rem;
+  
+    }
+  
+    .hero-right .inner-right-wrapper {
+      width: inherit;
+      height: inherit;
+      position: relative;
+    }
+  
+    // This is the style for the "sent succesfully" card
+    .hero-right .successful-card {
+      position: absolute;
+      z-index: 2;
+      top: 3rem;
+      left: -3rem;
+      width: 8rem;
+    }
+  
+    // This is the style for the "expenses" card
+    .hero-right .expenses-card {
+      position: absolute;
+      bottom: 2rem;
+      right: 0;
+    }
+  
+    // Here, we have the container which the images are changing in
+    .hero-right .slider-container {
+      clip-path: polygon(1.015% 8.825%, 1.015% 8.825%, 1.148% 7.394%, 1.533% 6.036%, 2.148% 4.77%, 2.974% 3.613%, 3.989% 2.585%, 5.172% 1.703%, 6.502% 0.985%, 7.959% 0.45%, 9.521% 0.116%, 11.168% 0%, 89.848% 0%, 89.848% 0%, 91.494% 0.116%, 93.057% 0.45%, 94.513% 0.985%, 95.843% 1.703%, 97.026% 2.585%, 98.041% 3.613%, 98.867% 4.77%, 99.482% 6.036%, 99.867% 7.394%, 100% 8.825%, 100% 76.998%, 100% 76.998%, 99.928% 78.05%, 99.716% 79.073%, 99.371% 80.057%, 98.9% 80.994%, 98.309% 81.874%, 97.606% 82.69%, 96.797% 83.432%, 95.888% 84.092%, 94.887% 84.659%, 93.801% 85.127%, 53.324% 100%, 53.324% 100%, 52.539% 100.256%, 51.737% 100.453%, 50.924% 100.593%, 50.103% 100.674%, 49.279% 100.696%, 48.455% 100.661%, 47.635% 100.567%, 46.825% 100.415%, 46.028% 100.204%, 45.248% 99.936%, 7.045% 85.178%, 7.045% 85.178%, 5.985% 84.702%, 5.01% 84.13%, 4.125% 83.471%, 3.338% 82.732%, 2.655% 81.922%, 2.082% 81.051%, 1.625% 80.126%, 1.29% 79.155%, 1.085% 78.148%, 1.015% 77.113%, 1.015% 8.825%);
+      width: 90%;
+      height: 90%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+  
+    // Classes used for the image change.
+    // They're initialized in the "homepage.component.ts" file.
+    .image1 {
+      background-image: url('/assets/images/slider-img1.jpg');
+    }
+  
+    .image2 {
+      background-image: url('/assets/images/slider-img2.jpg');
+    }
+  
+    .image3 {
+      background-image: url('/assets/images/slider-img3.jpg');
+    }
+  
+}  
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+
+    .entire-hero-section {
+      padding-top: 3rem;
+      padding: 6rem;
+    }
+  
+    .hero-right {
+      width: 28rem;
+      height: 32rem;
+    }
+}
+
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+    .entire-hero-section {
+      padding-top: 3rem;
+      padding: 6rem 8rem;
+    }
+  
+    // Adjusting line-height for the main title
+    .hero-left .main-header-txt {
+      line-height: 3.8rem;
+    }
+}  
+
+// Desktop - Large
+@media (min-width: 1650px) {
+    .entire-hero-section {
+      padding-top: 4rem;
+      padding: 6rem 10rem;
+    }
+  
+    .hero-left {
+      gap: 1.5rem;
+    }
+  
+    // Adjusting line-height for the main title
+    .hero-left .main-header-txt {
+      line-height: 4.2rem;
+    }
+  
+    .hero-right {
+      width: 36rem;
+      height: 40rem;
+    }
+  
+    .hero-right .successful-card {
+      width: auto;
+      top: 4rem;
+      left: -4rem;
+    }
+  
+    .hero-right .expenses-card {
+      bottom: 4rem;
+      width: 16rem;
+    }
+}
