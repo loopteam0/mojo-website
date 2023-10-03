@@ -8,9 +8,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Small
 @media (min-width: 1024px) {
 
-  
   // "Why choose us" / "Our Advantages" section
-
   .entire-advantages-section {
     padding: 4rem;
     background: rgba(69, 0, 255, 1);
@@ -20,11 +18,11 @@ of styling is done in the mobile media query (340px)
     gap: 1.2rem;
   }
 
-  .entire-advantages-section > #text-xs {
+  .entire-advantages-section>#text-xs {
     color: rgba(105, 224, 122, 1);
   }
 
-  .entire-advantages-section > #text-lg {
+  .entire-advantages-section>#text-lg {
     color: white;
   }
 
@@ -51,7 +49,7 @@ of styling is done in the mobile media query (340px)
   }
 
   // Ellipse holding the container
-  .feature-card .icon-container{
+  .feature-card .icon-container {
     padding: 0.5rem;
     display: flex;
     align-items: center;
@@ -61,12 +59,12 @@ of styling is done in the mobile media query (340px)
     margin-bottom: 0.5rem;
   }
 
-  .feature-card > #text-md{
+  .feature-card>#text-md {
     color: #11052B;
     text-align: center;
   }
 
-  .feature-card > #text-xs{
+  .feature-card>#text-xs {
     color: #999;
     text-align: center;
   }
@@ -74,11 +72,14 @@ of styling is done in the mobile media query (340px)
 }
 
 
+
+
+
 // Desktop - Medium
 @media (min-width: 1280px) {
 
   // "Why choose us" / "Our Advantages" section
-  .entire-advantages-section{
+  .entire-advantages-section {
     padding: 4rem 6rem;
   }
 
@@ -90,14 +91,17 @@ of styling is done in the mobile media query (340px)
 
 
 
+
+
+
 // Desktop - Standard
 @media (min-width: 1440px) {
 
-   // "Why choose us" / "Our Advantages" section
-   .entire-advantages-section{
+  // "Why choose us" / "Our Advantages" section
+  .entire-advantages-section {
     padding: 4rem 8rem;
   }
-  
+
   // Container holding feature cards
   .entire-advantages-section .feature-cards-wrapper {
     gap: 4rem;
@@ -106,14 +110,17 @@ of styling is done in the mobile media query (340px)
 
 
 
+
+
+
 // Desktop - Large
 @media (min-width: 1650px) {
 
   // "Why choose us" / "Our Advantages" section
-  .entire-advantages-section{
+  .entire-advantages-section {
     padding: 4rem 10rem;
   }
-  
+
   // Container holding feature cards
   .entire-advantages-section .feature-cards-wrapper {
     margin-top: 1rem;

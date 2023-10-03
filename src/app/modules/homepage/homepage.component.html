@@ -1,35 +1,39 @@
 <section class="homepage">
 
-<!-- Hero Section -->
-<app-homepage-hero></app-homepage-hero>
+  <!-- Hero Section -->
+  <app-homepage-hero></app-homepage-hero>
 
-<!-- "Why choose us" / "Our Advantages" section -->
+  <!-- "Why choose us" / "Our Advantages" section -->
 
-<section class="entire-advantages-section">
-<span id="text-xs">Why Choose Us</span>
-<span id="text-lg">Some of our advantages</span>
+  <section class="entire-advantages-section">
+    <span id="text-xs">Why Choose Us</span>
+    <span id="text-lg">Some of our advantages</span>
 
-<!-- Container holding feature cards -->
-<div class="feature-cards-wrapper">
+    <!-- Container holding feature cards -->
+    <div class="feature-cards-wrapper">
 
-  <!-- Card Population with "*ngFor" -->
-  <div class="feature-card" *ngFor="let card of advantageCard">
+      <!-- Card Population with "*ngFor" -->
+      <div class="feature-card" *ngFor="let card of advantageCard">
 
-    <!-- Ellipse holding the container -->
-    <div class="icon-container">
-      <img src="{{card.icon}}" alt="">
+        <!-- Ellipse holding the container -->
+        <div class="icon-container">
+          <img src="{{card.icon}}" alt="">
+        </div>
+
+        <span id="text-md">{{card.title}}</span>
+        <span id="text-xs">{{card.subtitle}}</span>
+
+      </div>
+
+
     </div>
+  </section>
 
-    <span id="text-md">{{card.title}}</span>
-    <span id="text-xs">{{card.subtitle}}</span>
+  <!-- "Steps to become a mojoer" section -->
 
-  </div>
+ <app-become-a-mojoer></app-become-a-mojoer>
 
 
-</div>
-</section>
-
-<!-- <app-mojo-merchant-cta></app-mojo-merchant-cta>
+  <!-- <app-mojo-merchant-cta></app-mojo-merchant-cta>
 <app-newsletter></app-newsletter> -->
 </section>
-

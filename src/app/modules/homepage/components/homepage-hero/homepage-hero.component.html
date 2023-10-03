@@ -1,12 +1,11 @@
 <section class="entire-hero-section">
     <!-- Dividing the Hero container into two parts; 
           left for the information, and right for the slider -->
-    <div class="hero-left">
-      <span id="text-sm" class="mini-header-txt">Mojo</span>
+    <div class="hero-left" *ngFor="let info of homepageHero">
+      <span id="text-sm" class="mini-header-txt">{{info.tagText}}</span>
       <span id="text-xl" class="main-header-txt">Trusted and Secured. <br />
         Join Mojo now</span>
-      <span id="text-rg" class="sub-header-txt">Spend, save and manage your money, all in one place. Open an e-wallet
-        from your phone, for free.</span>
+      <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
   
       <!-- Container to hold both App Store and Play Store badges -->
       <div class="badge-wrapper">

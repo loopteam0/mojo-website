@@ -141,6 +141,36 @@ body {
     border: 0;
   }
 
+  /* White feature container for the sections with steps 
+     on how to do something */
+  #stepContainer {
+    border-radius: 0.625rem;
+    background: white;
+    box-shadow: 10px 32px 72px 0px rgba(51, 51, 51, 0.03);
+    width: 15rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    #inner-stepContainer {
+      height: 14rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    #text-md {
+      margin: 0.25rem 0;
+    }
+
+    #text-sm {
+      color: #999;
+    }
+  }
+
   /* Section container styling */
 
   #container {
@@ -148,9 +178,20 @@ body {
   }
 }
 
+
+
+
+
+
 @media (min-width: 1280px) {
   #btn-filled {
     padding: 1rem 1.5rem;
+  }
+
+  /* White feature container for the sections with steps 
+     on how to do something */
+  #stepContainer {
+    width: 17rem;
   }
 
   /* Section container styling */
@@ -159,6 +200,11 @@ body {
     padding: 0 6rem;
   }
 }
+
+
+
+
+
 
 @media (min-width: 1440px) {
   // Global text styles.
@@ -193,6 +239,10 @@ body {
   //   font-size: 0.875rem;
   //   font-family: "Poppins-Regular";
   // }
+
+  #stepContainer {
+    width: 18rem;
+  }
 
   /* Section container styling */
 

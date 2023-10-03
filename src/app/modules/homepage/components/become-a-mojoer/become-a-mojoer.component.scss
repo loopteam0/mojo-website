@@ -1,0 +1,174 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // "Steps to become a mojoer" section
+
+  .mojoer-steps-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 4rem;
+  }
+
+  .mojoer-steps-section .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mojoer-steps-section .header-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .mojoer-steps-section .header-wrapper > #text-rg {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .mojoer-steps-section .inner-steps-wrapper {
+    background: rgba(253, 225, 255, 1);
+    border-radius: 1.75rem;
+    padding: 3rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .inner-steps-wrapper #text-sm {
+    font-size: 0.7rem;
+  }
+
+  .mojoer-steps-section .inner-steps-wrapper .step1 #inner-stepContainer {
+    background: rgba(241, 241, 255, 1);
+  }
+
+  .mojoer-steps-section .inner-steps-wrapper .step2 #inner-stepContainer {
+    background: rgba(255, 225, 205, 1);
+  }
+
+  .mojoer-steps-section .inner-steps-wrapper .step3 #inner-stepContainer {
+    background: rgba(217, 217, 217, 1);
+  }
+
+  .step1 #inner-stepContainer .app-store-logo {
+    width: 2.5rem;
+    left: 0.5rem;
+    position: absolute;
+    top: 5rem;
+  }
+
+  .step1 > #inner-stepContainer > .phone-mockup {
+    position: absolute;
+    width: 22rem;
+    left: -3rem;
+    top: -8rem;
+  }
+
+  .step1 #inner-stepContainer .play-store-logo {
+    width: 2.5rem;
+    position: absolute;
+    top: 8rem;
+    right: 0.5rem;
+  }
+
+  .step2 > #inner-stepContainer > .phone-mockup {
+    position: absolute;
+    width: 20rem;
+    right: -2rem;
+    bottom: 0;
+  }
+
+  .step3 > #inner-stepContainer > .phone-mockup {
+    position: absolute;
+    width: 18rem;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  .mojoer-steps-section {
+    padding: 4rem 6rem;
+  }
+
+  .mojoer-steps-section .inner-steps-wrapper {
+    gap: 2rem;
+    padding: 6rem 0;
+  }
+
+  .inner-steps-wrapper #text-sm {
+    font-size: 0.8rem;
+  }
+
+  .step1 #inner-stepContainer .app-store-logo {
+    width: 3rem;
+    left: 0.75rem;
+  }
+
+  .step1 > #inner-stepContainer > .phone-mockup {
+    width: 22rem;
+    left: -2rem;
+    top: -8rem;
+  }
+
+  .step1 #inner-stepContainer .play-store-logo {
+    width: 3rem;
+    right: 0.75rem;
+  }
+
+  .step2 > #inner-stepContainer > .phone-mockup {
+    width: 22rem;
+    right: -2.5rem;
+  }
+
+  .step3 > #inner-stepContainer > .phone-mockup {
+    width: 19rem;
+    right: 0;
+  }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  .mojoer-steps-section {
+    padding: 4rem 8rem;
+  }
+
+  .step1 > #inner-stepContainer > .phone-mockup {
+    width: 25rem;
+    left: -2.75rem;
+    top: -11rem;
+  }
+
+  .step2 > #inner-stepContainer > .phone-mockup {
+    width: 24rem;
+  }
+
+  .step3 > #inner-stepContainer > .phone-mockup {
+    width: 21rem;
+    right: 0;
+  }
+}
+
+@media (min-width: 1650px) {
+  .mojoer-steps-section {
+    padding: 4rem 10rem;
+  }
+  .mojoer-steps-section .inner-steps-wrapper {
+    gap: 4rem;
+  }
+
+  .step3 > #inner-stepContainer > .phone-mockup {
+    width: 23rem;
+  }
+}

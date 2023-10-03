@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomepageHero } from 'src/app/models/homepage.models';
 
 @Component({
   selector: 'app-homepage-hero',
@@ -25,5 +26,10 @@ export class HomepageHeroComponent {
     this.currentIndex = (this.currentIndex + 1) % this.carouselImages.length;
     this.currentImage = this.carouselImages[this.currentIndex];
   }
+
+  // Making hero info available to edit later in CMS by giving it a model
+  homepageHero: HomepageHero[] = [
+    {tagText: 'Mojo', mainTitle: 'Trusted and Secured. Join Mojo now', subTitle: "Spend, save and manage your money, all in one place. Open an e-wallet from your phone, for free."}
+  ]
 
 }
