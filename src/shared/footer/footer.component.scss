@@ -88,14 +88,17 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
- 
+  // Main container for the footer
+  .entire-footer {
+    padding: 6rem;
+  }
 }
 
 // Desktop - Standard
 @media (min-width: 1440px) {
  // Main container for the footer
  .entire-footer {
-  padding: 6rem;
+  padding: 6rem 8rem;
 }
 }
 
@@ -104,7 +107,7 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1650px) {
   // Main container for the footer
   .entire-footer {
-    padding: 8rem;
+    padding: 6rem 10rem;
   }
 }
 

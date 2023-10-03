@@ -125,7 +125,7 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1280px) {
 
   .entire-navbar{
-    padding: 0 4rem;
+    padding: 0 6rem;
   }
 
   // Left side of the navigation bar, with the logo and the links
@@ -142,13 +142,13 @@ of styling is done in the mobile media query (340px)
 // Desktop - Standard
 @media (min-width: 1440px) {
   .entire-navbar{
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
   .entire-navbar{
-    padding: 0 8rem;
+    padding: 0 10rem;
   }
 }

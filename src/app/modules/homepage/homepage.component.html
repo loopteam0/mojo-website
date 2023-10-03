@@ -3,14 +3,10 @@
         left for the information, and right for the slider -->
   <div class="hero-left">
     <span id="text-sm" class="mini-header-txt">Mojo</span>
-    <span id="text-xl" class="main-header-txt"
-      >Trusted and Secured. <br />
-      Join Mojo now</span
-    >
-    <span id="text-rg" class="sub-header-txt"
-      >Spend, save and manage your money, all in one place. Open an e-wallet
-      from your phone, for free.</span
-    >
+    <span id="text-xl" class="main-header-txt">Trusted and Secured. <br />
+      Join Mojo now</span>
+    <span id="text-rg" class="sub-header-txt">Spend, save and manage your money, all in one place. Open an e-wallet
+      from your phone, for free.</span>
 
     <!-- Container to hold both App Store and Play Store badges -->
     <div class="badge-wrapper">
@@ -22,20 +18,21 @@
   <div class="hero-right">
 
     <div class="inner-right-wrapper">
-    <!-- This is the sent succesfully card -->
-    <img class="successful-card" src="/assets/images/Successfuly-card.png" alt=""/>
+      <!-- This is the sent succesfully card -->
+      <img class="successful-card" src="/assets/images/Successfuly-card.png" alt="" />
 
-    <!-- Here, we have the container which the images are changing in -->
-    <div class="slider-container" style=" background: url('/assets/images/slider-img1.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; background-clip: content-box; background-origin: content-box;">
-    
+      <!-- Carousel Implementation -->
+      <!-- Here, we have the container which the images are changing in -->
+      <div class="slider-container" [ngClass]="currentImage">
+
+      </div>
+
+      <!-- This is the expenses and income card -->
+      <img class="expenses-card" src="/assets/images/expenses-card.png" alt="" />
     </div>
 
-    <!-- This is the expenses and income card -->
-    <img class="expenses-card" src="/assets/images/expenses-card.png" alt="" />
   </div>
 
-</div>
-  
 </section>
 
 <app-mojo-merchant-cta></app-mojo-merchant-cta>

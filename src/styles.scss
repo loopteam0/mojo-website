@@ -86,7 +86,7 @@ body {
  because they might be maintained from the previous
  media query 
 
- */ 
+ */
 
 @media (min-width: 1024px) {
   // Global text styles.
@@ -156,7 +156,7 @@ body {
   /* Section container styling */
 
   #container {
-    padding: 0 4rem;
+    padding: 0 6rem;
   }
 }
 
@@ -165,10 +165,9 @@ body {
   // Just the font-size and font-style. Other styles would be
   // made specifically to the text, i.e color, line-height etc.
 
-  // #text-xl {
-  //   font-size: 3rem;
-  //   font-family: "Poppins-Bold";
-  // }
+  #text-xl {
+    font-size: 3rem;
+  }
 
   #text-lg {
     font-size: 2rem;
@@ -198,13 +197,24 @@ body {
   /* Section container styling */
 
   #container {
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
 
 @media (min-width: 1650px) {
-  #container {
-    padding: 0 8rem;
+  // Global text styles.
+  // Just the font-size and font-style. Other styles would be
+  // made specifically to the text, i.e color, line-height etc.
+
+  #text-xl {
+    font-size: 3.5rem;
   }
-  
+
+  #text-rg {
+    font-size: 1.25rem;
+  }
+
+  #container {
+    padding: 0 10rem;
+  }
 }
