@@ -7,13 +7,15 @@ import { SharedModule } from 'src/shared/shared.module';
 import { PersonalComponent } from './pages/personal/personal.component';
 import { HomepageHeroComponent } from './components/homepage-hero/homepage-hero.component';
 import { BecomeAMojoerComponent } from './components/become-a-mojoer/become-a-mojoer.component';
+import { GeneralFeaturesComponent } from './components/general-features/general-features.component';
 
 @NgModule({
   declarations: [
     HomepageComponent,
     PersonalComponent,
     HomepageHeroComponent,
-    BecomeAMojoerComponent
+    BecomeAMojoerComponent,
+    GeneralFeaturesComponent
   ],
   imports: [
     CommonModule,

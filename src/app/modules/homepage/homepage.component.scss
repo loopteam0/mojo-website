@@ -105,6 +105,10 @@ of styling is done in the mobile media query (340px)
     width: clamp(28rem, 50%, 40rem);
   }
 
+  app-mojo-merchant-cta{
+    margin: 1rem 0;
+  }
+
 }
 
 
@@ -128,6 +132,7 @@ of styling is done in the mobile media query (340px)
   .about-mojo-section{
     padding: 2rem 6rem;
   }
+
 }
 
 
@@ -152,6 +157,10 @@ of styling is done in the mobile media query (340px)
   .about-mojo-section{
     height: 35rem;
     padding: 2rem 8rem;
+  }
+
+  app-mojo-merchant-cta{
+    margin: 1.5rem 0;
   }
 }
 
@@ -182,5 +191,9 @@ of styling is done in the mobile media query (340px)
 
   .about-mojo-left #text-rg{
     max-width: 32rem;
+  }
+
+  app-mojo-merchant-cta{
+    margin: 2rem 0;
   }
 }

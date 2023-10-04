@@ -8,6 +8,8 @@ const routes: Routes = [
     loadChildren: () => 
       import('./modules/homepage/homepage.module').then((m) => m.HomepageModule),
   },
+
+
 ];
 
 @NgModule({

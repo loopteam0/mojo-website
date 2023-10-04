@@ -1,0 +1,131 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+    .entire-features-wrapper {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        overflow: hidden;
+    }
+
+    .entire-features-wrapper .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .header>#text-lg {
+        color: rgba(69, 0, 255, 1);
+    }
+
+    .header>#text-xs {
+        color: rgba(17, 5, 43, 1);
+    }
+
+    .inner-features-container {
+        display: flex;
+        justify-content: space-around;
+        height: 25rem;
+        overflow: hidden;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .inner-features-container>img {
+        width: 24rem;
+        height: 29rem;
+    }
+
+    .inner-features-container .feature-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .feature-column .feature-single {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .feature-single .icon-container {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 999px;
+        background: rgba(212, 217, 245, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-single .feature-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .feature-header>#text-md {
+        color: rgba(17, 5, 43, 1);
+
+    }
+
+    .feature-header>#text-rg {
+        color: rgba(52, 64, 94, 1);
+        font-size: 1rem;
+        max-width: 15rem;
+    }
+}
+
+// Desktop - Medium 
+@media (min-width: 1280px) {
+    .entire-features-wrapper {
+        padding: 4rem 6rem;
+    }
+}
+
+// Desktop - Standard 
+@media (min-width: 1440px) {
+    .entire-features-wrapper {
+        padding: 4rem 8rem;
+    }
+
+    .inner-features-container>img {
+        width: 28rem;
+        height: 35rem;
+    }
+
+    .inner-features-container{
+        height: 30rem;
+    }
+
+    .inner-features-container .feature-column{
+        gap: 3.5rem;
+    }
+
+    .feature-header>#text-rg {
+        font-size: 1.125rem;
+    }
+}
+
+// Desktop - Large 
+@media (min-width: 1650px) {
+    .entire-features-wrapper {
+        padding: 4rem 10rem;
+    }
+
+}

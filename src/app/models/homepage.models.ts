@@ -9,3 +9,11 @@ export interface HomepageHero{
     mainTitle: string;
     subTitle: string;
 }
+
+
+export interface GeneralFeatures{
+    containerColor: string;
+    title: string;
+    subtitle: string;
+    icon: string;
+}

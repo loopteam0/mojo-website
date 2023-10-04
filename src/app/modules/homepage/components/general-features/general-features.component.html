@@ -1,0 +1,46 @@
+<section class="entire-features-wrapper">
+    <div class="header">
+        <span id="text-lg">What our app offers</span>
+        <span id="text-xs">Mojo has so much to offer you.</span>
+    </div>
+
+    <div class="inner-features-container">
+        <!-- Two columns, a single one on each side of the image, which contain two features each-->
+        <div class="feature-column">
+
+            <!-- A single feature's wrapper -->
+            <div *ngFor="let feature of featuresColumn1" class="feature-single">
+
+                <div [style.backgroundColor]="feature.containerColor" class="icon-container">
+                    <img src="{{feature.icon}}" alt="">
+                </div>
+                <div class="feature-header">
+                    <span id="text-md">{{feature.title}}</span>
+                    <span id="text-rg">{{feature.subtitle}}</span>
+                </div>
+            </div>
+
+          
+
+        </div>
+
+        <img src="/assets/images/general-features.png" alt="">
+
+        <!-- Second Column -->
+        <div class="feature-column">
+
+            <!-- A single feature's wrapper -->
+            <div *ngFor="let feature of featuresColumn2" class="feature-single">
+
+                <div [style.backgroundColor]="feature.containerColor" class="icon-container">
+                    <img src="{{feature.icon}}" alt="">
+                </div>
+                <div class="feature-header">
+                    <span id="text-md">{{feature.title}}</span>
+                    <span id="text-rg">{{feature.subtitle}}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

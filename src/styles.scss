@@ -112,7 +112,7 @@ body {
   }
 
   #text-rg {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-family: "Poppins-Regular";
     flex-shrink: 0;
   }
@@ -189,6 +189,9 @@ body {
     font-size: 2rem;
   }
 
+  #text-rg {
+    font-size: 1.125rem;
+  }
 
   #btn-filled {
     padding: 1rem 1.5rem;
@@ -221,20 +224,15 @@ body {
     font-size: 3rem;
   }
 
-  #text-lg {
-    font-size: 2rem;
-    font-family: "Poppins-SemiBold";
-  }
 
   // #text-md {
   //   font-size: 1.5rem;
   //   font-family: "Poppins-SemiBold";
   // }
 
-  // #text-rg {
-  //   font-size: 1.125rem;
-  //   font-family: "Poppins-Regular";
-  // }
+  #text-rg {
+    font-size: 1.125rem;
+  }
 
   // #text-sm {
   //   font-size: 1rem;
