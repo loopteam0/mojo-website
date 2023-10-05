@@ -1,0 +1,118 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  .entire-contact-us {
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 35rem;
+  }
+
+  .entire-contact-us .contact-us-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .contact-us-left .header {
+    display: inherit;
+    flex-direction: inherit;
+  }
+
+  .header > #text-xl {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .header > #text-rg {
+    max-width: 27rem;
+    color: rgba(52, 64, 94, 1);
+  }
+
+  .contact-us-left form {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: 1rem;
+    width: 20rem;
+  }
+
+  form #form-input {
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid #e0e0e0;
+    font-family: 'Inter-Regular';
+    color: rgba(130, 130, 130, 1);
+  }
+
+  #form-input::placeholder{
+    font-family: 'Inter-Regular';
+    color: rgba(130, 130, 130, 1);
+  }
+
+  form .submit-btn{
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    width: 14rem;
+  }
+
+  #form-input:focus{
+    outline: none;
+  }
+
+  .entire-contact-us .contact-us-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-us-right iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// Desktop - Small
+@media (min-width: 1280px) {
+
+    .entire-contact-us {
+        padding: 4rem 6rem;
+    }
+
+    .header > #text-rg {
+        max-width: 30rem;
+      }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+
+    .entire-contact-us {
+        padding: 4rem 8rem;
+    }
+}
+
+// Desktop - Standard
+@media (min-width: 1650px) {
+
+    .entire-contact-us {
+        padding: 4rem 10rem;
+    }
+
+    .header > #text-rg {
+        max-width: 35rem;
+      }
+}

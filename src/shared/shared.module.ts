@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MojoMerchantCtaComponent } from './mojo-merchant-cta/mojo-merchant-cta.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ScheduleBillPaymentsComponent } from './schedule-bill-payments/schedule-bill-payments.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ScheduleBillPaymentsComponent } from './schedule-bill-payments/schedule
     FooterComponent,
     MojoMerchantCtaComponent,
     NewsletterComponent,
-    ScheduleBillPaymentsComponent
+    ScheduleBillPaymentsComponent,
+    ContactUsComponent,
+    HowItWorksComponent
   
   ],
   imports: [
@@ -34,7 +38,9 @@ import { ScheduleBillPaymentsComponent } from './schedule-bill-payments/schedule
     FooterComponent,
     MojoMerchantCtaComponent,
     NewsletterComponent,
-    ScheduleBillPaymentsComponent
+    ScheduleBillPaymentsComponent,
+    ContactUsComponent,
+    HowItWorksComponent
 
 
   ]

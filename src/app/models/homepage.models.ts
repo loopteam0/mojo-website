@@ -23,3 +23,21 @@ export interface MojoForYou{
     mainHeader: string;
     points: Array<string>;
 }
+
+export interface BecomeAMojoer{
+    firstStep: [
+        mainHeader: string,
+        subHeader: string,
+        stepTagTxt: string
+    ];
+    secondStep: [
+        mainHeader: string,
+        subHeader: string,
+        stepTagTxt: string
+    ];
+    thirdStep: [
+        mainHeader: string,
+        subHeader: string,
+        stepTagTxt: string
+    ]
+}

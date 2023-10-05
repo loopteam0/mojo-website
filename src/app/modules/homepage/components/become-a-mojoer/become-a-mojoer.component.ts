@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BecomeAMojoer } from 'src/app/models/homepage.models';
 
 @Component({
   selector: 'app-become-a-mojoer',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class BecomeAMojoerComponent {
 
+  becomeAMojoer: BecomeAMojoer[] = [
+   
+  ]
 }
