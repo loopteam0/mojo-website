@@ -1,0 +1,182 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  .entire-feedbacks-section {
+    height: 30rem;
+    padding: 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entire-feedbacks-section > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  // All avatars
+  .entire-feedbacks-section .avatar-one,
+  .avatar-two,
+  .avatar-three,
+  .avatar-four,
+  .avatar-five,
+  .avatar-six {
+    position: absolute;
+    border-radius: 999px;
+    opacity: 0.5;
+  }
+
+  // Individual avatars (First One)
+  .entire-feedbacks-section .avatar-one {
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 6%;
+    top: 22%;
+  }
+
+  // Individual avatars (Second One)
+  .entire-feedbacks-section .avatar-two {
+    width: 7rem;
+    height: 7rem;
+    left: 10%;
+    bottom: 20%;
+  }
+
+  // Individual avatars (Third One)
+  .entire-feedbacks-section .avatar-three {
+    width: 5rem;
+    height: 5rem;
+    left: 25%;
+    top: 25%;
+  }
+
+  // Individual avatars (Fourth One)
+  .entire-feedbacks-section .avatar-four {
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 25%;
+    top: 35%;
+  }
+
+  // Individual avatars (Fifth One)
+  .entire-feedbacks-section .avatar-five {
+    width: 6rem;
+    height: 6rem;
+    right: 10%;
+    bottom: 20%;
+  }
+
+  // Individual avatars (Sixth One)
+  .entire-feedbacks-section .avatar-six {
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 6%;
+    top: 22%;
+  }
+
+  .main-feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+  }
+
+  .main-feedback-container .avatar-main {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 999px;
+  }
+
+  .feedback-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 25rem;
+  }
+
+  .feedback-content .comment {
+    font-family: "Poppins-Regular";
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .main-feedback-container .button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .button-wrapper .control-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    background: rgba(173, 200, 255, 1);
+    display: flex;
+    justify-content: center;
+    border-radius: 0.25rem;
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  .entire-feedbacks-section {
+    height: 35rem;
+    padding: 4rem 6rem;
+  }
+
+  // All avatars
+  .entire-feedbacks-section .avatar-one,
+  .avatar-two,
+  .avatar-three,
+  .avatar-four,
+  .avatar-five,
+  .avatar-six {
+    transform: scale(1.2);
+  }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+
+    .entire-feedbacks-section {
+        height: 40rem;
+        padding: 4rem 8rem;
+      }
+    
+      // All avatars
+      .entire-feedbacks-section .avatar-one,
+      .avatar-two,
+      .avatar-three,
+      .avatar-four,
+      .avatar-five,
+      .avatar-six {
+        transform: scale(1.4);
+      }
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+
+    .entire-feedbacks-section {
+        height: 45rem;
+        padding: 4rem 10rem;
+      }
+    
+      // All avatars
+      .entire-feedbacks-section .avatar-one,
+      .avatar-two,
+      .avatar-three,
+      .avatar-four,
+      .avatar-five,
+      .avatar-six {
+        transform: scale(1.6);
+      }
+}

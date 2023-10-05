@@ -17,6 +17,7 @@ of styling is done in the mobile media query (340px)
       display: flex;
       align-items: flex-start;
       gap: 4rem;
+      padding-top: 8rem;
     }
   
     .hero-left {
@@ -118,8 +119,7 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1280px) {
 
     .entire-hero-section {
-      padding-top: 3rem;
-      padding: 6rem;
+      padding: 10rem 6rem 6rem 6rem;
     }
   
     .hero-right {
@@ -132,8 +132,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Standard
 @media (min-width: 1440px) {
     .entire-hero-section {
-      padding-top: 3rem;
-      padding: 6rem 8rem;
+      padding: 10rem 8rem 6rem 8rem;
     }
   
     // Adjusting line-height for the main title
@@ -145,8 +144,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Large
 @media (min-width: 1650px) {
     .entire-hero-section {
-      padding-top: 4rem;
-      padding: 6rem 10rem;
+      padding: 12rem 10rem 6rem 10rem;
     }
   
     .hero-left {

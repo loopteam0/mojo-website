@@ -8,6 +8,8 @@ import { PersonalComponent } from './pages/personal/personal.component';
 import { HomepageHeroComponent } from './components/homepage-hero/homepage-hero.component';
 import { BecomeAMojoerComponent } from './components/become-a-mojoer/become-a-mojoer.component';
 import { GeneralFeaturesComponent } from './components/general-features/general-features.component';
+import { MediaAndPressComponent } from './components/media-and-press/media-and-press.component';
+import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { GeneralFeaturesComponent } from './components/general-features/general-
     HomepageHeroComponent,
     BecomeAMojoerComponent,
     GeneralFeaturesComponent,
+    MediaAndPressComponent,
+    FeedbacksComponent
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
 })
