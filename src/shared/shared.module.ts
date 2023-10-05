@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MojoMerchantCtaComponent } from './mojo-merchant-cta/mojo-merchant-cta.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { ScheduleBillPaymentsComponent } from './schedule-bill-payments/schedule-bill-payments.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     NavbarComponent,
     FooterComponent,
     MojoMerchantCtaComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    ScheduleBillPaymentsComponent
   
   ],
   imports: [
@@ -31,7 +33,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     NavbarComponent,
     FooterComponent,
     MojoMerchantCtaComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    ScheduleBillPaymentsComponent
 
 
   ]

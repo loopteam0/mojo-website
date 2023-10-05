@@ -72,7 +72,7 @@ of styling is done in the mobile media query (340px)
 
 
   // About Mojo section
-  .about-mojo-section{
+  .about-mojo-section {
     height: 30rem;
     padding: 2rem 4rem;
     display: flex;
@@ -80,33 +80,93 @@ of styling is done in the mobile media query (340px)
     justify-content: space-between;
   }
 
-  .about-mojo-section .about-mojo-left{
+  .about-mojo-section .about-mojo-left {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
   }
 
-  .about-mojo-left > #text-lg{
+  .about-mojo-left>#text-lg {
     color: rgba(69, 0, 255, 1);
   }
 
-  .about-mojo-left > #text-rg{
+  .about-mojo-left>#text-rg {
     color: rgba(52, 64, 94, 1);
     max-width: 28rem;
   }
 
-  .about-mojo-left > #btn-filled{
+  .about-mojo-left>#btn-filled {
     background: rgba(69, 0, 255, 1);
     color: white;
   }
 
-  .about-mojo-section > img{
+  .about-mojo-section>img {
     width: clamp(28rem, 50%, 40rem);
   }
 
-  app-mojo-merchant-cta{
+  app-mojo-merchant-cta {
     margin: 1rem 0;
+  }
+
+
+  // "Mojo is for you" section
+
+  .mojo-for-you-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2rem;
+  }
+
+  .mojo-for-you-section .section-left{
+    width: 60%;
+  }
+
+  .mojo-for-you-section .section-left img {
+    width: 100%;
+  }
+
+  .mojo-for-you-section .section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 50%;
+  }
+
+  .section-right .title-container{
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: 0.25rem;
+  }
+
+  .title-container > #text-xs{
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .title-container > #text-xl{
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .section-right .features-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .features-container .point{
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .point > span{
+    color: rgba(17, 5, 43, 1);
+    max-width: 20rem;
   }
 
 }
@@ -129,8 +189,18 @@ of styling is done in the mobile media query (340px)
   }
 
   // About Mojo section
-  .about-mojo-section{
+  .about-mojo-section {
     padding: 2rem 6rem;
+  }
+
+  // "Mojo is for you" section
+
+  .mojo-for-you-section {
+    padding: 4rem 6rem;
+  }
+
+  .point > span{
+    max-width: 28rem;
   }
 
 }
@@ -154,13 +224,20 @@ of styling is done in the mobile media query (340px)
   }
 
   // About Mojo section
-  .about-mojo-section{
+  .about-mojo-section {
     height: 35rem;
     padding: 2rem 8rem;
   }
 
-  app-mojo-merchant-cta{
+  app-mojo-merchant-cta {
     margin: 1.5rem 0;
+  }
+
+  // "Mojo is for you" section
+
+  .mojo-for-you-section {
+    padding: 4rem 8rem;
+    gap: 5rem;
   }
 }
 
@@ -184,16 +261,22 @@ of styling is done in the mobile media query (340px)
   }
 
   // About Mojo section
-  .about-mojo-section{
+  .about-mojo-section {
     height: 40rem;
     padding: 2rem 10rem;
   }
 
-  .about-mojo-left #text-rg{
+  .about-mojo-left #text-rg {
     max-width: 32rem;
   }
 
-  app-mojo-merchant-cta{
+  app-mojo-merchant-cta {
     margin: 2rem 0;
+  }
+
+   // "Mojo is for you" section
+
+   .mojo-for-you-section {
+    padding: 4rem 10rem;
   }
 }

@@ -17,3 +17,9 @@ export interface GeneralFeatures{
     subtitle: string;
     icon: string;
 }
+
+export interface MojoForYou{
+    subheader: string;
+    mainHeader: string;
+    points: Array<string>;
+}

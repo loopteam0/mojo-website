@@ -42,6 +42,30 @@
   <!-- General features section (What our app offers)-->
   <app-general-features></app-general-features>
 
+  <!-- "Mojo is for you" section -->
+  <section class="mojo-for-you-section">
+
+    <div class="section-left">
+      <img src="/assets/images/mojo-for you.png" alt="">
+    </div>
+
+    <div class="section-right" *ngFor="let info of mojoForYou">
+
+      <div class="title-container">
+        <span id="text-xs">{{info.subheader}}</span>
+        <span id="text-xl">{{info.mainHeader}}</span>
+      </div>
+
+      <div class="features-container">
+        <span *ngFor="let point of info.points" class="point">
+          <img src="/assets/svgs/icn-check-blue.svg" alt="">
+          <span id="text-rg">{{point}}</span>
+        </span>
+      </div>
+    </div>
+
+  </section>
+
 
   <app-mojo-merchant-cta></app-mojo-merchant-cta>
 

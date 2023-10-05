@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AdvantageCard } from 'src/app/models/homepage.models';
+import { AdvantageCard, MojoForYou } from 'src/app/models/homepage.models';
 
 
 @Component({
@@ -15,6 +15,12 @@ export class HomepageComponent {
     {icon: '/assets/svgs/icn-clock-blue.svg', title: 'Quick Transactions', subtitle: 'You can pay for items very quickly.'},
     {icon: '/assets/svgs/icn-credit-card-blue.svg', title: 'Easy Payment', subtitle: 'Pay anything very easily.'},
     {icon: '/assets/svgs/icn-secure-badge-blue.svg', title: 'Trusted and Secure', subtitle: 'Your account is always secure.'},
+  ]
+
+
+  // Populating "Mojo is for you" information
+  mojoForYou: MojoForYou[] = [
+    {subheader: 'Notes to our mojoers', mainHeader: 'Mojo is for you', points: ['Mojo supports fresh Lebanese Pounds and fresh US Dollars', 'Mojo is tailored to your needs', 'Mojo customer service supports you all the way.']}
   ]
 
 }

@@ -8,7 +8,6 @@ import { PersonalComponent } from './pages/personal/personal.component';
 import { HomepageHeroComponent } from './components/homepage-hero/homepage-hero.component';
 import { BecomeAMojoerComponent } from './components/become-a-mojoer/become-a-mojoer.component';
 import { GeneralFeaturesComponent } from './components/general-features/general-features.component';
-import { ScheduleBillPaymentsComponent } from './components/schedule-bill-payments/schedule-bill-payments.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +16,7 @@ import { ScheduleBillPaymentsComponent } from './components/schedule-bill-paymen
     HomepageHeroComponent,
     BecomeAMojoerComponent,
     GeneralFeaturesComponent,
-    ScheduleBillPaymentsComponent
   ],
-  imports: [
-    CommonModule,
-    HomepageRoutingModule,
-    MaterialModule,
-    SharedModule
-  ]
+  imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
 })
-export class HomepageModule { }
+export class HomepageModule {}

@@ -33,7 +33,8 @@ of styling is done in the mobile media query (340px)
     color: rgba(17, 5, 43, 1);
   }
 
-  .mojoer-steps-section .inner-steps-wrapper {
+  // Main wrapper holding the steps cards (pink background)
+  .mojoer-steps-section .steps-main-section {
     background: rgba(253, 225, 255, 1);
     border-radius: 1.75rem;
     padding: 3rem 0;
@@ -44,19 +45,26 @@ of styling is done in the mobile media query (340px)
     gap: 1rem;
   }
 
-  .inner-steps-wrapper #text-sm {
+  // Container holding a single step with its tag ("steps-tag" class)
+  .steps-main-section .single-step-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps-main-section #text-sm {
     font-size: 0.7rem;
   }
 
-  .mojoer-steps-section .inner-steps-wrapper .step1 #inner-stepContainer {
+  .mojoer-steps-section .steps-main-section .step1 #inner-stepContainer {
     background: rgba(241, 241, 255, 1);
   }
 
-  .mojoer-steps-section .inner-steps-wrapper .step2 #inner-stepContainer {
+  .mojoer-steps-section .steps-main-section .step2 #inner-stepContainer {
     background: rgba(255, 225, 205, 1);
   }
 
-  .mojoer-steps-section .inner-steps-wrapper .step3 #inner-stepContainer {
+  .mojoer-steps-section .steps-main-section .step3 #inner-stepContainer {
     background: rgba(217, 217, 217, 1);
   }
 
@@ -102,12 +110,12 @@ of styling is done in the mobile media query (340px)
     padding: 4rem 6rem;
   }
 
-  .mojoer-steps-section .inner-steps-wrapper {
+  .mojoer-steps-section .steps-main-section {
     gap: 2rem;
     padding: 6rem 0;
   }
 
-  .inner-steps-wrapper #text-sm {
+  .steps-main-section #text-sm {
     font-size: 0.8rem;
   }
 
@@ -164,7 +172,7 @@ of styling is done in the mobile media query (340px)
   .mojoer-steps-section {
     padding: 4rem 10rem;
   }
-  .mojoer-steps-section .inner-steps-wrapper {
+  .mojoer-steps-section .steps-main-section{
     gap: 4rem;
   }
 
