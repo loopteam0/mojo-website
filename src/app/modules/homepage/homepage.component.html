@@ -43,13 +43,13 @@
   <app-general-features></app-general-features>
 
   <!-- "Mojo is for you" section -->
-  <section class="mojo-for-you-section">
+  <section class="mojo-for-you-section" *ngFor="let info of mojoForYou">
 
     <div class="section-left">
-      <img src="/assets/images/mojo-for you.png" alt="">
+      <img src="{{info.image}}" alt="">
     </div>
 
-    <div class="section-right" *ngFor="let info of mojoForYou">
+    <div class="section-right">
 
       <div class="title-container">
         <span id="text-xs">{{info.subheader}}</span>

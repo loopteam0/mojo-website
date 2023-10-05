@@ -20,7 +20,7 @@ export class HomepageComponent {
 
   // Populating "Mojo is for you" information
   mojoForYou: MojoForYou[] = [
-    {subheader: 'Notes to our mojoers', mainHeader: 'Mojo is for you', points: ['Mojo supports fresh Lebanese Pounds and fresh US Dollars', 'Mojo is tailored to your needs', 'Mojo customer service supports you all the way.']}
+    {image: '/assets/images/mojo-for you.png', subheader: 'Notes to our mojoers', mainHeader: 'Mojo is for you', points: ['Mojo supports fresh Lebanese Pounds and fresh US Dollars', 'Mojo is tailored to your needs', 'Mojo customer service supports you all the way.']}
   ]
 
 }

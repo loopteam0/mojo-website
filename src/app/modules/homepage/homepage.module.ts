@@ -10,11 +10,13 @@ import { BecomeAMojoerComponent } from './components/become-a-mojoer/become-a-mo
 import { GeneralFeaturesComponent } from './components/general-features/general-features.component';
 import { MediaAndPressComponent } from './components/media-and-press/media-and-press.component';
 import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
+import { PersonalPageHeroComponent } from './components/personal-page-hero/personal-page-hero.component';
 
 @NgModule({
   declarations: [
     HomepageComponent,
     PersonalComponent,
+    PersonalPageHeroComponent,
     HomepageHeroComponent,
     BecomeAMojoerComponent,
     GeneralFeaturesComponent,

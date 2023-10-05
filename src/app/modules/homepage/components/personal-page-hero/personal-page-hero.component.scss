@@ -1,0 +1,116 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+    // Dividing the Hero container into two parts;
+    // left for the information, and right for the image
+    .entire-hero-section {
+      background-color: rgba(242, 245, 255, 1);
+      padding-top: 3rem;
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      padding-top: 8rem;
+    }
+  
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      gap: 0.5rem;
+    }
+  
+    // Text editing
+    .hero-left .mini-header-txt {
+      color: rgba(105, 224, 122, 1);
+    }
+  
+    .hero-left .main-header-txt {
+      line-height: 3.2rem;
+      color: rgba(69, 0, 255, 1);
+      max-width: 30rem;
+    }
+  
+    .hero-left .sub-header-txt {
+      color: rgba(52, 64, 94, 1);
+      margin: 1rem 0;
+      max-width: 35rem;
+    }
+  
+    // Container to hold both login and open account buttons
+    .hero-left .badge-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .badge-wrapper .open-acct-btn{
+      background: rgba(69, 0, 255, 1);
+      color: white;
+    }
+
+    .badge-wrapper .login-btn{
+      background: rgba(105, 224, 122, 1);
+      color: rgba(69, 0, 255, 1);
+    }
+  
+    // Right section of the hero container.
+   
+    .hero-right {
+     width: 50%;
+    }
+  
+    .hero-right > img {
+     width: 100%;
+    }
+  
+  
+  
+}  
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+
+    .entire-hero-section {
+      padding: 10rem 6rem 6rem 6rem;
+    }
+
+}
+
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+    .entire-hero-section {
+      padding: 10rem 8rem 6rem 8rem;
+    }
+  
+    // Adjusting line-height for the main title
+    .hero-left .main-header-txt {
+      line-height: 3.8rem;
+    }
+}  
+
+// Desktop - Large
+@media (min-width: 1650px) {
+    .entire-hero-section {
+      padding: 12rem 10rem 6rem 10rem;
+    }
+  
+    .hero-left {
+      gap: 1.5rem;
+    }
+  
+    // Adjusting line-height for the main title
+    .hero-left .main-header-txt {
+      line-height: 4.2rem;
+    }
+  
+}

@@ -1,1 +1,78 @@
-<p>personal works!</p>
+<section class="personal">
+    <!-- Hero Section -->
+  <app-personal-page-hero></app-personal-page-hero>
+
+  <!-- Secured blue strip -->
+  <div id="blue-strip-mojo">
+    <span id="text-rg">With Mojo your money is secured</span>
+  </div>
+
+  <!-- "Payments like never before" section-->
+
+  <section class="payment-features-section" *ngFor="let info of paymentLikeNeverBefore">
+
+    <!-- Main header and the sub one -->
+    <div class="header-wrapper">
+      <span id="text-lg">{{info.mainHeader}}</span>
+      <span id="text-rg">{{info.subTitle}}</span>
+    </div>
+  
+    <!-- Main wrapper holding the steps cards (pink background)-->
+    <div [style.backgroundColor]="info.outerBg" class="steps-main-section">      
+  
+        <div class="step1" id="stepContainer" *ngFor="let info of info.cardInfoOne">
+  
+          <div [style.backgroundColor]="info.innerBg" id="inner-stepContainer">
+          </div>
+  
+          <span id="text-md">{{info.cardTitle}}</span>
+          <span id="text-sm">{{info.cardSubTitle}}</span>
+  
+        </div>
+  
+  
+    </div>
+  
+  </section>
+  
+
+  <!-- "Currency support" section -->
+  <section class="currency-support-section" *ngFor="let info of currencySupport">
+
+    <div class="section-left">
+      <img src="{{info.image}}" alt="">
+    </div>
+
+    <div class="section-right">
+
+      <div class="title-container">
+        <span id="text-xs">{{info.subheader}}</span>
+        <span id="text-xl">{{info.mainHeader}}</span>
+      </div>
+
+      <div class="features-container">
+        <span *ngFor="let point of info.points" class="point">
+          <img src="/assets/svgs/icn-check-blue.svg" alt="">
+          <span id="text-rg">{{point}}</span>
+        </span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA container-->
+  <app-mojo-merchant-cta></app-mojo-merchant-cta>
+
+  <!-- Schedule bill payments section -->
+  <app-schedule-bill-payments></app-schedule-bill-payments>
+
+  <!-- How Mojo App works section-->
+  <app-how-it-works></app-how-it-works>
+
+  <!-- Contact Us section -->
+  <app-contact-us></app-contact-us>
+  
+  <!-- Newsletter section -->
+  <app-newsletter></app-newsletter>
+
+</section>
