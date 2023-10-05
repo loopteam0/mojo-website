@@ -14,16 +14,26 @@ of styling is done in the mobile media query (340px)
     justify-content: space-between;
     background: #f7f7f7;
     padding: 4rem;
+    position: relative;
   }
 
   .entire-footer .footer-left {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
 
     .mojo-logo {
       width: 8rem;
     }
+  }
+
+  .footer-left .badge-wrapper{
+    position: absolute;
+    right: 8rem;
+    display: flex;
+    gap: 1rem;
+    top: 2rem;
   }
 
   // Mobile number wrapper
@@ -56,6 +66,7 @@ of styling is done in the mobile media query (340px)
       text-transform: capitalize;
       font-size: 0.875rem;
       font-family: "Poppins-SemiBold";
+      cursor: pointer;
     }
 
     .blue-link {
@@ -63,6 +74,7 @@ of styling is done in the mobile media query (340px)
       text-transform: capitalize;
       font-size: 0.875rem;
       font-family: "Poppins-SemiBold";
+      cursor: pointer;
     }
   }
 

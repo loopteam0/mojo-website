@@ -27,6 +27,9 @@ of styling is done in the mobile media query (340px)
     gap: 1.5rem;
   }
 
+  .navbar-left .mojo-logo{
+    cursor: pointer;
+  }
 
   // Container to hold all the link cells
   .entire-navbar .navbar-left .link-wrapper {
