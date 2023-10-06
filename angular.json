@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "mojo-website": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ar-LB": "src/locale/mojo.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/mojo-website",
             "index": "src/index.html",
             "main": "src/main.ts",
