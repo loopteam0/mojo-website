@@ -8,13 +8,13 @@ of styling is done in the mobile media query (340px)
 // Desktop - Small
 @media (min-width: 1024px) {
     .entire-media-section{
-        padding: 6rem 4rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 4rem;
     }
 
+    // Container to hold both the header and the button to read more
     .entire-media-section .media-top{
         display: flex;
         align-items: center;
@@ -33,6 +33,7 @@ of styling is done in the mobile media query (340px)
     }
 
 
+    // The Media bottom div container holds both news cards
     .entire-media-section .media-bottom{
         display: flex;
         align-items: center;
@@ -94,17 +95,11 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-    .entire-media-section{
-        padding: 6rem;
-    }
+
 }
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-    .entire-media-section{
-        padding: 6rem 8rem;
-    }
-
     .entire-media-section .media-bottom{
         gap: 6rem;
     }
@@ -121,7 +116,5 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Large
 @media (min-width: 1650px) {
-    .entire-media-section{
-        padding: 6rem 10rem;
-    }
+
 }

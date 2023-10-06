@@ -10,7 +10,6 @@ of styling is done in the mobile media query (340px)
 
   // "Why choose us" / "Our Advantages" section
   .entire-advantages-section {
-    padding: 4rem;
     background: rgba(69, 0, 255, 1);
     display: flex;
     flex-direction: column;
@@ -74,7 +73,6 @@ of styling is done in the mobile media query (340px)
   // About Mojo section
   .about-mojo-section {
     height: 30rem;
-    padding: 2rem 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +114,6 @@ of styling is done in the mobile media query (340px)
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
     gap: 2rem;
   }
 
@@ -172,31 +169,12 @@ of styling is done in the mobile media query (340px)
 }
 
 
-
-
-
 // Desktop - Medium
 @media (min-width: 1280px) {
-
-  // "Why choose us" / "Our Advantages" section
-  .entire-advantages-section {
-    padding: 4rem 6rem;
-  }
 
   // Container holding feature cards
   .entire-advantages-section .feature-cards-wrapper {
     gap: 3.5rem;
-  }
-
-  // About Mojo section
-  .about-mojo-section {
-    padding: 2rem 6rem;
-  }
-
-  // "Mojo is for you" section
-
-  .mojo-for-you-section {
-    padding: 4rem 6rem;
   }
 
   .point > span{
@@ -207,16 +185,8 @@ of styling is done in the mobile media query (340px)
 
 
 
-
-
-
 // Desktop - Standard
 @media (min-width: 1440px) {
-
-  // "Why choose us" / "Our Advantages" section
-  .entire-advantages-section {
-    padding: 4rem 8rem;
-  }
 
   // Container holding feature cards
   .entire-advantages-section .feature-cards-wrapper {
@@ -226,7 +196,6 @@ of styling is done in the mobile media query (340px)
   // About Mojo section
   .about-mojo-section {
     height: 35rem;
-    padding: 2rem 8rem;
   }
 
   app-mojo-merchant-cta {
@@ -234,25 +203,15 @@ of styling is done in the mobile media query (340px)
   }
 
   // "Mojo is for you" section
-
   .mojo-for-you-section {
-    padding: 4rem 8rem;
     gap: 5rem;
   }
 }
 
 
 
-
-
-
 // Desktop - Large
 @media (min-width: 1650px) {
-
-  // "Why choose us" / "Our Advantages" section
-  .entire-advantages-section {
-    padding: 4rem 10rem;
-  }
 
   // Container holding feature cards
   .entire-advantages-section .feature-cards-wrapper {
@@ -263,7 +222,6 @@ of styling is done in the mobile media query (340px)
   // About Mojo section
   .about-mojo-section {
     height: 40rem;
-    padding: 2rem 10rem;
   }
 
   .about-mojo-left #text-rg {
@@ -274,9 +232,4 @@ of styling is done in the mobile media query (340px)
     margin: 2rem 0;
   }
 
-   // "Mojo is for you" section
-
-   .mojo-for-you-section {
-    padding: 4rem 10rem;
-  }
 }

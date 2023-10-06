@@ -11,7 +11,6 @@ of styling is done in the mobile media query (340px)
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
     gap: 2rem;
   }
 
@@ -69,7 +68,6 @@ of styling is done in the mobile media query (340px)
   // Styles for "Understand Cashflows" and "Convenient Payments"
 
   .subHeroContent {
-    padding: 4rem;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -102,10 +100,7 @@ of styling is done in the mobile media query (340px)
 
   // Feature point container for "Secured Payments", 
   // "Quick Settlements" and "Worldwide payments" 
-  .feature-point-container {
-    padding: 4rem;
-  }
-
+ 
   .feature-point-container .inner-container {
     border-radius: 1.75rem;
     padding: 5rem 2rem;
@@ -155,7 +150,6 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
     gap: 4rem;
   }
 
@@ -203,23 +197,10 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1280px) {
   // Feature point container for "Secured Payments", 
   // "Quick Settlements" and "Worldwide payments"
-  .feature-point-container {
-    padding: 4rem 6rem;
-  }
 
   .feature-point-container .inner-container {
     height: 25rem;
     padding: 5rem 4rem;
-  }
-
-  // currency support section
-  .currency-support-section {
-    padding: 4rem 6rem;
-  }
-
-  // "How to become a merchant/agent" section
-  .payment-features-section {
-    padding: 4rem 6rem;
   }
 
 }
@@ -229,10 +210,6 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1440px) {
   // Feature point container for "Secured Payments", 
   // "Quick Settlements" and "Worldwide payments"
-  .feature-point-container {
-    padding: 4rem 8rem;
-  }
-
   .feature-point-container .inner-container{
     padding: 5rem 4rem;
   }
@@ -243,24 +220,13 @@ of styling is done in the mobile media query (340px)
 
   // currency support section
   .currency-support-section {
-    padding: 4rem 8rem;
     gap: 5rem;
-  }
-
-  // "How to become a merchant/agent" section
-  .payment-features-section {
-    padding: 4rem 8rem;
   }
 
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
-  // Feature point container for "Secured Payments", 
-  // "Quick Settlements" and "Worldwide payments"
-  .feature-point-container {
-    padding: 4rem 10rem;
-  }
 
   .content-wrapper > #text-rg{
     max-width: 30rem;
@@ -268,16 +234,6 @@ of styling is done in the mobile media query (340px)
 
   .image-wrapper > img{
     transform: scale(1.2);
-  }
-
-  // currency support section
-  .currency-support-section {
-    padding: 4rem 10rem;
-  }
-
-  // "How to become a merchant/agent" section
-  .payment-features-section {
-    padding: 4rem 10rem;
   }
 
 }

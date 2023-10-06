@@ -8,7 +8,7 @@
   </div>
 
    <!-- Convenient Payments section -->
-   <div class="subHeroContent" *ngFor="let info of convenientPayments">
+   <div id="container" class="subHeroContent" *ngFor="let info of convenientPayments">
 
     <div class="subHero-left">
       <img src="/assets/images/qr-code-mockup.png" alt="">
@@ -22,7 +22,7 @@
   </div>
 
   <!-- Secured payments (Feature point)-->
-  <div class="feature-point-container" *ngFor="let info of securedPayments">
+  <div id="container" class="feature-point-container" *ngFor="let info of securedPayments">
 
     <!-- Container with colored background and flex-direction property -->
     <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
@@ -41,7 +41,7 @@
   </div>
 
   <!-- Quick Settlements (Feature point)-->
-  <div class="feature-point-container" *ngFor="let info of quickSettlements">
+  <div id="container" class="feature-point-container" *ngFor="let info of quickSettlements">
 
     <!-- Container with colored background and flex-direction property -->
     <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
@@ -60,7 +60,7 @@
   </div>
 
   <!-- "Currency support" section -->
-  <section class="currency-support-section" *ngFor="let info of currencySupport">
+  <section id="container" class="currency-support-section" *ngFor="let info of currencySupport">
 
     <div class="section-left">
       <img src="{{info.image}}" alt="">
@@ -84,7 +84,7 @@
   </section>
 
    <!-- Worldwide payments (Feature point)-->
-   <div class="feature-point-container" *ngFor="let info of worldwidePayments">
+   <div id="container" class="feature-point-container" *ngFor="let info of worldwidePayments">
 
     <!-- Container with colored background and flex-direction property -->
     <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
@@ -103,7 +103,7 @@
   </div>
 
   <!-- Understand Cashflows section -->
-  <div class="subHeroContent" *ngFor="let info of understandCashFlows">
+  <div id="container" class="subHeroContent" *ngFor="let info of understandCashFlows">
 
     <div class="subHero-left">
       <img src="/assets/images/subHero.png" alt="">
@@ -118,7 +118,7 @@
 
   <!-- "How to become a merchant/agent" section-->
 
-  <section class="payment-features-section" *ngFor="let info of becomeMerchantOrAgent">
+  <section id="container" class="payment-features-section" *ngFor="let info of becomeMerchantOrAgent">
 
     <!-- Main wrapper holding the steps cards (pink background)-->
     <div [style.backgroundColor]="info.outerBg" class="steps-main-section">      

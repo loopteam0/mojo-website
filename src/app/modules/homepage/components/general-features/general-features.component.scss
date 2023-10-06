@@ -8,7 +8,6 @@ of styling is done in the mobile media query (340px)
 // Desktop - Small
 @media (min-width: 1024px) {
     .entire-features-wrapper {
-        padding: 4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -47,6 +46,7 @@ of styling is done in the mobile media query (340px)
         height: 29rem;
     }
 
+    // Two columns, a single one on each side of the image, which contain two features each
     .inner-features-container .feature-column {
         display: flex;
         flex-direction: column;
@@ -56,6 +56,7 @@ of styling is done in the mobile media query (340px)
         height: 100%;
     }
 
+    // A single feature's wrapper
     .feature-column .feature-single {
         display: flex;
         flex-direction: column;
@@ -93,16 +94,12 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium 
 @media (min-width: 1280px) {
-    .entire-features-wrapper {
-        padding: 4rem 6rem;
-    }
+
 }
 
 // Desktop - Standard 
 @media (min-width: 1440px) {
-    .entire-features-wrapper {
-        padding: 4rem 8rem;
-    }
+
 
     .inner-features-container>img {
         width: 28rem;
@@ -124,8 +121,5 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Large 
 @media (min-width: 1650px) {
-    .entire-features-wrapper {
-        padding: 4rem 10rem;
-    }
 
 }

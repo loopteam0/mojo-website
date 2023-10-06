@@ -12,7 +12,6 @@ of styling is done in the mobile media query (340px)
     // left for the information, and right for the image
     .entire-hero-section {
       background-color: rgba(242, 245, 255, 1);
-      padding-top: 3rem;
       padding: 4rem;
       display: flex;
       align-items: center;
@@ -46,18 +45,18 @@ of styling is done in the mobile media query (340px)
     }
   
     // Container to hold both login and open account buttons
-    .hero-left .badge-wrapper {
+    .hero-left .button-wrapper {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
 
-    .badge-wrapper .open-acct-btn{
+    .button-wrapper .open-acct-btn{
       background: rgba(69, 0, 255, 1);
       color: white;
     }
 
-    .badge-wrapper .login-btn{
+    .button-wrapper .login-btn{
       background: rgba(105, 224, 122, 1);
       color: rgba(69, 0, 255, 1);
     }

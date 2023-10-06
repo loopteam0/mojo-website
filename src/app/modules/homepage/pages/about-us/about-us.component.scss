@@ -1,0 +1,162 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // Main hero container
+  .about-us-hero-wrapper {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  //Inner container which is holding the text (purple-ish background)
+  .inner-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.75rem;
+    background: rgba(241, 241, 255, 1);
+    padding: 3rem;
+    gap: 2rem;
+    height: 30rem;
+    text-align: center;
+  }
+
+  #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .inner-hero-container > #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 90%;
+  }
+
+  // Main founders container
+  .founders-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  //Inner container which is holding the cards in a grid (purple-ish background)
+  .inner-founders-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 1.75rem;
+    background: rgba(241, 241, 255, 1);
+    padding: 8rem 3rem;
+    gap: 2rem;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  // Main team card
+  .inner-founders-container .team-card {
+    border-radius: 1rem;
+    border: 2px solid #dcdcdc;
+    background: #fff;
+    height: 20rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .team-card .team-card-top{
+    height: 55%;
+    margin: 0.75rem;
+    background-color: rgba(241, 241, 255, 1);
+    border-radius: 0.5rem;
+  }
+
+  .team-card .team-card-bottom{
+    flex: 1 1 auto;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .team-card-bottom .member-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    #text-md{
+        color: rgba(69, 0, 255, 1);
+    }
+
+    #text-rg{
+        color: rgba(62, 62, 89, 1);
+    }
+  }
+
+  .team-card-bottom .icons-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons-wrapper .icon-container{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  // Main hero container
+  .about-us-hero-wrapper {
+    padding: 8rem 6rem 4rem 6rem;
+  }
+
+  // Main team card
+  .inner-founders-container .team-card {
+    height: 24rem;
+    width: 18rem;
+  }
+
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  // Main hero container
+  .about-us-hero-wrapper {
+    padding: 8rem 8rem 4rem 8rem;
+  }
+
+  // Main team card
+  .inner-founders-container .team-card {
+    height: 26rem;
+    width: 20rem;
+  }
+
+  .team-card .team-card-bottom{
+    padding-bottom: 2.5rem;
+  }
+  
+  .team-card-bottom .icons-wrapper{
+    gap: 1rem;
+  }
+
+  .icons-wrapper .icon-container{
+   transform: scale(1.25);
+  }
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+  // Main hero container
+  .about-us-hero-wrapper {
+    padding: 8rem 10rem 4rem 10rem;
+  }
+}

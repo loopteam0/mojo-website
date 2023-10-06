@@ -3,7 +3,7 @@
   <app-homepage-hero></app-homepage-hero>
 
   <!-- "Why choose us" / "Our Advantages" section -->
-  <section class="entire-advantages-section">
+  <section id="container" class="entire-advantages-section">
     <span id="text-xs">Why Choose Us</span>
     <span id="text-lg">Some of our advantages</span>
 
@@ -26,7 +26,7 @@
   <app-become-a-mojoer></app-become-a-mojoer>
 
   <!-- About Mojo section -->
-  <section class="about-mojo-section">
+  <section id="container" class="about-mojo-section">
     <div class="about-mojo-left">
       <span id="text-lg">About Mojo</span>
       <span id="text-rg"
@@ -43,7 +43,7 @@
   <app-general-features></app-general-features>
 
   <!-- "Mojo is for you" section -->
-  <section class="mojo-for-you-section" *ngFor="let info of mojoForYou">
+  <section id="container" class="mojo-for-you-section" *ngFor="let info of mojoForYou">
 
     <div class="section-left">
       <img src="{{info.image}}" alt="">

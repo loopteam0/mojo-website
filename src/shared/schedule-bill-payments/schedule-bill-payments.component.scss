@@ -8,7 +8,6 @@ of styling is done in the mobile media query (340px)
 // Desktop - Small
 @media (min-width: 1024px) {
     .entire-section{
-        padding: 4rem;
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -43,25 +42,15 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-    .entire-section{
-        padding: 4rem 6rem;
-       
-    }
-    
+
 }
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-    .entire-section{
-        padding: 4rem 8rem;
-    }
-    
+
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
-    .entire-section{
-        padding: 4rem 10rem;
-    }
-    
+
 }

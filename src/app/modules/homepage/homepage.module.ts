@@ -13,6 +13,7 @@ import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { PersonalPageHeroComponent } from './components/personal-page-hero/personal-page-hero.component';
 import { BusinessComponent } from './pages/business/business.component';
 import { BusinessPageHeroComponent } from './components/business-page-hero/business-page-hero.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BusinessPageHeroComponent } from './components/business-page-hero/busin
     MediaAndPressComponent,
     FeedbacksComponent,
     BusinessComponent,
+    AboutUsComponent,
     BusinessPageHeroComponent
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],

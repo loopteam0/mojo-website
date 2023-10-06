@@ -12,7 +12,6 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
     gap: 4rem;
   }
 
@@ -60,7 +59,6 @@ of styling is done in the mobile media query (340px)
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
     gap: 2rem;
   }
 
@@ -116,7 +114,6 @@ of styling is done in the mobile media query (340px)
   // "Spend with confidence" section
 
   .spend-confidence-section {
-    padding: 4rem;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -150,61 +147,24 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-  .payment-features-section {
-    padding: 4rem 6rem;
-  }
-
-  // Currency support section
-
-  .currency-support-section {
-    padding: 4rem 6rem;
-  }
 
   .point > span {
     max-width: 28rem;
-  }
-
-  // "Spend with confidence" section
-
-  .spend-confidence-section {
-    padding: 4rem 6rem;
   }
 }
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-  .payment-features-section {
-    padding: 4rem 6rem;
-  }
 
   // Currency support section
 
   .currency-support-section {
-    padding: 4rem 8rem;
     gap: 5rem;
-  }
-
-
-  // "Spend with confidence" section
-
-  .spend-confidence-section {
-    padding: 4rem 8rem;
   }
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
-
-  // Currency support section
-  .currency-support-section {
-    padding: 4rem 10rem;
-  }
-
-  // "Spend with confidence" section
-
-  .spend-confidence-section {
-    padding: 4rem 10rem;
-  }
 
 
 }

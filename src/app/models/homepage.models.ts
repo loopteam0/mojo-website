@@ -60,3 +60,22 @@ export interface FeaturePoints{
   subTitle: string;
   flexDirection: string;
 }
+
+export interface AboutUs{
+  mainTitle: string;
+  passage: string;
+}
+
+export interface TeamMembers{
+  memberImg: string;
+  memberName: string;
+  memberRole: string;
+  iconContainerBg: string;
+  iconContainer: Array<{
+    background: string;
+    icon: string;
+    iconColor: string;
+    iconLink: string;
+  }>;
+
+}

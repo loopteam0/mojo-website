@@ -9,7 +9,6 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1024px) {
   .entire-feedbacks-section {
     height: 30rem;
-    padding: 4rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,7 +19,7 @@ of styling is done in the mobile media query (340px)
     color: rgba(69, 0, 255, 1);
   }
 
-  // All avatars
+  // All avatars, left and right
   .entire-feedbacks-section .avatar-one,
   .avatar-two,
   .avatar-three,
@@ -80,6 +79,7 @@ of styling is done in the mobile media query (340px)
     top: 22%;
   }
 
+  // Main div in the center
   .main-feedback-container {
     display: flex;
     flex-direction: column;
@@ -94,6 +94,7 @@ of styling is done in the mobile media query (340px)
     border-radius: 999px;
   }
 
+  // Container for feedback content, name and review/comment
   .feedback-content {
     display: flex;
     flex-direction: column;
@@ -129,7 +130,6 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1280px) {
   .entire-feedbacks-section {
     height: 35rem;
-    padding: 4rem 6rem;
   }
 
   // All avatars
@@ -148,7 +148,6 @@ of styling is done in the mobile media query (340px)
 
     .entire-feedbacks-section {
         height: 40rem;
-        padding: 4rem 8rem;
       }
     
       // All avatars
@@ -167,7 +166,6 @@ of styling is done in the mobile media query (340px)
 
     .entire-feedbacks-section {
         height: 45rem;
-        padding: 4rem 10rem;
       }
     
       // All avatars

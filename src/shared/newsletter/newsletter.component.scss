@@ -7,15 +7,17 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 1024px) {
+  #container {
+    padding-top: 8rem;
+  }
+
   .entire-newsletter {
     background-color: rgba(69, 0, 255, 1);
-    padding: 4rem;
     border-radius: 1.125rem 1.125rem 0rem 0rem;
     display: flex;
     gap: 3rem;
     height: 10rem;
     overflow: hidden;
-    padding-top: 8rem;
     justify-content: space-between;
   }
 
@@ -60,8 +62,8 @@ of styling is done in the mobile media query (340px)
       width: 12rem;
     }
 
-    input[type="email"]:focus{
-        outline: none;
+    input[type="email"]:focus {
+      outline: none;
     }
 
     input[type="email"]::placeholder {
@@ -113,6 +115,7 @@ of styling is done in the mobile media query (340px)
 }
 
 @media (min-width: 1440px) {
+
   .entire-newsletter {
     padding: 4rem 8rem;
     padding-top: 8rem;
@@ -120,7 +123,7 @@ of styling is done in the mobile media query (340px)
     padding-right: 12rem;
   }
 
-  .newsletter-left{
+  .newsletter-left {
     gap: 0.5rem;
   }
 
@@ -138,12 +141,11 @@ of styling is done in the mobile media query (340px)
   }
 }
 
-
 @media (min-width: 1650px) {
-.entire-newsletter{
+  .entire-newsletter {
     padding: 4rem 12rem;
     padding-top: 8rem;
     height: 12rem;
     padding-right: 15rem;
-}
+  }
 }

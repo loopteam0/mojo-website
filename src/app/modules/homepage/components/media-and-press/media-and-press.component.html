@@ -1,13 +1,23 @@
-<section class="entire-media-section">
+<section id="container" class="entire-media-section">
+
+  <!-- Container to hold both the header and the button to read more-->
   <div class="media-top">
     <span id="text-lg">Media & Press</span>
     <button id="btn-filled" class="read-more-btn">Read More</button>
   </div>
 
+  <!-- The Media bottom div container holds both news cards -->
   <div class="media-bottom">
     <div class="news-card">
-      <div class="news-card-left" style="background: url('/assets/images/news-img1.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-      </div>
+      <div
+        class="news-card-left"
+        style="
+          background: url('/assets/images/news-img1.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      ></div>
 
       <div class="news-card-right">
         <div class="review-container">
@@ -28,24 +38,32 @@
     </div>
 
     <div class="news-card">
-        <div style="background: url('/assets/images/news-img2.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover;" class="news-card-left">
+      <div
+        style="
+          background: url('/assets/images/news-img2.jpeg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+        class="news-card-left"
+      ></div>
+
+      <div class="news-card-right">
+        <div class="review-container">
+          <img src="/assets/svgs/icn-star-blue.svg" alt="" />
+          <span id="text-rg" class="latest-txt">Latest</span>
+          <span id="text-xs" class="date">11/09/2022</span>
         </div>
-  
-        <div class="news-card-right">
-            <div class="review-container">
-                <img src="/assets/svgs/icn-star-blue.svg" alt="" />
-                <span id="text-rg" class="latest-txt">Latest</span>
-                <span id="text-xs" class="date">11/09/2022</span>
-              </div>
-  
-          <span id="text-md"
-            >Digital wallets, a new way to bypass banks in Lebanon?</span
-          >
-          <span id="text-xs"
-            >Since mid-May, a small revolution has been taking place in Lebanon's
-            digital wallet market, as the first steps towards synergy
-            among......</span
-          >
-        </div>
-      </div>  </div>
+
+        <span id="text-md"
+          >Digital wallets, a new way to bypass banks in Lebanon?</span
+        >
+        <span id="text-xs"
+          >Since mid-May, a small revolution has been taking place in Lebanon's
+          digital wallet market, as the first steps towards synergy
+          among......</span
+        >
+      </div>
+    </div>
+  </div>
 </section>

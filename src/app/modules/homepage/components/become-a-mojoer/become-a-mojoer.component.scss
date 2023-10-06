@@ -7,14 +7,13 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 1024px) {
-  // "Steps to become a mojoer" section
 
+  // "Steps to become a mojoer" section
   .mojoer-steps-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
     gap: 4rem;
   }
 
@@ -129,9 +128,6 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-  .mojoer-steps-section {
-    padding: 4rem 6rem;
-  }
 
   .mojoer-steps-section .steps-main-section {
     gap: 2rem;
@@ -171,10 +167,7 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-  .mojoer-steps-section {
-    padding: 4rem 8rem;
-  }
-
+ 
   .step1 > #inner-stepContainer > .phone-mockup {
     width: 25rem;
     left: -2.75rem;
@@ -192,9 +185,7 @@ of styling is done in the mobile media query (340px)
 }
 
 @media (min-width: 1650px) {
-  .mojoer-steps-section {
-    padding: 4rem 10rem;
-  }
+
   .mojoer-steps-section .steps-main-section {
     gap: 4rem;
   }

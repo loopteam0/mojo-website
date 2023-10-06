@@ -7,114 +7,104 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 1024px) {
-    // "Steps to become a mojoer" section
-  
-    .mojoer-steps-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem;
-      gap: 4rem;
-    }
-  
-    .mojoer-steps-section .header-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-  
-    .mojoer-steps-section .header-wrapper > #text-lg {
-      color: rgba(69, 0, 255, 1);
-    }
-  
-    .mojoer-steps-section .header-wrapper > #text-rg {
-      color: rgba(17, 5, 43, 1);
-    }
-  
-    // Main wrapper holding the steps cards (pink background)
-    .mojoer-steps-section .steps-main-section {
-      background: rgba(253, 225, 255, 1);
-      border-radius: 1.75rem;
-      padding: 3.5rem 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    // Container holding a single step with its tag ("step-tag" class)
-    .steps-main-section .single-step-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-  
+  // "Steps to become a mojoer" section
 
-  
-    .steps-main-section #text-sm {
-      font-size: 0.7rem;
-    }
-  
-    .mojoer-steps-section .steps-main-section .step1 #inner-stepContainer {
-      background: rgba(241, 241, 255, 1);
-    }
-  
-    .mojoer-steps-section .steps-main-section .step2 #inner-stepContainer {
-      background: rgba(255, 225, 205, 1);
-    }
-  
-    .mojoer-steps-section .steps-main-section .step3 #inner-stepContainer {
-      background: rgba(217, 217, 217, 1);
-    }
-
-
-    #inner-stepContainer > iframe{
-        width: 100%;
-        height: 100%;
-        border-radius: 0.5rem;
-    }
+  .mojoer-steps-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
   }
-  
-  // Desktop - Medium
-  @media (min-width: 1280px) {
-    .mojoer-steps-section {
-      padding: 4rem 6rem;
-    }
-  
-    .mojoer-steps-section .steps-main-section {
-      gap: 2rem;
-      padding: 6rem 0;
-    }
-  
-    .steps-main-section #text-sm {
-      font-size: 0.8rem;
-    }
 
+  .mojoer-steps-section .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
-  
-  // Desktop - Standard
-  @media (min-width: 1440px) {
-    .mojoer-steps-section {
-      padding: 4rem 8rem;
-    }
-  }
-  
 
-  // Desktop - Large
-  @media (min-width: 1650px) {
-    .mojoer-steps-section {
-      padding: 4rem 10rem;
-    }
-    .mojoer-steps-section .steps-main-section {
-      gap: 4rem;
-    }
-  
-    .step3 > #inner-stepContainer > .phone-mockup {
-      width: 23rem;
-    }
+  .mojoer-steps-section .header-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
   }
-  
+
+  .mojoer-steps-section .header-wrapper > #text-rg {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  // Main wrapper holding the steps cards (pink background)
+  .mojoer-steps-section .steps-main-section {
+    background: rgba(253, 225, 255, 1);
+    border-radius: 1.75rem;
+    padding: 3.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  // Container holding a single step with its tag ("step-tag" class)
+  .steps-main-section .single-step-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .steps-main-section #text-sm {
+    font-size: 0.7rem;
+  }
+
+  .mojoer-steps-section .steps-main-section .step1 #inner-stepContainer {
+    background: rgba(241, 241, 255, 1);
+  }
+
+  .mojoer-steps-section .steps-main-section .step2 #inner-stepContainer {
+    background: rgba(255, 225, 205, 1);
+  }
+
+  .mojoer-steps-section .steps-main-section .step3 #inner-stepContainer {
+    background: rgba(217, 217, 217, 1);
+  }
+
+  #inner-stepContainer > iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+  }
+}
+
+
+
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  .mojoer-steps-section .steps-main-section {
+    gap: 2rem;
+    padding: 6rem 0;
+  }
+
+  .steps-main-section #text-sm {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+}
+
+
+
+// Desktop - Large
+@media (min-width: 1650px) {
+  .mojoer-steps-section .steps-main-section {
+    gap: 4rem;
+  }
+
+  .step3 > #inner-stepContainer > .phone-mockup {
+    width: 23rem;
+  }
+}

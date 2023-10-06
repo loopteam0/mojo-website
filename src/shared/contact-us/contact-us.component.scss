@@ -8,7 +8,6 @@ of styling is done in the mobile media query (340px)
 // Desktop - Small
 @media (min-width: 1024px) {
   .entire-contact-us {
-    padding: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +23,7 @@ of styling is done in the mobile media query (340px)
     gap: 2rem;
   }
 
+  // Container to hold text headers of the newsletter section
   .contact-us-left .header {
     display: inherit;
     flex-direction: inherit;
@@ -38,6 +38,8 @@ of styling is done in the mobile media query (340px)
     color: rgba(52, 64, 94, 1);
   }
 
+
+  // Inputs + button container
   .contact-us-left form {
     display: inherit;
     flex-direction: inherit;
@@ -51,25 +53,26 @@ of styling is done in the mobile media query (340px)
     width: 100%;
     border-radius: 0.25rem;
     border: 1px solid #e0e0e0;
-    font-family: 'Inter-Regular';
+    font-family: "Inter-Regular";
     color: rgba(130, 130, 130, 1);
   }
 
-  #form-input::placeholder{
-    font-family: 'Inter-Regular';
+  #form-input::placeholder {
+    font-family: "Inter-Regular";
     color: rgba(130, 130, 130, 1);
   }
 
-  form .submit-btn{
+  form .submit-btn {
     background: rgba(69, 0, 255, 1);
     color: white;
     width: 14rem;
   }
 
-  #form-input:focus{
+  #form-input:focus {
     outline: none;
   }
 
+  // Container holding the map
   .entire-contact-us .contact-us-right {
     width: 50%;
     height: 100%;
@@ -84,35 +87,20 @@ of styling is done in the mobile media query (340px)
   }
 }
 
-
 // Desktop - Small
 @media (min-width: 1280px) {
-
-    .entire-contact-us {
-        padding: 4rem 6rem;
-    }
-
-    .header > #text-rg {
-        max-width: 30rem;
-      }
+  .header > #text-rg {
+    max-width: 30rem;
+  }
 }
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-
-    .entire-contact-us {
-        padding: 4rem 8rem;
-    }
 }
 
 // Desktop - Standard
 @media (min-width: 1650px) {
-
-    .entire-contact-us {
-        padding: 4rem 10rem;
-    }
-
-    .header > #text-rg {
-        max-width: 35rem;
-      }
+  .header > #text-rg {
+    max-width: 35rem;
+  }
 }

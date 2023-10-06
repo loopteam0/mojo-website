@@ -7,9 +7,6 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 1024px) {
-  .entire-faq-section {
-    padding: 4rem;
-  }
 
   .inner-faq-section {
     padding: 4.5rem 1.5rem;
@@ -21,6 +18,7 @@ of styling is done in the mobile media query (340px)
     gap: 3rem;
   }
 
+  // Container to hold text headers
   .inner-faq-section .header {
     display: flex;
     flex-direction: column;
@@ -36,6 +34,8 @@ of styling is done in the mobile media query (340px)
     color: rgba(17, 5, 43, 1);
   }
 
+
+  // Holds all accordions together in a grid
   .inner-faq-section .accordion-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -49,6 +49,8 @@ of styling is done in the mobile media query (340px)
     width: 14rem;
   }
 
+
+  // A single accordion's container, but populated with data
   .accordion-group .accordion-wrapper {
     border-radius: 1rem;
     background: #fff;
@@ -108,23 +110,15 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-    .entire-faq-section {
-        padding: 4rem 6rem;
-    }
+
 }
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-    .entire-faq-section {
-        padding: 4rem 8rem;
-    }
 
-    
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
-    .entire-faq-section {
-        padding: 4rem 10rem;
-    }
+
 }

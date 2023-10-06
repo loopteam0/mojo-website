@@ -1,24 +1,17 @@
-<!-- 
 
-<div class="tile-header" (click)="toggleAccordion()">
-    <span class="header-txt">{{title}}</span>
-    <img [class.expanded]="expanded" src="/assets/svgs/icn-chevron-down.svg" alt="">
-</div>
-
-<div class="tile-content" [class.expanded]="expanded" *ngIf="expanded">
-    <span>{{content}}</span>
-</div> -->
-
-<div class="entire-faq-section">
+<div id="container" class="entire-faq-section">
 
     <div class="inner-faq-section">
 
+        <!-- Container to hold text headers -->
         <div class="header">
             <span id="text-lg">FAQ's</span>
             <span id="text-rg">Here are some common questions and answers about Mojo.</span>
         </div>
 
+        <!-- Holds all accordions together in a grid -->
         <div class="accordion-group">
+            <!-- A single accordion's container, but populated with data-->
         <div class="accordion-wrapper" (click)="toggleAccordion(i)" [class.isExpanded]="info.isExpanded" *ngFor="let info of accordionContent; let i = index">
             <div class="tile-header">
                 <span [class.isExpanded]="info.isExpanded" class="header-txt">{{info.title}}</span>

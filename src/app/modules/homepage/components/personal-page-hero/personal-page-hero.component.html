@@ -1,13 +1,13 @@
 <section class="entire-hero-section">
     <!-- Dividing the Hero container into two parts; 
-          left for the information, and right for the slider -->
+          left for the information, and right for the image -->
     <div class="hero-left" *ngFor="let info of homepageHero">
       <span id="text-sm" class="mini-header-txt">{{info.tagText}}</span>
       <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
       <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
   
       <!-- Container to hold both login and open account buttons -->
-      <div class="badge-wrapper">
+      <div class="button-wrapper">
         <button id="btn-filled" class="open-acct-btn">Open an Account</button>
         <button id="btn-filled" class="login-btn">Login to Account</button>
       </div>

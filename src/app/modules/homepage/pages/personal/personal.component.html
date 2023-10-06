@@ -9,7 +9,7 @@
 
   <!-- "Payments like never before" section-->
 
-  <section class="payment-features-section" *ngFor="let info of paymentLikeNeverBefore">
+  <section id="container" class="payment-features-section" *ngFor="let info of paymentLikeNeverBefore">
 
     <!-- Main header and the sub one -->
     <div class="header-wrapper">
@@ -37,7 +37,7 @@
   
 
   <!-- "Currency support" section -->
-  <section class="currency-support-section" *ngFor="let info of currencySupport">
+  <section id="container" class="currency-support-section" *ngFor="let info of currencySupport">
 
     <div class="section-left">
       <img src="{{info.image}}" alt="">
@@ -64,7 +64,7 @@
   <app-mojo-merchant-cta></app-mojo-merchant-cta>
 
   <!-- Spend with Confidence section -->
-  <div class="spend-confidence-section">
+  <div id="container" class="spend-confidence-section">
 
     <div class="spend-section-left">
       <img src="/assets/images/subHero.png" alt="">

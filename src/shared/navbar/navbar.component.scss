@@ -15,7 +15,6 @@ of styling is done in the mobile media query (340px)
     align-items: center;
     justify-content: space-between;
     background: white;
-    padding: 0 4rem;
   }
 
 
@@ -127,10 +126,6 @@ of styling is done in the mobile media query (340px)
 // Desktop - Medium
 @media (min-width: 1280px) {
 
-  .entire-navbar{
-    padding: 0 6rem;
-  }
-
   // Left side of the navigation bar, with the logo and the links
   .entire-navbar .navbar-left {
     gap: 2.5rem;
@@ -144,14 +139,10 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-  .entire-navbar{
-    padding: 0 8rem;
-  }
+
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
-  .entire-navbar{
-    padding: 0 10rem;
-  }
+
 }
