@@ -1,0 +1,135 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+    // Dividing the Hero container into two parts;
+    // left for the information, and right for the image
+    .entire-hero-section {
+      background-color: rgba(242, 245, 255, 1);
+      padding-top: 3rem;
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      padding-top: 8rem;
+      height: 25rem;
+    }
+  
+    .hero-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+  
+    // Text editing
+    .hero-center .main-header-txt {
+      color: rgba(69, 0, 255, 1);
+    }
+  
+    .hero-left .sub-header-txt {
+      color: rgba(52, 64, 94, 1);
+    }
+  
+
+    .open-acct-btn{
+      background: rgba(69, 0, 255, 1);
+      color: white;
+      margin-top: 1rem;
+      width: 20rem;
+    }
+
+
+    // Objects around the hero 
+    #object{
+      position: absolute;
+      width: 14rem;
+    }
+
+    // Adjusting the third object because it's a bit 
+    // smaller than the others
+    .entire-hero-section #object:nth-child(3){
+      width: 20rem;
+    }
+
+    .img1{
+      top: 6%;
+      left: 3%;
+    }
+
+    .img2{
+      top: 42%;
+      left: 12%;
+    }
+
+    .img3{
+      top: 10%;
+      right: 3%;
+      width: 20rem;
+    }
+
+    .img4{
+      top: 42%;
+      right: 12%;
+    }
+  
+  
+}  
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+
+    .entire-hero-section {
+      padding: 10rem 6rem 6rem 6rem;
+      height: 30rem;
+    }
+
+    // Objects around the hero 
+    #object{
+      transform: scale(1.2);
+    }
+
+    .img1{
+      top: 10%;
+      left: 6%;
+    }
+
+    .img2{
+      top: 52%;
+      left: 12%;
+    }
+
+    .img3{
+      top: 16%;
+      right: 3%;
+    }
+
+    .img4{
+      top:52%;
+      right: 12%;
+    }
+
+}
+
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+    .entire-hero-section {
+      padding: 10rem 8rem 6rem 8rem;
+    }
+}  
+
+// Desktop - Large
+@media (min-width: 1650px) {
+    .entire-hero-section {
+      padding: 12rem 10rem 6rem 10rem;
+    }
+  
+}

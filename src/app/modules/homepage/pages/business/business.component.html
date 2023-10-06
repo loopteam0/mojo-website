@@ -1,0 +1,149 @@
+<section class="personal">
+    <!-- Hero Section -->
+  <app-business-page-hero></app-business-page-hero>
+
+  <!-- Secured blue strip -->
+  <div id="blue-strip-mojo">
+    <span id="text-rg">With Mojo your money is secured</span>
+  </div>
+
+   <!-- Convenient Payments section -->
+   <div class="subHeroContent" *ngFor="let info of convenientPayments">
+
+    <div class="subHero-left">
+      <img src="/assets/images/qr-code-mockup.png" alt="">
+    </div>
+
+    <div class="subHero-right">
+      <span id="text-lg">{{info.mainTitle}}</span>
+      <span id="text-rg">{{info.subTitle}}</span>
+    </div>
+
+  </div>
+
+  <!-- Secured payments (Feature point)-->
+  <div class="feature-point-container" *ngFor="let info of securedPayments">
+
+    <!-- Container with colored background and flex-direction property -->
+    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+
+      <div class="content-wrapper">
+        <span id="text-lg">{{info.mainTitle}}</span>
+        <span id="text-rg">{{info.subTitle}}</span>
+
+      </div>
+
+      <div class="image-wrapper">
+        <img src="/assets/images/padlock.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Quick Settlements (Feature point)-->
+  <div class="feature-point-container" *ngFor="let info of quickSettlements">
+
+    <!-- Container with colored background and flex-direction property -->
+    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+
+      <div class="content-wrapper">
+        <span id="text-lg">{{info.mainTitle}}</span>
+        <span id="text-rg">{{info.subTitle}}</span>
+
+      </div>
+
+      <div class="image-wrapper">
+        <img src="{{info.image}}" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- "Currency support" section -->
+  <section class="currency-support-section" *ngFor="let info of currencySupport">
+
+    <div class="section-left">
+      <img src="{{info.image}}" alt="">
+    </div>
+
+    <div class="section-right">
+
+      <div class="title-container">
+        <span id="text-xs">{{info.subheader}}</span>
+        <span id="text-xl">{{info.mainHeader}}</span>
+      </div>
+
+      <div class="features-container">
+        <span *ngFor="let point of info.points" class="point">
+          <img src="/assets/svgs/icn-check-blue.svg" alt="">
+          <span id="text-rg">{{point}}</span>
+        </span>
+      </div>
+    </div>
+
+  </section>
+
+   <!-- Worldwide payments (Feature point)-->
+   <div class="feature-point-container" *ngFor="let info of worldwidePayments">
+
+    <!-- Container with colored background and flex-direction property -->
+    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+
+      <div class="content-wrapper">
+        <span id="text-lg">{{info.mainTitle}}</span>
+        <span id="text-rg">{{info.subTitle}}</span>
+
+      </div>
+
+      <div class="image-wrapper">
+        <img src="{{info.image}}" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Understand Cashflows section -->
+  <div class="subHeroContent" *ngFor="let info of understandCashFlows">
+
+    <div class="subHero-left">
+      <img src="/assets/images/subHero.png" alt="">
+    </div>
+
+    <div class="subHero-right">
+      <span id="text-lg">{{info.mainTitle}}</span>
+      <span id="text-rg">{{info.subTitle}}</span>
+    </div>
+
+  </div>
+
+  <!-- "How to become a merchant/agent" section-->
+
+  <section class="payment-features-section" *ngFor="let info of becomeMerchantOrAgent">
+
+    <!-- Main wrapper holding the steps cards (pink background)-->
+    <div [style.backgroundColor]="info.outerBg" class="steps-main-section">      
+  
+        <div class="step1" id="stepContainer" *ngFor="let info of info.cardInfoOne">
+  
+          <div [style.backgroundColor]="info.innerBg" id="inner-stepContainer">
+          </div>
+  
+          <span id="text-md">{{info.cardTitle}}</span>
+          <span id="text-sm">{{info.cardSubTitle}}</span>
+  
+        </div>
+  
+    </div>
+  
+  </section>
+
+  <!-- FAQ Section -->
+  <app-faq-section></app-faq-section>
+  
+  <!-- Contact Us section -->
+  <app-contact-us></app-contact-us>
+  
+  <!-- Newsletter section -->
+  <app-newsletter></app-newsletter>
+
+</section>

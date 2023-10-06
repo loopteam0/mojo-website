@@ -11,6 +11,8 @@ import { GeneralFeaturesComponent } from './components/general-features/general-
 import { MediaAndPressComponent } from './components/media-and-press/media-and-press.component';
 import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { PersonalPageHeroComponent } from './components/personal-page-hero/personal-page-hero.component';
+import { BusinessComponent } from './pages/business/business.component';
+import { BusinessPageHeroComponent } from './components/business-page-hero/business-page-hero.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PersonalPageHeroComponent } from './components/personal-page-hero/perso
     BecomeAMojoerComponent,
     GeneralFeaturesComponent,
     MediaAndPressComponent,
-    FeedbacksComponent
+    FeedbacksComponent,
+    BusinessComponent,
+    BusinessPageHeroComponent
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
 })

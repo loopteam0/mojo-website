@@ -47,3 +47,16 @@ export interface AccordionContent {
   content: string,
   isExpanded: boolean;
 }
+
+export interface SubHeroContent{
+  mainTitle: string;
+  subTitle: string;
+}
+
+export interface FeaturePoints{
+  backgroundColor: string;
+  image: string;
+  mainTitle: string;
+  subTitle: string;
+  flexDirection: string;
+}

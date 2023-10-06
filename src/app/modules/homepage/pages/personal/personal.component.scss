@@ -7,67 +7,6 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 1024px) {
-
-.currency-support-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem;
-    gap: 2rem;
-  }
-
-  .currency-support-section .section-left{
-    width: 60%;
-  }
-
-  .currency-support-section .section-left img {
-    width: 100%;
-  }
-
-  .currency-support-section .section-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 50%;
-  }
-
-  .section-right .title-container{
-    display: inherit;
-    flex-direction: inherit;
-    align-items: inherit;
-    gap: 0.25rem;
-  }
-
-  .title-container > #text-xs{
-    color: rgba(69, 0, 255, 1);
-  }
-
-  .title-container > #text-xl{
-    color: rgba(17, 5, 43, 1);
-  }
-
-  .section-right .features-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .features-container .point{
-    display: flex;
-    gap: 0.5rem;
-    align-items: flex-start;
-  }
-
-  .point > span{
-    color: rgba(17, 5, 43, 1);
-    max-width: 20rem;
-  }
-
-
-
-
   .payment-features-section {
     display: flex;
     flex-direction: column;
@@ -103,8 +42,7 @@ of styling is done in the mobile media query (340px)
     gap: 1rem;
   }
 
-
-  #stepContainer{
+  #stepContainer {
     width: 23rem;
   }
 
@@ -116,52 +54,157 @@ of styling is done in the mobile media query (340px)
     background: rgba(255, 225, 205, 1);
   }
 
-  
 
+  // Currency support section
+  .currency-support-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2rem;
+  }
+
+  .currency-support-section .section-left {
+    width: 60%;
+  }
+
+  .currency-support-section .section-left img {
+    width: 100%;
+  }
+
+  .currency-support-section .section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 50%;
+  }
+
+  .section-right .title-container {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: 0.25rem;
+  }
+
+  .title-container > #text-xs {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .title-container > #text-xl {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .section-right .features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .features-container .point {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .point > span {
+    color: rgba(17, 5, 43, 1);
+    max-width: 20rem;
+  }
+
+  // "Spend with confidence" section
+
+  .spend-confidence-section {
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .spend-confidence-section .spend-section-left {
+    width: 60%;
+  }
+
+  .spend-section-left > img {
+    width: 100%;
+  }
+
+  .spend-confidence-section .spend-section-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .spend-section-right #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .spend-section-right #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 26rem;
+  }
 }
 
 // Desktop - Medium
 @media (min-width: 1280px) {
+  .payment-features-section {
+    padding: 4rem 6rem;
+  }
 
-    // "Mojo is for you" section
-  
-    .currency-support-section {
-      padding: 4rem 6rem;
-    }
-  
-    .point > span{
-      max-width: 28rem;
-    }
-  
+  // Currency support section
+
+  .currency-support-section {
+    padding: 4rem 6rem;
   }
-  
-  
-  
-  
-  
-  
-  // Desktop - Standard
-  @media (min-width: 1440px) {
-  
-    // "Mojo is for you" section
-  
-    .currency-support-section {
-      padding: 4rem 8rem;
-      gap: 5rem;
-    }
+
+  .point > span {
+    max-width: 28rem;
   }
-  
-  
-  
-  
-  
-  
-  // Desktop - Large
-  @media (min-width: 1650px) {
-  
-     // "Mojo is for you" section
-  
-     .mojo-for-you-section {
-      padding: 4rem 10rem;
-    }
+
+  // "Spend with confidence" section
+
+  .spend-confidence-section {
+    padding: 4rem 6rem;
   }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  .payment-features-section {
+    padding: 4rem 6rem;
+  }
+
+  // Currency support section
+
+  .currency-support-section {
+    padding: 4rem 8rem;
+    gap: 5rem;
+  }
+
+
+  // "Spend with confidence" section
+
+  .spend-confidence-section {
+    padding: 4rem 8rem;
+  }
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+
+  // Currency support section
+  .currency-support-section {
+    padding: 4rem 10rem;
+  }
+
+  // "Spend with confidence" section
+
+  .spend-confidence-section {
+    padding: 4rem 10rem;
+  }
+
+
+}

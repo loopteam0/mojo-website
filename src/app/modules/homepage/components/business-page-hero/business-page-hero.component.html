@@ -1,0 +1,19 @@
+<section class="entire-hero-section">
+
+  <!-- Objects around the hero -->
+  <img src="/assets/images/cc-machine.png" alt="" class="img1" id="object">
+  <img src="/assets/images/receipt.png" alt="" class="img2" id="object">
+  <img src="/assets/images/wallet-withdraw.png" alt="" class="img3" id="object">
+  <img src="/assets/images/shopping-basket.png" alt="" class="img4" id="object">
+
+  <div class="hero-center" *ngFor="let info of homepageHero">
+
+    <img src="/assets/svgs/icn-m-logo.svg" alt="">
+    <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
+    <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
+    <button id="btn-filled" class="open-acct-btn">Register for a Merchant Account</button>
+
+  </div>
+
+
+</section>
