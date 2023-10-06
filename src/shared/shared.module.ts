@@ -13,6 +13,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ScheduleBillPaymentsComponent } from './schedule-bill-payments/schedule-bill-payments.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { FaqSectionComponent } from './faq-section/faq-section.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
     NewsletterComponent,
     ScheduleBillPaymentsComponent,
     ContactUsComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    FaqSectionComponent
   
   ],
   imports: [
@@ -40,7 +42,8 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
     NewsletterComponent,
     ScheduleBillPaymentsComponent,
     ContactUsComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    FaqSectionComponent
 
 
   ]

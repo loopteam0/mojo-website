@@ -1,0 +1,130 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  .entire-faq-section {
+    padding: 4rem;
+  }
+
+  .inner-faq-section {
+    padding: 4.5rem 1.5rem;
+    border-radius: 1.25rem;
+    background: #f1f1ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .inner-faq-section .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .header > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .header > #text-rg {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .inner-faq-section .accordion-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .inner-faq-section .view-more-faq-btn{
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    width: 14rem;
+  }
+
+  .accordion-group .accordion-wrapper {
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .accordion-group .accordion-wrapper.isExpanded{
+    display: block;
+    height: fit-content;
+    padding: 1rem 0;
+  }
+
+  .tile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    gap: 0.5rem;
+
+    .header-txt {
+      font-family: "Poppins-SemiBold";
+      color: rgba(23, 15, 73, 1);
+      font-size: 1rem;
+    }
+
+    .header-txt.isExpanded{
+        color: rgba(69, 0, 255, 1);
+    }
+
+    img {
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+      width: 2rem;
+    }
+
+    img.isExpanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  .tile-content {
+    padding: 0.8rem 1.2rem;
+    width: 80%;
+
+    span {
+      color: rgba(17, 5, 43, 1);
+      font-family: "Poppins-Regular";
+      font-size: 1rem;
+    }
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+    .entire-faq-section {
+        padding: 4rem 6rem;
+    }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+    .entire-faq-section {
+        padding: 4rem 8rem;
+    }
+
+    
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+    .entire-faq-section {
+        padding: 4rem 10rem;
+    }
+}

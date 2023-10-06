@@ -18,4 +18,6 @@ export class PersonalComponent {
       { cardTitle:'Use Mojo anywhere in the world', cardSubTitle:'Lorem Ipsum',  innerBg: 'rgba(255, 225, 205, 1)'}
     ] }
   ]
+
+ 
 }

@@ -1,0 +1,40 @@
+<!-- 
+
+<div class="tile-header" (click)="toggleAccordion()">
+    <span class="header-txt">{{title}}</span>
+    <img [class.expanded]="expanded" src="/assets/svgs/icn-chevron-down.svg" alt="">
+</div>
+
+<div class="tile-content" [class.expanded]="expanded" *ngIf="expanded">
+    <span>{{content}}</span>
+</div> -->
+
+<div class="entire-faq-section">
+
+    <div class="inner-faq-section">
+
+        <div class="header">
+            <span id="text-lg">FAQ's</span>
+            <span id="text-rg">Here are some common questions and answers about Mojo.</span>
+        </div>
+
+        <div class="accordion-group">
+        <div class="accordion-wrapper" (click)="toggleAccordion(i)" [class.isExpanded]="info.isExpanded" *ngFor="let info of accordionContent; let i = index">
+            <div class="tile-header">
+                <span [class.isExpanded]="info.isExpanded" class="header-txt">{{info.title}}</span>
+                <img [class.isExpanded]="info.isExpanded" src="/assets/svgs/icn-faq-open.svg" alt="">
+            </div>
+            
+            <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
+                <span>{{info.content}}</span>
+            </div>
+        </div>
+        </div>
+
+        <button id="btn-filled" class="view-more-faq-btn">View More FAQ's</button>
+
+    </div>
+
+   
+
+</div>

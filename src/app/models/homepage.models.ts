@@ -40,3 +40,10 @@ export interface PaymentLikeNeverBefore {
     innerBg: string;
   }>;
 }
+
+
+export interface AccordionContent {
+  title: string,
+  content: string,
+  isExpanded: boolean;
+}
