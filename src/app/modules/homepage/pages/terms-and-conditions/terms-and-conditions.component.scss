@@ -1,3 +1,4 @@
+
 /*
 All SCSS styles are grouped in media queries, from 
 mobile to desktop. So as we scale up, from one screen to 
@@ -169,7 +170,17 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     gap: 1.5rem;
   }
+
+  // For all bold text in the t&c content
+  #bold-txt{
+    font-family: 'Poppins-Bold';
+  }
 }
 
 @media (min-width: 1024px) {
 }
+
+
+
+
+
