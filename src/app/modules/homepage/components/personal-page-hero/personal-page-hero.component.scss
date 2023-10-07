@@ -79,7 +79,7 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1280px) {
 
     .entire-hero-section {
-      padding: 10rem 6rem 6rem 6rem;
+      padding: 8rem 6rem 6rem 6rem;
     }
 
 }
@@ -88,7 +88,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Standard
 @media (min-width: 1440px) {
     .entire-hero-section {
-      padding: 10rem 8rem 6rem 8rem;
+      padding: 8rem 8rem 6rem 8rem;
     }
   
     // Adjusting line-height for the main title
@@ -100,7 +100,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Large
 @media (min-width: 1650px) {
     .entire-hero-section {
-      padding: 12rem 10rem 6rem 10rem;
+      padding: 8rem 10rem 6rem 10rem;
     }
   
     .hero-left {
