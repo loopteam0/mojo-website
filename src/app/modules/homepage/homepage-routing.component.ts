@@ -5,6 +5,7 @@ import { PersonalComponent } from './pages/personal/personal.component';
 import { BusinessComponent } from './pages/business/business.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { FAQComponent } from './pages/faq/faq.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
 
   { path: 'about-us/terms-and-conditions', component: TermsAndConditionsComponent },
+  { path: 'about-us/faq', component: FAQComponent },
+
 ];
 
 @NgModule({

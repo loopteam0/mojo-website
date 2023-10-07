@@ -15,6 +15,7 @@ import { BusinessComponent } from './pages/business/business.component';
 import { BusinessPageHeroComponent } from './components/business-page-hero/business-page-hero.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { FAQComponent } from './pages/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
     AboutUsComponent,
     BusinessPageHeroComponent,
     TermsAndConditionsComponent,
+    FAQComponent
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
 })

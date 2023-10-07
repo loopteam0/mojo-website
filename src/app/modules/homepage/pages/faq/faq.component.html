@@ -1,0 +1,74 @@
+<section class="faq">
+    <div class="hero-section">
+      <div class="header">
+        <span id="text-xs">Mojo Media</span>
+        <span id="text-xl">FAQ’s</span>
+      </div>
+  
+      <!-- Tab group and it's content wrappers underneath(tab-content) -->
+      <div class="tab">
+        <div
+          class="tabUnselected"
+          (click)="setActiveTab('tab1')"
+          [class.active]="tabSelected === 'tab1'"
+        >
+          Personal
+        </div>
+  
+        <div
+          class="tabUnselected"
+          (click)="setActiveTab('tab2')"
+          [class.active]="tabSelected === 'tab2'"
+        >
+          Business
+        </div>
+  
+      </div>
+  
+      <!-- Tab group's content -->
+      <div class="tab-content">
+        <ng-container *ngIf="tabSelected === 'tab1'">
+          <!-- Content for Tab 1 -->
+        </ng-container>
+  
+        <ng-container *ngIf="tabSelected === 'tab2'">
+          <!-- Content for Tab 2 -->
+        </ng-container>
+  
+        <ng-container *ngIf="tabSelected === 'tab3'">
+          <!-- Content for Tab 3 -->
+        </ng-container>
+      </div>
+  
+      <!-- A wrapper around the input and the buttons to add all together in one -->
+      <div class="input-wrapper">
+        <input type="email" name="" id="" placeholder="Search" />
+        <button id="btn-filled" type="submit">Search</button>
+      </div>
+    </div>
+  
+   
+    <div id="container">
+       <!-- Container to hold FAQ content ( putple-ish background) -->
+      <div class="main-content-container">
+        <div class="accordion-group">
+          <!-- A single accordion's container, but populated with data-->
+      <div class="accordion-wrapper" (click)="toggleAccordion(i)" [class.isExpanded]="info.isExpanded" *ngFor="let info of accordionContent; let i = index">
+          <div class="tile-header">
+              <span [class.isExpanded]="info.isExpanded" class="header-txt">{{info.title}}</span>
+              <img [class.isExpanded]="info.isExpanded" src="/assets/svgs/icn-faq-open.svg" alt="">
+          </div>
+          
+          <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
+              <span>{{info.content}}</span>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <app-contact-us></app-contact-us>
+  
+    <app-newsletter></app-newsletter>
+  </section>
+  
