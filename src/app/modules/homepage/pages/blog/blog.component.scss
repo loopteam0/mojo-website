@@ -1,0 +1,226 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+    .entire-hero-section {
+      background-color: rgba(242, 245, 255, 1);
+      padding-top: 3rem;
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      padding-top: 8rem;
+      height: 25rem;
+    }
+  
+    .hero-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      width: clamp(30rem, 50%, 42rem);
+      text-align: center;
+    }
+  
+    // Text editing
+    .hero-center #text-xs, .main-header-txt, .sub-header-txt {
+     color: white;
+    }
+
+      // Main hero container
+  .about-us-hero-wrapper {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  //Inner container which is holding the text (purple-ish background)
+  .inner-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.75rem;
+    background: rgba(241, 241, 255, 1);
+    padding: 3rem;
+    gap: 2rem;
+    height: 30rem;
+    text-align: center;
+  }
+
+  #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .inner-hero-container > #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 90%;
+  }
+
+  // Main founders container
+  .founders-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  //Inner container which is holding the cards in a grid (purple-ish background)
+  .inner-founders-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.75rem;
+    background: rgba(241, 241, 255, 1);
+    padding: 3rem 5rem;
+    gap: 2rem;
+  }
+
+   // Main team card
+   .inner-founders-container .team-card {
+    border-radius: 1rem;
+    border: 2px solid #dcdcdc;
+    background: #fff;
+    height: 20rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .team-card .team-card-top{
+    height: 55%;
+    margin: 0.75rem;
+    background-color: rgba(241, 241, 255, 1);
+    border-radius: 0.5rem;
+  }
+
+  .team-card .team-card-bottom{
+    flex: 1 1 auto;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .team-card-bottom .member-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    #text-md{
+        color: rgba(69, 0, 255, 1);
+    }
+
+    #text-rg{
+        color: rgba(62, 62, 89, 1);
+    }
+  }
+
+  .team-card-bottom .icons-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons-wrapper .icon-container{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Tab group
+  .tab {
+    gap: 0.625rem;
+    flex-shrink: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(214, 214, 214, 1);
+  }
+
+  .tabUnselected {
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    background: transparent;
+    font-family: "Inter-SemiBold";
+    font-size: 1rem;
+    color: rgba(18, 20, 22, 1);
+    cursor: pointer;
+}
+
+  .tabUnselected.active {
+    background: transparent;
+    border-bottom: 2px solid rgba(69, 0, 255, 1);
+    color: rgba(69, 0, 255, 1);
+    transition: 0.5s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  // Tab group's content
+  .tab-content {
+    flex: 1 1 auto;
+  }
+
+  .news-cards-container{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    gap: 1.5rem;
+    justify-content: start;
+  }
+
+  // Promotional banner
+
+  .main-promotional-banner{
+    height: 30rem;
+    border-radius: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+}  
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+
+    .entire-hero-section {
+      padding: 10rem 6rem 6rem 6rem;
+      height: 30rem;
+    }
+
+}
+
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+    .entire-hero-section {
+      padding: 10rem 8rem 6rem 8rem;
+    }
+
+    // .hero-center{
+    //     width: 35rem;
+    // }
+}  
+
+// Desktop - Large
+@media (min-width: 1650px) {
+    .entire-hero-section {
+      padding: 12rem 10rem 6rem 10rem;
+    }
+
+    // .hero-center{
+    //     width: 42rem;
+    // }
+  
+}

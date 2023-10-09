@@ -6,6 +6,7 @@ import { BusinessComponent } from './pages/business/business.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { FAQComponent } from './pages/faq/faq.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'personal', component: PersonalComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'about-us', component: AboutUsComponent },
-
+  { path: 'blog', component: BlogComponent },
   { path: 'about-us/terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'about-us/faq', component: FAQComponent },
 
