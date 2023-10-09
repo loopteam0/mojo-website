@@ -61,16 +61,15 @@ of styling is done in the mobile media query (340px)
     max-width: 90%;
   }
 
-  // Main founders container
-  .founders-main-wrapper {
+  // Main news container
+  .news-main-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
   }
 
   //Inner container which is holding the cards in a grid (purple-ish background)
-  .inner-founders-container {
+  .inner-news-container {
     display: flex;
     flex-direction: column;
     border-radius: 1.75rem;
@@ -79,62 +78,6 @@ of styling is done in the mobile media query (340px)
     gap: 2rem;
   }
 
-   // Main team card
-   .inner-founders-container .team-card {
-    border-radius: 1rem;
-    border: 2px solid #dcdcdc;
-    background: #fff;
-    height: 20rem;
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .team-card .team-card-top{
-    height: 55%;
-    margin: 0.75rem;
-    background-color: rgba(241, 241, 255, 1);
-    border-radius: 0.5rem;
-  }
-
-  .team-card .team-card-bottom{
-    flex: 1 1 auto;
-    padding-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .team-card-bottom .member-info-wrapper{
-    display: flex;
-    flex-direction: column;
-    #text-md{
-        color: rgba(69, 0, 255, 1);
-    }
-
-    #text-rg{
-        color: rgba(62, 62, 89, 1);
-    }
-  }
-
-  .team-card-bottom .icons-wrapper{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .icons-wrapper .icon-container{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   // Tab group
   .tab {
@@ -173,9 +116,67 @@ of styling is done in the mobile media query (340px)
 
   .news-cards-container{
     display: grid;
-    grid-template-columns:auto auto auto;
+    grid-template-columns:auto auto;
     gap: 1.5rem;
     justify-content: start;
+  }
+
+   // Main news card
+   .inner-news-container .news-card {
+    border-radius: 1rem;
+    border: 2px solid #dcdcdc;
+    background: #fff;
+    height: 30rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-card .news-card-top{
+    height: 55%;
+    margin: 0.75rem;
+    background-color: rgba(241, 241, 255, 1);
+    border-radius: 0.5rem;
+  }
+
+  .news-card .news-card-bottom{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .news-card-bottom .blog-info-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+  }
+
+  .blog-info-wrapper .writer-info{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .blog-info-wrapper .gray-dot{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background-color: rgba(108, 117, 125, 0.4);
+  }
+
+  .writer-info > #etext-xs{
+    color: rgba(18, 20, 22, 1);
+  }
+
+  .writer-info > img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
   }
 
   // Promotional banner

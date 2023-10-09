@@ -79,3 +79,13 @@ export interface TeamMembers{
   }>;
 
 }
+
+
+export interface NewsCards{
+  newsImg: string;
+  writerImg: string;
+  writerName: string;
+  newsDate: string;
+  newsTitle: string;
+  newsSubTitle: string;
+}

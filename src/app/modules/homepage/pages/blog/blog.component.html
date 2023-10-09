@@ -1,114 +1,148 @@
 <section class="blog">
+  <section
+    style="
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        ),
+        url('/assets/images/blog-image.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    "
+    class="entire-hero-section"
+  >
+    <div class="hero-center" *ngFor="let info of blogpageHero">
+      <span id="text-xs">{{ info.tagText }}</span>
+      <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
+      <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
+    </div>
+  </section>
 
-    <section style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('/assets/images/blog-image.png'); background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;" class="entire-hero-section">
+  <!-- Secured blue strip -->
+  <div id="blue-strip-mojo">
+    <span id="text-rg">With Mojo your money is secured</span>
+  </div>
 
-        <div class="hero-center" *ngFor="let info of blogpageHero">
+  <!-- Main news container -->
+  <div id="container" class="news-main-wrapper">
+    <span id="text-lg">Here are some news you may like</span>
 
-            <span id="text-xs">{{info.tagText}}</span>
-            <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
-            <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
-
+    <!-- Inner container which is holding the cards in a grid (purple-ish background) with a tab group -->
+    <div class="inner-news-container">
+      <!-- Tab group and it's content wrappers underneath(tab-content) -->
+      <div class="tab">
+        <div
+          class="tabUnselected"
+          (click)="setActiveTab('tab1')"
+          [class.active]="tabSelected === 'tab1'"
+        >
+          Mojo News
         </div>
 
+        <div
+          class="tabUnselected"
+          (click)="setActiveTab('tab2')"
+          [class.active]="tabSelected === 'tab2'"
+        >
+          Career
+        </div>
 
-    </section>
+        <div
+          class="tabUnselected"
+          (click)="setActiveTab('tab3')"
+          [class.active]="tabSelected === 'tab3'"
+        >
+          Sustainability
+        </div>
 
-    <!-- Secured blue strip -->
-    <div id="blue-strip-mojo">
-        <span id="text-rg">With Mojo your money is secured</span>
-    </div>
+        <div
+          class="tabUnselected"
+          (click)="setActiveTab('tab4')"
+          [class.active]="tabSelected === 'tab4'"
+        >
+          Financial
+        </div>
+      </div>
 
-    <!-- Main Founders container -->
-    <div id="container" class="founders-main-wrapper">
-        <span id="text-lg">Here are some news you may like</span>
+      <!-- Tab group's content -->
+      <div class="tab-content">
+        <div class="news-cards-container" *ngIf="tabSelected === 'tab1'">
+          <!-- Content for Tab 1 -->
 
-        <!-- Inner container which is holding the cards in a grid (purple-ish background) -->
-        <div class="inner-founders-container">
-
-            <!-- Tab group and it's content wrappers underneath(tab-content) -->
-            <div class="tab">
-                <div class="tabUnselected" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
-                    Mojo News
-                </div>
-
-                <div class="tabUnselected" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
-                    Career
-                </div>
-
-                <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
-                    Sustainability
-                </div>
-
-                <div class="tabUnselected" (click)="setActiveTab('tab4')" [class.active]="tabSelected === 'tab4'">
-                    Financial
-                </div>
-
-            </div>
-
-            <!-- Tab group's content -->
-            <div class="tab-content">
-                <div class="news-cards-container" *ngIf="tabSelected === 'tab1'">
-                    <!-- Content for Tab 1 -->
-
-                    <!-- Main team card -->
-                    <div class="team-card" *ngFor="let info of teamMembers">
-                        <div style="
-            background-image: url('{{info.memberImg}}');
-            background-position: center -3rem;
+          <!-- Main news card -->
+          <div class="news-card" *ngFor="let info of teamMembers">
+            <div
+              style="
+            background-image: url('{{ info.memberImg }}');
+            background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-          " class="team-card-top"></div>
+          "
+              class="news-card-top"
+            ></div>
 
-                        <div class="team-card-bottom">
-                            <div class="member-info-wrapper">
-                                <span id="text-md">{{info.memberName}}</span>
-                                <span id="text-rg">{{info.memberRole}}</span>
-                            </div>
-
-                            <div class="icons-wrapper">
-                                <a href="{{info.iconLink}}" *ngFor="let info of info.iconContainer"
-                                    [style.backgroundColor]="info.background" class="icon-container">
-                                    <img style='filter: {{info.iconColor}}' [src]="info.icon" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="news-card-bottom">
+              <div class="blog-info-wrapper">
+                <div class="writer-info">
+                  <img src="/assets/images/blog-writer.jpeg" alt="" />
+                  <span id="text-xs">{{ info.memberName }}</span>
                 </div>
 
-                <div *ngIf="tabSelected === 'tab2'">
-                    <!-- Content for Tab 2 -->
-                </div>
+                <div class="gray-dot"></div>
 
-                <div *ngIf="tabSelected === 'tab3'">
-                    <!-- Content for Tab 3 -->
-                </div>
+                <span class="news-date" id="text-xs">June 28, 2018</span>
+              </div>
 
-                <div *ngIf="tabSelected === 'tab4'">
-                    <!-- Content for Tab 3 -->
-                </div>
+              <div class="blog-content">
+                <span id="text-rg" class="blog-title"
+                  >Integer Maecenas Eget Viverra si importune
+                </span>
+              </div>
             </div>
-
+          </div>
         </div>
-    </div>
-    <div class="promotional-bannner-wrapper" id="container">
 
-        <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('/assets/images/blog-image.png'); background-position: center;
+        <div *ngIf="tabSelected === 'tab2'">
+          <!-- Content for Tab 2 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab3'">
+          <!-- Content for Tab 3 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab4'">
+          <!-- Content for Tab 3 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo banner section -->
+  <div class="promotional-bannner-wrapper" id="container">
+    <div
+      style="
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.4) 100%
+          ),
+          url('/assets/images/blog-image.png');
+        background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;" class="main-promotional-banner">
-
-            <div class="hero-center" *ngFor="let info of blogpageHero">
-
-                <span id="text-xs">{{info.tagText}}</span>
-                <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
-                <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
-
-            </div>
-
-        </div>
+        background-repeat: no-repeat;
+      "
+      class="main-promotional-banner"
+    >
+      <div class="hero-center" *ngFor="let info of promoBanner">
+        <span id="text-xs">{{ info.tagText }}</span>
+        <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
+        <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
+      </div>
     </div>
+  </div>
 
-    <!-- Newsletter section -->
-    <app-newsletter></app-newsletter>
+  <!-- Newsletter section -->
+  <app-newsletter></app-newsletter>
 </section>
