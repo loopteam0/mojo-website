@@ -20,7 +20,7 @@
     </div>
   </section>
 
-  <!-- Secured blue strip -->
+  <!-- Secured blue strip (styles located in the styles.scss file) -->
   <div id="blue-strip-mojo">
     <span id="text-rg">With Mojo your money is secured</span>
   </div>
@@ -29,7 +29,7 @@
   <div id="container" class="news-main-wrapper">
     <span id="text-lg">Here are some news you may like</span>
 
-    <!-- Inner container which is holding the cards in a grid (purple-ish background) with a tab group -->
+    <!-- Purple-ish background with a tab group -->
     <div class="inner-news-container">
       <!-- Tab group and it's content wrappers underneath(tab-content) -->
       <div class="tab">
@@ -68,14 +68,15 @@
 
       <!-- Tab group's content -->
       <div class="tab-content">
+
+        <!-- Container for holding all the news cards -->
         <div class="news-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
-
           <!-- Main news card -->
-          <div class="news-card" *ngFor="let info of teamMembers">
+          <div class="news-card" *ngFor="let info of newscards">
             <div
               style="
-            background-image: url('{{ info.memberImg }}');
+            background-image: url('{{ info.newsImg }}');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -87,21 +88,25 @@
               <div class="blog-info-wrapper">
                 <div class="writer-info">
                   <img src="/assets/images/blog-writer.jpeg" alt="" />
-                  <span id="text-xs">{{ info.memberName }}</span>
+                  <span id="text-xs">{{ info.writerName }}</span>
                 </div>
 
                 <div class="gray-dot"></div>
 
-                <span class="news-date" id="text-xs">June 28, 2018</span>
+                <span class="news-date" id="text-xs">{{info.newsDate}}</span>
               </div>
 
               <div class="blog-content">
-                <span id="text-rg" class="blog-title"
-                  >Integer Maecenas Eget Viverra si importune
+                <span class="blog-title"
+                  >{{info.newsTitle}}
                 </span>
+
+                <span id="text-xs" class="blog-content-txt">{{info.newsSubTitle}}</span>
               </div>
             </div>
           </div>
+
+          <!-- <button id="btn-filled">Load More</button> -->
         </div>
 
         <div *ngIf="tabSelected === 'tab2'">

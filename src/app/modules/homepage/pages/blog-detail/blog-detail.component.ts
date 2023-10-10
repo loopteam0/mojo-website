@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { HomepageHero, NewsCards, TeamMembers } from 'src/app/models/homepage.models';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-blog-detail',
+  templateUrl: './blog-detail.component.html',
+  styleUrls: ['./blog-detail.component.scss']
 })
-export class BlogComponent {
+export class BlogDetailComponent {
 
    // Making hero info available to edit later in CMS by giving it a model
    blogpageHero: HomepageHero[] = [

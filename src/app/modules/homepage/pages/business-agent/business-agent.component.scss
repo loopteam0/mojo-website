@@ -1,0 +1,272 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // Hero section
+
+  .entire-hero-section {
+    background-color: rgba(242, 245, 255, 1);
+    padding-top: 3rem;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 8rem;
+    height: 25rem;
+  }
+
+  .hero-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  // Text editing
+  .hero-center .main-header-txt {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .hero-left .sub-header-txt {
+    color: rgba(52, 64, 94, 1);
+  }
+
+  .open-acct-btn {
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    margin-top: 1rem;
+    width: 20rem;
+  }
+
+  .agent-network-hero{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .agent-network-hero > #text-xl{
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .agent-network-hero > #text-rg{
+    color: rgba(52, 64, 94, 1);
+    line-height: 2rem;
+
+    .blue-txt{
+      color: rgba(69, 0, 255, 1);
+      font-family: 'Poppins-SemiBold';
+    }
+  }
+
+  // Feature point container for "Secured Payments",
+  // "Quick Settlements" and "Worldwide payments"
+
+  .feature-point-container .inner-container {
+    border-radius: 1.75rem;
+    padding: 5rem 2rem;
+    height: clamp(20rem, 22rem, 30rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .inner-container .content-wrapper {
+    border-radius: 1.6rem;
+    background: white;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 60%;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .content-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
+    max-width: 26rem;
+  }
+
+  .content-wrapper > #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 26rem;
+  }
+
+  .inner-container .image-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // "How to become a merchant/agent" section
+  .payment-features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .payment-features-section .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .payment-features-section .header-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .payment-features-section .header-wrapper > #text-rg {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  // Main wrapper holding the steps cards (pink background)
+  .payment-features-section .steps-main-section {
+    border-radius: 1.75rem;
+    padding: 4.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .steps-main-section #text-md {
+    font-size: 1rem;
+  }
+  .steps-main-section #text-sm {
+    font-size: 0.7rem;
+  }
+
+  // Partners Section
+
+  .partners-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .partners-section .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header > #text-xl{
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .header > #text-rg{
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .partners-section .logos-grid-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+  // Grid for logos of partners
+  .logos-grid-wrapper .partners-logo-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 1rem;
+      gap: 2rem;
+      justify-content: space-between;
+
+      img{
+        width: 6rem;
+      }
+  }
+
+  // Giving the last column a display of flex to
+  // align properly with the rest
+   .logos-grid-wrapper 
+  .partners-logo-grid:nth-child(4) {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .partners-section > #btn-filled{
+    background-color: rgba(69, 0, 255, 1);
+    color: white;
+    width: 15rem;
+  }
+
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  .entire-hero-section {
+    padding: 10rem 6rem 6rem 6rem;
+    height: 30rem;
+  }
+
+  // Feature point container for "Secured Payments",
+  // "Quick Settlements" and "Worldwide payments"
+
+  .feature-point-container .inner-container {
+    height: 25rem;
+    padding: 5rem 4rem;
+  }
+
+  // Increasing image widths for screen size
+  .logos-grid-wrapper .partners-logo-grid img{
+    width: 8rem;
+  }
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  .entire-hero-section {
+    padding: 10rem 8rem 6rem 8rem;
+  }
+
+  // Feature point container for "Secured Payments",
+  // "Quick Settlements" and "Worldwide payments"
+  .feature-point-container .inner-container {
+    padding: 5rem 4rem;
+  }
+
+  .image-wrapper > img {
+    transform: scale(1.1);
+  }
+
+  // currency support section
+  .currency-support-section {
+    gap: 5rem;
+  }
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+  .entire-hero-section {
+    padding: 12rem 10rem 6rem 10rem;
+  }
+
+  .content-wrapper > #text-rg {
+    max-width: 30rem;
+  }
+
+  .image-wrapper > img {
+    transform: scale(1.2);
+  }
+}

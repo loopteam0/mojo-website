@@ -7,17 +7,23 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { FAQComponent } from './pages/faq/faq.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { BusinessAgentComponent } from './pages/business-agent/business-agent.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent },
   { path: 'personal', component: PersonalComponent },
   { path: 'business', component: BusinessComponent },
+  { path: 'business/agents', component: BusinessAgentComponent },
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'about-us/terms-and-conditions', component: TermsAndConditionsComponent },
+  {
+    path: 'about-us/terms-and-conditions',
+    component: TermsAndConditionsComponent,
+  },
   { path: 'about-us/faq', component: FAQComponent },
-
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog/blog-detail', component: BlogDetailComponent },
 ];
 
 @NgModule({

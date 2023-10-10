@@ -17,6 +17,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { FAQComponent } from './pages/faq/faq.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { BusinessAgentComponent } from './pages/business-agent/business-agent.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,13 @@ import { BlogComponent } from './pages/blog/blog.component';
     MediaAndPressComponent,
     FeedbacksComponent,
     BusinessComponent,
+    BusinessAgentComponent,
     AboutUsComponent,
     BusinessPageHeroComponent,
     TermsAndConditionsComponent,
     FAQComponent,
-    BlogComponent
+    BlogComponent,
+    BlogDetailComponent
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
 })

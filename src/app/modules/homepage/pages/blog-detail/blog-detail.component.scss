@@ -1,0 +1,74 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  .entire-hero-section {
+    background-color: rgba(242, 245, 255, 1);
+    padding-top: 3rem;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 8rem;
+    height: 25rem;
+  }
+
+  .hero-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    width: clamp(30rem, 50%, 42rem);
+    text-align: center;
+  }
+
+  // Text editing
+  .hero-center #text-xs,
+  .main-header-txt,
+  .sub-header-txt {
+    color: white;
+  }
+
+ 
+  // Promotional banner
+
+  .main-promotional-banner {
+    height: 30rem;
+    border-radius: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  .entire-hero-section {
+    padding: 10rem 6rem 6rem 6rem;
+    height: 30rem;
+  }
+
+
+
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  .entire-hero-section {
+    padding: 10rem 8rem 6rem 8rem;
+  }
+
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+  .entire-hero-section {
+    padding: 12rem 10rem 6rem 10rem;
+  }
+}

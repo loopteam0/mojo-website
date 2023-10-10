@@ -7,58 +7,32 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 1024px) {
-
-    .entire-hero-section {
-      background-color: rgba(242, 245, 255, 1);
-      padding-top: 3rem;
-      padding: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4rem;
-      padding-top: 8rem;
-      height: 25rem;
-    }
-  
-    .hero-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.35rem;
-      width: clamp(30rem, 50%, 42rem);
-      text-align: center;
-    }
-  
-    // Text editing
-    .hero-center #text-xs, .main-header-txt, .sub-header-txt {
-     color: white;
-    }
-
-      // Main hero container
-  .about-us-hero-wrapper {
-    padding: 8rem 4rem 4rem 4rem;
+  .entire-hero-section {
+    background-color: rgba(242, 245, 255, 1);
+    padding-top: 3rem;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 8rem;
+    height: 25rem;
   }
 
-  //Inner container which is holding the text (purple-ish background)
-  .inner-hero-container {
+  .hero-center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 1.75rem;
-    background: rgba(241, 241, 255, 1);
-    padding: 3rem;
-    gap: 2rem;
-    height: 30rem;
+    gap: 0.35rem;
+    width: clamp(30rem, 50%, 42rem);
     text-align: center;
   }
 
-  #text-lg {
-    color: rgba(69, 0, 255, 1);
-  }
-
-  .inner-hero-container > #text-rg {
-    color: rgba(52, 64, 94, 1);
-    max-width: 90%;
+  // Text editing
+  .hero-center #text-xs,
+  .main-header-txt,
+  .sub-header-txt {
+    color: white;
   }
 
   // Main news container
@@ -68,16 +42,20 @@ of styling is done in the mobile media query (340px)
     gap: 2rem;
   }
 
-  //Inner container which is holding the cards in a grid (purple-ish background)
+  .news-main-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
+    text-align: center;
+  }
+
+  // Purple-ish background
   .inner-news-container {
     display: flex;
     flex-direction: column;
     border-radius: 1.75rem;
     background: rgba(241, 241, 255, 1);
-    padding: 3rem 5rem;
+    padding: 2rem;
     gap: 2rem;
   }
-
 
   // Tab group
   .tab {
@@ -100,7 +78,7 @@ of styling is done in the mobile media query (340px)
     font-size: 1rem;
     color: rgba(18, 20, 22, 1);
     cursor: pointer;
-}
+  }
 
   .tabUnselected.active {
     background: transparent;
@@ -114,114 +92,180 @@ of styling is done in the mobile media query (340px)
     flex: 1 1 auto;
   }
 
-  .news-cards-container{
+  // Container for holding all the news cards
+  .news-cards-container {
     display: grid;
-    grid-template-columns:auto auto;
+    grid-template-columns: auto auto auto;
     gap: 1.5rem;
     justify-content: start;
   }
 
-   // Main news card
-   .inner-news-container .news-card {
+  // Main news card
+  .inner-news-container .news-card {
     border-radius: 1rem;
     border: 2px solid #dcdcdc;
     background: #fff;
-    height: 30rem;
-    width: 22rem;
+    height: 25rem;
+    width: 16rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
-  .news-card .news-card-top{
-    height: 55%;
+  .news-card .news-card-top {
+    height: 50%;
     margin: 0.75rem;
     background-color: rgba(241, 241, 255, 1);
     border-radius: 0.5rem;
   }
 
-  .news-card .news-card-bottom{
+  .news-card .news-card-bottom {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 1rem;
+    padding-top: 0rem;
   }
 
-  .news-card-bottom .blog-info-wrapper{
+  .news-card-bottom .blog-info-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
   }
 
-  .blog-info-wrapper .writer-info{
+  .blog-info-wrapper .writer-info {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    width: 45%;
   }
 
-  .blog-info-wrapper .gray-dot{
+  .blog-info-wrapper .gray-dot {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 999px;
     background-color: rgba(108, 117, 125, 0.4);
   }
 
-  .writer-info > #etext-xs{
+  .writer-info > #text-xs {
     color: rgba(18, 20, 22, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
   }
 
-  .writer-info > img{
+  // Date text
+  .blog-info-wrapper > #text-xs {
+    color: rgba(108, 117, 125, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    width: 40%;
+  }
+
+  .writer-info > img {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 999px;
   }
 
+  .news-card-bottom .blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .blog-content .blog-title {
+    font-size: 1.125rem;
+    font-family: "Poppins-SemiBold";
+  }
+
+  .blog-content > #text-xs {
+    color: rgb(153, 153, 153);
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .blog-content > #text-xs::after {
+    content: ""; /* Needed to render the pseudo */
+    background-image: linear-gradient(to right, transparent, #fff 80%);
+    position: absolute;
+    inset-inline-end: 0;
+    height: calc(1rem * 1.38 + 1px);
+    width: 100%;
+  }
+
+  .news-cards-container > #btn-filled{
+    margin: 0 auto;
+  }
+
   // Promotional banner
 
-  .main-promotional-banner{
+  .main-promotional-banner {
     height: 30rem;
     border-radius: 1.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
-
-}  
+}
 
 // Desktop - Medium
 @media (min-width: 1280px) {
+  .entire-hero-section {
+    padding: 10rem 6rem 6rem 6rem;
+    height: 30rem;
+  }
 
-    .entire-hero-section {
-      padding: 10rem 6rem 6rem 6rem;
-      height: 30rem;
-    }
+
+  // Main news card
+  .inner-news-container .news-card {
+    height: 27rem;
+    width: 20rem;
+  }
+
+ 
+
+  // Date text
+  .blog-info-wrapper > #text-xs {
+    width: auto;
+  }
+
+  .blog-content .blog-title {
+    font-size: 1.125rem;
+    font-family: "Poppins-SemiBold";
+  }
+
+  .blog-content > #text-xs {
+    font-size: 0.875rem;
+  }
 
 }
 
-
 // Desktop - Standard
 @media (min-width: 1440px) {
-    .entire-hero-section {
-      padding: 10rem 8rem 6rem 8rem;
-    }
+  .entire-hero-section {
+    padding: 10rem 8rem 6rem 8rem;
+  }
 
-    // .hero-center{
-    //     width: 35rem;
-    // }
-}  
+  // Purple-ish background
+  .inner-news-container {
+    padding: 3rem 5rem;
+    gap: 2rem;
+  }
+}
 
 // Desktop - Large
 @media (min-width: 1650px) {
-    .entire-hero-section {
-      padding: 12rem 10rem 6rem 10rem;
-    }
-
-    // .hero-center{
-    //     width: 42rem;
-    // }
-  
+  .entire-hero-section {
+    padding: 12rem 10rem 6rem 10rem;
+  }
 }
