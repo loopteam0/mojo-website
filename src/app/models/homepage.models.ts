@@ -106,3 +106,26 @@ export interface CareerPositionCards{
   positionType: string;
   location: string;
 }
+
+export interface MojoeeBenefitsCards{
+  mainHeader: string;
+  benefitsList: Array<string>;
+}
+
+export interface JobPositions{
+  positionTitle: string;
+  whoWeAreLookingFor: Array<string>;
+  whatYouWillBeDoing: Array<string>;
+  bonusPointsFamiliarity: Array<string>;
+  educationalRequirement: string;
+  salary: Array<string>;
+  workingHours: Array<string>;
+  workingDays: Array<string>;
+  perksAndBenefits: Array<string>;
+  applicationProcess: Array<string>;
+  jobSummary: Array<{
+    icon: string;
+    mainTitle: string;
+    subTitle: string;
+  }>;
+}

@@ -1,0 +1,230 @@
+<section class="business-agent">
+  <!-- Hero Section -->
+  <section id="container">
+    <section style="
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+        url('/assets/images/career-detail-bg.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    " class="entire-hero-section">
+      <div class="hero-center" *ngFor="let info of careerPageHero">
+        <span id="text-xs">{{ info.tagText }}</span>
+        <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
+        <button id="btn-filled">Apply Now</button>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- Job Details section -->
+  <div id="container" class="job-details-container" *ngFor="let job of jobPositions">
+
+    <div class="inner-job-details-container">
+      <!-- Left side of the inner job details section (the content section)-->
+      <div class="job-details-left">
+
+        <span id="text-lg">{{job.positionTitle}}</span>
+
+        <!-- Who Are We Looking for -->
+        <div class="job-details-point">
+          <span id="text-md">Who Are We Looking For</span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.whoWeAreLookingFor" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+        <!-- What you will be doing -->
+        <div class="job-details-point">
+          <span id="text-md">What you will be doing</span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.whatYouWillBeDoing" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+        <!-- Bonus Points for familiarity -->
+        <div class="job-details-point">
+          <span id="text-md">Bonus Points for Familiarity with</span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.bonusPointsFamiliarity" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+        <!-- Bonus Points for familiarity -->
+        <div class="job-details-point">
+          <span id="text-md">Bonus Points for Familiarity with</span>
+
+          <ul class="point-list-wrapper">
+            <span *ngFor="let list of job.bonusPointsFamiliarity" id="text-rg">{{list}}</span>
+          </ul>
+        </div>
+
+        <!-- Salary -->
+        <div class="job-details-point">
+          <span id="text-md">Salary</span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.salary" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="job-details-point">
+          <span id="text-md">Working Hours</span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.workingHours" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+        <!-- Working Days -->
+        <div class="job-details-point">
+          <span id="text-md">Working Days</span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.workingDays" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+        <!-- Perks & Benefits  -->
+        <div class="job-details-point">
+          <span id="text-md">Perks & Benefits </span>
+
+          <ul class="point-list-wrapper">
+            <li *ngFor="let list of job.perksAndBenefits" id="text-rg">{{list}}</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right side of the inner job details section (apply now box and share)-->
+      <div class="job-details-right">
+
+        <div class="job-summary-container">
+          <button id="btn-filled">Apply Now</button>
+
+          <span id="text-md">Job Summary</span>
+
+          <!-- A group of all the 4 summary point containers-->
+          <div class="summary-group">
+            <div class="summary-point-container" *ngFor="let info of job.jobSummary">
+              <img src="{{info.icon}}" alt="">
+
+              <div>
+                <span id="text-rg">{{info.mainTitle}}</span>
+                <span id="text-rg">{{info.subTitle}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="share-container">
+          <span id="text-rg">Share Job posting:</span>
+
+          <div>
+            <div (click)="shareToFacebook()" class="icon-container">
+              <img src="/assets/svgs/icn-facebook-color.svg" alt="">
+            </div>
+
+            <div (click)="shareToTwitter()" class="icon-container">
+              <img src="/assets/svgs/icn-twitter-color.svg" alt="">
+            </div>
+
+            <div (click)="shareToLinkedin()" class="icon-container">
+              <img src="/assets/svgs/icn-linkedin-color.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Application Process  -->
+    <div class="job-details-point">
+      <span id="text-md">Application Process</span>
+
+      <ul class="point-list-wrapper">
+        <li *ngFor="let list of job.applicationProcess" id="text-rg">{{list}}</li>
+      </ul>
+    </div>
+
+    <button id="btn-filled">Apply Now</button>
+
+  </div>
+
+  <!-- Open Positions -->
+  <div id="container" class="position-main-wrapper" *ngFor="let info of openPositions">
+    <span id="text-lg">{{info.mainTitle}}</span>
+
+    <!-- Purple-ish background with a tab group -->
+    <div class="inner-position-container">
+      <!-- Tab group and it's content wrappers underneath(tab-content) -->
+      <div class="tab">
+        <div class="tabUnselected" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
+          Borrowing
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
+          Customer Operations
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
+          Data
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab4')" [class.active]="tabSelected === 'tab4'">
+          Engineering
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab5')" [class.active]="tabSelected === 'tab5'">
+          Finance
+        </div>
+
+      </div>
+
+      <!-- Tab group's content -->
+      <div class="tab-content">
+
+        <!-- Container for holding all the news cards -->
+        <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
+          <!-- Content for Tab 1 -->
+          <!-- Position news card -->
+          <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+            <span id="text-md">{{info.position}}</span>
+            <span id="text-rg">{{info.positionType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div>
+
+        </div>
+
+        <div *ngIf="tabSelected === 'tab2'">
+          <!-- Content for Tab 2 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab3'">
+          <!-- Content for Tab 3 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab4'">
+          <!-- Content for Tab 4 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab5'">
+          <!-- Content for Tab 5 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us section -->
+  <app-contact-us></app-contact-us>
+
+  <!-- Newsletter section -->
+  <app-newsletter></app-newsletter>
+</section>

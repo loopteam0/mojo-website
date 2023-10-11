@@ -36,7 +36,7 @@ of styling is done in the mobile media query (340px)
     color: white;
   }
 
-  // About Mojo section
+  // Digital Wallet Revolution section
   .about-mojo-section {
     height: 30rem;
     display: flex;
@@ -186,52 +186,53 @@ of styling is done in the mobile media query (340px)
   .inner-position-container .position-card {
     border-radius: 1rem;
     background: #fff;
-    height: 10rem;
-    width: 14rem;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
     box-shadow: 10px 32px 72px 0px rgba(51, 51, 51, 0.03);
     padding: 1rem;
+    cursor: pointer;
     justify-content: space-evenly;
   }
 
-  .position-card > #text-rg{
+  .position-card > #text-rg {
     color: rgba(69, 0, 255, 1);
   }
 
-  .position-card > #text-md, .position-card > #text-xs{
+  .position-card > #text-md,
+  .position-card > #text-xs {
     color: rgba(17, 5, 43, 1);
   }
 
-  // Agent Benefits
-  .agents-benefits-wrapper {
+  // Mojoee Benefits (1/2)
+  .mojoee-benefits-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 3rem;
   }
 
-  // Left side of the Agents benefits container
-  .agents-benefits-wrapper .agents-benefits-left {
+  // Left side of the Mojoee benefits container
+  .mojoee-benefits-wrapper .mojoee-benefits-left {
     display: flex;
     flex-direction: column;
     width: 45%;
     gap: 0.75rem;
   }
 
-  .agents-benefits-left > #text-xs {
+  .mojoee-benefits-left > #text-xs {
     color: rgba(105, 224, 122, 1);
   }
 
-  .agents-benefits-left > #text-lg {
+  .mojoee-benefits-left > #text-lg {
     color: rgba(69, 0, 255, 1);
   }
 
-  .agents-benefits-left > #text-rg {
+  .mojoee-benefits-left > #text-rg {
     color: rgba(0, 24, 51, 1);
   }
 
-  // Right side of the Agents benefits container
-  .agents-benefits-right {
+  // Right side of the Mojoee benefits container
+  .mojoee-benefits-right {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 60%;
@@ -239,7 +240,7 @@ of styling is done in the mobile media query (340px)
   }
 
   // Benefits Point(s)
-  .agents-benefits-right .benefit-single-point {
+  .mojoee-benefits-right .benefit-single-point {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -261,108 +262,61 @@ of styling is done in the mobile media query (340px)
     gap: 0.5rem;
   }
 
-  // "How to become a merchant/agent" section
-  .payment-features-section {
+  // Mojoee Benefits (2/2) (Working at Mojo)
+
+  .mojo-benefits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .mojo-benefits-container .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 4rem;
-  }
-
-  .payment-features-section .header-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .payment-features-section .header-wrapper > #text-rg {
-    color: rgba(17, 5, 43, 1);
-  }
-
-  // Main wrapper holding the steps cards (pink background)
-  .payment-features-section .steps-main-section {
-    border-radius: 1.75rem;
-    padding: 4.5rem 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .steps-main-section #text-md {
-    font-size: 1rem;
-  }
-  .steps-main-section #text-sm {
-    font-size: 0.7rem;
-  }
-
-  // Registration Requirements
-
-  .registration-requirements .divider {
-    height: 1px;
-    background: rgba(218, 218, 218, 1);
-    margin-bottom: 3rem;
-  }
-
-  .registration-requirements .requirements-group {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  // Partners Section
-
-  .partners-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6rem;
-  }
-
-  .partners-section .header {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-  }
+    gap: 0.5rem;
 
-  .header > #text-rg {
-    color: rgba(17, 5, 43, 1);
-  }
+    #text-lg{
+      color: rgba(69, 0, 255, 1);
+    }
 
-  .partners-section .logos-grid-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  // Grid for logos of partners
-  .logos-grid-wrapper .partners-logo-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 1rem;
-    gap: 2rem;
-    justify-content: space-between;
-
-    img {
-      width: 6rem;
+    #text-rg{
+      color: rgba(17, 5, 43, 1);
     }
   }
 
-  // Giving the last column a display of flex to
-  // align properly with the rest
-  .logos-grid-wrapper .partners-logo-grid:nth-child(4) {
-    display: flex;
-    flex-direction: column;
+  .mojo-benefits-container .inner-mojo-benefits-wrapper {
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    background: rgba(253, 225, 255, 1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
 
-  .partners-section > #btn-filled {
-    background-color: rgba(69, 0, 255, 1);
-    color: white;
-    width: 15rem;
+  .inner-mojo-benefits-wrapper .benefit-card {
+    border-radius: 1rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 32px 72px 0px rgba(51, 51, 51, 0.03);
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .benefit-card > #text-lg{
+    color: rgba(245, 143, 181, 1);
+  }
+
+  .benefit-card .benefit-card-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    #text-rg{
+      color: rgba(17, 5, 43, 1);
+    }
   }
 }
 
@@ -378,14 +332,6 @@ of styling is done in the mobile media query (340px)
     height: 25rem;
     padding: 5rem 4rem;
   }
-
-  // Main position card
-  .inner-position-container .position-card {
-    border-radius: 1rem;
-    background: #fff;
-    width: 18rem;
-  }
-
 }
 
 // Desktop - Standard
@@ -399,11 +345,17 @@ of styling is done in the mobile media query (340px)
     padding: 5rem 4rem;
   }
 
+  // Image scaling for big M logo
   .image-wrapper > img {
     transform: scale(1.1);
   }
 
-  // Purple-ish background
+  // Mojoee Benefits (Gap increase b/n left and right)
+  .mojoee-benefits-wrapper {
+    gap: 8rem;
+  }
+
+  // Purple-ish background for Open Positions section
   .inner-position-container {
     padding: 3rem 5rem;
     gap: 2rem;
@@ -416,18 +368,7 @@ of styling is done in the mobile media query (340px)
     padding: 12rem 10rem 6rem 10rem;
   }
 
-
-  // Main position card
-  .inner-position-container .position-card {
-    border-radius: 1rem;
-    background: #fff;
-    width: 21rem;
-  }
-
-  .content-wrapper > #text-rg {
-    max-width: 30rem;
-  }
-
+  // Image scaling for big M logo
   .image-wrapper > img {
     transform: scale(1.2);
   }

@@ -19,12 +19,11 @@
     <span id="text-rg">A work culture like none</span>
   </div>
 
-  <!-- About Mojo section -->
+  <!-- Digital Wallet Revolution section -->
   <section id="container" class="about-mojo-section">
-    <div class="about-mojo-left">
-      <span id="text-lg">Join the Digital Wallet Revolution.</span>
-      <span id="text-rg">Mojo is a wallet that integrates cash transactions with modern technology to increase
-        efficiency and security. We are on our way to great things. We are happy to have you join us.</span>
+    <div class="about-mojo-left" *ngFor="let info of digitalWallet">
+      <span id="text-lg">{{info.mainTitle}}</span>
+      <span id="text-rg">{{info.subTitle}}</span>
       <button id="btn-filled">Check Job Postings</button>
     </div>
 
@@ -51,8 +50,8 @@
 
   <!-- Open Positions -->
 
-  <div id="container" class="position-main-wrapper">
-    <span id="text-lg">Open Positions</span>
+  <div id="container" class="position-main-wrapper"  *ngFor="let info of openPositions">
+    <span id="text-lg">{{info.mainTitle}}</span>
 
     <!-- Purple-ish background with a tab group -->
     <div class="inner-position-container">
@@ -94,7 +93,7 @@
         <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Position news card -->
-          <div class="position-card" *ngFor="let info of careerCards">
+          <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
@@ -119,21 +118,20 @@
   </div>
 
 
-
-  <!-- Agent Benefits -->
+  <!-- Mojoee Benefits (1/2) -->
   <div id="container">
-    <div class="agents-benefits-wrapper">
-      <!-- Left side of the Agents benefits container -->
-      <div class="agents-benefits-left" *ngFor="let info of agentsBenefitsHeader">
+    <div class="mojoee-benefits-wrapper">
+      <!-- Left side of the Mojoee benefits container -->
+      <div class="mojoee-benefits-left" *ngFor="let info of mojoeeBenefitsHeader">
         <span id="text-xs">{{ info.tagText }}</span>
         <span id="text-lg">{{ info.mainTitle }}</span>
         <span id="text-rg">{{ info.subTitle }}</span>
       </div>
 
-      <!-- Right side of the Agents benefits container -->
-      <div class="agents-benefits-right">
+      <!-- Right side of the Mojoee benefits container -->
+      <div class="mojoee-benefits-right">
         <!-- Benefits Point(s) -->
-        <div class="benefit-single-point" *ngFor="let info of agentsBenefits">
+        <div class="benefit-single-point" *ngFor="let info of mojoeeBenefits">
           <div [style.backgroundColor]="info.iconContainerBG" class="icon-container">
             <img src="{{ info.icon }}" alt="" />
           </div>
@@ -144,6 +142,25 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Mojoee Benfits 2/2 (Working at Mojo) -->
+  <div id="container" class="mojo-benefits-container">
+
+    <div class="header" *ngFor="let info of mojoBenefitsHeader">
+      <span id="text-lg">{{info.mainTitle}}</span>
+      <span id="text-rg">{{info.subTitle}}</span>
+    </div>
+    <div class="inner-mojo-benefits-wrapper">
+      <div class="benefit-card" *ngFor="let info of mojoeeBenefitsCards">
+        <span id="text-lg" class="card-header-txt">{{info.mainHeader}}</span>
+
+        <div class="benefit-card-list">
+          <span *ngFor="let info of info.benefitsList" id="text-rg">{{info}}</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
