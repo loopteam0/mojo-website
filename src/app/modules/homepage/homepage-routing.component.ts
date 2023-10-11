@@ -9,6 +9,7 @@ import { FAQComponent } from './pages/faq/faq.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { BusinessAgentComponent } from './pages/business-agent/business-agent.component';
+import { CareersComponent } from './pages/careers/careers.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
     component: TermsAndConditionsComponent,
   },
   { path: 'about-us/faq', component: FAQComponent },
+  { path: 'about-us/careers', component: CareersComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/blog-detail', component: BlogDetailComponent },
 ];

@@ -19,6 +19,7 @@ import { FAQComponent } from './pages/faq/faq.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { BusinessAgentComponent } from './pages/business-agent/business-agent.component';
+import { CareersComponent } from './pages/careers/careers.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BusinessAgentComponent } from './pages/business-agent/business-agent.co
     BusinessComponent,
     BusinessAgentComponent,
     AboutUsComponent,
+    CareersComponent,
     BusinessPageHeroComponent,
     TermsAndConditionsComponent,
     FAQComponent,

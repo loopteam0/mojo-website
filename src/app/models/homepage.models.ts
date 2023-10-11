@@ -100,3 +100,9 @@ export interface RegistrationRequirements{
   mainText: string;
   point: Array<string>;
 }
+
+export interface CareerPositionCards{
+  position: string;
+  positionType: string;
+  location: string;
+}

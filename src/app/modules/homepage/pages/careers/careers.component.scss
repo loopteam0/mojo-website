@@ -1,0 +1,434 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // Hero section
+
+  .entire-hero-section {
+    padding-top: 3rem;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 8rem;
+    height: 25rem;
+  }
+
+  .hero-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    width: 32rem;
+    text-align: center;
+  }
+
+  // Text editing
+  .hero-center .main-header-txt,
+  .sub-header-txt,
+  .hero-center > #text-xs {
+    color: white;
+  }
+
+  // About Mojo section
+  .about-mojo-section {
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-mojo-section .about-mojo-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .about-mojo-left > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .about-mojo-left > #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 28rem;
+  }
+
+  .about-mojo-left > #btn-filled {
+    background: rgba(69, 0, 255, 1);
+    color: white;
+  }
+
+  .about-mojo-section > img {
+    width: clamp(28rem, 50%, 40rem);
+  }
+
+  // Feature point container for " Mojo Risin' in 45 locations".
+
+  .feature-point-container .inner-container {
+    border-radius: 1.75rem;
+    padding: 5rem 2rem;
+    height: clamp(20rem, 22rem, 30rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .inner-container .content-wrapper {
+    border-radius: 1.6rem;
+    background: white;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 60%;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  .content-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .content-wrapper > #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 26rem;
+  }
+
+  .inner-container .image-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Open Positions
+
+  // Main position container
+  .position-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .position-main-wrapper > #text-lg {
+    color: rgba(69, 0, 255, 1);
+    text-align: center;
+  }
+
+  // Purple-ish background
+  .inner-position-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.75rem;
+    background: rgba(241, 241, 255, 1);
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  // Tab group
+  .tab {
+    gap: 0.625rem;
+    flex-shrink: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(214, 214, 214, 1);
+  }
+
+  .tabUnselected {
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    background: transparent;
+    font-family: "Inter-SemiBold";
+    font-size: 1rem;
+    color: rgba(18, 20, 22, 1);
+    cursor: pointer;
+  }
+
+  .tabUnselected.active {
+    background: transparent;
+    border-bottom: 2px solid rgba(69, 0, 255, 1);
+    color: rgba(69, 0, 255, 1);
+    transition: 0.5s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  // Tab group's content
+  .tab-content {
+    flex: 1 1 auto;
+  }
+
+  // Container for holding all the position cards
+  .position-cards-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem;
+    justify-content: start;
+  }
+
+  // Main position card
+  .inner-position-container .position-card {
+    border-radius: 1rem;
+    background: #fff;
+    height: 10rem;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 32px 72px 0px rgba(51, 51, 51, 0.03);
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+
+  .position-card > #text-rg{
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .position-card > #text-md, .position-card > #text-xs{
+    color: rgba(17, 5, 43, 1);
+  }
+
+  // Agent Benefits
+  .agents-benefits-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  // Left side of the Agents benefits container
+  .agents-benefits-wrapper .agents-benefits-left {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 0.75rem;
+  }
+
+  .agents-benefits-left > #text-xs {
+    color: rgba(105, 224, 122, 1);
+  }
+
+  .agents-benefits-left > #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .agents-benefits-left > #text-rg {
+    color: rgba(0, 24, 51, 1);
+  }
+
+  // Right side of the Agents benefits container
+  .agents-benefits-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    gap: 3rem 2.5rem;
+  }
+
+  // Benefits Point(s)
+  .agents-benefits-right .benefit-single-point {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .benefit-single-point .icon-container {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    background-color: rgba(212, 217, 245, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-single-point .benefits-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  // "How to become a merchant/agent" section
+  .payment-features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .payment-features-section .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .payment-features-section .header-wrapper > #text-rg {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  // Main wrapper holding the steps cards (pink background)
+  .payment-features-section .steps-main-section {
+    border-radius: 1.75rem;
+    padding: 4.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .steps-main-section #text-md {
+    font-size: 1rem;
+  }
+  .steps-main-section #text-sm {
+    font-size: 0.7rem;
+  }
+
+  // Registration Requirements
+
+  .registration-requirements .divider {
+    height: 1px;
+    background: rgba(218, 218, 218, 1);
+    margin-bottom: 3rem;
+  }
+
+  .registration-requirements .requirements-group {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  // Partners Section
+
+  .partners-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .partners-section .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header > #text-rg {
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .partners-section .logos-grid-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  // Grid for logos of partners
+  .logos-grid-wrapper .partners-logo-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
+
+    img {
+      width: 6rem;
+    }
+  }
+
+  // Giving the last column a display of flex to
+  // align properly with the rest
+  .logos-grid-wrapper .partners-logo-grid:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partners-section > #btn-filled {
+    background-color: rgba(69, 0, 255, 1);
+    color: white;
+    width: 15rem;
+  }
+}
+
+// Desktop - Medium
+@media (min-width: 1280px) {
+  .entire-hero-section {
+    padding: 10rem 6rem 6rem 6rem;
+    height: 30rem;
+  }
+
+  // Feature point container for "Mojo Risin' in 45 locations"
+  .feature-point-container .inner-container {
+    height: 25rem;
+    padding: 5rem 4rem;
+  }
+
+  // Main position card
+  .inner-position-container .position-card {
+    border-radius: 1rem;
+    background: #fff;
+    width: 18rem;
+  }
+
+}
+
+// Desktop - Standard
+@media (min-width: 1440px) {
+  .entire-hero-section {
+    padding: 10rem 8rem 6rem 8rem;
+  }
+
+  // Feature point container for "Mojo Risin' in 45 locations"
+  .feature-point-container .inner-container {
+    padding: 5rem 4rem;
+  }
+
+  .image-wrapper > img {
+    transform: scale(1.1);
+  }
+
+  // Purple-ish background
+  .inner-position-container {
+    padding: 3rem 5rem;
+    gap: 2rem;
+  }
+}
+
+// Desktop - Large
+@media (min-width: 1650px) {
+  .entire-hero-section {
+    padding: 12rem 10rem 6rem 10rem;
+  }
+
+
+  // Main position card
+  .inner-position-container .position-card {
+    border-radius: 1rem;
+    background: #fff;
+    width: 21rem;
+  }
+
+  .content-wrapper > #text-rg {
+    max-width: 30rem;
+  }
+
+  .image-wrapper > img {
+    transform: scale(1.2);
+  }
+}

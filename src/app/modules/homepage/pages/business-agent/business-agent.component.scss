@@ -137,7 +137,7 @@ of styling is done in the mobile media query (340px)
   // Right side of the Agents benefits container
   .agents-benefits-right{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     width: 60%;
     gap: 3rem 2.5rem;
   }

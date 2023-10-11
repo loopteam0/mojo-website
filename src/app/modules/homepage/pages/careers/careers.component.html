@@ -1,0 +1,159 @@
+<section class="business-agent">
+  <!-- Hero Section -->
+  <section style="
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%),
+        url('/assets/images/careers-bg.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    " class="entire-hero-section">
+    <div class="hero-center" *ngFor="let info of careerPageHero">
+      <span id="text-xs">{{ info.tagText }}</span>
+      <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
+      <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
+    </div>
+  </section>
+
+  <!-- Secured blue strip -->
+  <div id="blue-strip-mojo">
+    <span id="text-rg">A work culture like none</span>
+  </div>
+
+  <!-- About Mojo section -->
+  <section id="container" class="about-mojo-section">
+    <div class="about-mojo-left">
+      <span id="text-lg">Join the Digital Wallet Revolution.</span>
+      <span id="text-rg">Mojo is a wallet that integrates cash transactions with modern technology to increase
+        efficiency and security. We are on our way to great things. We are happy to have you join us.</span>
+      <button id="btn-filled">Check Job Postings</button>
+    </div>
+
+    <img src="/assets/images/about-mojo-img.png" alt="" />
+  </section>
+
+
+  <!-- Mojo Risin' in 45 locations (Feature point)-->
+  <div id="container" class="feature-point-container" *ngFor="let info of MojoLocations">
+    <!-- Container with image background (passing an image as the background instead in the "backgroundColor" object) and flex-direction property -->
+    <div [style.flexDirection]="info.flexDirection" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('{{info.backgroundColor}}'); background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;" class="inner-container">
+      <div class="content-wrapper">
+        <span id="text-lg">{{ info.mainTitle }}</span>
+        <span id="text-rg">{{ info.subTitle }}</span>
+      </div>
+
+      <div class="image-wrapper">
+        <img src="{{ info.image }}" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Open Positions -->
+
+  <div id="container" class="position-main-wrapper">
+    <span id="text-lg">Open Positions</span>
+
+    <!-- Purple-ish background with a tab group -->
+    <div class="inner-position-container">
+      <!-- Tab group and it's content wrappers underneath(tab-content) -->
+      <div class="tab">
+        <div class="tabUnselected" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
+          All
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
+          Customer Support
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
+          Data
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab4')" [class.active]="tabSelected === 'tab4'">
+          Engineering
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab5')" [class.active]="tabSelected === 'tab5'">
+          Finance
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab6')" [class.active]="tabSelected === 'tab6'">
+          Marketing
+        </div>
+
+        <div class="tabUnselected" (click)="setActiveTab('tab7')" [class.active]="tabSelected === 'tab7'">
+          Operations
+        </div>
+      </div>
+
+      <!-- Tab group's content -->
+      <div class="tab-content">
+
+        <!-- Container for holding all the news cards -->
+        <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
+          <!-- Content for Tab 1 -->
+          <!-- Position news card -->
+          <div class="position-card" *ngFor="let info of careerCards">
+            <span id="text-md">{{info.position}}</span>
+            <span id="text-rg">{{info.positionType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div>
+
+          
+        </div>
+
+        <div *ngIf="tabSelected === 'tab2'">
+          <!-- Content for Tab 2 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab3'">
+          <!-- Content for Tab 3 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab4'">
+          <!-- Content for Tab 3 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Agent Benefits -->
+  <div id="container">
+    <div class="agents-benefits-wrapper">
+      <!-- Left side of the Agents benefits container -->
+      <div class="agents-benefits-left" *ngFor="let info of agentsBenefitsHeader">
+        <span id="text-xs">{{ info.tagText }}</span>
+        <span id="text-lg">{{ info.mainTitle }}</span>
+        <span id="text-rg">{{ info.subTitle }}</span>
+      </div>
+
+      <!-- Right side of the Agents benefits container -->
+      <div class="agents-benefits-right">
+        <!-- Benefits Point(s) -->
+        <div class="benefit-single-point" *ngFor="let info of agentsBenefits">
+          <div [style.backgroundColor]="info.iconContainerBG" class="icon-container">
+            <img src="{{ info.icon }}" alt="" />
+          </div>
+
+          <div class="benefits-content">
+            <span id="text-md">{{ info.mainTitle }}</span>
+            <span id="text-xs">{{ info.subTitle }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FAQ Section -->
+  <app-faq-section></app-faq-section>
+
+  <!-- Contact Us section -->
+  <app-contact-us></app-contact-us>
+
+  <!-- Newsletter section -->
+  <app-newsletter></app-newsletter>
+</section>
