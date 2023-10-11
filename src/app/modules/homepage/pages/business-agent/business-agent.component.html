@@ -49,7 +49,37 @@
     </div>
   </div>
 
- 
+  <!-- Agent Benefits -->
+  <div id="container">
+    <div class="agents-benefits-wrapper">
+
+      <!-- Left side of the Agents benefits container -->
+      <div class="agents-benefits-left" *ngFor="let info of agentsBenefitsHeader">
+        <span id="text-xs">{{info.tagText}}</span>
+        <span id="text-lg">{{info.mainTitle}}</span>
+        <span id="text-rg">{{info.subTitle}}</span>
+      </div>
+
+      <!-- Right side of the Agents benefits container -->
+      <div class="agents-benefits-right">
+
+        <!-- Benefits Point(s) -->
+        <div class="benefit-single-point" *ngFor="let info of agentsBenefits">
+          <div [style.backgroundColor]="info.iconContainerBG" class="icon-container">
+            <img src="{{info.icon}}" alt="">
+          </div>
+
+          <div class="benefits-content">
+            <span id="text-md">{{info.mainTitle}}</span>
+            <span id="text-rg">{{info.subTitle}}</span>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 
   <!-- "How to become a merchant/agent" section-->
 
@@ -71,6 +101,17 @@
     </div>
   
   </section>
+
+  <!-- Registration Requirements -->
+  <div id="container" class="registration-requirements" *ngFor="let info of registrationRequirements">
+    <div class="divider"></div>
+
+    <span id="text-lg">{{info.mainText}}</span>
+    
+    <div class="requirements-group">
+      <li *ngFor="let info of info.point" id="text-rg">{{info}}</li>
+    </div>
+  </div>
 
   <!-- Partners Section -->
 

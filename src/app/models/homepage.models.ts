@@ -80,7 +80,6 @@ export interface TeamMembers{
 
 }
 
-
 export interface NewsCards{
   newsImg: string;
   writerImg: string;
@@ -88,4 +87,16 @@ export interface NewsCards{
   newsDate: string;
   newsTitle: string;
   newsSubTitle: string;
+}
+
+export interface BusinessAgentsBenefits{
+  icon: string;
+  iconContainerBG: string;
+  mainTitle: string;
+  subTitle: string;
+}
+
+export interface RegistrationRequirements{
+  mainText: string;
+  point: Array<string>;
 }

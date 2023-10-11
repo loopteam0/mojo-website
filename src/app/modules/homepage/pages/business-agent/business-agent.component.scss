@@ -9,6 +9,10 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1024px) {
   // Hero section
 
+  #text-xl, #text-lg{
+    color: rgba(69, 0, 255, 1);
+  }
+
   .entire-hero-section {
     background-color: rgba(242, 245, 255, 1);
     padding-top: 3rem;
@@ -52,9 +56,7 @@ of styling is done in the mobile media query (340px)
     gap: 1rem;
   }
 
-  .agent-network-hero > #text-xl{
-    color: rgba(69, 0, 255, 1);
-  }
+  
 
   .agent-network-hero > #text-rg{
     color: rgba(52, 64, 94, 1);
@@ -66,8 +68,7 @@ of styling is done in the mobile media query (340px)
     }
   }
 
-  // Feature point container for "Secured Payments",
-  // "Quick Settlements" and "Worldwide payments"
+  // Feature point container for "Partner with us".
 
   .feature-point-container .inner-container {
     border-radius: 1.75rem;
@@ -92,10 +93,7 @@ of styling is done in the mobile media query (340px)
     flex-wrap: wrap;
   }
 
-  .content-wrapper > #text-lg {
-    color: rgba(69, 0, 255, 1);
-    max-width: 26rem;
-  }
+ 
 
   .content-wrapper > #text-rg {
     color: rgba(52, 64, 94, 1);
@@ -113,6 +111,60 @@ of styling is done in the mobile media query (340px)
     }
   }
 
+  // Agent Benefits
+  .agents-benefits-wrapper{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  // Left side of the Agents benefits container
+  .agents-benefits-wrapper .agents-benefits-left{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 0.75rem;
+  }
+
+  .agents-benefits-left > #text-xs{
+    color: rgba(105, 224, 122, 1);
+  }
+
+  .agents-benefits-left > #text-rg{
+    color: rgba(0, 24, 51, 1);
+  }
+
+  // Right side of the Agents benefits container
+  .agents-benefits-right{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 60%;
+    gap: 3rem 2.5rem;
+  }
+
+  // Benefits Point(s)
+  .agents-benefits-right .benefit-single-point{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .benefit-single-point .icon-container{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    background-color: rgba(212, 217, 245, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-single-point .benefits-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   // "How to become a merchant/agent" section
   .payment-features-section {
     display: flex;
@@ -127,10 +179,6 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-  }
-
-  .payment-features-section .header-wrapper > #text-lg {
-    color: rgba(69, 0, 255, 1);
   }
 
   .payment-features-section .header-wrapper > #text-rg {
@@ -155,6 +203,21 @@ of styling is done in the mobile media query (340px)
     font-size: 0.7rem;
   }
 
+  // Registration Requirements
+
+  .registration-requirements .divider{
+    height: 1px;
+    background: rgba(218, 218, 218, 1);
+    margin-bottom: 3rem;
+  }
+
+  .registration-requirements .requirements-group{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
   // Partners Section
 
   .partners-section{
@@ -168,10 +231,6 @@ of styling is done in the mobile media query (340px)
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-
-  .header > #text-xl{
-    color: rgba(69, 0, 255, 1);
   }
 
   .header > #text-rg{
@@ -220,9 +279,7 @@ of styling is done in the mobile media query (340px)
     height: 30rem;
   }
 
-  // Feature point container for "Secured Payments",
-  // "Quick Settlements" and "Worldwide payments"
-
+  // Feature point container for "Partner with Us"
   .feature-point-container .inner-container {
     height: 25rem;
     padding: 5rem 4rem;
@@ -231,6 +288,13 @@ of styling is done in the mobile media query (340px)
   // Increasing image widths for screen size
   .logos-grid-wrapper .partners-logo-grid img{
     width: 8rem;
+  }
+
+  .steps-main-section #text-md {
+    font-size: 1.125rem;
+  }
+  .steps-main-section #text-sm {
+    font-size: 1rem;
   }
 }
 
