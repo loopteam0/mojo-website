@@ -10,7 +10,7 @@ export class BlogDetailComponent {
 
    // Making hero info available to edit later in CMS by giving it a model
    blogpageHero: HomepageHero[] = [
-    {tagText: 'Mojoer', mainTitle: 'Get updates with Mojo', subTitle: "Mojo blog tells you all you need to know about the financial landsape of Lebanon and the world."}
+    {tagText: 'Mojo Media', mainTitle: 'Integer Maecenas Eget Viverra si importune', subTitle: ""}
   ]
 
   // Making promo banner info available to edit later in CMS by giving it a model

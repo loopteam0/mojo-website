@@ -1,4 +1,5 @@
 <section class="blog">
+  <section id="container">
   <section
     style="
       background: linear-gradient(
@@ -16,13 +17,14 @@
     <div class="hero-center" *ngFor="let info of blogpageHero">
       <span id="text-xs">{{ info.tagText }}</span>
       <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
-      <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
     </div>
+  </section>
   </section>
 
  
 
 
+  <app-media-and-press></app-media-and-press>
 
   <!-- Promo banner section -->
   <div class="promotional-bannner-wrapper" id="container">

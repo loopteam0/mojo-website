@@ -8,15 +8,14 @@ of styling is done in the mobile media query (340px)
 // Desktop - Small
 @media (min-width: 1024px) {
   .entire-hero-section {
-    background-color: rgba(242, 245, 255, 1);
-    padding-top: 3rem;
     padding: 4rem;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 4rem;
-    padding-top: 8rem;
-    height: 25rem;
+    height: 20rem;
+    margin-top: 2rem;
+    border-radius: 1.75rem;
   }
 
   .hero-center {
@@ -24,7 +23,7 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     gap: 0.35rem;
-    width: clamp(30rem, 50%, 42rem);
+    width: clamp(30rem, 75%, 42rem);
     text-align: center;
   }
 
@@ -50,8 +49,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Medium
 @media (min-width: 1280px) {
   .entire-hero-section {
-    padding: 10rem 6rem 6rem 6rem;
-    height: 30rem;
+    padding: 10rem 6rem 3rem 6rem;
   }
 
 
@@ -61,7 +59,7 @@ of styling is done in the mobile media query (340px)
 // Desktop - Standard
 @media (min-width: 1440px) {
   .entire-hero-section {
-    padding: 10rem 8rem 6rem 8rem;
+    padding: 10rem 8rem 3rem 8rem;
   }
 
 }
@@ -69,6 +67,6 @@ of styling is done in the mobile media query (340px)
 // Desktop - Large
 @media (min-width: 1650px) {
   .entire-hero-section {
-    padding: 12rem 10rem 6rem 10rem;
+    padding: 12rem 10rem 3rem 10rem;
   }
 }

@@ -73,7 +73,7 @@
         <div class="news-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Main news card -->
-          <div class="news-card" *ngFor="let info of newscards">
+          <div (click)="blogDetailsPage()" class="news-card" *ngFor="let info of newscards">
             <div
               style="
             background-image: url('{{ info.newsImg }}');

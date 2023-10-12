@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HomepageHero, NewsCards, TeamMembers } from 'src/app/models/homepage.models';
 
 @Component({
@@ -7,6 +8,13 @@ import { HomepageHero, NewsCards, TeamMembers } from 'src/app/models/homepage.mo
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
+
+
+  constructor(private router : Router){}
+
+  blogDetailsPage(){
+    this.router.navigate(['blog/blog-detail'])
+  }
 
    // Making hero info available to edit later in CMS by giving it a model
    blogpageHero: HomepageHero[] = [
