@@ -1,0 +1,25 @@
+/*
+All SCSS styles are grouped in media queries, from 
+mobile to desktop. So as we scale up, from one screen to 
+the next, the styling reduces, meaning that the majority 
+of styling is done in the mobile media query (340px)
+*/
+
+
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  .map-canvas{
+    width: 100%;
+    height: 40rem;
+    padding: 4rem 0;
+
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+}
