@@ -30,8 +30,10 @@
     <div class="about-mojo-left">
       <span id="text-lg">About Mojo</span>
       <span id="text-rg"
-        >Mojo is a wallet that integrates cash transactions with modern
-        technology to increase efficiency and security.</span
+        >Mojo is designed with you in mind. Our mission is to provide a secure,
+        efficient, flexible, and affordable wallet for every citizen, making
+        daily transactions—from buying groceries to settling utility bills—a
+        seamless experience.</span
       >
       <button id="btn-filled">More about Us</button>
     </div>
@@ -43,29 +45,29 @@
   <app-general-features></app-general-features>
 
   <!-- "Mojo is for you" section -->
-  <section id="container" class="mojo-for-you-section" *ngFor="let info of mojoForYou">
-
+  <section
+    id="container"
+    class="mojo-for-you-section"
+    *ngFor="let info of mojoForYou"
+  >
     <div class="section-left">
-      <img src="{{info.image}}" alt="">
+      <img src="{{ info.image }}" alt="" />
     </div>
 
     <div class="section-right">
-
       <div class="title-container">
-        <span id="text-xs">{{info.subheader}}</span>
-        <span id="text-xl">{{info.mainHeader}}</span>
+        <span id="text-xs">{{ info.subheader }}</span>
+        <span id="text-xl">{{ info.mainHeader }}</span>
       </div>
 
       <div class="features-container">
         <span *ngFor="let point of info.points" class="point">
-          <img src="/assets/svgs/icn-check-blue.svg" alt="">
-          <span id="text-rg">{{point}}</span>
+          <img src="/assets/svgs/icn-check-blue.svg" alt="" />
+          <span id="text-rg">{{ point }}</span>
         </span>
       </div>
     </div>
-
   </section>
-
 
   <app-mojo-merchant-cta></app-mojo-merchant-cta>
 
@@ -77,7 +79,7 @@
 
   <!-- Feedbacks (Reviews) section -->
   <app-feedbacks></app-feedbacks>
-  
+
   <!-- Contact Us section -->
   <app-contact-us></app-contact-us>
 
