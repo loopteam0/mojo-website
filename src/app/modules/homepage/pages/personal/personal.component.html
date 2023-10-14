@@ -22,7 +22,9 @@
   
         <div class="step1" id="stepContainer" *ngFor="let info of info.cardInfoOne">
   
-          <div [style.backgroundColor]="info.innerBg" id="inner-stepContainer">
+          <div style="background-image: url('{{info.innerBg}}'); background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;" id="inner-stepContainer">
           </div>
   
           <span id="text-md">{{info.cardTitle}}</span>
@@ -64,15 +66,15 @@
   <app-mojo-merchant-cta></app-mojo-merchant-cta>
 
   <!-- Spend with Confidence section -->
-  <div id="container" class="spend-confidence-section">
+  <div id="container" class="spend-confidence-section" *ngFor="let info of spendWithConfidence">
 
     <div class="spend-section-left">
       <img src="/assets/images/subHero.png" alt="">
     </div>
 
     <div class="spend-section-right">
-      <span id="text-lg">Spend with Confidence</span>
-      <span id="text-rg">With Mojo spend analytics you can determine and create your spend path.</span>
+      <span id="text-lg">{{info.mainTitle}}</span>
+      <span id="text-rg">{{info.subTitle}}</span>
     </div>
 
   </div>
@@ -92,4 +94,5 @@
   <!-- Newsletter section -->
   <app-newsletter></app-newsletter>
 
+  <router-outlet></router-outlet>
 </section>

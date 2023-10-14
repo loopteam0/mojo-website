@@ -26,14 +26,11 @@
   <app-become-a-mojoer></app-become-a-mojoer>
 
   <!-- About Mojo section -->
-  <section id="container" class="about-mojo-section">
+  <section id="container" class="about-mojo-section" *ngFor="let info of aboutMojo">
     <div class="about-mojo-left">
-      <span id="text-lg">About Mojo</span>
+      <span id="text-lg">{{info.mainTitle}}</span>
       <span id="text-rg"
-        >Mojo is designed with you in mind. Our mission is to provide a secure,
-        efficient, flexible, and affordable wallet for every citizen, making
-        daily transactions—from buying groceries to settling utility bills—a
-        seamless experience.</span
+        >{{info.subTitle}}</span
       >
       <button id="btn-filled">More about Us</button>
     </div>
@@ -89,3 +86,4 @@
   <!-- Newsletter section -->
   <app-newsletter></app-newsletter>
 </section>
+

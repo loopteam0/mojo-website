@@ -7,83 +7,96 @@
   </div>
 
   <!-- Main wrapper holding the steps cards (pink background)-->
-  <div class="steps-main-section">
+  <div class="steps-main-section" *ngFor="let info of becomeAMojoer">
 
 
+    <ng-container *ngFor="let info of info.Steps">
+      <!-- Container holding a single step with its tag ("step-tag" class) -->
+      <div class="single-step-wrapper">
 
-    <!-- Container holding a single step with its tag ("step-tag" class) -->
-    <div class="single-step-wrapper">
 
-      <div class="step1" id="stepContainer">
+        <ng-container *ngFor="let info of info.firstStep">
+          <div class="step1" id="stepContainer">
 
-        <div id="inner-stepContainer">
+            <div id="inner-stepContainer">
 
-          <img class="app-store-logo" src="/assets/images/app-store-logo.png" alt="">
-          <img class="phone-mockup" src="/assets/images/phone-mockup-1.png" alt="">
-          <img class="play-store-logo" src="/assets/images/play-store-logo.png" alt="">
-        </div>
+              <img class="app-store-logo" src="/assets/images/app-store-logo.png" alt="">
+              <img class="phone-mockup" src="/assets/images/phone-mockup-1.png" alt="">
+              <img class="play-store-logo" src="/assets/images/play-store-logo.png" alt="">
+            </div>
 
-        <span id="text-md">Download The Mojo App</span>
-        <span id="text-sm">Download on IOS and Android.</span>
+            <span id="text-md">{{info.mainHeader}}</span>
+            <span id="text-sm">{{info.subHeader}}</span>
+
+          </div>
+
+
+          <!-- Step tags-->
+          <div class="step-tag">
+            <div style="background-color: rgba(69, 0, 255, 1);" class="number">
+              <span>1</span>
+            </div>
+            <span class="step-tag-txt">{{info.stepTagTxt}}</span>
+          </div>
+        </ng-container>
+
+
 
       </div>
 
-      <!-- Step tags-->
-      <div class="step-tag">
-        <div style="background-color: rgba(69, 0, 255, 1);" class="number">
-          <span>1</span>
-        </div>
-        <span class="step-tag-txt">First Step</span>
-      </div>
+      <div class="single-step-wrapper">
 
-    </div>
+        <ng-container *ngFor="let info of info.secondStep">
+        <div class="step2" id="stepContainer">
 
-    <div class="single-step-wrapper">
+          <div id="inner-stepContainer">
+            <img class="phone-mockup" src="/assets/images/phone-mockup-2.png" alt="">
+          </div>
 
-      <div class="step2" id="stepContainer">
+          <span id="text-md">{{info.mainHeader}}</span>
+          <span id="text-sm">{{info.subHeader}}</span>
 
-        <div id="inner-stepContainer">
-          <img class="phone-mockup" src="/assets/images/phone-mockup-2.png" alt="">
         </div>
 
-        <span id="text-md">Complete account profile</span>
-        <span id="text-sm">What you need to open a Mojo account.</span>
-
-      </div>
-
-      <!-- Step tags-->
-      <div class="step-tag">
-        <div style="background-color: rgba(255, 140, 66, 1);" class="number">
-          <span>2</span>
-        </div>
-        <span class="step-tag-txt">Second Step</span>
-      </div>
-
-
-    </div>
-
-    <div class="single-step-wrapper">
-
-      <div class="step3" id="stepContainer">
-
-        <div id="inner-stepContainer">
-          <img class="phone-mockup" src="/assets/images/phone-mockup-3.png" alt="">
+        <!-- Step tags-->
+        <div class="step-tag">
+          <div style="background-color: rgba(255, 140, 66, 1);" class="number">
+            <span>2</span>
+          </div>
+          <span class="step-tag-txt">{{info.stepTagTxt}}</span>
         </div>
 
-        <span id="text-md">You are now a Mojoer</span>
-        <span id="text-sm">You can pay and receive funds very quickly.</span>
 
+        </ng-container>
       </div>
+      
 
-      <!-- Step tags-->
-      <div class="step-tag">
-        <div style="background-color: rgba(5, 178, 219, 1);" class="number">
-          <span>3</span>
+      <div class="single-step-wrapper">
+
+        <ng-container *ngFor="let info of info.thirdStep">
+        <div class="step3" id="stepContainer">
+
+          <div id="inner-stepContainer">
+            <img class="phone-mockup" src="/assets/images/phone-mockup-3.png" alt="">
+          </div>
+
+          <span id="text-md">{{info.mainHeader}}</span>
+          <span id="text-sm">{{info.subHeader}}</span>
+
         </div>
-        <span class="step-tag-txt">Third Step</span>
+
+        <!-- Step tags-->
+        <div class="step-tag">
+          <div style="background-color: rgba(5, 178, 219, 1);" class="number">
+            <span>3</span>
+          </div>
+          <span class="step-tag-txt">{{info.stepTagTxt}}</span>
+        </div>
+
+        </ng-container>
       </div>
 
-    </div>
+    </ng-container>
 
 
 

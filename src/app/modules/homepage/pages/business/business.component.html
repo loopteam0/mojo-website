@@ -41,7 +41,7 @@
   </div>
 
   <!-- Quick Settlements (Feature point)-->
-  <div id="container" class="feature-point-container" *ngFor="let info of quickSettlements">
+  <div id="container" class="feature-point-container quick-settlements" *ngFor="let info of quickSettlements">
 
     <!-- Container with colored background and flex-direction property -->
     <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
@@ -125,8 +125,14 @@
   
         <div class="step1" id="stepContainer" *ngFor="let info of info.cardInfoOne">
   
-          <div [style.backgroundColor]="info.innerBg" id="inner-stepContainer">
+          <div id="inner-stepContainer">
+            <div  id="inner-stepContainer">
+              <iframe [src]="sanitizeUrl(info.innerBg)" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
+        </div>
   
           <span id="text-md">{{info.cardTitle}}</span>
           <span id="text-sm">{{info.cardSubTitle}}</span>

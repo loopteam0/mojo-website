@@ -32,6 +32,7 @@ of styling is done in the mobile media query (340px)
   .inner-hero-container > #text-rg {
     color: rgba(52, 64, 94, 1);
     max-width: 90%;
+    
   }
 
   // Main founders container
@@ -80,6 +81,7 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
   }
 
   .team-card-bottom .member-info-wrapper{
@@ -91,6 +93,7 @@ of styling is done in the mobile media query (340px)
 
     #text-rg{
         color: rgba(62, 62, 89, 1);
+        font-size: 0.8rem;
     }
   }
 
@@ -143,6 +146,11 @@ of styling is done in the mobile media query (340px)
   .team-card .team-card-bottom{
     padding-bottom: 2.5rem;
   }
+
+  .team-card-bottom .member-info-wrapper > #text-rg{
+    color: rgba(62, 62, 89, 1);
+    font-size: 1rem;
+}
   
   .team-card-bottom .icons-wrapper{
     gap: 1rem;

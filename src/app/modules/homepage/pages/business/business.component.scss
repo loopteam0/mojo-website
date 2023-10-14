@@ -73,12 +73,12 @@ of styling is done in the mobile media query (340px)
     gap: 2rem;
   }
 
-  .subHeroContent .subHero-left {
-    width: 60%;
-  }
+  // .subHeroContent .subHero-left {
+  //   width: 60%;
+  // }
 
   .subHero-left>img {
-    width: 100%;
+    max-width: 100%;
   }
 
   .subHeroContent .subHero-right {
@@ -139,7 +139,7 @@ of styling is done in the mobile media query (340px)
     justify-content: center;
 
     img{
-      width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -181,6 +181,12 @@ of styling is done in the mobile media query (340px)
 
   #stepContainer {
     width: 23rem;
+  }
+
+  iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
   }
 
   .payment-features-section .steps-main-section .step1 #inner-stepContainer {

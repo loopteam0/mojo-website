@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/services/scroll.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+
+  constructor(private scrollService: ScrollService) {}
+  
+  onNavLinkClick(sectionId: string) {
+    this.scrollService.scrollToClass.emit(sectionId);
+  }
+  
 }

@@ -10,62 +10,25 @@
   <div class="steps-main-section">
 
     <!-- Container holding a single step with its tag ("step-tag" class) -->
-    <div class="single-step-wrapper">
+    <div class="single-step-wrapper" *ngFor="let info of howItWorks">
 
       <div class="step1" id="stepContainer">
 
         <div id="inner-stepContainer">
-          <iframe src="https://www.youtube.com/embed/i3rhDtDL31I?si=ERN1zM_m1vl78V8z" title="YouTube video player"
+          <iframe [src]="sanitizeUrl(info.videoLink)" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
 
-        <span id="text-md">Load your Wallet</span>
-        <span id="text-sm">You can easily fu nd your account</span>
+        <span id="text-md">{{info.title}}</span>
+        <span id="text-sm">{{info.description}}</span>
 
       </div>
 
     </div>
 
-    <div class="single-step-wrapper">
-
-      <div class="step2" id="stepContainer">
-
-        <div id="inner-stepContainer">
-          <iframe src="https://www.youtube.com/embed/i3rhDtDL31I?si=ERN1zM_m1vl78V8z" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-
-        <span id="text-md">Send Money</span>
-        <span id="text-sm">Learn to transfer your funds.</span>
-
-      </div>
-
-
-
-
-    </div>
-
-    <div class="single-step-wrapper">
-
-      <div class="step3" id="stepContainer">
-
-        <div id="inner-stepContainer">
-          <iframe src="https://www.youtube.com/embed/i3rhDtDL31I?si=ERN1zM_m1vl78V8z" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-
-        <span id="text-md">Make Payments</span>
-        <span id="text-sm">You can pay and receive funds very quickly.</span>
-
-      </div>
-
-    </div>
+   
 
   </div>
 

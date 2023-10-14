@@ -44,8 +44,6 @@ import { FaqSectionComponent } from './faq-section/faq-section.component';
     ContactUsComponent,
     HowItWorksComponent,
     FaqSectionComponent
-
-
   ]
 })
 export class SharedModule { }

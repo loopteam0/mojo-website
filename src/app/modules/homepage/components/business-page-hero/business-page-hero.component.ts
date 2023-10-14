@@ -11,7 +11,7 @@ export class BusinessPageHeroComponent {
 
   // Making hero info available to edit later in CMS by giving it a model
   businesspageHero: HomepageHero[] = [
-    {tagText: 'Mojo', mainTitle: 'Business is best with Mojo', subTitle: "Mojo Merchants App has all you need to receive payments."}
+    {tagText: 'Mojo', mainTitle: 'Business is best with Mojo', subTitle: "Business is much simpler being a Mojo Merchant."}
   ]
 
 }

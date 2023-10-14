@@ -16,7 +16,7 @@
 
   <!-- Secured blue strip -->
   <div id="blue-strip-mojo">
-    <span id="text-rg">A work culture like none</span>
+    <span id="text-rg">We like to keep our Mojoees happy!</span>
   </div>
 
   <!-- Digital Wallet Revolution section -->
@@ -64,26 +64,11 @@
         <div class="tabUnselected" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
           Customer Support
         </div>
-
+     
         <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
-          Data
-        </div>
-
-        <div class="tabUnselected" (click)="setActiveTab('tab4')" [class.active]="tabSelected === 'tab4'">
-          Engineering
-        </div>
-
-        <div class="tabUnselected" (click)="setActiveTab('tab5')" [class.active]="tabSelected === 'tab5'">
-          Finance
-        </div>
-
-        <div class="tabUnselected" (click)="setActiveTab('tab6')" [class.active]="tabSelected === 'tab6'">
           Marketing
         </div>
 
-        <div class="tabUnselected" (click)="setActiveTab('tab7')" [class.active]="tabSelected === 'tab7'">
-          Operations
-        </div>
       </div>
 
       <!-- Tab group's content -->
@@ -102,17 +87,29 @@
           
         </div>
 
-        <div *ngIf="tabSelected === 'tab2'">
+        <div class="position-cards-container" *ngIf="tabSelected === 'tab2'">
           <!-- Content for Tab 2 -->
+
+           <!-- Position news card -->
+           <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+            <span id="text-md">{{info.position}}</span>
+            <span id="text-rg">{{info.positionType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div>
         </div>
 
-        <div *ngIf="tabSelected === 'tab3'">
+        <div class="position-cards-container" *ngIf="tabSelected === 'tab3'">
           <!-- Content for Tab 3 -->
+
+           <!-- Position news card -->
+           <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+            <span id="text-md">{{info.position}}</span>
+            <span id="text-rg">{{info.positionType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div>
         </div>
 
-        <div *ngIf="tabSelected === 'tab4'">
-          <!-- Content for Tab 3 -->
-        </div>
+      
       </div>
     </div>
   </div>

@@ -95,6 +95,10 @@ of styling is done in the mobile media query (340px)
   .footer-right .socials-group {
     display: flex;
     gap: 0.5rem;
+
+    img{
+      cursor: pointer;
+    }
   }
 }
 

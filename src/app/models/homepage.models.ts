@@ -25,9 +25,33 @@ export interface MojoForYou {
 }
 
 export interface BecomeAMojoer {
-  firstStep: [mainHeader: string, subHeader: string, stepTagTxt: string];
-  secondStep: [mainHeader: string, subHeader: string, stepTagTxt: string];
-  thirdStep: [mainHeader: string, subHeader: string, stepTagTxt: string];
+
+  Steps: Array<{
+    firstStep: Array<{
+      mainHeader: string;
+      subHeader: string;
+      stepTagTxt: string;
+    }>;
+
+    secondStep: Array<{
+      mainHeader: string;
+      subHeader: string;
+      stepTagTxt: string;
+    }>;
+
+    thirdStep: Array<{
+      mainHeader: string;
+      subHeader: string;
+      stepTagTxt: string;
+    }>;
+  }>;
+
+}
+
+export interface StepsVideos{
+  title: string;
+  description: string;
+  videoLink : string;
 }
 
 export interface PaymentLikeNeverBefore {
@@ -41,19 +65,18 @@ export interface PaymentLikeNeverBefore {
   }>;
 }
 
-
 export interface AccordionContent {
-  title: string,
-  content: string,
+  title: string;
+  content: string;
   isExpanded: boolean;
 }
 
-export interface SubHeroContent{
+export interface SubHeroContent {
   mainTitle: string;
   subTitle: string;
 }
 
-export interface FeaturePoints{
+export interface FeaturePoints {
   backgroundColor: string;
   image: string;
   mainTitle: string;
@@ -61,12 +84,12 @@ export interface FeaturePoints{
   flexDirection: string;
 }
 
-export interface AboutUs{
+export interface AboutUs {
   mainTitle: string;
   passage: string;
 }
 
-export interface TeamMembers{
+export interface TeamMembers {
   memberImg: string;
   memberName: string;
   memberRole: string;
@@ -77,42 +100,42 @@ export interface TeamMembers{
     iconColor: string;
     iconLink: string;
   }>;
-
 }
 
-export interface NewsCards{
+export interface NewsCards {
   newsImg: string;
   writerImg: string;
   writerName: string;
   newsDate: string;
   newsTitle: string;
   newsSubTitle: string;
+  newsLink: string;
 }
 
-export interface BusinessAgentsBenefits{
+export interface BusinessAgentsBenefits {
   icon: string;
   iconContainerBG: string;
   mainTitle: string;
   subTitle: string;
 }
 
-export interface RegistrationRequirements{
+export interface RegistrationRequirements {
   mainText: string;
   point: Array<string>;
 }
 
-export interface CareerPositionCards{
+export interface CareerPositionCards {
   position: string;
   positionType: string;
   location: string;
 }
 
-export interface MojoeeBenefitsCards{
+export interface MojoeeBenefitsCards {
   mainHeader: string;
   benefitsList: Array<string>;
 }
 
-export interface JobPositions{
+export interface JobPositions {
   positionTitle: string;
   whoWeAreLookingFor: Array<string>;
   whatYouWillBeDoing: Array<string>;
@@ -129,3 +152,11 @@ export interface JobPositions{
     subTitle: string;
   }>;
 }
+
+
+// export interface MediaAndPress{
+//   title: string;
+//   description: string;
+//   newsLink: string;
+//   newsImg: string;
+// }

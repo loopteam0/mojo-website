@@ -89,7 +89,18 @@ of styling is done in the mobile media query (340px)
 
     .news-card-right > #text-xs{
         max-width: 16rem;
+        text-overflow: ellipsis;
+        position: relative;
     }
+
+    .news-card-right > #text-xs::after {
+        content: ""; /* Needed to render the pseudo */
+        background-image: linear-gradient(to right, transparent, #fff 80%);
+        position: absolute;
+        inset-inline-end: 0;
+        height: calc(1rem * 1.38 + 1px);
+        width: 100%;
+      }
 }
 
 

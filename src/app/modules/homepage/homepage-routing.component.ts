@@ -16,20 +16,56 @@ import { LocatorComponent } from './pages/locator/locator.component';
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent },
-  { path: 'personal', component: PersonalComponent },
-  { path: 'business', component: BusinessComponent },
-  { path: 'business/agents', component: BusinessAgentComponent },
-  { path: 'about-us', component: AboutUsComponent },
+
+  
   {
-    path: 'about-us/terms-and-conditions',
-    component: TermsAndConditionsComponent,
+    path: 'personal', component: PersonalComponent,
+    children: [
+      { path: '', redirectTo: 'personal', pathMatch: 'full' },
+      { path: 'locate-mojo', component: LocatorComponent },
+      { path: 'faq', component: FAQComponent },
+    ]
   },
-  { path: 'about-us/faq', component: FAQComponent },
-  { path: 'about-us/careers', component: CareersComponent },
-  { path: 'about-us/careers/job-details', component: JobDetailsComponent },
-  {path: 'about-us/locate-mojo', component: LocatorComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'blog/blog-detail', component: BlogDetailComponent },
+  {
+    path: 'business',
+    children: [
+      { path: '', component: BusinessComponent },
+      { path: 'faq', component: FAQComponent },
+      { path: 'agents', component: BusinessAgentComponent },
+    ]
+  },
+  {
+    path: 'about-us',
+    children: [
+      { path: '', component: AboutUsComponent },
+      { path: 'locate-mojo', component: LocatorComponent },
+      { path: 'faq', component: FAQComponent },
+    ]
+  },
+  {
+    path: 'blog',
+    children: [
+      { path: '', component: BlogComponent },
+      { path: 'blog-detail', component: BlogDetailComponent },
+    ]
+  }
+
+
+
+  // { path: 'personal', component: PersonalComponent },
+  // { path: 'business', component: BusinessComponent },
+  // { path: 'business/agents', component: BusinessAgentComponent },
+  // { path: 'about-us', component: AboutUsComponent },
+  // {
+  //   path: 'about-us/terms-and-conditions',
+  //   component: TermsAndConditionsComponent,
+  // },
+  // { path: 'faq', component: FAQComponent },
+  // { path: 'about-us/careers', component: CareersComponent },
+  // { path: 'about-us/careers/job-details', component: JobDetailsComponent },
+  // { path: 'locate-mojo', component: LocatorComponent },
+  // { path: 'blog', component: BlogComponent },
+  // { path: 'blog/blog-detail', component: BlogDetailComponent },
 ];
 
 @NgModule({

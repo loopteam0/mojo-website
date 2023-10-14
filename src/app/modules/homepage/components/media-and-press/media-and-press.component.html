@@ -8,11 +8,11 @@
 
   <!-- The Media bottom div container holds both news cards -->
   <div class="media-bottom">
-    <div class="news-card">
+    <div class="news-card" *ngFor="let info of mediaAndPress">
       <div
         class="news-card-left"
         style="
-          background: url('/assets/images/news-img1.png');
+          background: url('{{info.newsImg}}');
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -23,47 +23,17 @@
         <div class="review-container">
           <img src="/assets/svgs/icn-star-blue.svg" alt="" />
           <span id="text-rg" class="latest-txt">Latest</span>
-          <span id="text-xs" class="date">11/09/2022</span>
+          <span id="text-xs" class="date">{{info.newsDate}}</span>
         </div>
 
         <span id="text-md"
-          >Digital wallets, a new way to bypass banks in Lebanon?</span
+          > <a href="{{info.newsLink}}">{{info.newsTitle}}</a></span
         >
         <span id="text-xs"
-          >Since mid-May, a small revolution has been taking place in Lebanon's
-          digital wallet market, as the first steps towards synergy
-          among......</span
+          >{{info.newsSubTitle}}</span
         >
       </div>
     </div>
 
-    <div class="news-card">
-      <div
-        style="
-          background: url('/assets/images/news-img2.jpeg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        "
-        class="news-card-left"
-      ></div>
-
-      <div class="news-card-right">
-        <div class="review-container">
-          <img src="/assets/svgs/icn-star-blue.svg" alt="" />
-          <span id="text-rg" class="latest-txt">Latest</span>
-          <span id="text-xs" class="date">11/09/2022</span>
-        </div>
-
-        <span id="text-md"
-          >Digital wallets, a new way to bypass banks in Lebanon?</span
-        >
-        <span id="text-xs"
-          >Since mid-May, a small revolution has been taking place in Lebanon's
-          digital wallet market, as the first steps towards synergy
-          among......</span
-        >
-      </div>
-    </div>
   </div>
 </section>

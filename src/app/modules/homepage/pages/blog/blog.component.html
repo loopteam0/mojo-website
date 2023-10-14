@@ -3,10 +3,10 @@
     style="
       background: linear-gradient(
           0deg,
-          rgba(0, 0, 0, 0.4) 0%,
-          rgba(0, 0, 0, 0.4) 100%
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.7) 100%
         ),
-        url('/assets/images/blog-image.png');
+        url('/assets/images/media-page-bg.jpeg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -41,29 +41,7 @@
           Mojo News
         </div>
 
-        <div
-          class="tabUnselected"
-          (click)="setActiveTab('tab2')"
-          [class.active]="tabSelected === 'tab2'"
-        >
-          Career
-        </div>
-
-        <div
-          class="tabUnselected"
-          (click)="setActiveTab('tab3')"
-          [class.active]="tabSelected === 'tab3'"
-        >
-          Sustainability
-        </div>
-
-        <div
-          class="tabUnselected"
-          (click)="setActiveTab('tab4')"
-          [class.active]="tabSelected === 'tab4'"
-        >
-          Financial
-        </div>
+       
       </div>
 
       <!-- Tab group's content -->
@@ -73,7 +51,7 @@
         <div class="news-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Main news card -->
-          <div (click)="blogDetailsPage()" class="news-card" *ngFor="let info of newscards">
+          <div class="news-card" *ngFor="let info of newscards">
             <div
               style="
             background-image: url('{{ info.newsImg }}');
@@ -98,7 +76,7 @@
 
               <div class="blog-content">
                 <span class="blog-title"
-                  >{{info.newsTitle}}
+                  ><a href="{{info.newsLink}}">{{info.newsTitle}}</a>
                 </span>
 
                 <span id="text-xs" class="blog-content-txt">{{info.newsSubTitle}}</span>
