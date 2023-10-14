@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdvantageCard, HomepageHero, MojoForYou } from 'src/app/models/homepage.models';
 
 
@@ -9,6 +10,12 @@ import { AdvantageCard, HomepageHero, MojoForYou } from 'src/app/models/homepage
 })
 export class HomepageComponent {
 
+
+  constructor(private router: Router){}
+
+  toAboutUs(){
+    this.router.navigate(['/about-us']);
+  }
 
   // Populating "Our Advantages" cards
   advantageCard : AdvantageCard[] = [

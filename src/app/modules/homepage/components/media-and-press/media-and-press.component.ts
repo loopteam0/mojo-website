@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewsCards } from 'src/app/models/homepage.models';
 
 @Component({
@@ -7,6 +8,12 @@ import { NewsCards } from 'src/app/models/homepage.models';
   styleUrls: ['./media-and-press.component.scss']
 })
 export class MediaAndPressComponent {
+
+  constructor(private router: Router){}
+
+  toBlog(){
+    this.router.navigate(['/blog']);
+  }
 
   mediaAndPress: NewsCards[] = [
     {newsImg: '/assets/images/news-img1.png', writerImg: '', writerName: '', newsDate: '11/09/2022', newsTitle: 'Digital wallets, a new way to bypass banks in Lebanon?', newsSubTitle: "Since mid-May, a small revolution has been taking place in Lebanon's digital wallet market, as the first steps towards synergy among", newsLink: 'https://today.lorientlejour.com/article/1339336/digital-wallets-a-new-way-to-bypass-banks-in-lebanon.html'},
