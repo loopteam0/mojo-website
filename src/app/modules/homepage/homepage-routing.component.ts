@@ -17,14 +17,14 @@ const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent },
 
-  
   {
-    path: 'personal', component: PersonalComponent,
+    path: 'personal',
     children: [
-      { path: '', redirectTo: 'personal', pathMatch: 'full' },
+      { path: '', component: PersonalComponent },
       { path: 'locate-mojo', component: LocatorComponent },
       { path: 'faq', component: FAQComponent },
-    ]
+      { path: 'about-us', component: AboutUsComponent },
+    ],
   },
   {
     path: 'business',
@@ -32,7 +32,7 @@ const routes: Routes = [
       { path: '', component: BusinessComponent },
       { path: 'faq', component: FAQComponent },
       { path: 'agents', component: BusinessAgentComponent },
-    ]
+    ],
   },
   {
     path: 'about-us',
@@ -40,17 +40,21 @@ const routes: Routes = [
       { path: '', component: AboutUsComponent },
       { path: 'locate-mojo', component: LocatorComponent },
       { path: 'faq', component: FAQComponent },
-    ]
+      {
+        path: 'terms-and-conditions',
+        component: TermsAndConditionsComponent,
+      },
+      { path: 'careers', component: CareersComponent },
+      { path: 'careers/job-details', component: JobDetailsComponent },
+    ],
   },
   {
     path: 'blog',
     children: [
       { path: '', component: BlogComponent },
       { path: 'blog-detail', component: BlogDetailComponent },
-    ]
-  }
-
-
+    ],
+  },
 
   // { path: 'personal', component: PersonalComponent },
   // { path: 'business', component: BusinessComponent },

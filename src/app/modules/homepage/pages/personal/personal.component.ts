@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HomepageHero, MojoForYou, PaymentLikeNeverBefore } from 'src/app/models/homepage.models';
 import { ScrollService } from 'src/services/scroll.service';
 
@@ -9,7 +10,7 @@ import { ScrollService } from 'src/services/scroll.service';
 })
 export class PersonalComponent {
 
-  constructor(private scrollService: ScrollService) {
+  constructor(private scrollService: ScrollService, private router: Router) {
     this.scrollService.scrollToClass.subscribe(className => {
       const elements = document.getElementsByClassName(className);
       if (elements.length > 0) {
@@ -18,6 +19,10 @@ export class PersonalComponent {
       }
     });
   }
+
+  // navigateToFaq() {
+  //   this.router.navigateByUrl('/personal/faq');
+  // }
 
   currencySupport: MojoForYou[] = [
     { image: '/assets/images/currency-support.png', subheader: 'We currently support', mainHeader: '2 currencies', points: ['Fresh Lebanese Pounds', 'Fresh United States Dollars',] }

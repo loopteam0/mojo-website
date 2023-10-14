@@ -23,7 +23,7 @@ export class BecomeAMojoerComponent {
             {
               mainHeader: 'Complete account profile',
               subHeader: 'Tell us about you so we can personalise your experience.',
-              stepTagTxt: 'Second Step',
+              stepTagTxt: 'Next Step',
             },
           ],
 
@@ -31,7 +31,7 @@ export class BecomeAMojoerComponent {
             {
               mainHeader: 'You are now a Mojoer',
               subHeader: 'You can pay and receive funds very with Mojo now',
-              stepTagTxt: 'Third Step',
+              stepTagTxt: 'Final Step',
             },
           ],}
         

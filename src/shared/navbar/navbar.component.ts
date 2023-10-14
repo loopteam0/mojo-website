@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ScrollService } from 'src/services/scroll.service';
 
 
@@ -10,10 +11,14 @@ import { ScrollService } from 'src/services/scroll.service';
 export class NavbarComponent {
 
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, private router: Router) {}
   
   onNavLinkClick(sectionId: string) {
     this.scrollService.scrollToClass.emit(sectionId);
   }
+
+  // navigateToFaq() {
+  //   this.router.navigate(['/personal/faq']);
+  // }
   
 }
