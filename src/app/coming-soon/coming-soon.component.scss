@@ -1,0 +1,165 @@
+
+.main-container {
+    background-color: var(--Input-Shade, #f2f6ff);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    aspect-ratio: 4.33;
+    object-fit: cover;
+    object-position: center;
+    width: 52px;
+    overflow: hidden;
+  }
+
+  .logo-text {
+    color: #494c4f;
+    font-family: Roboto, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.0125rem;
+    margin-left: 10px;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-icon {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    width: 18px;
+    overflow: hidden;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .image {
+    aspect-ratio: 3.43;
+    object-fit: cover;
+    object-position: center;
+    width: 192px;
+    overflow: hidden;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown-value {
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+
+  .countdown-label {
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+
+  .announcement {
+    color: var(--Primary-Green, #69e07a);
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    letter-spacing: 0.0625rem;
+    max-width: 388px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    color: var(--color-text-medium, #34405e);
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .waitlist-label {
+    color: var(--gray-500, #6b7280);
+    font-family: Inter, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.00469rem;
+    width: 295px;
+    align-items: center;
+    border-radius: 62.4375rem;
+    border: 1px solid var(--gray-300, #d1d5db);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 14px 16px;
+    flex-grow: 1;
+  }
+
+  .waitlist-input-field {
+    width: 100%;
+  }
+
+  .waitlist-submit {
+    justify-content: center;
+    align-items: center;
+    border-radius: 6.25rem;
+    background-color: var(--Primary-Color, #4500ff);
+    display: flex;
+    width: 137px;
+    padding: 14px 20px;
+    flex-direction: column;
+    color: var(--white-white, #fff);
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.00469rem;
+  }

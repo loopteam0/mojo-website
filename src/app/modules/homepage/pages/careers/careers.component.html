@@ -78,7 +78,7 @@
         <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Position news card -->
-          <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
@@ -91,7 +91,7 @@
           <!-- Content for Tab 2 -->
 
            <!-- Position news card -->
-           <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+           <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
@@ -102,7 +102,7 @@
           <!-- Content for Tab 3 -->
 
            <!-- Position news card -->
-           <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+           <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>

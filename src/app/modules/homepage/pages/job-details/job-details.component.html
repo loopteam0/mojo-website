@@ -1,16 +1,16 @@
-<section class="business-agent">
+<section class="business-agent" *ngIf="selectedJob">
   <!-- Hero Section -->
   <section id="container">
     <section style="
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%),
         url('/assets/images/career-detail-bg.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
     " class="entire-hero-section">
-      <div class="hero-center" *ngFor="let info of careerPageHero">
-        <span id="text-xs">{{ info.tagText }}</span>
-        <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
+      <div class="hero-center">
+        <span id="text-xs">Mojoee</span>
+        <span id="text-xl" class="main-header-txt">{{ selectedJob.positionTitle }}</span>
         <button id="btn-filled">Apply Now</button>
       </div>
     </section>
@@ -18,20 +18,20 @@
 
 
   <!-- Job Details section -->
-  <div id="container" class="job-details-container" *ngFor="let job of jobPositions">
+  <div id="container" class="job-details-container">
 
     <div class="inner-job-details-container">
       <!-- Left side of the inner job details section (the content section)-->
       <div class="job-details-left">
 
-        <span id="text-lg">{{job.positionTitle}}</span>
+        <span id="text-lg">{{selectedJob.positionTitle}}</span>
 
         <!-- Who Are We Looking for -->
         <div class="job-details-point">
           <span id="text-md">Who Are We Looking For</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.whoWeAreLookingFor" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.whoWeAreLookingFor" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
@@ -40,34 +40,26 @@
           <span id="text-md">What you will be doing</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.whatYouWillBeDoing" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.whatYouWillBeDoing" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
         <!-- Bonus Points for familiarity -->
         <div class="job-details-point">
-          <span id="text-md">Bonus Points for Familiarity with</span>
+          <span id="text-md">Requirement & Skills</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.bonusPointsFamiliarity" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.bonusPointsFamiliarity" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
-        <!-- Bonus Points for familiarity -->
-        <div class="job-details-point">
-          <span id="text-md">Bonus Points for Familiarity with</span>
-
-          <ul class="point-list-wrapper">
-            <span *ngFor="let list of job.bonusPointsFamiliarity" id="text-rg">{{list}}</span>
-          </ul>
-        </div>
 
         <!-- Salary -->
         <div class="job-details-point">
           <span id="text-md">Salary</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.salary" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.salary" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
@@ -76,7 +68,7 @@
           <span id="text-md">Working Hours</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.workingHours" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.workingHours" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
@@ -85,7 +77,7 @@
           <span id="text-md">Working Days</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.workingDays" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.workingDays" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
@@ -94,7 +86,7 @@
           <span id="text-md">Perks & Benefits </span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of job.perksAndBenefits" id="text-rg">{{list}}</li>
+            <li *ngFor="let list of selectedJob.perksAndBenefits" id="text-rg">{{list}}</li>
           </ul>
         </div>
 
@@ -110,7 +102,7 @@
 
           <!-- A group of all the 4 summary point containers-->
           <div class="summary-group">
-            <div class="summary-point-container" *ngFor="let info of job.jobSummary">
+            <div class="summary-point-container" *ngFor="let info of selectedJob.jobSummary">
               <img src="{{info.icon}}" alt="">
 
               <div>
@@ -150,7 +142,7 @@
       <span id="text-md">Application Process</span>
 
       <ul class="point-list-wrapper">
-        <li *ngFor="let list of job.applicationProcess" id="text-rg">{{list}}</li>
+        <li *ngFor="let list of selectedJob.applicationProcess" id="text-rg">{{list}}</li>
       </ul>
     </div>
 
@@ -159,8 +151,8 @@
   </div>
 
   <!-- Open Positions -->
-  <div id="container" class="position-main-wrapper" *ngFor="let info of openPositions">
-    <span id="text-lg">{{info.mainTitle}}</span>
+  <div id="container" class="position-main-wrapper">
+    <span id="text-lg">Here are Other Positions to Consider</span>
 
     <!-- Purple-ish background with a tab group -->
     <div class="inner-position-container">
@@ -195,7 +187,7 @@
         <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Position news card -->
-          <div (click)="jobDetailsPage()" class="position-card" *ngFor="let info of careerCards">
+          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>

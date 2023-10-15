@@ -125,6 +125,7 @@ export interface RegistrationRequirements {
 }
 
 export interface CareerPositionCards {
+  positionId: string;
   position: string;
   positionType: string;
   location: string;
@@ -136,6 +137,7 @@ export interface MojoeeBenefitsCards {
 }
 
 export interface JobPositions {
+  positionId: string;
   positionTitle: string;
   whoWeAreLookingFor: Array<string>;
   whatYouWillBeDoing: Array<string>;

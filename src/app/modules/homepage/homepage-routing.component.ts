@@ -45,7 +45,10 @@ const routes: Routes = [
         component: TermsAndConditionsComponent,
       },
       { path: 'careers', component: CareersComponent },
-      { path: 'careers/job-details', component: JobDetailsComponent },
+      {
+        path: 'careers/:positionId',
+        component: JobDetailsComponent,
+      },
     ],
   },
   {
@@ -55,6 +58,7 @@ const routes: Routes = [
       { path: 'blog-detail', component: BlogDetailComponent },
     ],
   },
+
 
   // { path: 'personal', component: PersonalComponent },
   // { path: 'business', component: BusinessComponent },
