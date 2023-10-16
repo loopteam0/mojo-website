@@ -84,7 +84,7 @@ export class CareersComponent {
       backgroundColor: '/assets/images/maps-bg.png',
       image: '/assets/images/icn-m-logo-white.png',
       mainTitle: 'We are Growing Fast, in the Heart of Lebanon',
-      subTitle: 'Mojo Risin’ can be found in 45 locations now.',
+      subTitle: 'Mojo Risin’ can be found in 5 locations now.',
       flexDirection: 'row',
     },
   ];

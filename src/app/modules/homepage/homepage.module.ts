@@ -22,6 +22,7 @@ import { BusinessAgentComponent } from './pages/business-agent/business-agent.co
 import { CareersComponent } from './pages/careers/careers.component';
 import { JobDetailsComponent } from './pages/job-details/job-details.component';
 import { LocatorComponent } from './pages/locator/locator.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LocatorComponent } from './pages/locator/locator.component';
     FAQComponent,
     BlogComponent,
     BlogDetailComponent,
-    LocatorComponent
+    LocatorComponent,
+    PrivacyPolicyComponent
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
 })

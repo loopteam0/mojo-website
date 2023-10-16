@@ -96,6 +96,42 @@ export class JobDetailsComponent {
       positionType: 'Hybrid',
       location: 'Beirut',
     },
+    {
+      positionId: 'social-media-specialist',
+      position: 'Social Media Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+  ];
+
+  careerCardsCustomerSupport: CareerPositionCards[] = [
+    {
+      positionId: 'call-center-representative',
+      position: 'Call Center Representative',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'brach-customer-service-representative',
+      position: 'Branch Customer Service Representative',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    }
+  ];
+
+  careerCardsMarketing: CareerPositionCards[] = [
+    {
+      positionId: 'social-media-specialist',
+      position: 'Social Media Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'marketing-and-communication-specialist',
+      position: 'Marketing and Communication Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
   ];
 
   // Left side of job details section (Its content)
@@ -133,22 +169,18 @@ export class JobDetailsComponent {
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
       salary: [
-        'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-        'Salary Review: Yearly',
+        // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+        // 'Salary Review: Yearly',
       ],
 
-      workingHours: ['8 AM – 5 PM'],
+      workingHours: [],
 
-      workingDays: ['Weekly: 5 days.', 'Weekend: Friday.Saturday'],
+      workingDays: [],
 
-      perksAndBenefits: ['Monthly Voice and Data Allowance', 'Free Days Off'],
+      perksAndBenefits: [],
 
       applicationProcess: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Nullam dictum ligula a gravida porta.',
-        'Nam pellentesque orci ut odio blandit, sit amet elementum augue venenatis.',
-        'Vivamus semper magna suscipit leo malesuada, eu dictum velit varius.',
-        'Nulla non enim eu quam rutrum dictum in non urna.',
+        
       ],
 
       jobSummary: [
@@ -205,24 +237,20 @@ export class JobDetailsComponent {
       educationalRequirement:
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
-      salary: [
-        'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-        'Salary Review: Yearly',
-      ],
-
-      workingHours: ['8 AM – 5 PM'],
-
-      workingDays: ['Weekly: 5 days.', 'Weekend: Friday.Saturday'],
-
-      perksAndBenefits: ['Monthly Voice and Data Allowance', 'Free Days Off'],
-
-      applicationProcess: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Nullam dictum ligula a gravida porta.',
-        'Nam pellentesque orci ut odio blandit, sit amet elementum augue venenatis.',
-        'Vivamus semper magna suscipit leo malesuada, eu dictum velit varius.',
-        'Nulla non enim eu quam rutrum dictum in non urna.',
-      ],
+        salary: [
+          // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+          // 'Salary Review: Yearly',
+        ],
+  
+        workingHours: [],
+  
+        workingDays: [],
+  
+        perksAndBenefits: [],
+  
+        applicationProcess: [
+          
+        ],
 
       jobSummary: [
         {
@@ -282,24 +310,20 @@ export class JobDetailsComponent {
       educationalRequirement:
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
-      salary: [
-        'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-        'Salary Review: Yearly',
-      ],
-
-      workingHours: ['8 AM – 5 PM'],
-
-      workingDays: ['Weekly: 5 days.', 'Weekend: Friday.Saturday'],
-
-      perksAndBenefits: ['Monthly Voice and Data Allowance', 'Free Days Off'],
-
-      applicationProcess: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Nullam dictum ligula a gravida porta.',
-        'Nam pellentesque orci ut odio blandit, sit amet elementum augue venenatis.',
-        'Vivamus semper magna suscipit leo malesuada, eu dictum velit varius.',
-        'Nulla non enim eu quam rutrum dictum in non urna.',
-      ],
+        salary: [
+          // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+          // 'Salary Review: Yearly',
+        ],
+  
+        workingHours: [],
+  
+        workingDays: [],
+  
+        perksAndBenefits: [],
+  
+        applicationProcess: [
+          
+        ],
 
       jobSummary: [
         {
@@ -359,24 +383,20 @@ export class JobDetailsComponent {
       educationalRequirement:
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
-      salary: [
-        'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-        'Salary Review: Yearly',
-      ],
-
-      workingHours: ['8 AM – 5 PM'],
-
-      workingDays: ['Weekly: 5 days.', 'Weekend: Friday.Saturday'],
-
-      perksAndBenefits: ['Monthly Voice and Data Allowance', 'Free Days Off'],
-
-      applicationProcess: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Nullam dictum ligula a gravida porta.',
-        'Nam pellentesque orci ut odio blandit, sit amet elementum augue venenatis.',
-        'Vivamus semper magna suscipit leo malesuada, eu dictum velit varius.',
-        'Nulla non enim eu quam rutrum dictum in non urna.',
-      ],
+        salary: [
+          // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+          // 'Salary Review: Yearly',
+        ],
+  
+        workingHours: [],
+  
+        workingDays: [],
+  
+        perksAndBenefits: [],
+  
+        applicationProcess: [
+          
+        ],
 
       jobSummary: [
         {

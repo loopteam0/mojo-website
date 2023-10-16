@@ -12,6 +12,7 @@ import { BusinessAgentComponent } from './pages/business-agent/business-agent.co
 import { CareersComponent } from './pages/careers/careers.component';
 import { JobDetailsComponent } from './pages/job-details/job-details.component';
 import { LocatorComponent } from './pages/locator/locator.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
@@ -22,7 +23,7 @@ const routes: Routes = [
     children: [
       { path: '', component: PersonalComponent },
       { path: 'locate-mojo', component: LocatorComponent },
-      { path: 'faq', component: FAQComponent },
+      // { path: 'faq', component: FAQComponent },
       { path: 'about-us', component: AboutUsComponent },
     ],
   },
@@ -30,7 +31,7 @@ const routes: Routes = [
     path: 'business',
     children: [
       { path: '', component: BusinessComponent },
-      { path: 'faq', component: FAQComponent },
+      // { path: 'faq', component: FAQComponent },
       { path: 'agents', component: BusinessAgentComponent },
     ],
   },
@@ -39,7 +40,7 @@ const routes: Routes = [
     children: [
       { path: '', component: AboutUsComponent },
       { path: 'locate-mojo', component: LocatorComponent },
-      { path: 'faq', component: FAQComponent },
+      { path: 'privacy-policy', component: PrivacyPolicyComponent },
       {
         path: 'terms-and-conditions',
         component: TermsAndConditionsComponent,

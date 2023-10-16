@@ -55,40 +55,40 @@
 
 
         <!-- Salary -->
-        <div class="job-details-point">
+        <!-- <div class="job-details-point">
           <span id="text-md">Salary</span>
 
           <ul class="point-list-wrapper">
             <li *ngFor="let list of selectedJob.salary" id="text-rg">{{list}}</li>
           </ul>
-        </div>
+        </div> -->
 
         <!-- Working Hours -->
-        <div class="job-details-point">
+        <!-- <div class="job-details-point">
           <span id="text-md">Working Hours</span>
 
           <ul class="point-list-wrapper">
             <li *ngFor="let list of selectedJob.workingHours" id="text-rg">{{list}}</li>
           </ul>
-        </div>
+        </div> -->
 
         <!-- Working Days -->
-        <div class="job-details-point">
+        <!-- <div class="job-details-point">
           <span id="text-md">Working Days</span>
 
           <ul class="point-list-wrapper">
             <li *ngFor="let list of selectedJob.workingDays" id="text-rg">{{list}}</li>
           </ul>
-        </div>
+        </div> -->
 
         <!-- Perks & Benefits  -->
-        <div class="job-details-point">
+        <!-- <div class="job-details-point">
           <span id="text-md">Perks & Benefits </span>
 
           <ul class="point-list-wrapper">
             <li *ngFor="let list of selectedJob.perksAndBenefits" id="text-rg">{{list}}</li>
           </ul>
-        </div>
+        </div> -->
 
       </div>
 
@@ -138,15 +138,15 @@
     <div class="divider"></div>
 
     <!-- Application Process  -->
-    <div class="job-details-point">
+    <!-- <div class="job-details-point">
       <span id="text-md">Application Process</span>
 
       <ul class="point-list-wrapper">
         <li *ngFor="let list of selectedJob.applicationProcess" id="text-rg">{{list}}</li>
       </ul>
-    </div>
+    </div> -->
 
-    <button id="btn-filled">Apply Now</button>
+    <button id="btn-filled"><a href="mailto:kacyarts@gmail.com" style="text-decoration: none; color: white; width: 100%; display: block;">Apply Now</a></button>
 
   </div>
 
@@ -159,24 +159,17 @@
       <!-- Tab group and it's content wrappers underneath(tab-content) -->
       <div class="tab">
         <div class="tabUnselected" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
-          Borrowing
+          All
         </div>
 
         <div class="tabUnselected" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
-          Customer Operations
+          Customer Support
         </div>
 
         <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
-          Data
+          Marketing
         </div>
 
-        <div class="tabUnselected" (click)="setActiveTab('tab4')" [class.active]="tabSelected === 'tab4'">
-          Engineering
-        </div>
-
-        <div class="tabUnselected" (click)="setActiveTab('tab5')" [class.active]="tabSelected === 'tab5'">
-          Finance
-        </div>
 
       </div>
 
@@ -195,12 +188,25 @@
 
         </div>
 
-        <div *ngIf="tabSelected === 'tab2'">
+        <div class="position-cards-container" *ngIf="tabSelected === 'tab2'">
           <!-- Content for Tab 2 -->
+
+          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsCustomerSupport">
+            <span id="text-md">{{info.position}}</span>
+            <span id="text-rg">{{info.positionType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div>
+
         </div>
 
-        <div *ngIf="tabSelected === 'tab3'">
+        <div class="position-cards-container" *ngIf="tabSelected === 'tab3'">
           <!-- Content for Tab 3 -->
+
+          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsMarketing">
+            <span id="text-md">{{info.position}}</span>
+            <span id="text-rg">{{info.positionType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div>
         </div>
 
         <div *ngIf="tabSelected === 'tab4'">
