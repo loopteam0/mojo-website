@@ -175,6 +175,10 @@ of styling is done in the mobile media query (340px)
   #bold-txt{
     font-family: 'Poppins-Bold';
   }
+
+  a{
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 1024px) {

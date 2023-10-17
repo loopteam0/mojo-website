@@ -6,7 +6,7 @@
     </div>
 
     <!-- Tab group and it's content wrappers underneath(tab-content) -->
-    <div class="tab">
+    <!-- <div class="tab">
       <div class="tabUnselected" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
         Personal
       </div>
@@ -18,7 +18,7 @@
       <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
         Agent
       </div>
-    </div>
+    </div> -->
 
     <!-- Tab group's content -->
     <div class="tab-content">
@@ -99,8 +99,8 @@
 
         <span id="bold-txt">CONTACT US</span><br /><br />
         For more information about this Privacy Policy or inquiries regarding
-        our privacy practices please contact our call centre at +961
-        24522720/721 where our agents will be ready to assist you at any
+        our privacy practices please contact our call centre at <a id="bold-txt" href="tel:(24)522720">(24) 522 720</a> or
+        <a id="bold-txt" href="tel:(24)522721">(24) 522 721</a>, or email us at <a id="bold-txt" href="mailto:info@mojo.com.lb">info@mojo.com.lb</a>  where our agents will be ready to assist you at any
         time.<br /><br /><br /><br />
 
         <span id="bold-txt">GDPR COMPLIANT</span><br /><br />
@@ -339,7 +339,7 @@
         <span id="bold-txt">OPTING OUT</span> <br><br>
 
         You can ask us to stop sending you marketing messages at any time by contacting us at the following email
-        address: <br><br>
+        address: <a id="bold-txt" href="mailto:info@mojo.com.lb">info@mojo.com.lb</a><br><br>
       </span>
     </div>
   </div>
