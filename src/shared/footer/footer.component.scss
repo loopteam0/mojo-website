@@ -19,23 +19,30 @@ of styling is done in the mobile media query (340px)
     position: relative;
   }
 
+  .entire-footer > .upper-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+
   .entire-footer .footer-left {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
 
     .mojo-logo {
       width: 8rem;
     }
   }
 
-  .footer-left .badge-wrapper{
+  .footer-left .badge-wrapper {
     position: absolute;
     left: 2rem;
     display: flex;
     gap: 1rem;
-    top: 20rem;
+    top: 24rem;
   }
 
   // Mobile number wrapper
@@ -100,22 +107,23 @@ of styling is done in the mobile media query (340px)
     display: flex;
     gap: 0.5rem;
 
-    img{
+    img {
       cursor: pointer;
     }
   }
 
-  .extra-info{
+  .extra-info {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    width: 100%;
   }
 
-  .extra-info .location span{
+  .extra-info .location span {
     color: rgba(107, 122, 133, 1);
   }
 
-  .extra-info .second-extra-info{
+  .extra-info .second-extra-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,8 +131,12 @@ of styling is done in the mobile media query (340px)
     gap: 0.25rem;
   }
 
-  .extra-info .second-extra-info span{
+  .second-extra-info .info-txt {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .extra-info .second-extra-info span {
     color: rgba(107, 122, 133, 1);
   }
 }
@@ -134,6 +146,7 @@ of styling is done in the mobile media query (340px)
   // Main container for the footer
   .entire-footer {
     display: flex;
+    gap: 5rem;
     align-items: center;
     justify-content: space-between;
     background: #f7f7f7;
@@ -141,22 +154,30 @@ of styling is done in the mobile media query (340px)
     position: relative;
   }
 
+  .entire-footer > .upper-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
   .entire-footer .footer-left {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
 
     .mojo-logo {
       width: 8rem;
     }
   }
 
-  .footer-left .badge-wrapper{
+  .footer-left .badge-wrapper {
     position: absolute;
-    right: 8rem;
+    right: 4rem;
     display: flex;
     gap: 1rem;
+    left: unset;
     top: 2rem;
   }
 
@@ -170,8 +191,8 @@ of styling is done in the mobile media query (340px)
   // Footer links contains two sections of the class "links-column"
   .footer-left .footer-links {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .footer-links .divider {
@@ -219,8 +240,30 @@ of styling is done in the mobile media query (340px)
     display: flex;
     gap: 0.5rem;
 
-    img{
+    img {
       cursor: pointer;
+    }
+  }
+
+  .extra-info {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .extra-info .location{
+    text-align: end;
+  }
+
+  .extra-info .second-extra-info {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: flex-start;
+
+    .info-txt {
+      text-align: left;
     }
   }
 }
@@ -235,12 +278,11 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Standard
 @media (min-width: 1440px) {
- // Main container for the footer
- .entire-footer {
-  padding: 6rem 8rem;
+  // Main container for the footer
+  .entire-footer {
+    padding: 6rem 8rem;
+  }
 }
-}
-
 
 // Desktop - Large
 @media (min-width: 1650px) {
@@ -249,4 +291,3 @@ of styling is done in the mobile media query (340px)
     padding: 6rem 10rem;
   }
 }
-
