@@ -38,7 +38,7 @@ of styling is done in the mobile media query (340px)
   .mojoer-steps-section .steps-main-section {
     background: rgba(253, 225, 255, 1);
     border-radius: 1.75rem;
-    padding: 3.5rem 0;
+    padding: 3.5rem 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,12 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
   }
+
+  // .single-step-wrapper stepContainer{
+  //   width: 100%;
+  // }
 
   .single-step-wrapper .step-tag {
     display: flex;
@@ -82,9 +87,6 @@ of styling is done in the mobile media query (340px)
     font-size: 0.7rem;
   }
 
-  .single-step-wrapper #stepContainer{
-    width: 15rem;
-  }
 
   .mojoer-steps-section .steps-main-section .step1 #inner-stepContainer {
     background: rgba(241, 241, 255, 1);
@@ -96,6 +98,51 @@ of styling is done in the mobile media query (340px)
 
   .mojoer-steps-section .steps-main-section .step3 #inner-stepContainer {
     background: rgba(217, 217, 217, 1);
+  }
+
+  .step1 #inner-stepContainer .app-store-logo {
+    width: 2.5rem;
+    left: 1.5rem;
+    position: absolute;
+    top: 5rem;
+  }
+
+  .step1 > #inner-stepContainer > .phone-mockup {
+    position: absolute;
+    width: 22rem;
+    left: -1rem;
+    top: -8rem;
+  }
+
+  .step1 #inner-stepContainer .play-store-logo {
+    width: 2.5rem;
+    position: absolute;
+    top: 8rem;
+    right: 1.5rem;
+  }
+
+  .step2 > #inner-stepContainer > .phone-mockup {
+    position: absolute;
+    width: 20rem;
+    right: 0rem;
+    bottom: 0;
+  }
+
+  .step3 > #inner-stepContainer > .phone-mockup {
+    position: absolute;
+    width: 18rem;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  // Main wrapper holding the steps cards (pink background)
+  .mojoer-steps-section .steps-main-section {
+    flex-direction: row;
+    gap: 1rem;
   }
 
   .step1 #inner-stepContainer .app-store-logo {
@@ -126,22 +173,6 @@ of styling is done in the mobile media query (340px)
     bottom: 0;
   }
 
-  .step3 > #inner-stepContainer > .phone-mockup {
-    position: absolute;
-    width: 18rem;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-// Desktop - Small
-@media (min-width: 1024px) {
-
-  // Main wrapper holding the steps cards (pink background)
-  .mojoer-steps-section .steps-main-section {
-    flex-direction: row;
-    gap: 1rem;
-  }
 
 }
 

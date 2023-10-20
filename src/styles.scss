@@ -148,7 +148,7 @@ body {
     border-radius: 0.625rem;
     background: white;
     box-shadow: 10px 32px 72px 0px rgba(51, 51, 51, 0.03);
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 1rem;
     padding-bottom: 1.5rem;
     display: flex;
