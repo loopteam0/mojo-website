@@ -1,35 +1,68 @@
 <section class="entire-hero-section">
-    <!-- Dividing the Hero container into two parts; 
+  <!-- Dividing the Hero container into two parts; 
           left for the information, and right for the slider -->
-    <div class="hero-left" *ngFor="let info of homepageHero">
-      <span id="text-sm" class="mini-header-txt">{{info.tagText}}</span>
-      <span id="text-xl" class="main-header-txt">Trusted and Secured. <br />
-        Join Mojo now</span>
-      <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
-  
-      <!-- Container to hold both App Store and Play Store badges -->
-      <div class="badge-wrapper">
-        <!-- <img src="/assets/svgs/icn-app-store-badge-black.svg" alt="" /> -->
-        <img src="/assets/svgs/icn-google-store-badge-black.svg" alt="" />
-      </div>
-    </div>
-  
-    <div class="hero-right">
-  
-      <div class="inner-right-wrapper">
+  <div class="hero-left" *ngFor="let info of homepageHero">
+    <span id="text-sm" class="mini-header-txt">{{ info.tagText }}</span>
+    <span id="text-xl" class="main-header-txt"
+      >Trusted and Secured. <br />
+      Join Mojo now</span
+    >
+
+    <!-- The Mobile Carousel is positioned in the 
+      middle of the hero-left, so the desktop one is
+       hidden for the mobile view -->
+
+    <div class="mobile-hero-center">
+      <div class="mobile-hero-center-wrapper">
         <!-- This is the sent succesfully card -->
-        <img class="successful-card" src="/assets/images/Successfuly-card.png" alt="" />
-  
+        <img
+          class="successful-card"
+          src="/assets/images/Successfuly-card.png"
+          alt=""
+        />
+
         <!-- Carousel Implementation -->
         <!-- Here, we have the container which the images are changing in -->
-        <div class="slider-container" [ngClass]="currentImage">
-  
-        </div>
-  
+        <div class="slider-container" [ngClass]="currentImage"></div>
+
         <!-- This is the expenses and income card -->
-        <img class="expenses-card" src="/assets/images/expenses-card.png" alt="" />
+        <img
+          class="expenses-card"
+          src="/assets/images/expenses-card.png"
+          alt=""
+        />
       </div>
-  
     </div>
-  
-  </section>
+
+    <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
+
+    <!-- Container to hold both App Store and Play Store badges -->
+    <div class="badge-wrapper">
+      <!-- <img src="/assets/svgs/icn-app-store-badge-black.svg" alt="" /> -->
+      <img src="/assets/svgs/icn-google-store-badge-black.svg" alt="" />
+    </div>
+  </div>
+
+  <!-- Hiddden for mobile, shown on desktop-->
+  <div class="hero-right">
+    <div class="inner-right-wrapper">
+      <!-- This is the sent succesfully card -->
+      <img
+        class="successful-card"
+        src="/assets/images/Successfuly-card.png"
+        alt=""
+      />
+
+      <!-- Carousel Implementation -->
+      <!-- Here, we have the container which the images are changing in -->
+      <div class="slider-container" [ngClass]="currentImage"></div>
+
+      <!-- This is the expenses and income card -->
+      <img
+        class="expenses-card"
+        src="/assets/images/expenses-card.png"
+        alt=""
+      />
+    </div>
+  </div>
+</section>

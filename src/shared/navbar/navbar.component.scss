@@ -5,11 +5,29 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
+@media (min-width: 340px) {
+  .entire-desktop-navbar {
+    display: none;
+  }
+
+  .entire-mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
 // Desktop - Small
 @media (min-width: 1024px) {
 
+  .entire-mobile-nav{
+    display: none;
+  }
   // Main container for the navbar
-  .entire-navbar {
+  .entire-desktop-navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,25 +35,23 @@ of styling is done in the mobile media query (340px)
     background: white;
   }
 
-
   // Left side of the navigation bar, with the logo and the links
-  .entire-navbar .navbar-left {
+  .entire-desktop-navbar .navbar-left {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
   }
 
-  .navbar-left .mojo-logo{
+  .navbar-left .mojo-logo {
     cursor: pointer;
   }
 
   // Container to hold all the link cells
-  .entire-navbar .navbar-left .link-wrapper {
+  .entire-desktop-navbar .navbar-left .link-wrapper {
     display: flex;
     flex-direction: row;
   }
-
 
   // Each single link in the nav
   .navbar-left .link-wrapper .link-cell {
@@ -54,7 +70,6 @@ of styling is done in the mobile media query (340px)
     }
   }
 
-
   // Dropdown container style
   .navbar-left .link-wrapper .link-cell #dropdown-content {
     position: absolute;
@@ -72,7 +87,7 @@ of styling is done in the mobile media query (340px)
   }
 
   // Column groups in the dropdown container
-  #dropdown-content .dropdown-content-column{
+  #dropdown-content .dropdown-content-column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,7 +95,7 @@ of styling is done in the mobile media query (340px)
   }
 
   // Column links
-  #dropdown-content .dropdown-content-column .column-link{
+  #dropdown-content .dropdown-content-column .column-link {
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -88,18 +103,16 @@ of styling is done in the mobile media query (340px)
     cursor: pointer;
     text-decoration: none;
 
-    span{
-        color: rgba(52, 64, 94, 1);
+    span {
+      color: rgba(52, 64, 94, 1);
     }
   }
-
 
   // Show the dropdown content on hover
   .navbar-left .link-wrapper .link-cell:hover #dropdown-content {
     display: flex;
     z-index: 1000;
   }
-
 
   // Styles for when route is active with
   // "routerLinkActive" in HTML
@@ -116,17 +129,14 @@ of styling is done in the mobile media query (340px)
     }
   }
 
-  .navbar-right button{
+  .navbar-right button {
     background: rgba(69, 0, 255, 1);
     color: white;
   }
-
-
 }
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-
   // Left side of the navigation bar, with the logo and the links
   .entire-navbar .navbar-left {
     gap: 2.5rem;
@@ -140,10 +150,8 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-
 }
 
 // Desktop - Large
 @media (min-width: 1650px) {
-
 }

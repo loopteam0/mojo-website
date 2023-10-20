@@ -6,7 +6,7 @@ of styling is done in the mobile media query (340px)
 */
 
 // Desktop - Small
-@media (min-width: 1024px) {
+@media (min-width: 340px) {
     .entire-features-wrapper {
         display: flex;
         flex-direction: column;
@@ -35,25 +35,29 @@ of styling is done in the mobile media query (340px)
     .inner-features-container {
         display: flex;
         justify-content: space-around;
-        height: 25rem;
-        overflow: hidden;
+        flex-direction: column;
         align-items: flex-start;
         width: 100%;
     }
 
-    .inner-features-container>img {
-        width: 24rem;
-        height: 29rem;
+    // Mobile mockup appears here and desktop dissapears
+    .inner-features-container>#mobile-mockup {
+        width: 100%;
+    }
+
+    .inner-features-container>#desktop-mockup {
+        display: none;
     }
 
     // Two columns, a single one on each side of the image, which contain two features each
     .inner-features-container .feature-column {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 1.5rem;
         align-items: flex-start;
         justify-content: center;
         height: 100%;
+        margin: 1.5rem 0;
     }
 
     // A single feature's wrapper
@@ -87,6 +91,38 @@ of styling is done in the mobile media query (340px)
 
     .feature-header>#text-rg {
         color: rgba(52, 64, 94, 1);
+        max-width: 15rem;
+    }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+    .inner-features-container {
+        flex-direction: row;
+        height: 25rem;
+        overflow: hidden;
+    }
+
+    // Desktop mockup appears here and Mobile dissapears
+    .inner-features-container>#desktop-mockup {
+        width: 24rem;
+        height: 29rem;
+        display: block;
+    }
+
+    .inner-features-container>#mobile-mockup {
+        display: none;
+    }
+
+    // Two columns, a single one on each side of the image, which contain two features each
+    .inner-features-container .feature-column {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 0;
+    }
+
+    .feature-header>#text-rg {
         font-size: 1rem;
         max-width: 15rem;
     }
@@ -104,10 +140,6 @@ of styling is done in the mobile media query (340px)
     .inner-features-container>img {
         width: 28rem;
         height: 35rem;
-    }
-
-    .inner-features-container{
-        height: 30rem;
     }
 
     .inner-features-container .feature-column{

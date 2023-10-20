@@ -16,8 +16,10 @@
           <img src="{{ card.icon }}" alt="" />
         </div>
 
+        <div class="text-container">
         <span id="text-md">{{ card.title }}</span>
         <span id="text-xs">{{ card.subtitle }}</span>
+        </div>
       </div>
     </div>
   </section>
@@ -32,10 +34,15 @@
       <span id="text-rg"
         >{{info.subTitle}}</span
       >
+
+      <!-- Image appears for mobile here-->
+      <img id="about-us-mobile-mockup" src="/assets/images/about-mojo-img.png" alt="" />
+
       <button (click)="toAboutUs()" id="btn-filled">More about Us</button>
     </div>
 
-    <img src="/assets/images/about-mojo-img.png" alt="" />
+    <!-- Image appears for mobile here-->
+    <img id="about-us-desktop-mockup" src="/assets/images/about-mojo-img.png" alt="" />
   </section>
 
   <!-- General features section (What our app offers)-->
@@ -47,14 +54,22 @@
     class="mojo-for-you-section"
     *ngFor="let info of mojoForYou"
   >
-    <div class="section-left">
-      <img src="{{ info.image }}" alt="" />
+
+  <!-- Desktop mockup appears here -->
+    <div class="section-left-desktop">
+      <img id="desktop-mockup" src="{{ info.image }}" alt="" />
     </div>
 
     <div class="section-right">
       <div class="title-container">
         <span id="text-xs">{{ info.subheader }}</span>
         <span id="text-xl">{{ info.mainHeader }}</span>
+      </div>
+
+      <!-- Mobile mockup appears here, 
+        in between header and points -->
+      <div class="section-left-mobile">
+        <img id="mobile-mockup" src="{{ info.image }}" alt="" />
       </div>
 
       <div class="features-container">

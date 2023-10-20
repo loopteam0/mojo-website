@@ -5,28 +5,30 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
   .entire-contact-us {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    height: 35rem;
   }
 
   .entire-contact-us .contact-us-left {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   // Container to hold text headers of the newsletter section
   .contact-us-left .header {
     display: inherit;
     flex-direction: inherit;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
   }
 
   .header > #text-xl {
@@ -50,7 +52,7 @@ of styling is done in the mobile media query (340px)
 
   form #form-input {
     padding: 0.75rem 1.25rem;
-    width: 100%;
+    width: -webkit-fill-available;
     border-radius: 0.25rem;
     border: 1px solid #e0e0e0;
     font-family: "Inter-Regular";
@@ -65,7 +67,7 @@ of styling is done in the mobile media query (340px)
   form .submit-btn {
     background: rgba(69, 0, 255, 1);
     color: white;
-    width: 14rem;
+    width: 100%;
   }
 
   #form-input:focus {
@@ -74,20 +76,68 @@ of styling is done in the mobile media query (340px)
 
   // Container holding the map
   .entire-contact-us .contact-us-right {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .contact-us-right iframe {
+  .contact-us-right .mobile-map {
     width: 100%;
-    height: 100%;
+    height: 25rem;
+    border-radius: 0.9375rem;
+  }
+  .contact-us-right .desktop-map{
+    display: none;
   }
 }
 
 // Desktop - Small
+@media (min-width: 1024px) {
+  .entire-contact-us {
+    flex-direction: row;
+    height: 35rem;
+  }
+
+  .entire-contact-us .contact-us-left {
+    width: 50%;
+    gap: 2rem;
+  }
+
+  // Container to hold text headers of the newsletter section
+  .contact-us-left .header {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+
+  form #form-input {
+    width: -webkit-fill-available;
+  }
+
+
+  form .submit-btn {
+    width: 14rem;
+  }
+
+  // Container holding the map
+  .entire-contact-us .contact-us-right {
+    width: 50%;
+    height: 100%;
+  }
+
+  .contact-us-right .desktop-map {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .contact-us-right .mobile-map{
+    display: none;
+  }
+}
+
+// Desktop - Medium
 @media (min-width: 1280px) {
   .header > #text-rg {
     max-width: 30rem;
@@ -98,7 +148,7 @@ of styling is done in the mobile media query (340px)
 @media (min-width: 1440px) {
 }
 
-// Desktop - Standard
+// Desktop - Large
 @media (min-width: 1650px) {
   .header > #text-rg {
     max-width: 35rem;

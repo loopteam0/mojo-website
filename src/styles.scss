@@ -88,6 +88,113 @@ body {
 
  */
 
+ @media (min-width: 340px) {
+  // Global text styles.
+  // Just the font-size and font-style. Other styles would be
+  // made specifically to the text, i.e color, line-height etc.
+
+  #text-xl {
+    font-size: 1.5rem;
+    font-family: "Poppins-Bold";
+    flex-shrink: 0;
+  }
+
+  #text-lg {
+    font-size: 1.5rem;
+    font-family: "Poppins-SemiBold";
+    flex-shrink: 0;
+  }
+
+  #text-md {
+    font-size: 0.875rem;
+    font-family: "Poppins-SemiBold";
+    flex-shrink: 0;
+  }
+
+  #text-rg {
+    font-size: 0.875rem;
+    font-family: "Poppins-Regular";
+    flex-shrink: 0;
+  }
+
+  #text-sm {
+    font-size: 1rem;
+    font-family: "Inter-SemiBold";
+    flex-shrink: 0;
+  }
+
+  #text-xs {
+    font-size: 0.75rem;
+    font-family: "Poppins-Regular";
+    flex-shrink: 0;
+  }
+
+  /* Global buttons styles. 
+  All solid color buttons. Other styles, eg. color of text, 
+  would be applied individually ) */
+
+  #btn-filled {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: "Poppins-Regular";
+    border: 0;
+    cursor: pointer;
+  }
+
+  /* White feature container for the sections with steps 
+     on how to do something */
+  #stepContainer {
+    border-radius: 0.625rem;
+    background: white;
+    box-shadow: 10px 32px 72px 0px rgba(51, 51, 51, 0.03);
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    #inner-stepContainer {
+      height: 14rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    #text-md {
+      margin: 0.25rem 0;
+    }
+
+    #text-sm {
+      color: #999;
+    }
+  }
+
+  /* Section container styling */
+
+  #container {
+    padding: 4rem 2rem;
+  }
+
+  /* Outer wrapper for CTA, Footer and newsletter */
+  #outer-wrapper{
+    padding: 0 2rem;
+  }
+
+  // Secured blue strip
+  #blue-strip-mojo{
+    background: rgba(69, 0, 255, 1);
+    padding: 1.25rem;
+    text-align: center;
+
+     span{
+      color: white;
+     }
+  }
+}
+
 @media (min-width: 1024px) {
   // Global text styles.
   // Just the font-size and font-style. Other styles would be

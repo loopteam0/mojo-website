@@ -5,8 +5,8 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
 
   // "Steps to become a mojoer" section
   .mojoer-steps-section {
@@ -15,12 +15,14 @@ of styling is done in the mobile media query (340px)
     align-items: center;
     justify-content: center;
     gap: 4rem;
+    padding-top: 6rem !important;
   }
 
   .mojoer-steps-section .header-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 0.5rem;
   }
 
@@ -39,9 +41,10 @@ of styling is done in the mobile media query (340px)
     padding: 3.5rem 0;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 5rem;
   }
 
   // Container holding a single step with its tag ("step-tag" class)
@@ -72,10 +75,15 @@ of styling is done in the mobile media query (340px)
   .step-tag .step-tag-txt{
     font-family: 'Inter-Medium';
     color: rgba(31, 41, 55, 1);
+    font-size: 1rem;
   }
 
   .steps-main-section #text-sm {
     font-size: 0.7rem;
+  }
+
+  .single-step-wrapper #stepContainer{
+    width: 15rem;
   }
 
   .mojoer-steps-section .steps-main-section .step1 #inner-stepContainer {
@@ -124,6 +132,17 @@ of styling is done in the mobile media query (340px)
     right: 0;
     bottom: 0;
   }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  // Main wrapper holding the steps cards (pink background)
+  .mojoer-steps-section .steps-main-section {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
 }
 
 // Desktop - Medium

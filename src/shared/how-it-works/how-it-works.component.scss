@@ -5,8 +5,8 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
   // "Steps to become a mojoer" section
 
   .mojoer-steps-section {
@@ -35,13 +35,15 @@ of styling is done in the mobile media query (340px)
   // Main wrapper holding the steps cards (pink background)
   .mojoer-steps-section .steps-main-section {
     background: rgba(253, 225, 255, 1);
-    border-radius: 1.75rem;
-    padding: 3.5rem 0;
-    width: 100%;
+    border-radius: 0.526rem;
+    padding: 2rem;
+    width: 90%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+    padding-bottom: 3rem;
   }
 
   // Container holding a single step with its tag ("step-tag" class)
@@ -49,7 +51,6 @@ of styling is done in the mobile media query (340px)
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
   }
 
   .steps-main-section #text-sm {
@@ -73,6 +74,29 @@ of styling is done in the mobile media query (340px)
     height: 100%;
     border-radius: 0.5rem;
   }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // "Steps to become a mojoer" section
+
+  .mojoer-steps-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  // Main wrapper holding the steps cards (pink background)
+  .mojoer-steps-section .steps-main-section {
+    border-radius: 1.75rem;
+    padding: 3.5rem 0;
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
 }
 
 

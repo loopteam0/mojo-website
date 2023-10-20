@@ -5,8 +5,8 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
 
   // "Why choose us" / "Our Advantages" section
   .entire-advantages-section {
@@ -29,18 +29,19 @@ of styling is done in the mobile media query (340px)
   .entire-advantages-section .feature-cards-wrapper {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
   }
 
   .feature-cards-wrapper .feature-card {
-    width: 16rem;
-    height: 8rem;
-    padding: 1.5rem 2rem;
+    height: 4rem;
+    width: -webkit-fill-available;
+    padding: 1rem;
     background: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
     border-radius: 0.625rem;
@@ -55,25 +56,28 @@ of styling is done in the mobile media query (340px)
     justify-content: center;
     background: #F1F1FF;
     border-radius: 999px;
-    margin-bottom: 0.5rem;
   }
 
-  .feature-card>#text-md {
+  .feature-card .text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-container>#text-md {
     color: #11052B;
-    text-align: center;
   }
 
-  .feature-card>#text-xs {
+  .text-container>#text-xs {
     color: #999;
-    text-align: center;
   }
 
 
 
   // About Mojo section
   .about-mojo-section {
-    height: 30rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
@@ -82,7 +86,7 @@ of styling is done in the mobile media query (340px)
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .about-mojo-left>#text-lg {
@@ -92,15 +96,21 @@ of styling is done in the mobile media query (340px)
   .about-mojo-left>#text-rg {
     color: rgba(52, 64, 94, 1);
     max-width: 28rem;
+    text-align: center;
+  }
+
+  .about-mojo-left #about-us-mobile-mockup{
+    width: 100%;
   }
 
   .about-mojo-left>#btn-filled {
     background: rgba(69, 0, 255, 1);
     color: white;
+    width: 100%;
   }
 
-  .about-mojo-section>img {
-    width: clamp(28rem, 50%, 40rem);
+  .about-mojo-section>#about-us-desktop-mockup {
+    display: none;
   }
 
   app-mojo-merchant-cta {
@@ -112,25 +122,32 @@ of styling is done in the mobile media query (340px)
 
   .mojo-for-you-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
   }
 
-  .mojo-for-you-section .section-left{
-    width: 60%;
+  // Mobile mockup appears here, dsktop disappears
+  .mojo-for-you-section .section-left-desktop{
+    display: none
   }
 
-  .mojo-for-you-section .section-left img {
+  .mojo-for-you-section .section-left-mobile{
+    display: block;
+    width: 100%;
+  }
+
+  .mojo-for-you-section .section-left-mobile img {
     width: 100%;
   }
 
   .mojo-for-you-section .section-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
-    width: 50%;
+    width: 100%;
   }
 
   .section-right .title-container{
@@ -152,17 +169,139 @@ of styling is done in the mobile media query (340px)
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .features-container .point{
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: flex-start;
   }
 
   .point > span{
     color: rgba(17, 5, 43, 1);
+    max-width: 14rem;
+  }
+
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  // "Why choose us" / "Our Advantages" section
+  .entire-advantages-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  // Container holding feature cards
+  .entire-advantages-section .feature-cards-wrapper {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .feature-cards-wrapper .feature-card {
+    width: 16rem;
+    height: 8rem;
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // Ellipse holding the container
+  .feature-card .icon-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card .text-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container>#text-md {
+    text-align: center;
+  }
+
+  .text-container>#text-xs {
+    text-align: center;
+  }
+
+
+
+  // About Mojo section
+  .about-mojo-section {
+    height: 30rem;
+    flex-direction: row;
+  }
+
+  .about-mojo-section .about-mojo-left {
+    align-items: flex-start;
+  }
+
+  .about-mojo-left>#text-rg {
+    text-align: left;
+  }
+
+  // About us mobile mockup is hidden here
+  .about-mojo-left #about-us-mobile-mockup{
+    display: none;
+  }
+
+  .about-mojo-left>#btn-filled {
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    width: fit-content;
+  }
+
+  // About us desktop mockup appears here
+  .about-mojo-section > #about-us-desktop-mockup{
+    width: clamp(28rem, 50%, 40rem);
+    display: block;
+  }
+
+  app-mojo-merchant-cta {
+    margin: 1rem 0;
+  }
+
+
+  // "Mojo is for you" section
+
+  .mojo-for-you-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  // desktop mockup appears here, mobile disappears
+  .mojo-for-you-section .section-left-mobile{
+    display: none
+  }
+
+  .mojo-for-you-section .section-left-desktop{
+    display: block;
+    width: 60%;
+  }
+
+  .mojo-for-you-section .section-left-desktop img {
+    width: 100%;
+  }
+
+  .mojo-for-you-section .section-right {
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  .section-right .features-container{
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .features-container .point{
+    gap: 0.5rem;
+  }
+
+  .point > span{
     max-width: 20rem;
   }
 

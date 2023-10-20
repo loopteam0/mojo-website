@@ -5,13 +5,30 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-@media (max-width: 1023px){
-    .main-container{
-        display: none;
+// @media (max-width: 1023px){
+//     .main-container{
+//         display: none;
+//     }
+// }
+
+// Desktop - Small
+@media (min-width: 340px) {
+    app-navbar{
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    .copyright-wrapper{
+        padding: 1.5rem;
+        background-color: white;
+        text-align: center;
+    }
+
+    span{
+        color: rgba(110, 118, 141, 1);
     }
 }
 
-// Desktop - Small
 @media (min-width: 1024px) {
     app-navbar{
         position: fixed;
