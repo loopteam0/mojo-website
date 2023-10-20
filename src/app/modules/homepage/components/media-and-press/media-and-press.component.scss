@@ -5,8 +5,8 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
     .entire-media-section{
         display: flex;
         flex-direction: column;
@@ -17,6 +17,7 @@ of styling is done in the mobile media query (340px)
     // Container to hold both the header and the button to read more
     .entire-media-section .media-top{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         width: 100%;
@@ -26,16 +27,21 @@ of styling is done in the mobile media query (340px)
         color: rgba(69, 0, 255, 1);
     }
 
-    .media-top .read-more-btn{
+    .media-top .read-more-btn-desktop{
+        display: none;
+    }
+
+    #container .read-more-btn-mobile{
         background-color: rgba(69, 0, 255, 1);
         color: white;
-        width: 10rem;
+        width: 100%;
     }
 
 
     // The Media bottom div container holds both news cards
     .entire-media-section .media-bottom{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         width: 100%;
@@ -46,12 +52,12 @@ of styling is done in the mobile media query (340px)
         display: flex;
         gap: 1rem;
         align-items: center;
-        width: 50%;
+        width: 100%;
     }
 
     .news-card .news-card-left{
         width: 50%;
-        height: 16rem;
+        height: 14rem;
         border-radius: 0.56rem;
     }
 
@@ -101,6 +107,49 @@ of styling is done in the mobile media query (340px)
         height: calc(1rem * 1.38 + 1px);
         width: 100%;
       }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+    .entire-media-section{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+     // Container to hold both the header and the button to read more
+     .entire-media-section .media-top{
+        gap: 1rem;
+        flex-direction: row;
+    }
+
+    .entire-media-section .media-top > .read-more-btn-desktop{
+        display: block;
+        background-color: rgba(69, 0, 255, 1);
+        color: white;
+        width: 10rem;
+    }
+
+    #container > .read-more-btn-mobile{
+        display: none;
+    }
+
+    // The Media bottom div container holds both news cards
+    .entire-media-section .media-bottom{
+        flex-direction: row;
+    }
+
+    .media-bottom .news-card{
+        width: 50%;
+    }
+
+    .news-card .news-card-left{
+        width: 50%;
+        height: 16rem;
+        border-radius: 0.56rem;
+    }
+  
 }
 
 
