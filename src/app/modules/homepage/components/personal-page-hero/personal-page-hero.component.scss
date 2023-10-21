@@ -6,6 +6,87 @@ of styling is done in the mobile media query (340px)
 */
 
 // Desktop - Small
+@media (min-width: 340px) {
+
+  // Dividing the Hero container into two parts;
+  // left for the information, and right for the image
+  .entire-hero-section-personal {
+    background-color: rgba(242, 245, 255, 1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  // Text editing
+  .hero-left .mini-header-txt {
+    color: rgba(105, 224, 122, 1);
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-left .main-header-txt {
+    line-height: 2.5rem;
+    color: rgba(69, 0, 255, 1);
+    max-width: 30rem;
+  }
+
+  .hero-left .sub-header-txt {
+    color: rgba(52, 64, 94, 1);
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  // Container to hold both login and open account buttons
+  .hero-left .button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .button-wrapper #btn-filled.open-acct-btn{
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    padding: 0.85rem;
+  }
+
+  .button-wrapper #btn-filled.login-btn{
+    background: rgba(105, 224, 122, 1);
+    color: rgba(69, 0, 255, 1);
+    padding: 0.85rem;
+  }
+
+  // Right section of the hero container.
+ 
+  .hero-right-mobile {
+   width: 100%;
+  }
+
+  .hero-right-desktop {
+   display: none;
+  }
+
+  .hero-right-mobile > img {
+   width: 100%;
+  }
+
+
+
+} 
+
+// Desktop - Small
 @media (min-width: 1024px) {
 
     // Dividing the Hero container into two parts;
@@ -14,6 +95,7 @@ of styling is done in the mobile media query (340px)
       background-color: rgba(242, 245, 255, 1);
       padding: 4rem;
       display: flex;
+      flex-direction: row;
       align-items: center;
       gap: 4rem;
       padding-top: 8rem;
@@ -29,6 +111,7 @@ of styling is done in the mobile media query (340px)
   
     // Text editing
     .hero-left .mini-header-txt {
+      text-align: left;
       color: rgba(105, 224, 122, 1);
     }
   
@@ -36,12 +119,13 @@ of styling is done in the mobile media query (340px)
       line-height: 3.2rem;
       color: rgba(69, 0, 255, 1);
       max-width: 30rem;
+      text-align: left;
     }
   
     .hero-left .sub-header-txt {
       color: rgba(52, 64, 94, 1);
       margin: 1rem 0;
-      max-width: 35rem;
+      text-align: left;
     }
   
     // Container to hold both login and open account buttons
@@ -51,23 +135,30 @@ of styling is done in the mobile media query (340px)
       gap: 1rem;
     }
 
-    .button-wrapper .open-acct-btn{
+    .button-wrapper #btn-filled.open-acct-btn{
       background: rgba(69, 0, 255, 1);
       color: white;
+      padding: 0.8rem 1.5rem;
     }
 
-    .button-wrapper .login-btn{
+    .button-wrapper #btn-filled.login-btn{
       background: rgba(105, 224, 122, 1);
       color: rgba(69, 0, 255, 1);
+      padding: 0.8rem 1.5rem;
     }
   
     // Right section of the hero container.
    
-    .hero-right {
+    .hero-right-desktop {
+      display: block;
      width: 50%;
     }
+
+    .hero-right-mobile{
+      display: none;
+    }
   
-    .hero-right > img {
+    .hero-right-desktop > img {
      width: 100%;
     }
   

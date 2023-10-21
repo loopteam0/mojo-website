@@ -41,8 +41,8 @@
   <!-- "Currency support" section -->
   <section id="container" class="currency-support-section" *ngFor="let info of currencySupport">
 
-    <div class="section-left">
-      <img src="{{info.image}}" alt="">
+    <div class="section-left-desktop">
+      <img id="desktop-mockup" src="{{info.image}}" alt="">
     </div>
 
     <div class="section-right">
@@ -51,6 +51,11 @@
         <span id="text-xs">{{info.subheader}}</span>
         <span id="text-xl">{{info.mainHeader}}</span>
       </div>
+
+      <div class="section-left-mobile">
+        <img id="mobile-mockup" src="{{info.image}}" alt="">
+      </div>
+  
 
       <div class="features-container">
         <span *ngFor="let point of info.points" class="point">

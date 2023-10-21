@@ -6,7 +6,7 @@ of styling is done in the mobile media query (340px)
 */
 
 // Desktop - Small
-@media (min-width: 1024px) {
+@media (min-width: 340px) {
   .payment-features-section {
     display: flex;
     flex-direction: column;
@@ -20,6 +20,7 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    text-align: center;
   }
 
   .payment-features-section .header-wrapper > #text-lg {
@@ -33,17 +34,15 @@ of styling is done in the mobile media query (340px)
   // Main wrapper holding the steps cards (pink background)
   .payment-features-section .steps-main-section {
     border-radius: 1.75rem;
-    padding: 4.5rem 0;
+    padding: 4.5rem 1rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
   }
 
-  #stepContainer {
-    width: 23rem;
-  }
 
   .payment-features-section .steps-main-section .step1 #inner-stepContainer {
     background: rgba(241, 241, 255, 1);
@@ -57,16 +56,22 @@ of styling is done in the mobile media query (340px)
   // Currency support section
   .currency-support-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
   }
 
-  .currency-support-section .section-left {
-    width: 60%;
+  .currency-support-section .section-left-desktop {
+    display: none;
   }
 
-  .currency-support-section .section-left img {
+  .currency-support-section .section-left-mobile{
+    display: block;
+    width: 100%;
+  }
+
+  .currency-support-section .section-left-mobile img {
     width: 100%;
   }
 
@@ -75,14 +80,15 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    width: 50%;
+    width: 100%;
   }
 
   .section-right .title-container {
     display: inherit;
     flex-direction: inherit;
-    align-items: inherit;
+    align-items: center;
     gap: 0.25rem;
+    width: 100%;
   }
 
   .title-container > #text-xs {
@@ -96,27 +102,112 @@ of styling is done in the mobile media query (340px)
   .section-right .features-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
   }
 
   .features-container .point {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: flex-start;
   }
 
   .point > span {
     color: rgba(17, 5, 43, 1);
-    max-width: 20rem;
+    max-width: 14rem;
   }
 
   // "Spend with confidence" section
 
   .spend-confidence-section {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 2rem;
+  }
+
+  .spend-confidence-section .spend-section-left {
+    width: 100%;
+  }
+
+  .spend-section-left > img {
+    width: 100%;
+  }
+
+  .spend-confidence-section .spend-section-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .spend-section-right #text-lg {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .spend-section-right #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 26rem;
+    text-align: center;
+  }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  // Main wrapper holding the steps cards (pink background)
+  .payment-features-section .steps-main-section {
+    padding: 4.5rem 0;
+    flex-direction: row;
+  }
+
+  #stepContainer {
+    width: 23rem;
+  }
+
+  // Currency support section
+  .currency-support-section {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .currency-support-section .section-left-desktop {
+    display: block;
+    width: 60%;
+  }
+
+  .currency-support-section .section-left-mobile{
+    display: none;
+  }
+
+  .currency-support-section .section-left-desktop img {
+    width: 100%;
+  }
+
+  .currency-support-section .section-right {
+    width: 50%;
+  }
+
+  .section-right .title-container {
+    align-items: inherit;
+    gap: 0.25rem;
+  }
+
+  .section-right .features-container {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .point > span {
+    max-width: 20rem;
+  }
+
+  // "Spend with confidence" section
+
+  .spend-confidence-section {
+    flex-direction: row;
   }
 
   .spend-confidence-section .spend-section-left {
@@ -129,19 +220,15 @@ of styling is done in the mobile media query (340px)
 
   .spend-confidence-section .spend-section-right {
     width: 40%;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
   }
 
   .spend-section-right #text-lg {
-    color: rgba(69, 0, 255, 1);
   }
 
   .spend-section-right #text-rg {
-    color: rgba(52, 64, 94, 1);
     max-width: 26rem;
+    text-align: left;
   }
 }
 
