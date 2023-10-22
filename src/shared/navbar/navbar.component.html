@@ -200,8 +200,27 @@
   </div>
 
   <div class="mobile-nav-right">
+    <img (click)="toggleMenu()" src="/assets/svgs/icn-menu-blue.svg" alt="">
+  </div>
 
-    <img src="/assets/svgs/icn-menu-blue.svg" alt="">
+
+  <div *ngIf="isMenuOpen" class="mobile-nav-expanded">
+
+    
+    <div class="main-content-container">
+      <div class="wrapper" (click)="toggleAccordion(i)" [class.isExpanded]="info.isExpanded" *ngFor="let info of mobileNavContent; let i = index">
+      <div class="tile-header" [class.isExpanded]="info.isExpanded">
+        <span id="text-md">{{info.tileHeader}}</span>
+        <img [class.isExpanded]="info.isExpanded" src="{{info.expandedIcon}}" alt="">
+      </div>
+
+      <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
+        <div class="tile-header-content" *ngFor="let info of info.links">
+          <span id="text-md">{{info}}</span>
+        </div>
+    </div>
+    </div>
+    </div>
 
   </div>
 </section>

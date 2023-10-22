@@ -5,7 +5,7 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
+// Mobile
 @media (min-width: 340px) {
   .payment-features-section {
     display: flex;
@@ -221,9 +221,6 @@ of styling is done in the mobile media query (340px)
   .spend-confidence-section .spend-section-right {
     width: 40%;
     align-items: flex-start;
-  }
-
-  .spend-section-right #text-lg {
   }
 
   .spend-section-right #text-rg {

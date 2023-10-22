@@ -5,9 +5,8 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
+// Mobile
 @media (min-width: 340px) {
-
   // Dividing the Hero container into two parts;
   // left for the information, and right for the image
   .entire-hero-section-personal {
@@ -56,151 +55,117 @@ of styling is done in the mobile media query (340px)
     gap: 1rem;
   }
 
-  .button-wrapper #btn-filled.open-acct-btn{
+  .button-wrapper #btn-filled.open-acct-btn {
     background: rgba(69, 0, 255, 1);
     color: white;
     padding: 0.85rem;
   }
 
-  .button-wrapper #btn-filled.login-btn{
+  .button-wrapper #btn-filled.login-btn {
     background: rgba(105, 224, 122, 1);
     color: rgba(69, 0, 255, 1);
     padding: 0.85rem;
   }
 
   // Right section of the hero container.
- 
+
   .hero-right-mobile {
-   width: 100%;
+    width: 100%;
   }
 
   .hero-right-desktop {
-   display: none;
+    display: none;
   }
 
   .hero-right-mobile > img {
-   width: 100%;
+    width: 100%;
   }
-
-
-
-} 
+}
 
 // Desktop - Small
 @media (min-width: 1024px) {
+  // Dividing the Hero container into two parts;
+  // left for the information, and right for the image
+  .entire-hero-section-personal {
+    padding: 4rem;
+    flex-direction: row;
+  }
 
-    // Dividing the Hero container into two parts;
-    // left for the information, and right for the image
-    .entire-hero-section-personal {
-      background-color: rgba(242, 245, 255, 1);
-      padding: 4rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 4rem;
-      padding-top: 8rem;
-    }
-  
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 50%;
-      gap: 0.5rem;
-    }
-  
-    // Text editing
-    .hero-left .mini-header-txt {
-      text-align: left;
-      color: rgba(105, 224, 122, 1);
-    }
-  
-    .hero-left .main-header-txt {
-      line-height: 3.2rem;
-      color: rgba(69, 0, 255, 1);
-      max-width: 30rem;
-      text-align: left;
-    }
-  
-    .hero-left .sub-header-txt {
-      color: rgba(52, 64, 94, 1);
-      margin: 1rem 0;
-      text-align: left;
-    }
-  
-    // Container to hold both login and open account buttons
-    .hero-left .button-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+  .hero-left {
+    width: 50%;
+  }
 
-    .button-wrapper #btn-filled.open-acct-btn{
-      background: rgba(69, 0, 255, 1);
-      color: white;
-      padding: 0.8rem 1.5rem;
-    }
+  // Text editing
+  .hero-left .mini-header-txt {
+    text-align: left;
+  }
 
-    .button-wrapper #btn-filled.login-btn{
-      background: rgba(105, 224, 122, 1);
-      color: rgba(69, 0, 255, 1);
-      padding: 0.8rem 1.5rem;
-    }
-  
-    // Right section of the hero container.
-   
-    .hero-right-desktop {
-      display: block;
-     width: 50%;
-    }
+  .hero-left .main-header-txt {
+    line-height: 3.2rem;
+    max-width: 30rem;
+    text-align: left;
+  }
 
-    .hero-right-mobile{
-      display: none;
-    }
-  
-    .hero-right-desktop > img {
-     width: 100%;
-    }
-  
-  
-  
-}  
+  .hero-left .sub-header-txt {
+    text-align: left;
+  }
+
+  .button-wrapper #btn-filled.open-acct-btn {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .button-wrapper #btn-filled.login-btn {
+    padding: 0.8rem 1.5rem;
+  }
+
+  // Right section of the hero container.
+
+  // Showing the desktop mockup and hiding the mobile one
+  .hero-right-desktop {
+    display: block;
+    width: 50%;
+  }
+
+  .hero-right-mobile {
+    display: none;
+  }
+
+  .hero-right-desktop > img {
+    width: 100%;
+  }
+}
 
 // Desktop - Medium
 @media (min-width: 1280px) {
-
-    .entire-hero-section-personal {
-      padding: 8rem 6rem 6rem 6rem;
-    }
-
+  .entire-hero-section-personal {
+    padding: 8rem 6rem 6rem 6rem;
+  }
 }
-
 
 // Desktop - Standard
 @media (min-width: 1440px) {
-    .entire-hero-section-personal {
-      padding: 8rem 8rem 6rem 8rem;
-    }
-  
-    // Adjusting line-height for the main title
-    .hero-left .main-header-txt {
-      line-height: 3.8rem;
-    }
-}  
+  .entire-hero-section-personal {
+    padding: 8rem 8rem 6rem 8rem;
+  }
+
+  // Adjusting line-height for the main title
+  .hero-left .main-header-txt {
+    line-height: 3.8rem;
+  }
+}
 
 // Desktop - Large
 @media (min-width: 1650px) {
-    .entire-hero-section-personal {
-      padding: 8rem 10rem 6rem 10rem;
-    }
-  
-    .hero-left {
-      gap: 1.5rem;
-    }
-  
-    // Adjusting line-height for the main title
-    .hero-left .main-header-txt {
-      line-height: 4.2rem;
-    }
-  
+  .entire-hero-section-personal {
+    padding: 8rem 10rem 6rem 10rem;
+  }
+
+  .hero-left {
+    gap: 1.5rem;
+  }
+
+  // Adjusting line-height for the main title
+  .hero-left .main-header-txt {
+    line-height: 4.2rem;
+  }
 }
