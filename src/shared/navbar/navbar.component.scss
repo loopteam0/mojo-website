@@ -73,10 +73,17 @@ of styling is done in the mobile media query (340px)
     }
   }
 
+  .tile-content{
+    display: flex;
+    flex-direction: column;
+  }
+
   .tile-content .tile-header-content{
     background-color: rgba(241, 241, 255, 1);
     padding: 1rem;
     text-align: center;
+    text-decoration: none;
+    color: #374151;
   }
 }
 

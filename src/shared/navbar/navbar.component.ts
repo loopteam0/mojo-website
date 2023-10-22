@@ -3,10 +3,12 @@ import { Router } from '@angular/router';
 import { AccordionContent } from 'src/app/models/homepage.models';
 import { ScrollService } from 'src/services/scroll.service';
 
-export interface Navbar{
+export interface Navbar {
   tileHeader: string;
-  links: Array<string>;
-  routerLink: Array<string>;
+  links: Array<{
+    linkTitle: Array<string>;
+    routerLink: Array<string>;
+  }>;
   isExpanded: boolean;
   expandedIcon: string;
 }
@@ -14,13 +16,11 @@ export interface Navbar{
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-
-
   constructor(private scrollService: ScrollService, private router: Router) {}
-  
+
   onNavLinkClick(sectionId: string) {
     this.scrollService.scrollToClass.emit(sectionId);
   }
@@ -31,18 +31,77 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  // toggleAccordion(index: number) {
+  //   this.mobileNavContent[index].isExpanded = !this.mobileNavContent[index].isExpanded
+  // }
+
   toggleAccordion(index: number) {
-    this.mobileNavContent[index].isExpanded = !this.mobileNavContent[index].isExpanded
+    for (let i = 0; i < this.mobileNavContent.length; i++) {
+      if (i === index) {
+        // Toggle the clicked item
+        this.mobileNavContent[i].isExpanded =
+          !this.mobileNavContent[i].isExpanded;
+      } else {
+        // Close other items
+        this.mobileNavContent[i].isExpanded = false;
+      }
+    }
   }
 
-   // Generating accordion tiles
+  closeNav(){
+    this.toggleMenu();
+  }
 
-   mobileNavContent: Navbar[] = [
-    {tileHeader: 'Personal', links: ['Get a wallet', 'Currencies', 'Making Payments', "Locate - Mojo Risin'", 'Discover Mojo'], routerLink: ['', '', '', '', ''], isExpanded: false, expandedIcon: '/assets/svgs/expand-icn-nav.svg'},
-    {tileHeader: 'Business', links: ['Mojo Agent', 'Currencies', 'Settlement'], routerLink: ['', '', '', '', ''], isExpanded: false, expandedIcon: '/assets/svgs/expand-icn-nav.svg'},
-    {tileHeader: 'About Mojo', links: ['', '', '', '', ''], routerLink: ['', '', '', '', ''], isExpanded: false, expandedIcon: '/assets/svgs/expand-icn-nav.svg'},
-    {tileHeader: 'Media and Press', links: ['', '', '', '', ''], routerLink: ['', '', '', '', ''], isExpanded: false, expandedIcon: ''},
-  ]
+  // Generating accordion tiles
 
-  
+  mobileNavContent: Navbar[] = [
+    {
+      tileHeader: 'Personal',
+      links: [
+        { linkTitle: ['Get a  wallet'], routerLink: [''] },
+        { linkTitle: ['Currencies'], routerLink: [''] },
+        { linkTitle: ['Making Payments'], routerLink: [''] },
+        {
+          linkTitle: ['Locate - Mojo Risin’'],
+          routerLink: ['/personal/locate-mojo'],
+        },
+        { linkTitle: ['Discover Mojo'], routerLink: ['/personal/about-us'] },
+      ],
+      isExpanded: false,
+      expandedIcon: '/assets/svgs/expand-icn-nav.svg',
+    },
+
+    {
+      tileHeader: 'Business',
+      links: [
+        { linkTitle: ['Mojo Agents'], routerLink: ['/business/agents'] },
+        { linkTitle: ['Currencies'], routerLink: [''] },
+        { linkTitle: ['Settlements'], routerLink: [''] },
+
+      ],
+      isExpanded: false,
+      expandedIcon: '/assets/svgs/expand-icn-nav.svg',
+    },
+
+    {
+      tileHeader: 'About Mojo',
+      links: [
+        { linkTitle: ['Career'], routerLink: ['/about-us/careers'] },
+        { linkTitle: ["Locate - Mojo Risin'"], routerLink: ['/about-us/locate-mojo'] },
+        { linkTitle: ['Terms and Conditions'], routerLink: ['/about-us/terms-and-conditions'] },
+        { linkTitle: ['Privacy Policy'], routerLink: ['/about-us/privacy-policy'] },
+      ],
+      isExpanded: false,
+      expandedIcon: '/assets/svgs/expand-icn-nav.svg',
+    },
+
+    // {
+    //   tileHeader: 'Media and Press',
+    //   links: [
+
+    //   ],
+    //   isExpanded: false,
+    //   expandedIcon: '',
+    // },
+  ];
 }

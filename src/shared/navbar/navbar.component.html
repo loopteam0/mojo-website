@@ -208,6 +208,8 @@
 
     
     <div class="main-content-container">
+
+      <!-- Wrapper holding both header tile and it's contents -->
       <div class="wrapper" (click)="toggleAccordion(i)" [class.isExpanded]="info.isExpanded" *ngFor="let info of mobileNavContent; let i = index">
       <div class="tile-header" [class.isExpanded]="info.isExpanded">
         <span id="text-md">{{info.tileHeader}}</span>
@@ -215,10 +217,14 @@
       </div>
 
       <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
-        <div class="tile-header-content" *ngFor="let info of info.links">
-          <span id="text-md">{{info}}</span>
-        </div>
+        <a (click)="closeNav()" href="{{link.routerLink}}" routerLink="{{link.routerLink}}" class="tile-header-content" *ngFor="let link of info.links">
+          <span id="text-md">{{link.linkTitle}}</span>
+        </a>
     </div>
+
+    </div>
+    <div (click)="closeNav()" routerLink="/blog" class="tile-header">
+      <span id="text-md">Media and Press</span>
     </div>
     </div>
 
