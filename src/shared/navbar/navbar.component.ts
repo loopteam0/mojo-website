@@ -25,7 +25,7 @@ export class NavbarComponent {
     this.scrollService.scrollToClass.emit(sectionId);
   }
 
-  isMenuOpen = true;
+  isMenuOpen = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
