@@ -23,7 +23,7 @@ of styling is done in the mobile media query (340px)
   // Styles for mobile nav expand
   .entire-mobile-nav .mobile-nav-expanded {
     width: -webkit-fill-available;
-    height: 90svh;
+    height: 100vh;
     background: white;
     position: absolute;
     left: 0;
@@ -41,7 +41,7 @@ of styling is done in the mobile media query (340px)
 
   .main-content-container .tile-header {
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     display: flex;
     flex-direction: row;
