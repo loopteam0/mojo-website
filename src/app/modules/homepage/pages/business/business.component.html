@@ -22,10 +22,10 @@
   </div>
 
   <!-- Secured payments (Feature point)-->
-  <div id="container" class="feature-point-container" *ngFor="let info of securedPayments">
+  <div id="container" class="feature-point-container enhanced-security" *ngFor="let info of securedPayments">
 
     <!-- Container with colored background and flex-direction property -->
-    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+    <div  [style.backgroundColor]="info.backgroundColor" class="inner-container">
 
       <div class="content-wrapper">
         <span id="text-lg">{{info.mainTitle}}</span>
@@ -43,8 +43,8 @@
   <!-- Quick Settlements (Feature point)-->
   <div id="container" class="feature-point-container quick-settlements" *ngFor="let info of quickSettlements">
 
-    <!-- Container with colored background and flex-direction property -->
-    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+    <!-- Container with colored background-->
+    <div [style.backgroundColor]="info.backgroundColor" class="inner-container">
 
       <div class="content-wrapper">
         <span id="text-lg">{{info.mainTitle}}</span>
@@ -84,10 +84,10 @@
   </section>
 
    <!-- Worldwide payments (Feature point)-->
-   <div id="container" class="feature-point-container" *ngFor="let info of worldwidePayments">
+   <div id="container" class="feature-point-container worldwide-payments" *ngFor="let info of worldwidePayments">
 
     <!-- Container with colored background and flex-direction property -->
-    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+    <div [style.backgroundColor]="info.backgroundColor" class="inner-container">
 
       <div class="content-wrapper">
         <span id="text-lg">{{info.mainTitle}}</span>
@@ -104,7 +104,7 @@
   </div>
 
   <!-- Understand Cashflows section -->
-  <div id="container" class="subHeroContent" *ngFor="let info of understandCashFlows">
+  <div id="container" class="subHeroContent understand-cashflows" *ngFor="let info of understandCashFlows">
 
     <div class="subHero-left">
       <img src="/assets/images/subHero.png" alt="">
