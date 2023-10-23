@@ -190,7 +190,7 @@
 
   <div class="mobile-nav-left">
 
-    <img
+    <img (click)="closeNavOnly()"
     routerLink=""
     src="/assets/svgs/mojo-logo.svg"
     alt=""
@@ -216,14 +216,14 @@
         <img [class.isExpanded]="info.isExpanded" src="{{info.expandedIcon}}" alt="">
       </div>
 
-      <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
-        <a (click)="closeNav()" href="{{link.routerLink}}" routerLink="{{link.routerLink}}" class="tile-header-content" *ngFor="let link of info.links">
+    <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
+        <a (click)="closeNav(link.sectionId)" href="{{link.routerLink}}" routerLink="{{link.routerLink}}" class="tile-header-content" [class.isExpanded]="info.isExpanded" *ngFor="let link of info.links">
           <span id="text-md">{{link.linkTitle}}</span>
         </a>
     </div>
 
     </div>
-    <div (click)="closeNav()" routerLink="/blog" class="tile-header">
+    <div (click)="closeNav('Settlement')" routerLink="/blog" class="tile-header">
       <span id="text-md">Media and Press</span>
     </div>
     </div>

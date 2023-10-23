@@ -6,8 +6,9 @@ import { ScrollService } from 'src/services/scroll.service';
 export interface Navbar {
   tileHeader: string;
   links: Array<{
-    linkTitle: Array<string>;
-    routerLink: Array<string>;
+    linkTitle: string;
+    routerLink: string;
+    sectionId: string;
   }>;
   isExpanded: boolean;
   expandedIcon: string;
@@ -48,9 +49,18 @@ export class NavbarComponent {
     }
   }
 
-  closeNav(){
-    this.toggleMenu();
+  closeNav(sectionId: string) {
+    this.isMenuOpen = false;
+  
+    if (!this.isMenuOpen) {
+      this.scrollService.scrollToClass.emit(sectionId);
+    }
   }
+
+  closeNavOnly(){
+    this.isMenuOpen = false;
+  }
+  
 
   // Generating accordion tiles
 
@@ -58,14 +68,15 @@ export class NavbarComponent {
     {
       tileHeader: 'Personal',
       links: [
-        { linkTitle: ['Get a  wallet'], routerLink: [''] },
-        { linkTitle: ['Currencies'], routerLink: [''] },
-        { linkTitle: ['Making Payments'], routerLink: [''] },
+        { linkTitle: 'Get a  wallet', routerLink: '/personal', sectionId: 'entire-hero-section-personal' },
+        { linkTitle: 'Currencies', routerLink: '/personal', sectionId: 'currency-support-section' },
+        { linkTitle: 'Making Payments', routerLink: '/personal', sectionId: 'mojoer-steps-section' },
         {
-          linkTitle: ['Locate - Mojo Risin’'],
-          routerLink: ['/personal/locate-mojo'],
+          linkTitle: 'Locate - Mojo Risin’',
+          routerLink: '/personal/locate-mojo',
+          sectionId: ''
         },
-        { linkTitle: ['Discover Mojo'], routerLink: ['/personal/about-us'] },
+        { linkTitle: 'Discover Mojo', routerLink: '/personal/about-us', sectionId: '' },
       ],
       isExpanded: false,
       expandedIcon: '/assets/svgs/expand-icn-nav.svg',
@@ -74,9 +85,9 @@ export class NavbarComponent {
     {
       tileHeader: 'Business',
       links: [
-        { linkTitle: ['Mojo Agents'], routerLink: ['/business/agents'] },
-        { linkTitle: ['Currencies'], routerLink: [''] },
-        { linkTitle: ['Settlements'], routerLink: [''] },
+        { linkTitle: 'Mojo Agents', routerLink: '/business/agents', sectionId: '' },
+        { linkTitle: 'Currencies', routerLink: '/business', sectionId: 'currency-support-section' },
+        { linkTitle: 'Settlements', routerLink: '/business', sectionId: 'quick-settlements' },
 
       ],
       isExpanded: false,
@@ -86,10 +97,10 @@ export class NavbarComponent {
     {
       tileHeader: 'About Mojo',
       links: [
-        { linkTitle: ['Career'], routerLink: ['/about-us/careers'] },
-        { linkTitle: ["Locate - Mojo Risin'"], routerLink: ['/about-us/locate-mojo'] },
-        { linkTitle: ['Terms and Conditions'], routerLink: ['/about-us/terms-and-conditions'] },
-        { linkTitle: ['Privacy Policy'], routerLink: ['/about-us/privacy-policy'] },
+        { linkTitle: 'Career', routerLink: '/about-us/careers', sectionId: '' },
+        { linkTitle: "Locate - Mojo Risin'", routerLink: '/about-us/locate-mojo', sectionId: ''  },
+        { linkTitle: 'Terms and Conditions', routerLink: '/about-us/terms-and-conditions', sectionId: '' },
+        { linkTitle: 'Privacy Policy', routerLink: '/about-us/privacy-policy', sectionId: '' },
       ],
       isExpanded: false,
       expandedIcon: '/assets/svgs/expand-icn-nav.svg',
