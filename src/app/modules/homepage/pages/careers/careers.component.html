@@ -1,4 +1,4 @@
-<section class="business-agent">
+<section class="careers">
   <!-- Hero Section -->
   <section style="
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%),
@@ -34,7 +34,7 @@
   <!-- Mojo Risin' in 45 locations (Feature point)-->
   <div id="container" class="feature-point-container" *ngFor="let info of MojoLocations">
     <!-- Container with image background (passing an image as the background instead in the "backgroundColor" object) and flex-direction property -->
-    <div [style.flexDirection]="info.flexDirection" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('{{info.backgroundColor}}'); background-position: center;
+    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('{{info.backgroundColor}}'); background-position: center;
       background-size: cover;
       background-repeat: no-repeat;" class="inner-container">
       <div class="content-wrapper">

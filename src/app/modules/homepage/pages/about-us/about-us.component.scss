@@ -5,11 +5,12 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
   // Main hero container
   .about-us-hero-wrapper {
-    padding: 8rem 4rem 4rem 4rem;
+    padding: 4rem 2rem;
+    padding-top: 8rem;
   }
 
   //Inner container which is holding the text (purple-ish background)
@@ -19,9 +20,8 @@ of styling is done in the mobile media query (340px)
     align-items: center;
     border-radius: 1.75rem;
     background: rgba(241, 241, 255, 1);
-    padding: 3rem;
+    padding: 2rem 1rem;
     gap: 2rem;
-    height: 30rem;
     text-align: center;
   }
 
@@ -45,12 +45,12 @@ of styling is done in the mobile media query (340px)
 
   //Inner container which is holding the cards in a grid (purple-ish background)
   .inner-founders-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
     border-radius: 1.75rem;
     background: rgba(241, 241, 255, 1);
-    padding: 8rem 3rem;
+    padding: 4rem 1rem;
     gap: 2rem;
+    flex-direction: column;
     justify-items: center;
     justify-content: center;
   }
@@ -60,8 +60,8 @@ of styling is done in the mobile media query (340px)
     border-radius: 1rem;
     border: 2px solid #dcdcdc;
     background: #fff;
-    height: 20rem;
-    width: 15rem;
+    height: 22rem;
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -113,6 +113,34 @@ of styling is done in the mobile media query (340px)
     align-items: center;
     justify-content: center;
   }
+}
+
+// Desktop - Small
+@media (min-width: 1024px) {
+  // Main hero container
+  .about-us-hero-wrapper {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  //Inner container which is holding the text (purple-ish background)
+  .inner-hero-container {
+    padding: 3rem;
+    height: 30rem;
+  }
+
+  //Inner container which is holding the cards in a grid (purple-ish background)
+  .inner-founders-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 8rem 3rem;
+  }
+
+  // Main team card
+  .inner-founders-container .team-card {
+    height: 20rem;
+    width: 15rem;
+  }
+
 }
 
 // Desktop - Medium
