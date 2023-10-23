@@ -5,45 +5,128 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
+// Mobile
+@media (min-width: 340px) {
+
+  .entire-hero-section {
+    background-color: rgb(242, 245, 255);
+    padding-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    gap: 4rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+    height: 35rem;
+  }
+
+  .hero-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+ .img-slide-wrapper .product-img {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 1.3rem;
+    height: 16rem;
+    position: absolute;
+    top: 0;
+}
+
+.img-slide-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    height: 18rem;
+}
+
+
+
+.img-slide-wrapper .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    // margin: 0 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.carousel-indicators li {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 0 0.3rem;
+}
+
+.carousel-indicators li.active {
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+  // Text editing
+  .hero-center .main-header-txt {
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .hero-left .sub-header-txt {
+    color: rgba(52, 64, 94, 1);
+  }
+
+
+  .open-acct-btn{
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    margin-top: 1rem;
+    width: 20rem;
+  }
+
+
+  // Objects around the hero 
+  #object{
+    position: absolute;
+    width: 14rem;
+  }
+
+  // Adjusting the third object because it's a bit 
+  // smaller than the others
+  .entire-hero-section #object:nth-child(3){
+    width: 20rem;
+  }
+
+  .img1, .img2, .img3, .img4{
+    display: none;
+  }
+
+
+}  
+
 // Desktop - Small
 @media (min-width: 1024px) {
 
     .entire-hero-section {
-      background-color: rgba(242, 245, 255, 1);
       padding-top: 3rem;
       padding: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4rem;
       padding-top: 8rem;
       height: 25rem;
     }
   
     .hero-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       gap: 0.35rem;
     }
-  
-    // Text editing
-    .hero-center .main-header-txt {
-      color: rgba(69, 0, 255, 1);
-    }
-  
-    .hero-left .sub-header-txt {
-      color: rgba(52, 64, 94, 1);
-    }
-  
 
-    .open-acct-btn{
-      background: rgba(69, 0, 255, 1);
-      color: white;
-      margin-top: 1rem;
-      width: 20rem;
+    .img-slide-wrapper{
+      display: none;
     }
-
+  
 
     // Objects around the hero 
     #object{
@@ -60,22 +143,26 @@ of styling is done in the mobile media query (340px)
     .img1{
       top: 6%;
       left: 3%;
+      display: block;
     }
 
     .img2{
       top: 42%;
       left: 12%;
+      display: block;
     }
 
     .img3{
       top: 10%;
       right: 3%;
       width: 20rem;
+      display: block;
     }
 
     .img4{
       top: 42%;
       right: 12%;
+      display: block;
     }
   
   
