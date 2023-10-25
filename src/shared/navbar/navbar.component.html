@@ -11,7 +11,11 @@
     <!-- Container to hold all the link cells -->
     <div class="link-wrapper">
       <!-- Personal Link -->
-      <div routerLink="/personal" routerLinkActive="activeCell"  class="link-cell">
+      <div
+        routerLink="/personal"
+        routerLinkActive="activeCell"
+        class="link-cell"
+      >
         <span class="cell-title">Personal</span>
         <img
           class="chevron-down"
@@ -24,15 +28,24 @@
           <!-- Column groups in the dropdown container -->
 
           <div class="dropdown-content-column">
-            <div (click)="onNavLinkClick('entire-hero-section-personal')" class="column-link">
+            <div
+              (click)="onNavLinkClick('entire-hero-section-personal')"
+              class="column-link"
+            >
               <span id="text-sm">Get a wallet</span>
             </div>
 
-            <div (click)="onNavLinkClick('currency-support-section')" class="column-link">
+            <div
+              (click)="onNavLinkClick('currency-support-section')"
+              class="column-link"
+            >
               <span id="text-sm">Currencies</span>
             </div>
 
-            <div (click)="onNavLinkClick('mojoer-steps-section')" class="column-link">
+            <div
+              (click)="onNavLinkClick('mojoer-steps-section')"
+              class="column-link"
+            >
               <span id="text-sm">Making Payment</span>
             </div>
 
@@ -47,7 +60,7 @@
               <span id="text-sm">Forgot PIN</span>
             </div> -->
 
-            <a href="/personal/locate-mojo"  class="column-link">
+            <a href="/personal/locate-mojo" class="column-link">
               <span id="text-sm">Locate - Mojo Risin'</span>
             </a>
 
@@ -64,7 +77,11 @@
       </div>
 
       <!-- Business Link -->
-      <div routerLink="/business" routerLinkActive="activeCell" class="link-cell">
+      <div
+        routerLink="/business"
+        routerLinkActive="activeCell"
+        class="link-cell"
+      >
         <span class="cell-title">Business</span>
         <img
           class="chevron-down"
@@ -85,7 +102,10 @@
               <span id="text-sm">Mojo Agents</span>
             </a>
 
-            <div (click)="onNavLinkClick('currency-support-section')" class="column-link">
+            <div
+              (click)="onNavLinkClick('currency-support-section')"
+              class="column-link"
+            >
               <span id="text-sm">Currencies</span>
             </div>
 
@@ -99,7 +119,10 @@
           </div>
 
           <div class="dropdown-content-column">
-            <div (click)="onNavLinkClick('quick-settlements')" class="column-link">
+            <div
+              (click)="onNavLinkClick('quick-settlements')"
+              class="column-link"
+            >
               <span id="text-sm">Settlement</span>
             </div>
 
@@ -110,7 +133,7 @@
             <!-- <div class="column-link">
               <span id="text-sm">Partners</span>
             </div> -->
-<!-- 
+            <!-- 
             <div class="column-link">
               <span id="text-sm">Discover Mojo Business</span>
               <img src="/assets/svgs/icn-arrow-right-black.svg" alt="" />
@@ -125,7 +148,11 @@
       </div>
 
       <!-- About Mojo Link -->
-      <div routerLink="/about-us" routerLinkActive="activeCell" class="link-cell">
+      <div
+        routerLink="/about-us"
+        routerLinkActive="activeCell"
+        class="link-cell"
+      >
         <span class="cell-title">About Mojo</span>
         <img
           class="chevron-down"
@@ -138,8 +165,7 @@
           <!-- Column groups in the dropdown container -->
 
           <div class="dropdown-content-column">
-            
-            <a href="about-us/careers"  class="column-link">
+            <a href="about-us/careers" class="column-link">
               <span id="text-sm">Careers</span>
             </a>
 
@@ -147,18 +173,14 @@
               <span id="text-sm">Locate - Mojo Risin'</span>
             </a>
 
-            <a href="/about-us/terms-and-conditions"
-              
-              class="column-link"
-            >
+            <a href="/about-us/terms-and-conditions" class="column-link">
               <span id="text-sm">Terms and Conditions</span>
             </a>
 
-            <a href="/about-us/privacy-policy"  class="column-link">
+            <a href="/about-us/privacy-policy" class="column-link">
               <span id="text-sm">Privacy Policy</span>
               <!-- <img src="/assets/svgs/icn-arrow-right-black.svg" alt="" /> -->
             </a>
-
           </div>
 
           <div class="dropdown-content-column">
@@ -178,8 +200,6 @@
     </div>
   </div>
 
-  
-
   <!-- Right side of the navigation bar, which has the open account button -->
   <div class="navbar-right">
     <button id="btn-filled">Open a Mojo Account</button>
@@ -187,46 +207,62 @@
 </section>
 
 <section class="entire-mobile-nav">
-
   <div class="mobile-nav-left">
-
-    <img (click)="closeNavOnly()"
-    routerLink=""
-    src="/assets/svgs/mojo-logo.svg"
-    alt=""
-    class="mojo-logo"
-  />
-
+    <img
+      (click)="closeNavOnly()"
+      routerLink=""
+      src="/assets/svgs/mojo-logo.svg"
+      alt=""
+      class="mojo-logo"
+    />
   </div>
 
   <div class="mobile-nav-right">
-    <img (click)="toggleMenu()" src="/assets/svgs/icn-menu-blue.svg" alt="">
+    <img (click)="toggleMenu()" src="/assets/svgs/icn-menu-blue.svg" alt="" />
   </div>
 
-
   <div *ngIf="isMenuOpen" class="mobile-nav-expanded">
-
-    
     <div class="main-content-container">
-
       <!-- Wrapper holding both header tile and it's contents -->
-      <div class="wrapper" (click)="toggleAccordion(i)" [class.isExpanded]="info.isExpanded" *ngFor="let info of mobileNavContent; let i = index">
-      <div class="tile-header" [class.isExpanded]="info.isExpanded">
-        <span id="text-md">{{info.tileHeader}}</span>
-        <img [class.isExpanded]="info.isExpanded" src="{{info.expandedIcon}}" alt="">
+      <div
+        class="wrapper"
+        (click)="toggleAccordion(i)"
+        [class.isExpanded]="info.isExpanded"
+        *ngFor="let info of mobileNavContent; let i = index"
+      >
+        <div class="tile-header" [class.isExpanded]="info.isExpanded">
+          <span id="text-md">{{ info.tileHeader }}</span>
+          <img
+            [class.isExpanded]="info.isExpanded"
+            src="{{ info.expandedIcon }}"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="tile-content"
+          [class.isExpanded]="info.isExpanded"
+          *ngIf="info.isExpanded"
+        >
+          <a
+            (click)="closeNav(link.sectionId)"
+            href="{{ link.routerLink }}"
+            routerLink="{{ link.routerLink }}"
+            class="tile-header-content"
+            [class.isExpanded]="info.isExpanded"
+            *ngFor="let link of info.links"
+          >
+            <span id="text-md">{{ link.linkTitle }}</span>
+          </a>
+        </div>
       </div>
-
-    <div class="tile-content" [class.isExpanded]="info.isExpanded" *ngIf="info.isExpanded">
-        <a (click)="closeNav(link.sectionId)" href="{{link.routerLink}}" routerLink="{{link.routerLink}}" class="tile-header-content" [class.isExpanded]="info.isExpanded" *ngFor="let link of info.links">
-          <span id="text-md">{{link.linkTitle}}</span>
-        </a>
+      <div
+        (click)="closeNav('Settlement')"
+        routerLink="/blog"
+        class="tile-header"
+      >
+        <span id="text-md">Media and Press</span>
+      </div>
     </div>
-
-    </div>
-    <div (click)="closeNav('Settlement')" routerLink="/blog" class="tile-header">
-      <span id="text-md">Media and Press</span>
-    </div>
-    </div>
-
   </div>
 </section>

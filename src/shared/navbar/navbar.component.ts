@@ -97,6 +97,7 @@ export class NavbarComponent {
     {
       tileHeader: 'About Mojo',
       links: [
+        { linkTitle: 'About Us', routerLink: '/about-us', sectionId: '' },
         { linkTitle: 'Career', routerLink: '/about-us/careers', sectionId: '' },
         { linkTitle: "Locate - Mojo Risin'", routerLink: '/about-us/locate-mojo', sectionId: ''  },
         { linkTitle: 'Terms and Conditions', routerLink: '/about-us/terms-and-conditions', sectionId: '' },

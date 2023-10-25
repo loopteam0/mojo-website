@@ -6,7 +6,7 @@ of styling is done in the mobile media query (340px)
 */
 
 // Desktop - Small
-@media (min-width: 1024px) {
+@media (min-width: 340px) {
   .entire-hero-section {
     background-color: rgba(242, 245, 255, 1);
     padding-top: 3rem;
@@ -53,8 +53,207 @@ of styling is done in the mobile media query (340px)
     flex-direction: column;
     border-radius: 1.75rem;
     background: rgba(241, 241, 255, 1);
-    padding: 2rem;
+    padding: 1rem;
     gap: 2rem;
+  }
+
+   // Tab group
+   .tab {
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-button {
+    padding: 10px 20px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(214, 214, 214, 1);
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-button.active{
+    color: rgba(69, 0, 255, 1);
+    // border-bottom: 1px solid rgba(69, 0, 255, 1);
+  }
+  
+  .arrow {
+    display: flex;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+    width: -webkit-fill-available;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  
+  .dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+  // Tab group's content
+  .tab-content {
+    flex: 1 1 auto;
+  }
+
+  // Container for holding all the news cards
+  .news-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+
+  // Main news card
+  .inner-news-container .news-card {
+    border-radius: 1rem;
+    // border: 2px solid #dcdcdc;
+    background: #fff;
+    height: 25rem;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    // cursor: pointer;
+    overflow: hidden;
+  }
+
+  .news-card .news-card-top {
+    height: 50%;
+    margin: 0.75rem;
+    background-color: rgba(241, 241, 255, 1);
+    border-radius: 0.5rem;
+  }
+
+  .news-card .news-card-bottom {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-top: 0rem;
+  }
+
+  .news-card-bottom .blog-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .blog-info-wrapper .writer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 45%;
+  }
+
+  .blog-info-wrapper .gray-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background-color: rgba(108, 117, 125, 0.4);
+  }
+
+  .writer-info > #text-xs {
+    color: rgba(18, 20, 22, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+  }
+
+  // Date text
+  .blog-info-wrapper > #text-xs {
+    color: rgba(108, 117, 125, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    width: 40%;
+  }
+
+  .writer-info > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+  }
+
+  .news-card-bottom .blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .blog-content .blog-title {
+    font-size: 1.125rem;
+    font-family: "Poppins-SemiBold";
+
+    a{
+      color: inherit;
+    }
+  }
+
+  .blog-content > #text-xs {
+    color: rgb(153, 153, 153);
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .blog-content > #text-xs::after {
+    content: ""; /* Needed to render the pseudo */
+    background-image: linear-gradient(to right, transparent, #fff 80%);
+    position: absolute;
+    inset-inline-end: 0;
+    height: calc(1rem * 1.38 + 1px);
+    width: 100%;
+  }
+
+  .news-cards-container > #btn-filled{
+    margin: 0 auto;
+  }
+
+  // Promotional banner
+
+  .main-promotional-banner {
+    height: 10rem;
+    border-radius: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  // Purple-ish background
+  .inner-news-container {
+    padding: 2rem;
   }
 
   // Tab group
@@ -85,6 +284,10 @@ of styling is done in the mobile media query (340px)
     border-bottom: 2px solid rgba(69, 0, 255, 1);
     color: rgba(69, 0, 255, 1);
     transition: 0.5s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  .dropdown{
+    display: none;
   }
 
   // Tab group's content

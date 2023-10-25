@@ -56,6 +56,7 @@
     <!-- Purple-ish background with a tab group -->
     <div class="inner-position-container">
       <!-- Tab group and it's content wrappers underneath(tab-content) -->
+      <!-- Tab view is for desktop, dropdown for mobile -->
       <div class="tab">
         <div class="tabUnselected" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
           All
@@ -70,6 +71,22 @@
         </div>
 
       </div>
+
+      <div class="dropdown">
+        <button [class.active]="tabSelected === 'tab1'" id="text-rg" class="dropdown-button" (click)="toggleDropdown()">
+          {{ selectedOption || items[0] }}
+          <span class="arrow">
+            <img src="/assets/svgs/icn-arrow-down-purple.svg" alt="">
+          </span>
+        </button>
+        <div class="dropdown-menu" *ngIf="showDropdown">
+          <div id="text-rg" class="dropdown-item" *ngFor="let item of items" (click)="selectOption(item, 'tab1')" [class.active]="tabSelected === 'tab1'">
+            {{ item }}
+          </div>
+        </div>
+      </div>
+      
+      
 
       <!-- Tab group's content -->
       <div class="tab-content">

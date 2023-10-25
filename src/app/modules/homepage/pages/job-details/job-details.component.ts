@@ -70,6 +70,20 @@ export class JobDetailsComponent {
     this.tabSelected = tab;
   }
 
+  items: string[] = ['All', 'Customer Support', 'Marketing'];
+  selectedOption: string = '';
+  showDropdown: boolean = false;
+
+  toggleDropdown(): void {
+    this.showDropdown = !this.showDropdown;
+  }
+
+  selectOption(option: string, tab: string): void {
+    this.tabSelected = tab;
+    this.selectedOption = option;
+    this.showDropdown = false;
+  }
+
   // Routing to the desired position card's details when clicked on
   jobDetailsPage(positionId: string) {
     this.router.navigate(['about-us/careers', positionId]);

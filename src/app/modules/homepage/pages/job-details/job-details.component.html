@@ -173,6 +173,20 @@
 
       </div>
 
+      <div class="dropdown">
+        <button [class.active]="tabSelected === 'tab1'" id="text-rg" class="dropdown-button" (click)="toggleDropdown()">
+          {{ selectedOption || items[0] }}
+          <span class="arrow">
+            <img src="/assets/svgs/icn-arrow-down-purple.svg" alt="">
+          </span>
+        </button>
+        <div class="dropdown-menu" *ngIf="showDropdown">
+          <div id="text-rg" class="dropdown-item" *ngFor="let item of items" (click)="selectOption(item, 'tab1')" [class.active]="tabSelected === 'tab1'">
+            {{ item }}
+          </div>
+        </div>
+      </div>
+
       <!-- Tab group's content -->
       <div class="tab-content">
 

@@ -32,6 +32,20 @@ export class BlogComponent {
     this.tabSelected = tab;
   }
 
+  items: string[] = ['Mojo News'];
+  selectedOption: string = '';
+  showDropdown: boolean = false;
+
+  toggleDropdown(): void {
+    this.showDropdown = !this.showDropdown;
+  }
+
+  selectOption(option: string, tab: string): void {
+    this.tabSelected = tab;
+    this.selectedOption = option;
+    this.showDropdown = false;
+  }
+
 
 
   newscards: NewsCards[] = [
