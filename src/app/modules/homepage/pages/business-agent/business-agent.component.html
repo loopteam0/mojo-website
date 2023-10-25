@@ -32,10 +32,10 @@
   </div>
  
    <!-- Partner with us (Feature point)-->
-   <div id="container" class="feature-point-container" *ngFor="let info of worldwidePayments">
+   <div id="container" class="feature-point-container partnerWithUs" *ngFor="let info of worldwidePayments">
 
     <!-- Container with colored background and flex-direction property -->
-    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+    <div [style.backgroundColor]="info.backgroundColor" class="inner-container">
 
       <div class="content-wrapper">
         <span id="text-lg">{{info.mainTitle}}</span>
@@ -83,10 +83,10 @@
 
 
   <!-- Understand your transaction-->
-  <div id="container" class="feature-point-container" *ngFor="let info of understandTransaction">
+  <div id="container" class="feature-point-container understandTransaction" *ngFor="let info of understandTransaction">
 
     <!-- Container with colored background and flex-direction property -->
-    <div [style.flexDirection]="info.flexDirection" [style.backgroundColor]="info.backgroundColor" class="inner-container">
+    <div [style.backgroundColor]="info.backgroundColor" class="inner-container">
 
       <div class="content-wrapper">
         <span id="text-lg">{{info.mainTitle}}</span>

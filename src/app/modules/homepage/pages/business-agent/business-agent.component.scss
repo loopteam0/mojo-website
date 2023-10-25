@@ -5,16 +5,18 @@ the next, the styling reduces, meaning that the majority
 of styling is done in the mobile media query (340px)
 */
 
-// Desktop - Small
-@media (min-width: 1024px) {
+// Mobile
+@media (min-width: 340px) {
   // Hero section
 
-  iframe{
+  iframe {
     max-width: 100%;
     height: 100%;
+    border-radius: 0.5rem;
   }
 
-  #text-xl, #text-lg{
+  #text-xl,
+  #text-lg {
     color: rgba(69, 0, 255, 1);
   }
 
@@ -27,7 +29,7 @@ of styling is done in the mobile media query (340px)
     justify-content: center;
     gap: 4rem;
     padding-top: 8rem;
-    height: 25rem;
+    height: 30rem;
   }
 
   .hero-center {
@@ -53,23 +55,20 @@ of styling is done in the mobile media query (340px)
     width: 20rem;
   }
 
-  .agent-network-hero{
-    padding: 3rem;
+  .agent-network-hero {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
 
-  
-
-  .agent-network-hero > #text-rg{
+  .agent-network-hero > #text-rg {
     color: rgba(52, 64, 94, 1);
-    line-height: 2rem;
+    line-height: 1.5rem;
 
-    .blue-txt{
+    .blue-txt {
       color: rgba(69, 0, 255, 1);
-      font-family: 'Poppins-SemiBold';
+      font-family: "Poppins-SemiBold";
     }
   }
 
@@ -77,9 +76,9 @@ of styling is done in the mobile media query (340px)
 
   .feature-point-container .inner-container {
     border-radius: 1.75rem;
-    padding: 5rem 2rem;
-    height: clamp(20rem, 22rem, 30rem);
+    padding: 1.5rem;
     align-items: center;
+    flex-direction: column-reverse;
     justify-content: space-between;
     gap: 4rem;
     display: flex;
@@ -88,17 +87,17 @@ of styling is done in the mobile media query (340px)
   .inner-container .content-wrapper {
     border-radius: 1.6rem;
     background: white;
-    padding: 2.5rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.75rem;
     height: 60%;
     align-content: center;
+    width: -webkit-fill-available;
     flex-wrap: wrap;
+    text-align: center;
   }
-
- 
 
   .content-wrapper > #text-rg {
     color: rgba(52, 64, 94, 1);
@@ -110,52 +109,62 @@ of styling is done in the mobile media query (340px)
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-    img {
-      max-width: 100%;
-    max-height: 100%;
-    }
+  // Reducing the width of the first feature point containers image (i.e. the mojo logo)
+  .partnerWithUs .inner-container .image-wrapper img {
+    width: 65%;
+    margin: 2rem 0;
+  }
+
+  // Maintaining the width for the second container's
+  .understandTransaction .inner-container .image-wrapper img {
+    width: 100%;
   }
 
   // Agent Benefits
-  .agents-benefits-wrapper{
+  .agents-benefits-wrapper {
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 3rem;
   }
 
   // Left side of the Agents benefits container
-  .agents-benefits-wrapper .agents-benefits-left{
+  .agents-benefits-wrapper .agents-benefits-left {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    text-align: center;
+    align-items: center;
     gap: 0.75rem;
   }
 
-  .agents-benefits-left > #text-xs{
+  .agents-benefits-left > #text-xs {
     color: rgba(105, 224, 122, 1);
   }
 
-  .agents-benefits-left > #text-rg{
+  .agents-benefits-left > #text-rg {
     color: rgba(0, 24, 51, 1);
   }
 
   // Right side of the Agents benefits container
-  .agents-benefits-right{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 60%;
-    gap: 3rem 2.5rem;
+  .agents-benefits-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
   }
 
   // Benefits Point(s)
-  .agents-benefits-right .benefit-single-point{
+  .agents-benefits-right .benefit-single-point {
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 1rem;
+    align-items: center;
   }
 
-  .benefit-single-point .icon-container{
+  .benefit-single-point .icon-container {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 999px;
@@ -165,7 +174,7 @@ of styling is done in the mobile media query (340px)
     justify-content: center;
   }
 
-  .benefit-single-point .benefits-content{
+  .benefit-single-point .benefits-content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -194,12 +203,13 @@ of styling is done in the mobile media query (340px)
   // Main wrapper holding the steps cards (pink background)
   .payment-features-section .steps-main-section {
     border-radius: 1.75rem;
-    padding: 4.5rem 0;
+    padding: 3.5rem 1rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 3rem;
     background: rgba(253, 225, 255, 1);
   }
 
@@ -212,20 +222,20 @@ of styling is done in the mobile media query (340px)
 
   // Registration Requirements
 
-  .registration-requirements .divider{
+  .registration-requirements .divider {
     height: 1px;
     background: rgba(218, 218, 218, 1);
     margin-bottom: 3rem;
   }
 
-  .registration-requirements .requirements-group{
+  .registration-requirements .requirements-group {
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
   }
 
-  .registration-requirements > #btn-filled{
+  .registration-requirements > #btn-filled {
     margin: 3rem 0;
     background: rgba(69, 0, 255, 1);
     color: white;
@@ -233,7 +243,7 @@ of styling is done in the mobile media query (340px)
 
   // Partners Section
 
-  .partners-section{
+  .partners-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,43 +256,154 @@ of styling is done in the mobile media query (340px)
     text-align: center;
   }
 
-  .header > #text-rg{
+  .header > #text-rg {
     color: rgba(17, 5, 43, 1);
   }
 
-  .partners-section .logos-grid-wrapper{
+  .partners-section .logos-grid-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
+  }
 
   // Grid for logos of partners
   .logos-grid-wrapper .partners-logo-grid {
-      display: grid;
-      grid-template-columns: auto auto;
-      padding: 1rem;
-      gap: 2rem;
-      justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
 
-      img{
-        width: 6rem;
-      }
+    img {
+      width: 8rem;
+    }
   }
 
-  // Giving the last column a display of flex to
-  // align properly with the rest
-   .logos-grid-wrapper 
-  .partners-logo-grid:nth-child(4) {
-      display: flex;
-      flex-direction: column;
+  // Hiding the last 3 grids for mobile
+  .logos-grid-wrapper .partners-logo-grid:nth-child(2),
+  .logos-grid-wrapper .partners-logo-grid:nth-child(3),
+  .logos-grid-wrapper .partners-logo-grid:nth-child(4) {
+    display: none;
   }
 
-  .partners-section > #btn-filled{
+
+  .partners-section > #btn-filled {
     background-color: rgba(69, 0, 255, 1);
     color: white;
     width: 15rem;
   }
+}
 
+// Desktop - Small
+@media (min-width: 1024px) {
+
+  .entire-hero-section {
+    height: 25rem;
+  }
+
+  .agent-network-hero {
+    padding: 3rem;
+  }
+
+  .agent-network-hero #text-rg{
+    line-height: 2rem;
+  }
+
+  // Feature point container for "Partner with us".
+
+  .partnerWithUs .inner-container{
+    flex-direction: row;
+  }
+
+  .understandTransaction .inner-container{
+    flex-direction: row-reverse;
+  }
+
+  .feature-point-container .inner-container {
+    padding: 5rem 2rem;
+    height: clamp(20rem, 22rem, 30rem);
+    gap: 4rem;
+  }
+
+  .inner-container .content-wrapper {
+    padding: 2.5rem;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: flex-start;
+    width: 60%;
+  }
+
+  .content-wrapper > #text-rg {
+    color: rgba(52, 64, 94, 1);
+    max-width: 26rem;
+  }
+
+  .inner-container .image-wrapper{
+    width: 50%;
+  }
+
+  .partnerWithUs .inner-container .image-wrapper img{
+    width: 100%;
+
+  }
+
+  // Agent Benefits
+  .agents-benefits-wrapper {
+    flex-direction: row;
+  }
+
+  // Left side of the Agents benefits container
+  .agents-benefits-wrapper .agents-benefits-left {
+    text-align: left;
+    width: 45%;
+    align-items: flex-start;
+  }
+
+  // Right side of the Agents benefits container
+  .agents-benefits-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    width: 60%;
+    gap: 5rem 2.5rem;
+  }
+
+  // Benefits Point(s)
+  .agents-benefits-right .benefit-single-point {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  // "How to become a merchant/agent" section
+
+  // Main wrapper holding the steps cards (pink background)
+  .payment-features-section .steps-main-section {
+    padding: 4.5rem 0;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  // Partners Section
+
+  // Grid for logos of partners
+  .partners-section .logos-grid-wrapper .partners-logo-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
+
+    img {
+      width: 6rem;
+    }
+  }
+
+  // Giving the last column a display of flex to
+  // align properly with the rest
+  .partners-section .logos-grid-wrapper .partners-logo-grid:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 // Desktop - Medium
@@ -299,7 +420,7 @@ of styling is done in the mobile media query (340px)
   }
 
   // Increasing image widths for screen size
-  .logos-grid-wrapper .partners-logo-grid img{
+  .logos-grid-wrapper .partners-logo-grid img {
     width: 8rem;
   }
 
@@ -332,7 +453,7 @@ of styling is done in the mobile media query (340px)
     gap: 5rem;
   }
 
-  .agents-benefits-wrapper{
+  .agents-benefits-wrapper {
     gap: 8rem;
   }
 }
