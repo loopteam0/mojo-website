@@ -68,10 +68,19 @@ export class JobDetailsComponent {
 
   setActiveTab(tab: string) {
     this.tabSelected = tab;
+
+    if (this.tabSelected === 'tab1') {
+      this.selectedOption = this.items[0];
+    } else if (this.tabSelected === 'tab2') {
+      this.selectedOption = this.items[1];
+    } else if (this.tabSelected === 'tab3') {
+      this.selectedOption = this.items[2];
+    }
+    this.showDropdown = false;
   }
 
   items: string[] = ['All', 'Customer Support', 'Marketing'];
-  selectedOption: string = '';
+  selectedOption: string = 'All';
   showDropdown: boolean = false;
 
   toggleDropdown(): void {
@@ -80,7 +89,7 @@ export class JobDetailsComponent {
 
   selectOption(option: string, tab: string): void {
     this.tabSelected = tab;
-    this.selectedOption = option;
+    this.selectedOption = tab;
     this.showDropdown = false;
   }
 
@@ -88,7 +97,6 @@ export class JobDetailsComponent {
   jobDetailsPage(positionId: string) {
     this.router.navigate(['about-us/careers', positionId]);
   }
-
 
   // Cards For the Open Positions section
   careerCards: CareerPositionCards[] = [
@@ -130,7 +138,7 @@ export class JobDetailsComponent {
       position: 'Branch Customer Service Representative',
       positionType: 'Hybrid',
       location: 'Beirut',
-    }
+    },
   ];
 
   careerCardsMarketing: CareerPositionCards[] = [
@@ -193,9 +201,7 @@ export class JobDetailsComponent {
 
       perksAndBenefits: [],
 
-      applicationProcess: [
-        
-      ],
+      applicationProcess: [],
 
       jobSummary: [
         {
@@ -251,20 +257,18 @@ export class JobDetailsComponent {
       educationalRequirement:
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
-        salary: [
-          // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-          // 'Salary Review: Yearly',
-        ],
-  
-        workingHours: [],
-  
-        workingDays: [],
-  
-        perksAndBenefits: [],
-  
-        applicationProcess: [
-          
-        ],
+      salary: [
+        // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+        // 'Salary Review: Yearly',
+      ],
+
+      workingHours: [],
+
+      workingDays: [],
+
+      perksAndBenefits: [],
+
+      applicationProcess: [],
 
       jobSummary: [
         {
@@ -324,20 +328,18 @@ export class JobDetailsComponent {
       educationalRequirement:
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
-        salary: [
-          // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-          // 'Salary Review: Yearly',
-        ],
-  
-        workingHours: [],
-  
-        workingDays: [],
-  
-        perksAndBenefits: [],
-  
-        applicationProcess: [
-          
-        ],
+      salary: [
+        // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+        // 'Salary Review: Yearly',
+      ],
+
+      workingHours: [],
+
+      workingDays: [],
+
+      perksAndBenefits: [],
+
+      applicationProcess: [],
 
       jobSummary: [
         {
@@ -367,7 +369,7 @@ export class JobDetailsComponent {
       positionId: 'marketing-and-communication-specialist',
       positionTitle: 'Marketing and Communication Specialist',
       whoWeAreLookingFor: [
-        "We are looking for an enthusiastic Marketing and Communications Specialist to manage our external and internal communications. You will promote a positive public image and control the dissemination of information on our company’s behalf. Phenomenal communication and copywriting skills make a strong communications specialist. Experience in corporate communications and project management are important qualities too",
+        'We are looking for an enthusiastic Marketing and Communications Specialist to manage our external and internal communications. You will promote a positive public image and control the dissemination of information on our company’s behalf. Phenomenal communication and copywriting skills make a strong communications specialist. Experience in corporate communications and project management are important qualities too',
       ],
 
       whatYouWillBeDoing: [
@@ -397,20 +399,18 @@ export class JobDetailsComponent {
       educationalRequirement:
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going',
 
-        salary: [
-          // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
-          // 'Salary Review: Yearly',
-        ],
-  
-        workingHours: [],
-  
-        workingDays: [],
-  
-        perksAndBenefits: [],
-  
-        applicationProcess: [
-          
-        ],
+      salary: [
+        // 'Salary:  18,000 to 35,000 LBP (Depends on Skill and Experience)',
+        // 'Salary Review: Yearly',
+      ],
+
+      workingHours: [],
+
+      workingDays: [],
+
+      perksAndBenefits: [],
+
+      applicationProcess: [],
 
       jobSummary: [
         {

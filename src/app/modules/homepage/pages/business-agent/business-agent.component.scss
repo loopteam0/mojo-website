@@ -239,6 +239,7 @@ of styling is done in the mobile media query (340px)
     margin: 3rem 0;
     background: rgba(69, 0, 255, 1);
     color: white;
+    width: -webkit-fill-available;
   }
 
   // Partners Section
@@ -290,7 +291,7 @@ of styling is done in the mobile media query (340px)
   .partners-section > #btn-filled {
     background-color: rgba(69, 0, 255, 1);
     color: white;
-    width: 15rem;
+    width: -webkit-fill-available;
   }
 }
 
@@ -383,6 +384,10 @@ of styling is done in the mobile media query (340px)
     gap: 1rem;
   }
 
+  .registration-requirements > #btn-filled {
+    width: auto;
+  }
+
   // Partners Section
 
   // Grid for logos of partners
@@ -396,6 +401,10 @@ of styling is done in the mobile media query (340px)
     img {
       width: 6rem;
     }
+  }
+
+  .partners-section > #btn-filled{
+    width: auto;
   }
 
   // Giving the last column a display of flex to

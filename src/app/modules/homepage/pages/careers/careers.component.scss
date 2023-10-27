@@ -65,12 +65,13 @@ of styling is done in the mobile media query (340px)
   .about-mojo-left > #btn-filled {
     background: rgba(69, 0, 255, 1);
     color: white;
+    width: -webkit-fill-available;
   }
 
   .about-mojo-section > img {
     width: -webkit-fill-available;
     height: 21rem;
-    // margin-right: 2rem;
+    margin-right: 2rem;
   }
 
   // Feature point container for " Mojo Risin' in 45 locations".
@@ -302,6 +303,7 @@ of styling is done in the mobile media query (340px)
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
   }
 
   .mojo-benefits-container .header {
@@ -321,12 +323,13 @@ of styling is done in the mobile media query (340px)
   }
 
   .mojo-benefits-container .inner-mojo-benefits-wrapper {
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1.25rem;
     background: rgba(253, 225, 255, 1);
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    width: 95%;
   }
 
   .inner-mojo-benefits-wrapper .benefit-card {
@@ -376,6 +379,11 @@ of styling is done in the mobile media query (340px)
   .about-mojo-section > img {
     width: clamp(28rem, 50%, 40rem);
     margin: 0;
+    height: auto;
+  }
+
+  .about-mojo-left > #btn-filled {
+    width: auto;
   }
 
   // Feature point container for " Mojo Risin' in 45 locations".

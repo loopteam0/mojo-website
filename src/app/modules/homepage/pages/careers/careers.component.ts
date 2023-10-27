@@ -13,6 +13,7 @@ import {
   RegistrationRequirements,
   SubHeroContent,
 } from 'src/app/models/homepage.models';
+import { ScrollService } from 'src/services/scroll.service';
 
 @Component({
   selector: 'app-careers',
@@ -20,7 +21,20 @@ import {
   styleUrls: ['./careers.component.scss'],
 })
 export class CareersComponent {
-  constructor(private router: Router) {}
+
+  onNavLinkClick(sectionId: string) {
+    this.scrollService.scrollToClass.emit(sectionId);
+  }
+
+  constructor(private router: Router, private scrollService: ScrollService) {
+    this.scrollService.scrollToClass.subscribe(className => {
+      const elements = document.getElementsByClassName(className);
+      if (elements.length > 0) {
+        const firstElement = elements[0] as HTMLElement;
+        firstElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      }
+    });
+  }
 
   // Tab group functionality
   tabSelected: string = 'tab1';

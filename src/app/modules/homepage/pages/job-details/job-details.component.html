@@ -174,15 +174,24 @@
       </div>
 
       <div class="dropdown">
-        <button [class.active]="tabSelected === 'tab1'" id="text-rg" class="dropdown-button" (click)="toggleDropdown()">
-          {{ selectedOption || items[0] }}
+        <button id="text-rg" class="dropdown-button" (click)="toggleDropdown()">
+          <!-- {{ selectedOption || items[0] }} -->
+          <span>{{ selectedOption }}</span>
           <span class="arrow">
             <img src="/assets/svgs/icn-arrow-down-purple.svg" alt="">
           </span>
         </button>
         <div class="dropdown-menu" *ngIf="showDropdown">
-          <div id="text-rg" class="dropdown-item" *ngFor="let item of items" (click)="selectOption(item, 'tab1')" [class.active]="tabSelected === 'tab1'">
-            {{ item }}
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
+           All
+          </div>
+
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
+            Customer Support
+          </div>
+
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
+           Marketing
           </div>
         </div>
       </div>

@@ -436,6 +436,10 @@ of styling is done in the mobile media query (340px)
     gap: 2rem;
   }
 
+  .dropdown{
+    display: none;
+  }
+
   // Tab group
   .tab {
     gap: 0.625rem;

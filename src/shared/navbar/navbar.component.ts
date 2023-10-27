@@ -85,6 +85,7 @@ export class NavbarComponent {
     {
       tileHeader: 'Business',
       links: [
+        { linkTitle: 'Mojo Business', routerLink: '/business', sectionId: '' },
         { linkTitle: 'Mojo Agents', routerLink: '/business/agents', sectionId: '' },
         { linkTitle: 'Currencies', routerLink: '/business', sectionId: 'currency-support-section' },
         { linkTitle: 'Settlements', routerLink: '/business', sectionId: 'quick-settlements' },

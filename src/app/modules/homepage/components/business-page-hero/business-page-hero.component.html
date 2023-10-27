@@ -12,7 +12,7 @@
     <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
 
     <!-- Carousel for Mobile -->
-    <div class="img-slide-wrapper">
+    <!-- <div class="img-slide-wrapper">
       <ng-container *ngFor="let slide of subImages; let i = index">
           <div @carouselAnimation *ngIf="i === currentSlide" class="product-img"
               [style.background-image]="'url(' + slide + ')'"
@@ -20,14 +20,31 @@
           </div>
       </ng-container>
 
-      <!-- Indicators -->
+       Indicators
       <ul class="carousel-indicators">
           <li *ngFor="let slide of subImages; let i = index" [class.active]="currentSlide === i"
               (click)="goToImage(i)">
           </li>
       </ul>
 
-  </div>
+  </div> -->
+
+  <div class="img-slide-wrapper">
+    <ng-container *ngFor="let slide of subImages; let i = index">
+        <div @carouselAnimation *ngIf="i === currentSlide" class="product-img"
+            [style.background-image]="'url(' + slide + ')'"
+            style="background-size: cover; background-position: center; background-repeat: no-repeat;">
+        </div>
+    </ng-container>
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li *ngFor="let slide of subImages; let i = index" [class.active]="currentSlide === i"
+            (click)="goToImage(i)">
+        </li>
+    </ul>
+
+</div>
 
     <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
     <button id="btn-filled" class="open-acct-btn">Register for a Merchant Account</button>

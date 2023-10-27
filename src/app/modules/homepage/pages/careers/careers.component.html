@@ -24,7 +24,7 @@
     <div class="about-mojo-left" *ngFor="let info of digitalWallet">
       <span id="text-lg">{{info.mainTitle}}</span>
       <span id="text-rg">{{info.subTitle}}</span>
-      <button id="btn-filled">Check Job Postings</button>
+      <button (click)="onNavLinkClick('position-main-wrapper')" id="btn-filled">Check Job Postings</button>
     </div>
 
     <img src="/assets/images/about-mojo-img.png" alt="" />
