@@ -36,15 +36,25 @@ export class CareersComponent {
     });
   }
 
+ 
   // Tab group functionality
   tabSelected: string = 'tab1';
 
   setActiveTab(tab: string) {
     this.tabSelected = tab;
+
+    if (this.tabSelected === 'tab1') {
+      this.selectedOption = this.items[0];
+    } else if (this.tabSelected === 'tab2') {
+      this.selectedOption = this.items[1];
+    } else if (this.tabSelected === 'tab3') {
+      this.selectedOption = this.items[2];
+    }
+    this.showDropdown = false;
   }
 
   items: string[] = ['All', 'Customer Support', 'Marketing'];
-  selectedOption: string = '';
+  selectedOption: string = 'All';
   showDropdown: boolean = false;
 
   toggleDropdown(): void {
@@ -53,7 +63,7 @@ export class CareersComponent {
 
   selectOption(option: string, tab: string): void {
     this.tabSelected = tab;
-    this.selectedOption = option;
+    this.selectedOption = tab;
     this.showDropdown = false;
   }
 
@@ -63,6 +73,64 @@ export class CareersComponent {
   jobDetailsPage(positionId: string) {
     this.router.navigate(['about-us/careers', positionId]);
   }
+
+  // Cards For the Open Positions section
+  careerCards: CareerPositionCards[] = [
+    {
+      positionId: 'call-center-representative',
+      position: 'Call Center Representative',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'brach-customer-service-representative',
+      position: 'Branch Customer Service Representative',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'marketing-and-communication-specialist',
+      position: 'Marketing and Communication Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'social-media-specialist',
+      position: 'Social Media Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+  ];
+
+  careerCardsCustomerSupport: CareerPositionCards[] = [
+    {
+      positionId: 'call-center-representative',
+      position: 'Call Center Representative',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'brach-customer-service-representative',
+      position: 'Branch Customer Service Representative',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+  ];
+
+  careerCardsMarketing: CareerPositionCards[] = [
+    {
+      positionId: 'social-media-specialist',
+      position: 'Social Media Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+    {
+      positionId: 'marketing-and-communication-specialist',
+      position: 'Marketing and Communication Specialist',
+      positionType: 'Hybrid',
+      location: 'Beirut',
+    },
+  ];
 
   // Hero section
   careerPageHero: HomepageHero[] = [
@@ -151,33 +219,7 @@ export class CareersComponent {
     },
   ];
 
-  // Cards For the Open Positions section
-  careerCards: CareerPositionCards[] = [
-    {
-      positionId: 'call-center-representative',
-      position: 'Call Center Representative',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-    {
-      positionId: 'brach-customer-service-representative',
-      position: 'Branch Customer Service Representative',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-    {
-      positionId: 'marketing-and-communication-specialist',
-      position: 'Marketing and Communication Specialist',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-    {
-      positionId: 'social-media-specialist',
-      position: 'Social Media Specialist',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-  ];
+  
 
   // Cards for working at Mojo (Mojoee Benefits, 2/2)
   mojoeeBenefitsCards: MojoeeBenefitsCards[] = [

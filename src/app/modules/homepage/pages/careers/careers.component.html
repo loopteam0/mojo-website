@@ -73,20 +73,27 @@
       </div>
 
       <div class="dropdown">
-        <button [class.active]="tabSelected === 'tab1'" id="text-rg" class="dropdown-button" (click)="toggleDropdown()">
-          {{ selectedOption || items[0] }}
+        <button id="text-rg" class="dropdown-button" (click)="toggleDropdown()">
+          <!-- {{ selectedOption || items[0] }} -->
+          <span>{{ selectedOption }}</span>
           <span class="arrow">
             <img src="/assets/svgs/icn-arrow-down-purple.svg" alt="">
           </span>
         </button>
         <div class="dropdown-menu" *ngIf="showDropdown">
-          <div id="text-rg" class="dropdown-item" *ngFor="let item of items" (click)="selectOption(item, 'tab1')" [class.active]="tabSelected === 'tab1'">
-            {{ item }}
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
+           All
+          </div>
+
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
+            Customer Support
+          </div>
+
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
+           Marketing
           </div>
         </div>
       </div>
-      
-      
 
       <!-- Tab group's content -->
       <div class="tab-content">
@@ -101,32 +108,36 @@
             <span id="text-xs">{{info.location}}</span>
           </div>
 
-          
         </div>
 
         <div class="position-cards-container" *ngIf="tabSelected === 'tab2'">
           <!-- Content for Tab 2 -->
 
-           <!-- Position news card -->
-           <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
+          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsCustomerSupport">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
           </div>
+
         </div>
 
         <div class="position-cards-container" *ngIf="tabSelected === 'tab3'">
           <!-- Content for Tab 3 -->
 
-           <!-- Position news card -->
-           <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
+          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsMarketing">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
           </div>
         </div>
 
-      
+        <div *ngIf="tabSelected === 'tab4'">
+          <!-- Content for Tab 4 -->
+        </div>
+
+        <div *ngIf="tabSelected === 'tab5'">
+          <!-- Content for Tab 5 -->
+        </div>
       </div>
     </div>
   </div>

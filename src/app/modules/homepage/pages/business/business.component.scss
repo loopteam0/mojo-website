@@ -192,6 +192,7 @@ of styling is done in the mobile media query (340px)
   // Styles for "Understand Cashflows" and "Convenient Payments"
 
   .subHeroContent {
+    justify-content: center;
     flex-direction: row;
   }
 

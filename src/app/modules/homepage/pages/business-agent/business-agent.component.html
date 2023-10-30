@@ -1,18 +1,19 @@
 <section class="business-agent">
-    <!-- Hero Section -->
-    <section class="entire-hero-section">
+  <!-- Hero Section -->
+  <section class="entire-hero-section">
 
-      <div class="hero-center" *ngFor="let info of businesspageHero">
-    
-        <img src="/assets/svgs/icn-m-logo.svg" alt="">
-        <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
-        <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
-        <button (click)="onNavLinkClick('payment-features-section')" id="btn-filled" class="open-acct-btn">How do I become an agent?</button>
-    
-      </div>
-    
-    
-    </section>
+    <div class="hero-center" *ngFor="let info of businesspageHero">
+
+      <img src="/assets/svgs/icn-m-logo.svg" alt="">
+      <span id="text-xl" class="main-header-txt">{{info.mainTitle}}</span>
+      <span id="text-rg" class="sub-header-txt">{{info.subTitle}}</span>
+      <button (click)="onNavLinkClick('payment-features-section')" id="btn-filled" class="open-acct-btn">How do I become
+        an agent?</button>
+
+    </div>
+
+
+  </section>
 
   <!-- Secured blue strip -->
   <div id="blue-strip-mojo">
@@ -24,15 +25,22 @@
   <div id="container">
     <div class="agent-network-hero">
       <span id="text-xl">Mojo Agent Network</span>
-      <span id="text-rg">Become a <span class="blue-txt">Mojo Agent</span> and provide “A New Way to Pay” to your customers. Customers will no longer need physical cards or cash to make payments to your business. Mojo allows customers to easily and securely pay for your goods or services, while also providing a more convenient and cost-effective channel for your establishment to conduct business with other entities.
-        Customers can make payments to your business either in person or remotely through the Mojo App or via the shortcode *CASH# (*2274#). Mojo allows customers to have an easy and convenient way to conduct business with your establishment, while also providing an easy way for your business to transact with other Agents and Merchants.
+      <span id="text-rg">Become a <span class="blue-txt">Mojo Agent</span> and provide “A New Way to Pay” to your
+        customers. Customers will no longer need physical cards or cash to make payments to your business. Mojo allows
+        customers to easily and securely pay for your goods or services, while also providing a more convenient and
+        cost-effective channel for your establishment to conduct business with other entities.
+        Customers can make payments to your business either in person or remotely through the Mojo App or via the
+        shortcode *CASH# (*2274#). Mojo allows customers to have an easy and convenient way to conduct business with
+        your establishment, while also providing an easy way for your business to transact with other Agents and
+        Merchants.
         Mojo ensures that your payments are fast, easy, safe, and secure!
-        Agents will earn a commission for providing cash-in and cash-out services. This can create an additional revenue stream helping to increase profitability.</span>
+        Agents will earn a commission for providing cash-in and cash-out services. This can create an additional revenue
+        stream helping to increase profitability.</span>
     </div>
   </div>
- 
-   <!-- Partner with us (Feature point)-->
-   <div id="container" class="feature-point-container partnerWithUs" *ngFor="let info of worldwidePayments">
+
+  <!-- Partner with us (Feature point)-->
+  <div id="container" class="feature-point-container partnerWithUs" *ngFor="let info of worldwidePayments">
 
     <!-- Container with colored background and flex-direction property -->
     <div [style.backgroundColor]="info.backgroundColor" class="inner-container">
@@ -74,7 +82,7 @@
             <span id="text-md">{{info.mainTitle}}</span>
             <span id="text-xs">{{info.subTitle}}</span>
           </div>
-          
+
         </div>
 
       </div>
@@ -107,24 +115,23 @@
   <section id="container" class="payment-features-section">
 
     <!-- Main wrapper holding the steps cards (pink background)-->
-    <div class="steps-main-section">      
-  
-        <div class="step1" id="stepContainer" *ngFor="let info of stepsWithVideos">
-  
-          <div  id="inner-stepContainer">
-            <iframe [src]="sanitizeUrl(info.videoLink)" title="YouTube video player"
-            frameborder="0"
+    <div class="steps-main-section">
+
+      <div class="step1" id="stepContainer" *ngFor="let info of stepsWithVideos">
+
+        <div id="inner-stepContainer">
+          <iframe [src]="sanitizeUrl(info.videoLink)" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
-          </div>
-  
-          <span id="text-md">{{info.title}}</span>
-          <span id="text-sm">{{info.description}}</span>
-  
         </div>
-  
+
+        <span id="text-md">{{info.title}}</span>
+        <span id="text-sm">{{info.description}}</span>
+
+      </div>
+
     </div>
-  
+
   </section>
 
   <!-- Registration Requirements -->
@@ -132,23 +139,25 @@
     <div class="divider"></div>
 
     <span id="text-lg">{{info.mainText}}</span>
-    
+
     <div class="requirements-group">
       <li *ngFor="let info of info.point" id="text-rg">{{info}}</li>
     </div>
 
-    <button id="btn-filled">Download Application Form</button>
+    <a href="/assets/files/Mojo Agent Profile.pdf" download="mojo-agent.pdf">
+      <button id="btn-filled">Download Application Form</button>
+    </a>
   </div>
 
   <!-- Partners Section -->
 
   <section class="partners-section" id="container">
-    <div class="header">
+    <!-- <div class="header">
     <span id="text-xl">Our Mojo Network</span>
     <span id="text-rg">Join the ever growing network of wallet banking</span>
-    </div>
+    </div> -->
 
-     <!-- Columns for logos are 7, with 4 logos for 1 column.
+    <!-- Columns for logos are 7, with 4 logos for 1 column.
          But columns have been grouped as 2 to 1 container; 
          making 4 containers in total of 2 columns each
         
@@ -157,7 +166,7 @@
 
         And it's wrapped in a container called "logos-grid-wrapper"-->
 
-        <div class="logos-grid-wrapper">
+    <!-- <div class="logos-grid-wrapper">
 
           <div class="partners-logo-grid">
               <img src="/assets/images/GooglePay.png" alt="">
@@ -201,17 +210,17 @@
   
       </div>
 
-      <button id="btn-filled">Become an Agent</button>
+      <button id="btn-filled">Become an Agent</button> -->
   </section>
 
 
 
   <!-- FAQ Section -->
   <!-- <app-faq-section></app-faq-section> -->
-  
+
   <!-- Contact Us section -->
   <app-contact-us></app-contact-us>
-  
+
   <!-- Newsletter section -->
   <app-newsletter></app-newsletter>
 

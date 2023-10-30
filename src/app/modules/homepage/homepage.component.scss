@@ -185,6 +185,131 @@ of styling is done in the mobile media query (340px)
 
 }
 
+@media (min-width: 768px) {
+
+  // Container holding feature cards
+  .entire-advantages-section .feature-cards-wrapper {
+    flex-direction: row;
+  }
+
+  .feature-cards-wrapper .feature-card {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .feature-card .text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  // About Mojo section
+  .about-mojo-section {
+    height: 30rem;
+    flex-direction: row;
+  }
+
+  .about-mojo-section .about-mojo-left {
+    align-items: flex-start;
+    width: 40%;
+  }
+
+  .about-mojo-left>#text-rg {
+    text-align: left;
+  }
+
+  // About us mobile mockup is hidden here
+  .about-mojo-left #about-us-mobile-mockup{
+    display: none;
+  }
+
+  .about-mojo-left>#btn-filled {
+    background: rgba(69, 0, 255, 1);
+    color: white;
+    width: fit-content;
+  }
+
+  // About us desktop mockup appears here
+  .about-mojo-section > #about-us-desktop-mockup{
+    width: 60%;
+    display: block;
+  }
+
+  app-mojo-merchant-cta {
+    margin: 1rem 0;
+  }
+
+
+
+  // "Mojo is for you" section
+
+  .mojo-for-you-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  // Mobile mockup appears here, dsktop disappears
+  .mojo-for-you-section .section-left-desktop{
+    display: none;
+  }
+
+  .mojo-for-you-section .section-left-mobile{
+    display: block;
+    width: 100%;
+  }
+
+  .mojo-for-you-section .section-left-mobile img {
+    width: 100%;
+  }
+
+  .mojo-for-you-section .section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .section-right .title-container{
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: 0.25rem;
+  }
+
+  .title-container > #text-xs{
+    color: rgba(69, 0, 255, 1);
+  }
+
+  .title-container > #text-xl{
+    color: rgba(17, 5, 43, 1);
+  }
+
+  .section-right .features-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .features-container .point{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .point > span{
+    color: rgba(17, 5, 43, 1);
+    max-width: 14rem;
+  }
+
+}
+
 // Desktop - Small
 @media (min-width: 1024px) {
 

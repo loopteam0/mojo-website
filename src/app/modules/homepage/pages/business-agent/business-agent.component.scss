@@ -235,7 +235,7 @@ of styling is done in the mobile media query (340px)
     gap: 0.75rem;
   }
 
-  .registration-requirements > #btn-filled {
+  .registration-requirements  #btn-filled {
     margin: 3rem 0;
     background: rgba(69, 0, 255, 1);
     color: white;
@@ -384,7 +384,7 @@ of styling is done in the mobile media query (340px)
     gap: 1rem;
   }
 
-  .registration-requirements > #btn-filled {
+  .registration-requirements #btn-filled {
     width: auto;
   }
 
@@ -453,8 +453,9 @@ of styling is done in the mobile media query (340px)
     padding: 5rem 4rem;
   }
 
-  .image-wrapper > img {
-    transform: scale(1.1);
+  .partnerWithUs .inner-container .image-wrapper > img {
+    // transform: scale(1.1);
+    width: 80%;
   }
 
   // currency support section
@@ -478,6 +479,6 @@ of styling is done in the mobile media query (340px)
   }
 
   .image-wrapper > img {
-    transform: scale(1.2);
+    // transform: scale(1.2);
   }
 }
