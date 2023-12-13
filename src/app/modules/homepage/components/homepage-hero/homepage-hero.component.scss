@@ -48,8 +48,14 @@ of styling is done in the mobile media query (340px)
   // Container to hold both App Store and Play Store badges
   .hero-left .badge-wrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
+    img{
+      width: 8rem;
+    }
   }
 
   //The Mobile Carousel is positioned in the 
@@ -217,6 +223,12 @@ of styling is done in the mobile media query (340px)
     // Text editing
     .hero-left .main-header-txt {
       line-height: 3.2rem;
+    }
+
+    .hero-left .badge-wrapper {  
+      img{
+        width: 10rem;
+      }
     }
   
     // Right section of the hero container.
