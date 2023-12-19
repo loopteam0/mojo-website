@@ -14,6 +14,7 @@ of styling is done in the mobile media query (340px)
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .hero-section .header {
@@ -30,7 +31,7 @@ of styling is done in the mobile media query (340px)
   }
 
   .tab {
-    width: 100%;
+    // width: 100%;
     padding: 0.25rem;
     gap: 0.625rem;
     flex-shrink: 0;
@@ -49,7 +50,7 @@ of styling is done in the mobile media query (340px)
     flex: 1 0 0;
     border-radius: 0.375rem;
     background: transparent;
-    font-family: "SF-Regular";
+    font-family: "Inter-SemiBold";
     font-size: 0.8rem;
     color: #1f2937;
     cursor: pointer;
@@ -62,7 +63,7 @@ of styling is done in the mobile media query (340px)
   .tabUnselected.active {
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    color: #e66208;
+    color: rgba(69, 0, 255, 1);
     transition: 0.5s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
     img {
       filter: invert(58%) sepia(90%) saturate(5354%) hue-rotate(8deg)
@@ -140,6 +141,32 @@ of styling is done in the mobile media query (340px)
     margin: 2rem 0;
     width: -webkit-fill-available;
   }
+
+  #container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .download-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  a #btn-filled{
+    background-color: rgba(69, 0, 255, 1);
+    color: white;
+  }
+
+  .tab-heading-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 
@@ -149,6 +176,7 @@ of styling is done in the mobile media query (340px)
   // Main hero container
   .hero-section {
     padding: 8rem 4rem 4rem 4rem;
+    gap: 1rem;
   }
 
   // Tab group
@@ -182,7 +210,7 @@ of styling is done in the mobile media query (340px)
   .tabUnselected.active {
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    color: rgba(31, 41, 55, 1);
+    color: rgba(69, 0, 255, 1);
     transition: 0.5s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
   }
 
@@ -203,6 +231,13 @@ of styling is done in the mobile media query (340px)
 
   .terms-and-conditions .main-content-container {
     padding: 4rem;
+  }
+
+  .tab-heading-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
