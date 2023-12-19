@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://mojo.com.lb</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/personal</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/personal/locate-mojo</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/personal/about-us</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/business</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/business/agents</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/about-us</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/about-us/locate-mojo</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/about-us/privacy-policy</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/about-us/terms-and-conditions</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/about-us/careers</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/about-us/careers/*</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/blog</loc>
+    </url>
+    <url>
+        <loc>https://mojo.com.lb/blog/blog-detail</loc>
+    </url>
+  
+</urlset>
