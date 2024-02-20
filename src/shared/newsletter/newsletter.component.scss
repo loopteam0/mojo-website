@@ -1,207 +1,206 @@
-/*
-All SCSS styles are grouped in media queries, from 
-mobile to desktop. So as we scale up, from one screen to 
-the next, the styling reduces, meaning that the majority 
-of styling is done in the mobile media query (340px)
-*/
+// /*
+// All SCSS styles are grouped in media queries, from 
+// mobile to desktop. So as we scale up, from one screen to 
+// the next, the styling reduces, meaning that the majority 
+// of styling is done in the mobile media query (340px)
+// */
 
-// Desktop - Small
-@media (min-width: 340px) {
+// // Desktop - Small
+// @media (min-width: 340px) {
 
-  .entire-newsletter {
-    background-color: rgba(69, 0, 255, 1);
-    border-radius: 1.125rem 1.125rem 0rem 0rem;
-    display: flex;
-    flex-direction: column;
-    gap: 12rem;
-    overflow: hidden;
-    justify-content: space-between;
-  }
+//   .entire-newsletter {
+//     background-color: rgba(69, 0, 255, 1);
+//     // border-radius: 1.125rem 1.125rem 0rem 0rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 12rem;
+//     overflow: hidden;
+//     justify-content: space-between;
+//   }
 
-  // Dividing the newsletter container into two parts;
-  // left for the information, and right for the mockups
+//   // Dividing the newsletter container into two parts;
+//   // left for the information, and right for the mockups
 
-  .newsletter-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    // width: 50%;
-    gap: 1rem;
-  }
+//   .newsletter-left {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     // width: 50%;
+//     gap: 1rem;
+//   }
 
-  .newsletter-left .mini-header-txt {
-    color: rgba(105, 224, 122, 1);
-  }
+//   .newsletter-left .mini-header-txt {
+//     color: rgba(105, 224, 122, 1);
+//   }
 
-  .newsletter-left .main-header-txt {
-    color: white;
-  }
+//   .newsletter-left .main-header-txt {
+//     color: white;
+//   }
 
-  /* A wrapper around the input and the buttons to add all together in one */
-  .newsletter-left .input-wrapper {
-    border-radius: 0.625rem;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-    width: -webkit-fill-available;
+//   /* A wrapper around the input and the buttons to add all together in one */
+//   .newsletter-left .input-wrapper {
+//     border-radius: 0.625rem;
+//     background: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 1rem;
+//     gap: 1rem;
+//     width: -webkit-fill-available;
 
     input[type="email"] {
-      padding: 1rem;
-      padding-left: 3rem;
+      padding-left: 2rem;
+      // padding-right: 1.5rem;
       border: 0;
       background: transparent url("/assets/svgs/icn-email.svg");
       background-repeat: no-repeat;
-      background-position: 1rem;
+      background-position: 0rem;
       background-size: 1.2rem;
       font-family: "Poppins-Regular";
-      border-bottom: 1px solid rgba(237, 239, 242, 1);
       // width: 12rem;
     }
 
-    input[type="email"]:focus {
-      outline: none;
-    }
+//     input[type="email"]:focus {
+//       outline: none;
+//     }
 
-    input[type="email"]::placeholder {
-      font-size: 0.8rem;
-      font-family: "Poppins-Regular";
-      flex-shrink: 0;
-      color: rgba(153, 153, 153, 1);
-    }
+//     input[type="email"]::placeholder {
+//       font-size: 0.8rem;
+//       font-family: "Poppins-Regular";
+//       flex-shrink: 0;
+//       color: rgba(153, 153, 153, 1);
+//     }
 
-    #btn-filled {
-      background: rgba(69, 0, 255, 1);
-      padding: 0.7rem 1.5rem;
-      color: white;
-      width: 100%;
-    }
-  }
+//     #btn-filled {
+//       background: rgba(69, 0, 255, 1);
+//       padding: 0.7rem 1.5rem;
+//       color: white;
+//       width: 100%;
+//     }
+//   }
 
-  /* Making the right container relative and giving it a 
-  fixed height to keep the mockups close */
-  .newsletter-right {
-    position: relative;
-    width: 25rem;
-  }
+//   /* Making the right container relative and giving it a 
+//   fixed height to keep the mockups close */
+//   .newsletter-right {
+//     position: relative;
+//     width: 25rem;
+//   }
 
-  /* Parent container (.newsletter-right), is relative so 
-  it's children are absolute so we can place one on top of 
-  the other */
-  .newsletter-right .phone-1 {
-    position: absolute;
-    top: -8rem;
-    left: -5rem;
-    z-index: 2;
-    height: 26rem;
-  }
+//   /* Parent container (.newsletter-right), is relative so 
+//   it's children are absolute so we can place one on top of 
+//   the other */
+//   .newsletter-right .phone-1 {
+//     position: absolute;
+//     top: -8rem;
+//     left: -5rem;
+//     z-index: 2;
+//     height: 26rem;
+//   }
 
-  .newsletter-right .phone-2 {
-    position: absolute;
-    position: absolute;
-    top: -12rem;
-    right: 4rem;
-    z-index: 0;
-    height: 24rem;
-  }
-}
+//   .newsletter-right .phone-2 {
+//     position: absolute;
+//     position: absolute;
+//     top: -12rem;
+//     right: 4rem;
+//     z-index: 0;
+//     height: 24rem;
+//   }
+// }
 
-// Desktop - Small
-@media (min-width: 1024px) {
-  #container {
-    padding-top: 8rem;
-  }
+// // Desktop - Small
+// @media (min-width: 1024px) {
+//   #container {
+//     padding-top: 8rem;
+//   }
 
-  .entire-newsletter {
-    flex-direction: row;
-    gap: 3rem;
-    height: 10rem;
-  }
+//   .entire-newsletter {
+//     flex-direction: row;
+//     gap: 3rem;
+//     height: 10rem;
+//   }
 
-  .newsletter-left {
-    width: 50%;
-  }
-
-
-  .newsletter-left .input-wrapper {
-    flex-direction: row;
-    padding: 0.5rem;
-    padding-right: 1rem;
-    width: fit-content;
-
-    input[type="email"] {
-      border: 0;
-    }
+//   .newsletter-left {
+//     width: 50%;
+//   }
 
 
-    #btn-filled {
-      width: fit-content;
-    }
-  }
+//   .newsletter-left .input-wrapper {
+//     flex-direction: row;
+//     padding: 0.5rem;
+//     padding-right: 1rem;
+//     width: fit-content;
 
-  .newsletter-right {
-    position: relative;
-    width: 25rem;
-  }
+//     input[type="email"] {
+//       border: 0;
+//     }
 
-  .newsletter-right .phone-1 {
-    position: absolute;
-    top: -5rem;
-    left: -8rem;
-    z-index: 2;
-    height: 42rem;
-  }
 
-  .newsletter-right .phone-2 {
-    position: absolute;
-    top: -8rem;
-    right: -10rem;
-    z-index: 0;
-    height: 40rem;
-  }
-}
+//     #btn-filled {
+//       width: fit-content;
+//     }
+//   }
 
-@media (min-width: 1280px) {
-  .entire-newsletter {
-    padding: 4rem 6rem;
-    padding-top: 8rem;
-  }
-}
+//   .newsletter-right {
+//     position: relative;
+//     width: 25rem;
+//   }
 
-@media (min-width: 1440px) {
+//   .newsletter-right .phone-1 {
+//     position: absolute;
+//     top: -5rem;
+//     left: -8rem;
+//     z-index: 2;
+//     height: 42rem;
+//   }
 
-  .entire-newsletter {
-    padding: 4rem 8rem;
-    padding-top: 8rem;
-    height: 12rem;
-    padding-right: 12rem;
-  }
+//   .newsletter-right .phone-2 {
+//     position: absolute;
+//     top: -8rem;
+//     right: -10rem;
+//     z-index: 0;
+//     height: 40rem;
+//   }
+// }
 
-  .newsletter-left {
-    gap: 0.5rem;
-  }
+// @media (min-width: 1280px) {
+//   .entire-newsletter {
+//     padding: 4rem 6rem;
+//     padding-top: 8rem;
+//   }
+// }
 
-  /* Adjusting phone positions and size from this screen going */
-  .newsletter-right .phone-1 {
-    top: -4rem;
-    left: -7rem;
-    height: 45rem;
-  }
+// @media (min-width: 1440px) {
 
-  .newsletter-right .phone-2 {
-    top: -8rem;
-    right: -14rem;
-    height: 45rem;
-  }
-}
+//   .entire-newsletter {
+//     padding: 4rem 8rem;
+//     padding-top: 8rem;
+//     height: 12rem;
+//     padding-right: 12rem;
+//   }
 
-@media (min-width: 1650px) {
-  .entire-newsletter {
-    padding: 4rem 12rem;
-    padding-top: 8rem;
-    height: 12rem;
-    padding-right: 15rem;
-  }
-}
+//   .newsletter-left {
+//     gap: 0.5rem;
+//   }
+
+//   /* Adjusting phone positions and size from this screen going */
+//   .newsletter-right .phone-1 {
+//     top: -4rem;
+//     left: -7rem;
+//     height: 45rem;
+//   }
+
+//   .newsletter-right .phone-2 {
+//     top: -8rem;
+//     right: -14rem;
+//     height: 45rem;
+//   }
+// }
+
+// @media (min-width: 1650px) {
+//   .entire-newsletter {
+//     padding: 4rem 12rem;
+//     padding-top: 8rem;
+//     height: 12rem;
+//     padding-right: 15rem;
+//   }
+// }

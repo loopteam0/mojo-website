@@ -1,55 +1,53 @@
 <!-- Entire footer container holds the left and right sides 
     of the footer, indicated by their classes footer-left 
     and right. -->
+<section class="entire-footer-mobile bg-white w-auto p-10 flex lg:hidden flex-col items-start gap-10">
 
-<section class="entire-footer">
-  <div class="upper-footer">
-  <div class="footer-left">
-    <img class="mojo-logo" src="/assets/svgs/mojo-logo.svg" alt="" />
-
-    <!-- Container to hold both login and open account buttons -->
-    <div class="badge-wrapper">
-      <img src="/assets/svgs/app-store-badge-blue.svg" alt="">
-      <a href="https://play.google.com/store/apps/details?id=com.interpaylb.mojo&pcampaignid=web_share">
-      <img src="/assets/svgs/icn-google-store-badge-blue.svg" alt="">
-      </a>
-    </div>
-
-
-    <!-- Mobile number wrapper -->
-    <div class="mobile-number">
-      <img src="/assets/svgs/icn-call.svg" alt="" />
-      <span id="text-rg" class="number-txt">(24) 522 720</span>
-    </div>
-    <!-- Footer links contains two sections of the class "links-column"-->
-    <div class="footer-links">
-      <div class="links-column">
-        <span routerLink="/about-us" class="gray-link">About Us</span> 
-        <span routerLink="about-us/terms-and-conditions" class="blue-link">Terms and Conditions</span>
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="links-column">
-        <span routerLink="about-us/privacy-policy" class="blue-link">Privacy Policy</span>
-        <span class="blue-link"></span>
-      </div>
-    </div>
-
-    <!---->
+  <div class="flex flex-col items-start gap-2">
+    <img class="w-32" src="/assets/svgs/mojo-logo.svg" alt="">
+    <span class="text-[#6E768D] font-[Poppins-Regular] text-lg">© 2023 Mojo</span>
   </div>
 
-  <div class="footer-right">
-    <span>OUR SOCIAL HANDLES</span>
 
-    <div class="socials-group">
-      <a href="https://www.linkedin.com/company/mojowallet/">
+  <div class="links-group flex flex-row items-start gap-6">
+    <div class="left flex flex-col items-start gap-4 pr-6 border-r border-[#0223644D]">
+      <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">ABOUT US</span>
+      <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">ACADEMY</span>
+      <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">EVENTS</span>
+      <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">FOUNDATIONS</span>
+    </div>
+
+    <div class="left flex flex-col items-start gap-4 pr-6 border-r border-[#0223644D]">
+      <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">CORPORATE</span>
+      <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">PARTNERSHIPS</span>
+
+    </div>
+  </div>
+
+  <div class="badge-wrapper w-full flex flex-row items-center justify-center gap-4">
+    <img class="w-32" src="/assets/svgs/app-store-badge-blue.svg" alt="">
+    <a href="https://play.google.com/store/apps/details?id=com.interpaylb.mojo&pcampaignid=web_share">
+      <img src="/assets/svgs/icn-google-store-badge-blue.svg" alt="">
+    </a>
+  </div>
+
+  <div class="w-full text-center">
+    <span class="uppercase text-[#4500FF] font-[Poppins-SemiBold]">terms and conditions</span>
+  </div>
+
+  <div class="bottom w-full flex flex-row items-center justify-between">
+    <div class="mobile-number flex flex-row items-center gap-2">
+      <img src="/assets/svgs/icn-call.svg" alt="" />
+      <span class="number-txt text-[#34405E] font-[Poppins-SemiBold] text-sm">+233 55 123 1012</span>
+    </div>
+    <div class="socials-group flex flex-row items-center gap-2">
+      <!-- <a href="https://www.linkedin.com/company/mojowallet/">
         <img src="/assets/svgs/icn-linkedin.svg" alt="" />
-      </a>
+      </a> -->
 
-      <a href="https://www.tiktok.com/@mojo_wallet?_t=8j51wNePn5r&_r=1">
+      <!-- <a href="https://www.tiktok.com/@mojo_wallet?_t=8j51wNePn5r&_r=1">
         <img src="/assets/svgs/icn-tiktok.svg" alt="" />
-      </a>
+      </a> -->
 
       <a href="https://www.instagram.com/mojo_wallet/">
         <img src="/assets/svgs/icn-instagram.svg" alt="" />
@@ -62,25 +60,75 @@
       </a>
     </div>
   </div>
+
+</section>
+
+<section class="entire-footer-desktop hidden lg:flex bg-white w-auto p-16 lg:pb-24 xl:px-24 xl:py-16 xl:pb-24 2xl:px-32 2xl:py-20 2xl:pb-28 3xl:px-40 flex-row items-start justify-between gap-10">
+
+  <div class="flex flex-col items-start gap-3 w-[35%]">
+    <img class="w-32" src="/assets/svgs/mojo-logo.svg" alt="">
+    <span class="text-[#6E768D] font-[Poppins-Regular] text-lg">© 2023 Mojo</span>
+    <span class="uppercase text-[#4500FF] text-sm font-[Poppins-SemiBold]">terms and conditions</span>
+    <div class="mobile-number flex flex-row items-center gap-2">
+      <img src="/assets/svgs/icn-call.svg" alt="" />
+      <span class="number-txt text-[#34405E] text-sm font-[Poppins-SemiBold]">+233 55 123 1012</span>
+    </div>
+
   </div>
 
 
-  <div class="extra-info">
-
-    <div class="location">
-      <span id="text-rg">Mojo Head Office, Cap 41 (opposite ABC) <br>
-        Seaside Road, Floor 3 <br>
-        Dbayeh</span>
-    </div>
-
-    <div class="second-extra-info">
-      <img src="/assets/svgs/lebanese-flag.svg"/>
-      <div class="info-txt">
-      <span id="text-rg">Central Bank of Lebanon Decision No.35/27/22</span>
-      <span id="text-rg">Interpay Sal</span>
+  <div class="right flex flex-row items-start justify-between w-[-webkit-fill-available]">
+    <div class="links-group flex flex-row items-start gap-6">
+      <div class="left flex flex-col items-start gap-4 pr-6 border-r border-[#0223644D]">
+        <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">ABOUT US</span>
+        <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">ACADEMY</span>
+        <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">EVENTS</span>
+        <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">FOUNDATIONS</span>
       </div>
-      
+  
+      <div class="left flex flex-col items-start gap-4 pr-6 border-r border-[#0223644D]">
+        <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">CORPORATE</span>
+        <span class="text-[#34405E] font-[Poppins-SemiBold] text-sm">PARTNERSHIPS</span>
+  
+      </div>
     </div>
+  
+  
+    <div class="flex flex-col items-end gap-4">
+  
+      <div class="badge-wrapper w-full flex flex-row items-center justify-center gap-4">
+        <img class="w-32" src="/assets/svgs/app-store-badge-blue.svg" alt="">
+        <a href="https://play.google.com/store/apps/details?id=com.interpaylb.mojo&pcampaignid=web_share">
+          <img src="/assets/svgs/icn-google-store-badge-blue.svg" alt="">
+        </a>
+      </div>
 
+      <span class="uppercase text-[#6E768D] text-sm font-[Poppins-SemiBold]">Our Social handles</span>
+
+  
+      <div class="bottom w-full flex flex-row items-center justify-end">
+       
+        <div class="socials-group flex flex-row items-center gap-2">
+    
+          <a href="https://www.instagram.com/mojo_wallet/">
+            <img src="/assets/svgs/icn-instagram.svg" alt="" />
+          </a>
+    
+          <img src="/assets/svgs/icn-twitter.svg" alt="" />
+    
+          <a href="https://www.facebook.com/profile.php?id=61552052282277">
+            <img src="/assets/svgs/icn-facebook.svg" alt="" />
+          </a>
+        </div>
+      </div>
+  
+    </div>
   </div>
+
+  
+  
+
+
+  
+
 </section>

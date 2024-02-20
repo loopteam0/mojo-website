@@ -1,29 +1,36 @@
-
-
-<div id="outer-wrapper">
-  <section id="container" class="entire-newsletter">
-    <!-- Dividing the newsletter container into two parts; 
+<section id="container" class="entire-newsletter flex flex-col items-center bg-[#4500FF] relative overflow-hidden h-[35rem]">
+  <!-- Dividing the newsletter container into two parts; 
         left for the information, and right for the mockups -->
-    <div class="newsletter-left">
-      <span id="text-sm" class="mini-header-txt">Subscribe Now</span>
-      <span id="text-lg" class="main-header-txt"
-        >Subscribe to our newsletter</span
-      >
+  <div class="newsletter-left flex flex-col items-center justify-center gap-2">
+    <span id="text-sm" class="mini-header-txt text-[#C4C4C4]">Subscribe Now</span>
+    <span id="text-lg" class="main-header-txt text-white text-center">Subscribe to our newsletter</span>
 
-      <div class="input-wrapper">
-        <input
-          type="email"
-          name=""
-          id=""
-          placeholder="Enter your email address"
-        />
-        <button id="btn-filled" type="submit">Subscribe</button>
+    <div class="input-wrapper lg:hidden flex flex-row items-center bg-white rounded-lg p-4 gap-4">
+      <input type="email" name="" id="" placeholder="Enter your email address" />
+      <button id="btn-filled" class="bg-[#D7D7D7] p-4 rounded-md" type="submit"></button>
+    </div>
+
+    <div class="input-wrapper hidden lg:flex flex-row items-center bg-white rounded-lg p-4 gap-4">
+      <input class="w-72" type="email" name="" id="" placeholder="Enter your email address" />
+      <button id="btn-filled" class="bg-[#D7D7D7] p-4 rounded-md" type="submit">Subscribe</button>
+    </div>
+  </div>
+
+  <div class="newsletter-right flex flex-row justify-center relative">
+
+    <div class="absolute top-10 left-36 hidden  lg:flex flex-col items-start gap-6">
+      <img src="/assets/images/m-logo-footer.png" alt="">
+
+      <div class="flex flex-row items-center gap-4">
+        <img src="/assets/images/app-store-logo-white.png" alt="">
+        <img src="/assets/images/play-store-logo-white.png" alt="">
       </div>
     </div>
+    <!-- <img class="phone-1 absolute z-10 bottom-[-18rem]" src="/assets/images/phone-mockup-4.png" alt="" />
+    <img class="phone-2 absolute" src="/assets/images/phone-mockup-5.png" alt="" /> -->
+    <img class="relative scale-150 top-32 left-4 lg:scale-100 lg:top-0 lg:left-56 xl:top-[-8rem] xl:left-[22rem] 2xl:left-[24rem] 3xl:left-3/4" src="/assets/images/mock-group.png" alt=""/>
 
-    <div class="newsletter-right">
-      <img class="phone-1" src="/assets/images/phone-mockup-4.png" alt="" />
-      <img class="phone-2" src="/assets/images/phone-mockup-5.png" alt="" />
-    </div>
-  </section>
-</div>
+  </div>
+
+
+</section>
