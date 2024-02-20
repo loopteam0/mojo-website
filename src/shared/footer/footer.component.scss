@@ -8,15 +8,16 @@ of styling is done in the mobile media query (340px)
 // Mobile
 @media (min-width: 340px) {
   // Main container for the footer
-  // .entire-footer {
-  //   display: flex;
-  //   align-items: flex-start;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   background: #f7f7f7;
-  //   padding: 2rem;
-  //   position: relative;
-  // }
+  .entire-footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8rem;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 2rem;
+    position: relative;
+  }
 
   .entire-footer > .upper-footer {
     display: flex;
