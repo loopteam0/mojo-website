@@ -15,7 +15,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
     RouterModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RecaptchaModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
@@ -48,9 +49,6 @@ import { RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
     HowItWorksComponent,
     FaqSectionComponent,
     
-  ],
-  providers: [
-    { provide: RECAPTCHA_V3_SITE_KEY, useValue: 'YOUR_RECAPTCHA_SITE_KEY' }
   ],
 })
 export class SharedModule { }

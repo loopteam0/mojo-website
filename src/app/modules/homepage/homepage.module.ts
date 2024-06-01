@@ -23,6 +23,7 @@ import { CareersComponent } from './pages/careers/careers.component';
 import { JobDetailsComponent } from './pages/job-details/job-details.component';
 import { LocatorComponent } from './pages/locator/locator.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,6 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
     LocatorComponent,
     PrivacyPolicyComponent
   ],
-  imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule],
+  imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule, RecaptchaModule],
 })
 export class HomepageModule {}

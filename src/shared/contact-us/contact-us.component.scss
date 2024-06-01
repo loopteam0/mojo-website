@@ -70,6 +70,10 @@ of styling is done in the mobile media query (340px)
     width: 100%;
   }
 
+  form .submit-btn:disabled{
+    opacity: 0.2;
+  }
+
   #form-input:focus {
     outline: none;
   }

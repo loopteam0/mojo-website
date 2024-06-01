@@ -25,7 +25,7 @@
 
     <!-- Inputs + button container -->
    
-    <form (ngSubmit)="send(form)" #form="ngForm">
+    <form>
       <input type="text" name="name" id="form-input" placeholder="Name" />
       <input type="email" name="email" id="form-input" placeholder="Email" />
       <input
@@ -35,8 +35,19 @@
         placeholder="Phone Number"
       />
 
-      <button id="btn-filled" type="submit" class="submit-btn">Submit</button>
+      <button [disabled]="!captcha" id="btn-filled" type="submit" class="submit-btn">Submit</button>
+      <re-captcha (resolved)="resolved($event)" siteKey="6Lecpu4pAAAAAAgaeOycwFFLf1M2uDUHDVRSX8VU"></re-captcha>
+
+      @if (captcha) {
+        <span id="text-rg">You're a human!</span>
+      }
+
     </form>
+
+    
+
+    
+
 
 
 
@@ -53,4 +64,15 @@
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
   </div>
+
+  <!-- <div [hidden]="captcha" class="">
+    <span>Hello human</span>
+    <re-captcha (resolved)="resolved($event)" siteKey="6Lecpu4pAAAAAAgaeOycwFFLf1M2uDUHDVRSX8VU"></re-captcha>
+
+  </div>
+
+  <div [hidden]="!captcha" class="">
+   <span>{{email}}</span>
+
+  </div> -->
 </section>
