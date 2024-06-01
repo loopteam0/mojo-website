@@ -14,6 +14,8 @@ import { ScheduleBillPaymentsComponent } from './schedule-bill-payments/schedule
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 
 
 @NgModule({
@@ -31,8 +33,9 @@ import { FaqSectionComponent } from './faq-section/faq-section.component';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
-
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
@@ -43,7 +46,11 @@ import { FaqSectionComponent } from './faq-section/faq-section.component';
     ScheduleBillPaymentsComponent,
     ContactUsComponent,
     HowItWorksComponent,
-    FaqSectionComponent
-  ]
+    FaqSectionComponent,
+    
+  ],
+  providers: [
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: 'YOUR_RECAPTCHA_SITE_KEY' }
+  ],
 })
 export class SharedModule { }

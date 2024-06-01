@@ -24,7 +24,8 @@
     </div>
 
     <!-- Inputs + button container -->
-    <form action="">
+   
+    <form (ngSubmit)="send(form)" #form="ngForm">
       <input type="text" name="name" id="form-input" placeholder="Name" />
       <input type="email" name="email" id="form-input" placeholder="Email" />
       <input
@@ -34,8 +35,12 @@
         placeholder="Phone Number"
       />
 
-      <button id="btn-filled" class="submit-btn">Submit</button>
+      <button id="btn-filled" type="submit" class="submit-btn">Submit</button>
     </form>
+
+
+
+   
   </div>
 
   <!-- Container holding the map for desktop -->

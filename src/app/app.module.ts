@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from 'src/shared/shared.module';
 import { HomepageModule } from './modules/homepage/homepage.module';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { environment } from 'src/environments/environment';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,16 @@ import { HomepageModule } from './modules/homepage/homepage.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HomepageModule
+    HomepageModule,
+    RecaptchaV3Module,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: environment.recaptcha.siteKey,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
