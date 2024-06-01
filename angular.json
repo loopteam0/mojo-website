@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "MojoWebsite:build:production"
+              "buildTarget": "MojoWebsite:build:production"
             },
             "development": {
-              "browserTarget": "MojoWebsite:build:development"
+              "buildTarget": "MojoWebsite:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MojoWebsite:build"
+            "buildTarget": "MojoWebsite:build"
           }
         },
         "test": {
