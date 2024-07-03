@@ -1,16 +1,27 @@
+@if (PageData) {
 <section class="careers">
   <!-- Hero Section -->
   <section style="
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%),
-        url('/assets/images/careers-bg.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    " class="entire-hero-section">
-    <div class="hero-center" *ngFor="let info of careerPageHero">
-      <span id="text-xs">{{ info.tagText }}</span>
-      <span id="text-xl" class="main-header-txt">{{ info.mainTitle }}</span>
-      <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%),
+          url('{{images}}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      " class="entire-hero-section">
+    <div class="hero-center">
+      <span id="text-xs">Mojoee</span>
+
+      @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+        <span [innerHTML]="PageData.result.pageSection[0].header | safeHtml" id="text-xl" class="main-header-txt">
+        </span>
+      }
+
+      @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+        <span [innerHTML]="PageData.result.pageSection[0].subtext | safeHtml" id="text-rg"
+        class="sub-header-txt"></span>
+      }
+       
+
     </div>
   </section>
 
@@ -22,8 +33,18 @@
   <!-- Digital Wallet Revolution section -->
   <section id="container" class="about-mojo-section">
     <div class="about-mojo-left" *ngFor="let info of digitalWallet">
-      <span id="text-lg">{{info.mainTitle}}</span>
-      <span id="text-rg">{{info.subTitle}}</span>
+      <!-- <span id="text-lg">{{info.mainTitle}}</span> -->
+
+      @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+        <span [innerHTML]="PageData.result.pageSection[1].header | safeHtml" id="text-lg"></span>
+      }
+
+      <!-- <span id="text-rg">{{info.subTitle}}</span> -->
+
+      @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+        <span [innerHTML]="PageData.result.pageSection[1].subtext | safeHtml" id="text-rg"></span>
+      }
+
       <button (click)="onNavLinkClick('position-main-wrapper')" id="btn-filled">Check Job Postings</button>
     </div>
 
@@ -35,11 +56,18 @@
   <div id="container" class="feature-point-container" *ngFor="let info of MojoLocations">
     <!-- Container with image background (passing an image as the background instead in the "backgroundColor" object) and flex-direction property -->
     <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('{{info.backgroundColor}}'); background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;" class="inner-container">
+        background-size: cover;
+        background-repeat: no-repeat;" class="inner-container">
       <div class="content-wrapper">
-        <span id="text-lg">{{ info.mainTitle }}</span>
-        <span id="text-rg">{{ info.subTitle }}</span>
+        <!-- <span id="text-lg">{{ info.mainTitle }}</span> -->
+        @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+          <span [innerHTML]="PageData.result.pageSection[2].header | safeHtml" id="text-lg"></span>
+        }
+        <!-- <span id="text-rg">{{ info.subTitle }}</span> -->
+
+        @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+          <span [innerHTML]="PageData.result.pageSection[2].subtext | safeHtml" id="text-rg"></span>
+        }
       </div>
 
       <div class="image-wrapper">
@@ -50,7 +78,7 @@
 
   <!-- Open Positions -->
 
-  <div id="container" class="position-main-wrapper"  *ngFor="let info of openPositions">
+  <div id="container" class="position-main-wrapper" *ngFor="let info of openPositions">
     <span id="text-lg">{{info.mainTitle}}</span>
 
     <!-- Purple-ish background with a tab group -->
@@ -65,7 +93,7 @@
         <div class="tabUnselected" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
           Customer Support
         </div>
-     
+
         <div class="tabUnselected" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
           Marketing
         </div>
@@ -81,16 +109,19 @@
           </span>
         </button>
         <div class="dropdown-menu" *ngIf="showDropdown">
-          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab1')" [class.active]="tabSelected === 'tab1'">
-           All
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab1')"
+            [class.active]="tabSelected === 'tab1'">
+            All
           </div>
 
-          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab2')" [class.active]="tabSelected === 'tab2'">
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab2')"
+            [class.active]="tabSelected === 'tab2'">
             Customer Support
           </div>
 
-          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab3')" [class.active]="tabSelected === 'tab3'">
-           Marketing
+          <div id="text-rg" class="dropdown-item" (click)="setActiveTab('tab3')"
+            [class.active]="tabSelected === 'tab3'">
+            Marketing
           </div>
         </div>
       </div>
@@ -102,33 +133,67 @@
         <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Position news card -->
-          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
+          <!-- <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
-          </div>
+          </div> -->
+
+          @for (info of PageData.result.pageSection[3].jobPosts; track $index) {
+            <div (click)="jobDetailsPage(info.jobTitle)" class="position-card">
+              <span id="text-md">{{info.jobTitle}}</span>
+              <span id="text-rg">{{info.jobType}}</span>
+              <span id="text-xs">{{info.location}}</span>
+            </div>
+          }
+          
+
 
         </div>
 
         <div class="position-cards-container" *ngIf="tabSelected === 'tab2'">
           <!-- Content for Tab 2 -->
 
-          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsCustomerSupport">
+          <!-- <div (click)="jobDetailsPage(info.positionId)" class="position-card"
+            *ngFor="let info of careerCardsCustomerSupport">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
-          </div>
+          </div> -->
+
+          @for (info of PageData.result.pageSection[3].jobPosts; track $index) {
+            @if (info.jobCategory === 'Customer Support') {
+              <div (click)="jobDetailsPage(info.jobTitle)" class="position-card">
+                <span id="text-md">{{info.jobTitle}}</span>
+                <span id="text-rg">{{info.jobType}}</span>
+                <span id="text-xs">{{info.location}}</span>
+              </div>
+            }
+          }
 
         </div>
 
         <div class="position-cards-container" *ngIf="tabSelected === 'tab3'">
           <!-- Content for Tab 3 -->
 
-          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsMarketing">
+          <!-- <div (click)="jobDetailsPage(info.positionId)" class="position-card"
+            *ngFor="let info of careerCardsMarketing">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
-          </div>
+          </div> -->
+
+          @for (info of PageData.result.pageSection[3].jobPosts; track $index) {
+            @if (info.jobCategory === 'Marketing') {
+              <div (click)="jobDetailsPage(info.jobTitle)" class="position-card">
+                <span id="text-md">{{info.jobTitle}}</span>
+                <span id="text-rg">{{info.jobType}}</span>
+                <span id="text-xs">{{info.location}}</span>
+              </div>
+            }
+          }
+
+
         </div>
 
         <div *ngIf="tabSelected === 'tab4'">
@@ -149,8 +214,17 @@
       <!-- Left side of the Mojoee benefits container -->
       <div class="mojoee-benefits-left" *ngFor="let info of mojoeeBenefitsHeader">
         <span id="text-xs">{{ info.tagText }}</span>
-        <span id="text-lg">{{ info.mainTitle }}</span>
-        <span id="text-rg">{{ info.subTitle }}</span>
+        <!-- <span id="text-lg">{{ info.mainTitle }}</span> -->
+
+        @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+          <span [innerHTML]="PageData.result.pageSection[4].header | safeHtml" id="text-lg"></span>
+        }
+        <!-- <span id="text-rg">{{ info.subTitle }}</span> -->
+
+        @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+          <span [innerHTML]="PageData.result.pageSection[4].subtext | safeHtml" id="text-rg"></span>
+        }
+
       </div>
 
       <!-- Right side of the Mojoee benefits container -->
@@ -174,8 +248,17 @@
   <div id="container" class="mojo-benefits-container">
 
     <div class="header" *ngFor="let info of mojoBenefitsHeader">
-      <span id="text-lg">{{info.mainTitle}}</span>
-      <span id="text-rg">{{info.subTitle}}</span>
+      <!-- <span id="text-lg">{{info.mainTitle}}</span> -->
+
+      @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+        <span [innerHTML]="PageData.result.pageSection[5].header | safeHtml" id="text-lg"></span>
+      }
+      <!-- <span id="text-rg">{{info.subTitle}}</span> -->
+
+      @if (PageData.result.pageSection && PageData.result.pageSection.length > 0) {
+        <span [innerHTML]="PageData.result.pageSection[5].subtext | safeHtml" id="text-rg"></span>
+      }
+
     </div>
     <div class="inner-mojo-benefits-wrapper">
       <div class="benefit-card" *ngFor="let info of mojoeeBenefitsCards">
@@ -199,3 +282,4 @@
   <!-- Newsletter section -->
   <app-newsletter></app-newsletter>
 </section>
+}

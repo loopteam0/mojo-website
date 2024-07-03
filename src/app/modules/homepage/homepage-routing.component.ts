@@ -47,7 +47,7 @@ const routes: Routes = [
       },
       { path: 'careers', component: CareersComponent },
       {
-        path: 'careers/:positionId',
+        path: 'careers/:jobTitle',
         component: JobDetailsComponent,
       },
     ],

@@ -8,11 +8,11 @@ import { HomepageModule } from './modules/homepage/homepage.module';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaModule, RecaptchaV3Module } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     HomepageModule,
     RecaptchaModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [
   ],

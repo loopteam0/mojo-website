@@ -3,15 +3,15 @@
   <section id="container">
     <section style="
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%),
-        url('/assets/images/career-detail-bg.jpg');
+        url('{{selectedJob.authorImageUrl}}');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
     " class="entire-hero-section">
       <div class="hero-center">
         <span id="text-xs">Mojoee</span>
-        <span id="text-xl" class="main-header-txt">{{ selectedJob.positionTitle }}</span>
-        <button id="btn-filled"><a href="mailto:info&#64;mojo.com.lb" style="text-decoration: none; color: rgb(69, 0, 255); width: 100%; display: block;">Apply Now</a></button>
+        <span id="text-xl" class="main-header-txt">{{ selectedJob.jobTitle }}</span>
+        <button id="btn-filled"><a href="mailto:info&#69;mojo.com.lb" style="text-decoration: none; color: rgb(69, 0, 255); width: 100%; display: block;">Apply Now</a></button>
       </div>
     </section>
   </section>
@@ -24,14 +24,16 @@
       <!-- Left side of the inner job details section (the content section)-->
       <div class="job-details-left">
 
-        <span id="text-lg">{{selectedJob.positionTitle}}</span>
+        <span id="text-lg">{{selectedJob.jobTitle}}</span>
 
         <!-- Who Are We Looking for -->
         <div class="job-details-point">
           <span id="text-md">Who Are We Looking For</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.whoWeAreLookingFor" id="text-rg">{{list}}</li>
+            <!-- <li *ngFor="let list of selectedJob.jobAdditionalInfos" id="text-rg">{{list}}</li> -->
+
+            <span [innerHTML]="selectedJob.authorDescription" id="text-rg"></span>
           </ul>
         </div>
 
@@ -40,7 +42,7 @@
           <span id="text-md">What you will be doing</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.whatYouWillBeDoing" id="text-rg">{{list}}</li>
+            <span [innerHTML]="selectedJob.jobAdditionalInfos[0].details" id="text-rg"></span>
           </ul>
         </div>
 
@@ -49,46 +51,46 @@
           <span id="text-md">Requirement & Skills</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.bonusPointsFamiliarity" id="text-rg">{{list}}</li>
+            <span [innerHTML]="selectedJob.jobAdditionalInfos[1].details" id="text-rg"></span>
           </ul>
         </div>
 
 
         <!-- Salary -->
-        <!-- <div class="job-details-point">
+        <div class="job-details-point">
           <span id="text-md">Salary</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.salary" id="text-rg">{{list}}</li>
+            <span [innerHTML]="selectedJob.jobAdditionalInfos[3].details" id="text-rg"></span>
           </ul>
-        </div> -->
+        </div>
 
         <!-- Working Hours -->
-        <!-- <div class="job-details-point">
+        <div class="job-details-point">
           <span id="text-md">Working Hours</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.workingHours" id="text-rg">{{list}}</li>
+            <span [innerHTML]="selectedJob.jobAdditionalInfos[4].details" id="text-rg"></span>
           </ul>
-        </div> -->
+        </div>
 
         <!-- Working Days -->
-        <!-- <div class="job-details-point">
+        <div class="job-details-point">
           <span id="text-md">Working Days</span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.workingDays" id="text-rg">{{list}}</li>
+            <span [innerHTML]="selectedJob.jobAdditionalInfos[5].details" id="text-rg"></span>
           </ul>
-        </div> -->
+        </div>
 
         <!-- Perks & Benefits  -->
-        <!-- <div class="job-details-point">
+        <div class="job-details-point">
           <span id="text-md">Perks & Benefits </span>
 
           <ul class="point-list-wrapper">
-            <li *ngFor="let list of selectedJob.perksAndBenefits" id="text-rg">{{list}}</li>
+            <span [innerHTML]="selectedJob.jobAdditionalInfos[6].details" id="text-rg"></span>
           </ul>
-        </div> -->
+        </div>
 
       </div>
 
@@ -96,24 +98,52 @@
       <div class="job-details-right">
 
         <div class="job-summary-container">
-          <button id="btn-filled"><a href="mailto:info&#64;mojo.com.lb" style="text-decoration: none; color: white; width: 100%; display: block;">Apply Now</a></button>
+          <button id="btn-filled"><a href="mailto:info@mojo.com.lb" style="text-decoration: none; color: white; width: 100%; display: block;">Apply Now</a></button>
 
           <span id="text-md">Job Summary</span>
 
           <!-- A group of all the 4 summary point containers-->
           <div class="summary-group">
-            <div class="summary-point-container" *ngFor="let info of selectedJob.jobSummary">
-              <img src="{{info.icon}}" alt="">
+            <div class="summary-point-container">
+              <img src="/assets/svgs/icn-job-location.svg" alt="">
 
               <div>
-                <span id="text-rg">{{info.mainTitle}}</span>
-                <span id="text-rg">{{info.subTitle}}</span>
+                <span id="text-rg">Location</span>
+                <span id="text-rg">{{selectedJob.location}}</span>
+              </div>
+            </div>
+
+            <div class="summary-point-container">
+              <img src="/assets/svgs/icn-job-briefcase.svg" alt="">
+
+              <div>
+                <span id="text-rg">Job Type</span>
+                <span id="text-rg">{{selectedJob.jobType}}</span>
+              </div>
+            </div>
+
+            <div class="summary-point-container">
+              <img src="/assets/svgs/icn-job-calendar.svg" alt="">
+
+              <div>
+                <span id="text-rg">Date posted</span>
+                <span id="text-rg">Posted 1 month ago</span>
+              </div>
+            </div>
+
+
+            <div class="summary-point-container">
+              <img src="/assets/svgs/icn-job-book.svg" alt="">
+
+              <div>
+                <span id="text-rg">Experience</span>
+                <span id="text-rg">{{selectedJob.experience}}</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="share-container">
+        <!-- <div class="share-container">
           <span id="text-rg">Share Job posting:</span>
 
           <div>
@@ -129,7 +159,7 @@
               <img src="/assets/svgs/icn-linkedin-color.svg" alt="">
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -146,7 +176,7 @@
       </ul>
     </div> -->
 
-    <button id="btn-filled"><a href="mailto:info&#64;mojo.com.lb" style="text-decoration: none; color: white; width: 100%; display: block;">Apply Now</a></button>
+    <button id="btn-filled"><a href="mailto:mailto:info@mojo.com.lb" style="text-decoration: none; color: white; width: 100%; display: block;">Apply Now</a></button>
 
   </div>
 
@@ -203,33 +233,68 @@
         <div class="position-cards-container" *ngIf="tabSelected === 'tab1'">
           <!-- Content for Tab 1 -->
           <!-- Position news card -->
-          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
+          <!-- <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCards">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
-          </div>
+          </div> -->
+
+          <!-- <div (click)="jobDetailsPage(info.jobTitle)" class="position-card" *ngFor="let info of PageData.result.pageSection[3].jobPosts">
+            <span id="text-md">{{info.jobTitle}}</span>
+            <span id="text-rg">{{info.jobType}}</span>
+            <span id="text-xs">{{info.location}}</span>
+          </div> -->
+
+          @for (info of PageData.result.pageSection[3].jobPosts; track $index) {
+            <div (click)="jobDetailsPage(info.jobTitle)" class="position-card">
+              <span id="text-md">{{info.jobTitle}}</span>
+              <span id="text-rg">{{info.jobType}}</span>
+              <span id="text-xs">{{info.location}}</span>
+            </div>
+          }
+          
 
         </div>
 
         <div class="position-cards-container" *ngIf="tabSelected === 'tab2'">
           <!-- Content for Tab 2 -->
 
-          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsCustomerSupport">
-            <span id="text-md">{{info.position}}</span>
-            <span id="text-rg">{{info.positionType}}</span>
+          <!-- <div (click)="jobDetailsPage(info.jobTitle)" class="position-card" *ngFor="let info of PageData.result.pageSection[3].jobPosts">
+            <span id="text-md">{{info.jobTitle}}</span>
+            <span id="text-rg">{{info.jobType}}</span>
             <span id="text-xs">{{info.location}}</span>
-          </div>
+          </div> -->
+
+          @for (info of PageData.result.pageSection[3].jobPosts; track $index) {
+            @if (info.jobCategory === 'Customer Support') {
+              <div (click)="jobDetailsPage(info.jobTitle)" class="position-card">
+                <span id="text-md">{{info.jobTitle}}</span>
+                <span id="text-rg">{{info.jobType}}</span>
+                <span id="text-xs">{{info.location}}</span>
+              </div>
+            }
+          }
 
         </div>
 
         <div class="position-cards-container" *ngIf="tabSelected === 'tab3'">
           <!-- Content for Tab 3 -->
 
-          <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsMarketing">
+          <!-- <div (click)="jobDetailsPage(info.positionId)" class="position-card" *ngFor="let info of careerCardsMarketing">
             <span id="text-md">{{info.position}}</span>
             <span id="text-rg">{{info.positionType}}</span>
             <span id="text-xs">{{info.location}}</span>
-          </div>
+          </div> -->
+
+          @for (info of PageData.result.pageSection[3].jobPosts; track $index) {
+            @if (info.jobCategory === 'Marketing') {
+              <div (click)="jobDetailsPage(info.jobTitle)" class="position-card">
+                <span id="text-md">{{info.jobTitle}}</span>
+                <span id="text-rg">{{info.jobType}}</span>
+                <span id="text-xs">{{info.location}}</span>
+              </div>
+            }
+          }
         </div>
 
         <div *ngIf="tabSelected === 'tab4'">

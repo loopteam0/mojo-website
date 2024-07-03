@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { JobPostsPayload, PageResponse } from 'src/app/models/data.models';
 import {
   BusinessAgentsBenefits,
   CareerPositionCards,
@@ -13,6 +14,7 @@ import {
   RegistrationRequirements,
   SubHeroContent,
 } from 'src/app/models/homepage.models';
+import { DataService } from 'src/services/data.service';
 import { ScrollService } from 'src/services/scroll.service';
 
 @Component({
@@ -22,11 +24,16 @@ import { ScrollService } from 'src/services/scroll.service';
 })
 export class CareersComponent {
 
+  PageData!: PageResponse;
+  jobPosts: JobPostsPayload | null = null;
+  images: string | undefined; // Add your image file names
+  mojoeeBenefits: BusinessAgentsBenefits[] = [];
+
   onNavLinkClick(sectionId: string) {
     this.scrollService.scrollToClass.emit(sectionId);
   }
 
-  constructor(private router: Router, private scrollService: ScrollService) {
+  constructor(private router: Router, private scrollService: ScrollService, private dataService: DataService) {
     this.scrollService.scrollToClass.subscribe(className => {
       const elements = document.getElementsByClassName(className);
       if (elements.length > 0) {
@@ -36,6 +43,70 @@ export class CareersComponent {
     });
   }
 
+  ngOnInit(): void {
+    this.renderPageDetails('Career Page');
+
+  }
+
+
+  renderPageDetails(pageType: string) {
+    this.dataService
+      .renderPage(pageType)
+      .subscribe((response: PageResponse) => {
+        this.PageData = response;
+        console.log('PageData: ', this.PageData);
+        // this.jobPosts = response.result.pageSection[4].jobPosts[0];
+
+        this.images = response.result.pageSection.find(
+          (section) => section.sectionType === 'Hero Section'
+        )?.photo;
+
+        console.log('Carousel Images: ', this.images);
+
+        this.mojoeeBenefits = [
+          {
+            icon: '/assets/svgs/icn-people-group.svg',
+            iconContainerBG: 'rgba(212, 217, 245, 1)',
+            mainTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[0].title,
+            subTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[0].description,
+          },
+          {
+            icon: '/assets/svgs/icn-secure-badge-green.svg',
+            iconContainerBG: 'rgba(229, 255, 235, 1)',
+            mainTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[1].title,
+            subTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[1].description,
+          },
+          {
+            icon: '/assets/svgs/icn-book-orange.svg',
+            iconContainerBG: 'rgba(255, 223, 205, 1)',
+            mainTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[2].title,
+            subTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[2].description,
+          },
+          {
+            icon: '/assets/svgs/icn-navigation-pink.svg',
+            iconContainerBG: 'rgba(253, 225, 255, 1)',
+            mainTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[3].title,
+            subTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Mojoee Benefits'
+            )?.titleDescription[3].description,
+          },
+        ];
+      });
+  }
  
   // Tab group functionality
   tabSelected: string = 'tab1';
@@ -70,37 +141,37 @@ export class CareersComponent {
 
 
   // Routing to the desired position card's details when clicked on
-  jobDetailsPage(positionId: string) {
-    this.router.navigate(['about-us/careers', positionId]);
+  jobDetailsPage(jobTitle: string) {
+    this.router.navigate(['about-us/careers', jobTitle]);
   }
 
   // Cards For the Open Positions section
-  careerCards: CareerPositionCards[] = [
-    {
-      positionId: 'call-center-representative',
-      position: 'Call Center Representative',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-    {
-      positionId: 'brach-customer-service-representative',
-      position: 'Branch Customer Service Representative',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-    {
-      positionId: 'marketing-and-communication-specialist',
-      position: 'Marketing and Communication Specialist',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-    {
-      positionId: 'social-media-specialist',
-      position: 'Social Media Specialist',
-      positionType: 'Hybrid',
-      location: 'Beirut',
-    },
-  ];
+  // careerCards: CareerPositionCards[] = [
+  //   {
+  //     positionId: 'call-center-representative',
+  //     position: 'Call Center Representative',
+  //     positionType: 'Hybrid',
+  //     location: 'Beirut',
+  //   },
+  //   {
+  //     positionId: 'brach-customer-service-representative',
+  //     position: 'Branch Customer Service Representative',
+  //     positionType: 'Hybrid',
+  //     location: 'Beirut',
+  //   },
+  //   {
+  //     positionId: 'marketing-and-communication-specialist',
+  //     position: 'Marketing and Communication Specialist',
+  //     positionType: 'Hybrid',
+  //     location: 'Beirut',
+  //   },
+  //   {
+  //     positionId: 'social-media-specialist',
+  //     position: 'Social Media Specialist',
+  //     positionType: 'Hybrid',
+  //     location: 'Beirut',
+  //   },
+  // ];
 
   careerCardsCustomerSupport: CareerPositionCards[] = [
     {
@@ -188,36 +259,36 @@ export class CareersComponent {
   ];
 
   // Points for working at Mojo (Mojoee Benefits, 1/2)
-  mojoeeBenefits: BusinessAgentsBenefits[] = [
-    {
-      icon: '/assets/svgs/icn-people-group.svg',
-      iconContainerBG: 'rgba(212, 217, 245, 1)',
-      mainTitle: 'Team work',
-      subTitle:
-        "At Mojo, we believe in the incredible power of teamwork. We're not just a workforce; we're a family that collaborates, supports, and inspires one another to achieve remarkable things. Join us, and you'll be part of a team where your individual strengths contribute to a collective success story.",
-    },
-    {
-      icon: '/assets/svgs/icn-secure-badge-green.svg',
-      iconContainerBG: 'rgba(229, 255, 235, 1)',
-      mainTitle: 'Secured Future',
-      subTitle:
-        "We're dedicated to providing a secure future for all our team members. We understand that peace of mind and stability are essential in a fulfilling career. Join us, and you'll become part of an organization that values your long-term well-being.",
-    },
-    {
-      icon: '/assets/svgs/icn-book-orange.svg',
-      iconContainerBG: 'rgba(255, 223, 205, 1)',
-      mainTitle: 'Learning Opportunity',
-      subTitle:
-        'Discover boundless horizons of learning at Mojo. We are not just an organization; we are a learning ecosystem that thrives on curiosity and the pursuit of knowledge.',
-    },
-    {
-      icon: '/assets/svgs/icn-navigation-pink.svg',
-      iconContainerBG: 'rgba(253, 225, 255, 1)',
-      mainTitle: 'Up-Skill',
-      subTitle:
-        'We are committed to your continuous growth and development. With our strong focus on up-skilling, we provide you with the tools, resources, and opportunities to enhance your skills and advance your career.',
-    },
-  ];
+  // mojoeeBenefits: BusinessAgentsBenefits[] = [
+  //   {
+  //     icon: '/assets/svgs/icn-people-group.svg',
+  //     iconContainerBG: 'rgba(212, 217, 245, 1)',
+  //     mainTitle: 'Team work',
+  //     subTitle:
+  //       "At Mojo, we believe in the incredible power of teamwork. We're not just a workforce; we're a family that collaborates, supports, and inspires one another to achieve remarkable things. Join us, and you'll be part of a team where your individual strengths contribute to a collective success story.",
+  //   },
+  //   {
+  //     icon: '/assets/svgs/icn-secure-badge-green.svg',
+  //     iconContainerBG: 'rgba(229, 255, 235, 1)',
+  //     mainTitle: 'Secured Future',
+  //     subTitle:
+  //       "We're dedicated to providing a secure future for all our team members. We understand that peace of mind and stability are essential in a fulfilling career. Join us, and you'll become part of an organization that values your long-term well-being.",
+  //   },
+  //   {
+  //     icon: '/assets/svgs/icn-book-orange.svg',
+  //     iconContainerBG: 'rgba(255, 223, 205, 1)',
+  //     mainTitle: 'Learning Opportunity',
+  //     subTitle:
+  //       'Discover boundless horizons of learning at Mojo. We are not just an organization; we are a learning ecosystem that thrives on curiosity and the pursuit of knowledge.',
+  //   },
+  //   {
+  //     icon: '/assets/svgs/icn-navigation-pink.svg',
+  //     iconContainerBG: 'rgba(253, 225, 255, 1)',
+  //     mainTitle: 'Up-Skill',
+  //     subTitle:
+  //       'We are committed to your continuous growth and development. With our strong focus on up-skilling, we provide you with the tools, resources, and opportunities to enhance your skills and advance your career.',
+  //   },
+  // ];
 
   
 

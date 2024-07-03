@@ -115,10 +115,9 @@ export interface NewsCards {
 export interface BusinessAgentsBenefits {
   icon: string;
   iconContainerBG: string;
-  mainTitle: string;
-  subTitle: string;
+  mainTitle: string | undefined;
+  subTitle: string | undefined;
 }
-
 export interface RegistrationRequirements {
   mainText: string;
   point: Array<string>;

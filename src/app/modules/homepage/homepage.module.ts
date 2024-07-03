@@ -24,6 +24,7 @@ import { JobDetailsComponent } from './pages/job-details/job-details.component';
 import { LocatorComponent } from './pages/locator/locator.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { SafeHtmlPipe } from 'src/pipes/safehtml.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
     BlogComponent,
     BlogDetailComponent,
     LocatorComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    SafeHtmlPipe
   ],
   imports: [CommonModule, HomepageRoutingModule, MaterialModule, SharedModule, RecaptchaModule],
 })
