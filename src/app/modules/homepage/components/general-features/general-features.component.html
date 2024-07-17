@@ -1,7 +1,7 @@
 <section id="container" class="entire-features-wrapper">
   <div class="header">
-    <span id="text-lg">What our app offers</span>
-    <span id="text-xs">Mojo has so much to offer you.</span>
+    <span [innerHTML]="PageData.result.pageSection[4].header | safeHtml" id="text-lg"></span>
+    <span [innerHTML]="PageData.result.pageSection[4].subtext | safeHtml" id="text-xs"></span>
   </div>
 
   <div class="inner-features-container">

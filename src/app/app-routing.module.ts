@@ -4,11 +4,11 @@ import { HomepageModule } from './modules/homepage/homepage.module';
 
 const routes: Routes = [
 
-  {
-    path: '',
-    loadChildren: () => 
-      import('./modules/homepage/homepage.module').then((m) => m.HomepageModule),
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () => 
+  //     import('./modules/homepage/homepage.module').then((m) => m.HomepageModule),
+  // },
 
 
 ];

@@ -3,10 +3,7 @@
           left for the information, and right for the slider -->
   <div class="hero-left" *ngFor="let info of homepageHero">
     <span id="text-sm" class="mini-header-txt">{{ info.tagText }}</span>
-    <span id="text-xl" class="main-header-txt"
-      >Trusted and Secured. <br />
-      Join Mojo now</span
-    >
+    <span id="text-xl" [innerHTML]="PageData.result.pageSection[0].header | safeHtml" class="main-header-txt"></span>
 
     <!-- The Mobile Carousel is positioned in the 
       middle of the hero-left, so the desktop one is
@@ -23,7 +20,7 @@
 
         <!-- Carousel Implementation -->
         <!-- Here, we have the container which the images are changing in -->
-        <div class="slider-container" [ngClass]="currentImage"></div>
+        <div class="slider-container" [ngStyle]="{'background-image': 'url(' + currentImage.linkUrl + ')'}"></div>
 
         <!-- This is the expenses and income card -->
         <img
@@ -34,7 +31,7 @@
       </div>
     </div>
 
-    <span id="text-rg" class="sub-header-txt">{{ info.subTitle }}</span>
+    <span id="text-rg" [innerHTML]="PageData.result.pageSection[0].subtext | safeHtml" class="sub-header-txt"></span>
 
     <!-- Container to hold both App Store and Play Store badges -->
     <div class="badge-wrapper">
@@ -60,7 +57,7 @@
 
       <!-- Carousel Implementation -->
       <!-- Here, we have the container which the images are changing in -->
-      <div class="slider-container" [ngClass]="currentImage"></div>
+      <div class="slider-container" [ngStyle]="{'background-image': 'url(' + currentImage.linkUrl + ')'}"></div>
 
       <!-- This is the expenses and income card -->
       <img

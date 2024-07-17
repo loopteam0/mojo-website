@@ -13,43 +13,58 @@ of styling is done in the mobile media query (340px)
 
 // Desktop - Small
 @media (min-width: 340px) {
-    app-navbar{
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
-    .copyright-wrapper{
-        padding: 1.5rem;
-        background-color: white;
-        text-align: center;
-    }
+  app-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .copyright-wrapper {
+    padding: 1.5rem;
+    background-color: white;
+    text-align: center;
+  }
 
-    .developer-wrapper{
-        padding: 0.5rem;
-        background-color: white;
-        text-align: center;
-    }
+  .developer-wrapper {
+    padding: 0.5rem;
+    background-color: white;
+    text-align: center;
+  }
 
-    span{
-        color: rgba(110, 118, 141, 1);
-    }
+  span {
+    color: rgba(110, 118, 141, 1);
+  }
+
+  .message {
+    top: 54%;
+    width: 80%;
+    font-size: 0.75rem;
+    font-family: "Poppins-Regular";
+    flex-shrink: 0;
+  }
 }
 
 @media (min-width: 1024px) {
-    app-navbar{
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
-    .copyright-wrapper{
-        width: 100%;
-        padding: 1.5rem;
-        background-color: white;
-        text-align: center;
-        display: none;
-    }
+  app-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .copyright-wrapper {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: white;
+    text-align: center;
+    display: none;
+  }
 
-    span{
-        color: rgba(110, 118, 141, 1);
-    }
+  span {
+    color: rgba(110, 118, 141, 1);
+  }
+
+  .message{
+    top: 60%; 
+    width: 40%;
+    font-size: 1rem;
+
+  }
 }

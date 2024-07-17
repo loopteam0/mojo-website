@@ -1,27 +1,27 @@
 export interface AdvantageCard {
   icon: string;
-  title: string;
-  subtitle: string;
+  title: string | undefined;
+  subtitle: string | undefined;
 }
 
 export interface HomepageHero {
   tagText: string;
-  mainTitle: string;
-  subTitle: string;
+  mainTitle: string | undefined;
+  subTitle: string | undefined;
 }
 
 export interface GeneralFeatures {
   containerColor: string;
-  title: string;
-  subtitle: string;
+  title: string | undefined;
+  subtitle: string | undefined;
   icon: string;
 }
 
 export interface MojoForYou {
   image: string;
-  subheader: string;
-  mainHeader: string;
-  points: Array<string>;
+  subheader: string | undefined;
+  mainHeader: string | undefined;
+  points: string[] | undefined;
 }
 
 export interface BecomeAMojoer {

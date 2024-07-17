@@ -16,6 +16,7 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecaptchaModule } from 'ng-recaptcha';
+// import { SafeHtmlPipe } from 'src/pipes/safehtml.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
     ScheduleBillPaymentsComponent,
     ContactUsComponent,
     HowItWorksComponent,
-    FaqSectionComponent
+    FaqSectionComponent,
+    // SafeHtmlPipe
   
   ],
   imports: [
@@ -36,7 +38,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    RecaptchaModule
+    RecaptchaModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [

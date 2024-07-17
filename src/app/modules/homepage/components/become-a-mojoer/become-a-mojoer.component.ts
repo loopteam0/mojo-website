@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { PageResponse } from 'src/app/models/data.models';
 import { BecomeAMojoer } from 'src/app/models/homepage.models';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-become-a-mojoer',
@@ -40,4 +42,22 @@ export class BecomeAMojoerComponent {
     // {secondStep: [mainHeader: '', subHeader: '', stepTagTxt: '']},
     // {thirdStep: [mainHeader: '', subHeader: '', stepTagTxt: '']},
   ];
+
+  
+  PageData!: PageResponse;
+
+  constructor(private dataService: DataService){}
+
+  ngOnInit() {
+    this.renderPageDetails('Landing Page');
+  }
+
+  renderPageDetails(pageType: string) {
+    this.dataService
+      .renderPage(pageType)
+      .subscribe((response: PageResponse) => {
+        this.PageData = response;
+        console.log(this.PageData);
+      });
+  }
 }

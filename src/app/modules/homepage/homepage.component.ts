@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Image, PageResponse } from 'src/app/models/data.models';
 import { AdvantageCard, HomepageHero, MojoForYou } from 'src/app/models/homepage.models';
+import { DataService } from 'src/services/data.service';
 
 
 @Component({
@@ -10,29 +12,104 @@ import { AdvantageCard, HomepageHero, MojoForYou } from 'src/app/models/homepage
 })
 export class HomepageComponent {
 
+  PageData!: PageResponse;
+  advantageCard: AdvantageCard[] = [];
+  images: Image[] | undefined;
+  aboutMojo: HomepageHero[] = [];
+  mojoForYou: MojoForYou[] = [];
+  points: string[] | undefined = [];
 
-  constructor(private router: Router){}
+
+  constructor(private router: Router, private dataService: DataService){}
 
   toAboutUs(){
     this.router.navigate(['/about-us']);
   }
 
-  // Populating "Our Advantages" cards
-  advantageCard : AdvantageCard[] = [
-    {icon: '/assets/svgs/icn-clock-blue.svg', title: 'Quick Transactions', subtitle: 'You can pay for items very quickly.'},
-    {icon: '/assets/svgs/icn-credit-card-blue.svg', title: 'Easy Payment', subtitle: 'No more endless counting of banknotes.'},
-    {icon: '/assets/svgs/icn-secure-badge-blue.svg', title: 'Trusted and Secure', subtitle: 'Your account is always secure.'},
-  ]
+  ngOnInit(): void {
+    this.renderPageDetails('Landing Page');
+
+  }
+
+  renderPageDetails(pageType: string) {
+    this.dataService
+      .renderPage(pageType)
+      .subscribe((response: PageResponse) => {
+        this.PageData = response;
+        console.log('PageData: ', this.PageData);
 
 
-  // Populating "Mojo is for you" information
-  mojoForYou: MojoForYou[] = [
-    {image: '/assets/images/mojo-for you.png', subheader: 'Notes to our mojoers', mainHeader: 'Mojo is for you', points: ['Mojo supports fresh Lebanese Pounds and fresh US Dollars', 'Mojo is tailored to your needs', 'Mojo customer service supports you all the way.']}
-  ]
+        this.images = response.result.pageSection.find(
+          (section) => section.sectionType === 'Hero Section'
+        )?.imagesObj;
 
-  // About Mojo
-  aboutMojo: HomepageHero[] = [
-    {tagText: '', mainTitle: 'About Mojo', subTitle: 'Mojo is designed with you in mind. Our mission is to provide a secure, efficient, flexible, and affordable wallet for every citizen, making daily transactions—from buying groceries to settling utility bills—a seamless experience.'}
-  ]
+        console.log('Carousel Images: ', this.images);
+        // this.jobPosts = response.result.pageSection[4].jobPosts[0];
+
+        this.points = response.result.pageSection.find(
+          (section) => section.sectionType === 'Notes to Mojoers'
+        )?.points;
+        
+        this.advantageCard = [
+          {
+            icon: '/assets/svgs/icn-clock-blue.svg',
+            title: response.result.pageSection.find(
+              (section) => section.sectionType === 'Why Choose Us'
+            )?.titleDescription[0].title,
+            subtitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Why Choose Us'
+            )?.titleDescription[0].description,
+          },
+          {
+            icon: '/assets/svgs/icn-credit-card-blue.svg',
+            title: response.result.pageSection.find(
+              (section) => section.sectionType === 'Why Choose Us'
+            )?.titleDescription[1].title,
+            subtitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Why Choose Us'
+            )?.titleDescription[1].description,
+          },
+          {
+            icon: '/assets/svgs/icn-secure-badge-blue.svg',
+            title: response.result.pageSection.find(
+              (section) => section.sectionType === 'Why Choose Us'
+            )?.titleDescription[2].title,
+            subtitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'Why Choose Us'
+            )?.titleDescription[2].description,
+          },
+        ];
+
+        this.aboutMojo = [
+          {
+            tagText: '',
+            mainTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'About Mojo'
+            )?.header,
+            subTitle: response.result.pageSection.find(
+              (section) => section.sectionType === 'About Mojo'
+            )?.subtext,
+          },
+        ]
+
+        const pointOne = response.result.pageSection.find(
+          (section) => section.sectionType === 'Notes to Mojoers'
+        )?.points[0];
+
+        this.mojoForYou = [
+          {
+            image: '/assets/images/mojo-for you.png',
+            subheader: 'Notes to our mojoers',
+            mainHeader: response.result.pageSection.find(
+              (section) => section.sectionType === 'Notes to Mojoers'
+            )?.title,
+            points: this.points
+          },
+        ]
+      });
+
+      console.log(this.points)
+  }
+
 
 }

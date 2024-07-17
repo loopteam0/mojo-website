@@ -32,10 +32,8 @@
   <!-- About Mojo section -->
   <section id="container" class="about-mojo-section" *ngFor="let info of aboutMojo">
     <div class="about-mojo-left">
-      <span id="text-lg">{{info.mainTitle}}</span>
-      <span id="text-rg"
-        >{{info.subTitle}}</span
-      >
+      <span [innerHTML]="PageData.result.pageSection[3].header | safeHtml" id="text-lg"></span>
+      <span [innerHTML]="PageData.result.pageSection[3].subtext | safeHtml" id="text-rg"></span>
 
       <!-- Image appears for mobile here-->
       <img id="about-us-mobile-mockup" src="/assets/images/about-mojo-img.png" alt="" />

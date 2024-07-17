@@ -2,8 +2,8 @@
 
   <!-- Main header and the sub one -->
   <div class="header-wrapper">
-    <span id="text-lg">Simple steps to become a Mojoer</span>
-    <span id="text-rg">Three simple steps to become a Mojoer.</span>
+    <span [innerHTML]="PageData.result.pageSection[2].header | safeHtml" id="text-lg"></span>
+    <span [innerHTML]="PageData.result.pageSection[2].subtext | safeHtml" id="text-rg"></span>
   </div>
 
   <!-- Main wrapper holding the steps cards (pink background)-->
@@ -25,8 +25,8 @@
               <img class="play-store-logo" src="/assets/images/play-store-logo.png" alt="">
             </div>
 
-            <span id="text-md">{{info.mainHeader}}</span>
-            <span id="text-sm">{{info.subHeader}}</span>
+            <span id="text-md">{{PageData.result.pageSection[2].titleDescription[0].title}}</span>
+            <span id="text-sm">{{PageData.result.pageSection[2].titleDescription[0].description}}</span>
 
           </div>
 
@@ -53,8 +53,8 @@
             <img class="phone-mockup" src="/assets/images/phone-mockup-2.png" alt="">
           </div>
 
-          <span id="text-md">{{info.mainHeader}}</span>
-          <span id="text-sm">{{info.subHeader}}</span>
+          <span id="text-md">{{PageData.result.pageSection[2].titleDescription[1].title}}</span>
+          <span id="text-sm">{{PageData.result.pageSection[2].titleDescription[1].description}}</span>
 
         </div>
 
@@ -80,8 +80,8 @@
             <img class="phone-mockup" src="/assets/images/phone-mockup-3.png" alt="">
           </div>
 
-          <span id="text-md">{{info.mainHeader}}</span>
-          <span id="text-sm">{{info.subHeader}}</span>
+          <span id="text-md">{{PageData.result.pageSection[2].titleDescription[2].title}}</span>
+          <span id="text-sm">{{PageData.result.pageSection[2].titleDescription[2].title}}</span>
 
         </div>
 

@@ -15,50 +15,51 @@ import { LocatorComponent } from './pages/locator/locator.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
-  { path: 'homepage', component: HomepageComponent },
+  // { path: '', redirectTo: 'homepage', pathMatch: 'full' },
+  
+  // { path: 'homepage', component: HomepageComponent },
 
-  {
-    path: 'personal',
-    children: [
-      { path: '', component: PersonalComponent },
-      { path: 'locate-mojo', component: LocatorComponent },
-      // { path: 'faq', component: FAQComponent },
-      { path: 'about-us', component: AboutUsComponent },
-    ],
-  },
-  {
-    path: 'business',
-    children: [
-      { path: '', component: BusinessComponent },
-      // { path: 'faq', component: FAQComponent },
-      { path: 'agents', component: BusinessAgentComponent },
-    ],
-  },
-  {
-    path: 'about-us',
-    children: [
-      { path: '', component: AboutUsComponent },
-      { path: 'locate-mojo', component: LocatorComponent },
-      { path: 'privacy-policy', component: PrivacyPolicyComponent },
-      {
-        path: 'terms-and-conditions',
-        component: TermsAndConditionsComponent,
-      },
-      { path: 'careers', component: CareersComponent },
-      {
-        path: 'careers/:jobTitle',
-        component: JobDetailsComponent,
-      },
-    ],
-  },
-  {
-    path: 'blog',
-    children: [
-      { path: '', component: BlogComponent },
-      { path: 'blog-detail', component: BlogDetailComponent },
-    ],
-  },
+  // {
+  //   path: 'personal',
+  //   children: [
+  //     { path: '', component: PersonalComponent },
+  //     { path: 'locate-mojo', component: LocatorComponent },
+  //     // { path: 'faq', component: FAQComponent },
+  //     { path: 'about-us', component: AboutUsComponent },
+  //   ],
+  // },
+  // {
+  //   path: 'business',
+  //   children: [
+  //     { path: '', component: BusinessComponent },
+  //     // { path: 'faq', component: FAQComponent },
+  //     { path: 'agents', component: BusinessAgentComponent },
+  //   ],
+  // },
+  // {
+  //   path: 'about-us',
+  //   children: [
+  //     { path: '', component: AboutUsComponent },
+  //     { path: 'locate-mojo', component: LocatorComponent },
+  //     { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  //     {
+  //       path: 'terms-and-conditions',
+  //       component: TermsAndConditionsComponent,
+  //     },
+  //     { path: 'careers', component: CareersComponent },
+  //     {
+  //       path: 'careers/:jobTitle',
+  //       component: JobDetailsComponent,
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: 'blog',
+  //   children: [
+  //     { path: '', component: BlogComponent },
+  //     { path: 'blog-detail', component: BlogDetailComponent },
+  //   ],
+  // },
 
 
   // { path: 'personal', component: PersonalComponent },
