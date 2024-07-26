@@ -15,9 +15,11 @@ import { LocatorComponent } from './pages/locator/locator.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'homepage', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
   
+  { path: '', component: HomepageComponent },
   // { path: 'homepage', component: HomepageComponent },
+  
 
   // {
   //   path: 'personal',
@@ -41,7 +43,7 @@ const routes: Routes = [
   //   children: [
   //     { path: '', component: AboutUsComponent },
   //     { path: 'locate-mojo', component: LocatorComponent },
-  //     { path: 'privacy-policy', component: PrivacyPolicyComponent },
+      // { path: 'privacy-policy', component: PrivacyPolicyComponent },
   //     {
   //       path: 'terms-and-conditions',
   //       component: TermsAndConditionsComponent,
@@ -66,10 +68,12 @@ const routes: Routes = [
   // { path: 'business', component: BusinessComponent },
   // { path: 'business/agents', component: BusinessAgentComponent },
   // { path: 'about-us', component: AboutUsComponent },
-  // {
-  //   path: 'about-us/terms-and-conditions',
-  //   component: TermsAndConditionsComponent,
-  // },
+  {
+    path: 'about-us/terms-and-conditions',
+    component: TermsAndConditionsComponent,
+  },
+  { path: 'about-us/privacy-policy', component: PrivacyPolicyComponent },
+
   // { path: 'faq', component: FAQComponent },
   // { path: 'about-us/careers', component: CareersComponent },
   // { path: 'about-us/careers/job-details', component: JobDetailsComponent },

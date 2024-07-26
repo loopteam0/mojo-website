@@ -19,6 +19,16 @@ of styling is done in the mobile media query (340px)
     z-index: 1000;
   }
 
+  app-homepage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
   .wait-screen{
     display: flex;
     flex-direction: column;

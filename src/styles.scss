@@ -5,6 +5,16 @@ body {
   overflow-x: hidden;
 }
 
+app-homepage{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
 // @tailwind base;
 // @tailwind components;
 // @tailwind utilities;
